@@ -84,11 +84,11 @@ export function WingDrawing({ s }: { s: WingDrawingSpec }) {
       </g>
       <text x={cx - 12} y={X(p.xRef) + 4} fontSize={9.5} textAnchor="end" style={{ fill: C.text }}>REF</text>
       {xCp !== null && xCp > xMin - (xMax - xMin) && xCp < xMax + (xMax - xMin) && (
-        <g><path d={`M${cx} ${r2(X(xCp) - 7)} l7 7 l-7 7 l-7 -7 Z`} fill={C.dim} /><text x={cx + 12} y={X(xCp) + 4} fontSize={9.5} style={{ fill: C.dim }}>{`CP α ${s.at.alpha}°`}</text></g>
+        <g><path d={`M${cx} ${r2(X(xCp) - 7)} l7 7 l-7 7 l-7 -7 Z`} fill={C.dim} /><text x={cx + 12} y={X(xCp) + 4} fontSize={9.5} style={{ fill: C.dim }}>{`CP α ${Math.round(s.at.alpha * 10) / 10}°`}</text></g>
       )}
       {burstX !== null && (
         <g><line x1={box.x - 4} x2={box.x + box.w + 4} y1={X(burstX)} y2={X(burstX)} stroke={C.warn} strokeWidth={1.1} strokeDasharray="7 4" />
-          <text x={box.x + box.w + 4} y={X(burstX) - 5} fontSize={9.5} textAnchor="end" style={{ fill: C.warn }}>{`VORTEX BURST · α ${s.at.alpha}°`}</text></g>
+          <text x={box.x + box.w + 4} y={X(burstX) - 5} fontSize={9.5} textAnchor="end" style={{ fill: C.warn }}>{`VORTEX BURST · α ${Math.round(s.at.alpha * 10) / 10}°`}</text></g>
       )}
       {/* Sweep angle arc at the apex */}
       {root && st[1] && (
@@ -110,7 +110,7 @@ export function WingDrawing({ s }: { s: WingDrawingSpec }) {
       <line x1={sx1} y1={sy1} x2={sx2} y2={sy2} stroke={C.strong} strokeWidth={2.4} />
       <line x1={sx1} y1={sy1} x2={r2(pcx + half)} y2={sy1} stroke={C.thin} strokeDasharray="4 3" strokeWidth={0.8} />
       <path d={`M${r2(sx1 + 54)} ${sy1} A54 54 0 0 1 ${r2(sx1 + 54 * Math.cos(a))} ${r2(sy1 + 54 * Math.sin(a))}`} fill="none" stroke={C.dim} strokeWidth={0.9} />
-      <text x={r2(sx1 + 60)} y={r2(sy1 + 16)} fontSize={10} style={{ fill: C.dim }}>{`α ${s.at.alpha}°`}</text>
+      <text x={r2(sx1 + 60)} y={r2(sy1 + 16)} fontSize={10} style={{ fill: C.dim }}>{`α ${Math.round(s.at.alpha * 10) / 10}°`}</text>
 
       {/* Front view */}
       <text x={fv.x} y={fv.y - 34} fontSize={11} style={{ fill: C.strong, letterSpacing: "0.12em" }}>FRONT VIEW</text>
@@ -137,7 +137,7 @@ export function WingDrawing({ s }: { s: WingDrawingSpec }) {
         {[
           ["DESIGNATION", s.designation, 0, 30], ["PLANFORM", `S ${fmt(p.area)} · b ${fmt(p.span)} · AR ${fmt(p.aspectRatio)}`, 230, 30],
           ["REFERENCE", `Sref ${fmt(p.sRef)} · MAC ${fmt(p.cRef)} ${s.unit}`, 0, 64], ["Kp / Kv", `${fmt(s.kp, 3)} / ${fmt(s.kv, 2)}`, 230, 64],
-          [`CL AT α ${s.at.alpha}° (BAND)`, `${fmt(s.at.cl, 3)}  (${fmt(s.at.lo, 2)}–${fmt(s.at.hi, 2)})`, 0, 98], ["REGIME / CM", `${s.at.regime} / ${fmt(s.at.cm, 3)}`, 230, 98],
+          [`CL AT α ${Math.round(s.at.alpha * 10) / 10}° (BAND)`, `${fmt(s.at.cl, 3)}  (${fmt(s.at.lo, 2)}–${fmt(s.at.hi, 2)})`, 0, 98], ["REGIME / CM", `${s.at.regime} / ${fmt(s.at.cm, 3)}`, 230, 98],
           ["SCALE / UNITS", `NTS · ${s.unit}`, 0, 132], ["PROJECTION / DATE", `third angle · ${s.date}`, 230, 132],
         ].map(([kk, v, x, y]) => (
           <g key={kk as string} transform={`translate(${(x as number) + 10}, ${y as number})`}>

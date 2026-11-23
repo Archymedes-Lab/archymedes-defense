@@ -1,0 +1,1028 @@
+{
+ "generated": "scripts/validate_flight.ts",
+ "aircraft": "f106b",
+ "lattice": {
+  "kp": 2.355,
+  "kv": 3.053,
+  "elevonLiftPerRad": 1.125,
+  "elevonXcp": 27.908,
+  "xCg": 17.944
+ },
+ "trim": {
+  "source": "NASA TP-2747, Tables I and III",
+  "assumed": "sea-level standard density; velocity taken as true airspeed",
+  "alphaDeg": 11.3,
+  "publishedElevonDeg": -4.13,
+  "clRequired": 0.342,
+  "rows": [
+   {
+    "label": "Bare wing, sharp edge (the engine before this work)",
+    "cl": 0.559,
+    "error": 0.632,
+    "elevonDeg": null
+   },
+   {
+    "label": "With the elevon at its published angle, sharp edge",
+    "cl": 0.478,
+    "error": 0.395,
+    "elevonDeg": -4.13
+   },
+   {
+    "label": "With the elevon at its published angle, attached edge",
+    "cl": 0.363,
+    "error": 0.059,
+    "elevonDeg": -4.13
+   },
+   {
+    "label": "Trimmed by the model, rounded edge fitted to the flight table",
+    "cl": 0.353,
+    "error": 0.032,
+    "elevonDeg": -4.599
+   }
+  ],
+  "predictedElevonDeg": {
+   "attached": -4.599,
+   "sharp": -5.058,
+   "fitted": -4.599
+  }
+ },
+ "flight": {
+  "source": "NASA TP-3374, Table I",
+  "pointsUsed": 27,
+  "pointsExcluded": 7,
+  "excludedWhy": "Mach ≥ 0.6 (no compressibility model)",
+  "flights": [
+   "91-13",
+   "91-14",
+   "91-15",
+   "91-16",
+   "91-17"
+  ],
+  "variants": [
+   {
+    "label": "Sharp edge (the engine's assumption)",
+    "blend": {
+     "onsetDeg": 0,
+     "fullDeg": 0
+    },
+    "withinFlightCv": 0.107,
+    "meanWeightLb": 35413,
+    "minWeightLb": 28907,
+    "maxWeightLb": 43665,
+    "points": [
+     {
+      "serial": "91-15/12",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 12.9,
+      "mach": 0.36,
+      "weightLb": 40582
+     },
+     {
+      "serial": "91-15/13",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 13.9,
+      "mach": 0.34,
+      "weightLb": 39583
+     },
+     {
+      "serial": "91-15/17",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 15.1,
+      "mach": 0.34,
+      "weightLb": 41050
+     },
+     {
+      "serial": "91-16/09",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 15.8,
+      "mach": 0.33,
+      "weightLb": 37305
+     },
+     {
+      "serial": "91-16/10",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 16.9,
+      "mach": 0.31,
+      "weightLb": 35331
+     },
+     {
+      "serial": "91-16/11",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 17.8,
+      "mach": 0.29,
+      "weightLb": 32082
+     },
+     {
+      "serial": "91-17/07",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 18.6,
+      "mach": 0.29,
+      "weightLb": 32071
+     },
+     {
+      "serial": "91-17/09",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 20.2,
+      "mach": 0.27,
+      "weightLb": 30018
+     },
+     {
+      "serial": "91-17/10",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 21.3,
+      "mach": 0.26,
+      "weightLb": 29646
+     },
+     {
+      "serial": "91-13/11",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 13.9,
+      "mach": 0.42,
+      "weightLb": 40091
+     },
+     {
+      "serial": "91-13/05",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 14.9,
+      "mach": 0.41,
+      "weightLb": 39817
+     },
+     {
+      "serial": "91-13/10",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 16.1,
+      "mach": 0.39,
+      "weightLb": 35898
+     },
+     {
+      "serial": "91-13/06",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 17,
+      "mach": 0.38,
+      "weightLb": 37399
+     },
+     {
+      "serial": "91-13/07",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 18.8,
+      "mach": 0.35,
+      "weightLb": 34455
+     },
+     {
+      "serial": "91-13/08",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 20.5,
+      "mach": 0.34,
+      "weightLb": 32599
+     },
+     {
+      "serial": "91-13/09",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 22.5,
+      "mach": 0.32,
+      "weightLb": 32076
+     },
+     {
+      "serial": "91-15/06",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 13.9,
+      "mach": 0.54,
+      "weightLb": 40516
+     },
+     {
+      "serial": "91-14/07",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 14.8,
+      "mach": 0.53,
+      "weightLb": 41743
+     },
+     {
+      "serial": "91-15/08",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 15.8,
+      "mach": 0.5,
+      "weightLb": 38576
+     },
+     {
+      "serial": "91-14/08",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 16.8,
+      "mach": 0.49,
+      "weightLb": 37958
+     },
+     {
+      "serial": "91-14/09",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 17.7,
+      "mach": 0.47,
+      "weightLb": 32470
+     },
+     {
+      "serial": "91-14/10",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 18.7,
+      "mach": 0.45,
+      "weightLb": 30805
+     },
+     {
+      "serial": "91-14/11",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 19.7,
+      "mach": 0.44,
+      "weightLb": 30658
+     },
+     {
+      "serial": "91-14/12",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 20.5,
+      "mach": 0.42,
+      "weightLb": 30294
+     },
+     {
+      "serial": "91-15/10",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 21.9,
+      "mach": 0.4,
+      "weightLb": 28907
+     },
+     {
+      "serial": "91-13/04",
+      "flight": "91-13",
+      "group": "V",
+      "alphaDeg": 8.5,
+      "mach": 0.5,
+      "weightLb": 43665
+     },
+     {
+      "serial": "91-15/09",
+      "flight": "91-15",
+      "group": "V",
+      "alphaDeg": 21.7,
+      "mach": 0.41,
+      "weightLb": 30557
+     }
+    ]
+   },
+   {
+    "label": "Attached edge (no vortex lift)",
+    "blend": {
+     "onsetDeg": 89,
+     "fullDeg": 90
+    },
+    "withinFlightCv": 0.105,
+    "meanWeightLb": 26976,
+    "minWeightLb": 22133,
+    "maxWeightLb": 35670,
+    "points": [
+     {
+      "serial": "91-15/12",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 12.9,
+      "mach": 0.36,
+      "weightLb": 30206
+     },
+     {
+      "serial": "91-15/13",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 13.9,
+      "mach": 0.34,
+      "weightLb": 28867
+     },
+     {
+      "serial": "91-15/17",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 15.1,
+      "mach": 0.34,
+      "weightLb": 30842
+     },
+     {
+      "serial": "91-16/09",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 15.8,
+      "mach": 0.33,
+      "weightLb": 28618
+     },
+     {
+      "serial": "91-16/10",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 16.9,
+      "mach": 0.31,
+      "weightLb": 27097
+     },
+     {
+      "serial": "91-16/11",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 17.8,
+      "mach": 0.29,
+      "weightLb": 24693
+     },
+     {
+      "serial": "91-17/07",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 18.6,
+      "mach": 0.29,
+      "weightLb": 24813
+     },
+     {
+      "serial": "91-17/09",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 20.2,
+      "mach": 0.27,
+      "weightLb": 23112
+     },
+     {
+      "serial": "91-17/10",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 21.3,
+      "mach": 0.26,
+      "weightLb": 22860
+     },
+     {
+      "serial": "91-13/11",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 13.9,
+      "mach": 0.42,
+      "weightLb": 29238
+     },
+     {
+      "serial": "91-13/05",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 14.9,
+      "mach": 0.41,
+      "weightLb": 29557
+     },
+     {
+      "serial": "91-13/10",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 16.1,
+      "mach": 0.39,
+      "weightLb": 27411
+     },
+     {
+      "serial": "91-13/06",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 17,
+      "mach": 0.38,
+      "weightLb": 28642
+     },
+     {
+      "serial": "91-13/07",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 18.8,
+      "mach": 0.35,
+      "weightLb": 26588
+     },
+     {
+      "serial": "91-13/08",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 20.5,
+      "mach": 0.34,
+      "weightLb": 25006
+     },
+     {
+      "serial": "91-13/09",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 22.5,
+      "mach": 0.32,
+      "weightLb": 24385
+     },
+     {
+      "serial": "91-15/06",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 13.9,
+      "mach": 0.54,
+      "weightLb": 29548
+     },
+     {
+      "serial": "91-14/07",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 14.8,
+      "mach": 0.53,
+      "weightLb": 31043
+     },
+     {
+      "serial": "91-15/08",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 15.8,
+      "mach": 0.5,
+      "weightLb": 29593
+     },
+     {
+      "serial": "91-14/08",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 16.8,
+      "mach": 0.49,
+      "weightLb": 29154
+     },
+     {
+      "serial": "91-14/09",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 17.7,
+      "mach": 0.47,
+      "weightLb": 25026
+     },
+     {
+      "serial": "91-14/10",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 18.7,
+      "mach": 0.45,
+      "weightLb": 23802
+     },
+     {
+      "serial": "91-14/11",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 19.7,
+      "mach": 0.44,
+      "weightLb": 23751
+     },
+     {
+      "serial": "91-14/12",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 20.5,
+      "mach": 0.42,
+      "weightLb": 23238
+     },
+     {
+      "serial": "91-15/10",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 21.9,
+      "mach": 0.4,
+      "weightLb": 22133
+     },
+     {
+      "serial": "91-13/04",
+      "flight": "91-13",
+      "group": "V",
+      "alphaDeg": 8.5,
+      "mach": 0.5,
+      "weightLb": 35670
+     },
+     {
+      "serial": "91-15/09",
+      "flight": "91-15",
+      "group": "V",
+      "alphaDeg": 21.7,
+      "mach": 0.41,
+      "weightLb": 23451
+     }
+    ]
+   },
+   {
+    "label": "Rounded edge, fitted",
+    "blend": {
+     "onsetDeg": 14,
+     "fullDeg": 21
+    },
+    "withinFlightCv": 0.043,
+    "meanWeightLb": 30545,
+    "minWeightLb": 28862,
+    "maxWeightLb": 35670,
+    "points": [
+     {
+      "serial": "91-15/12",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 12.9,
+      "mach": 0.36,
+      "weightLb": 30206
+     },
+     {
+      "serial": "91-15/13",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 13.9,
+      "mach": 0.34,
+      "weightLb": 28867
+     },
+     {
+      "serial": "91-15/17",
+      "flight": "91-15",
+      "group": "I",
+      "alphaDeg": 15.1,
+      "mach": 0.34,
+      "weightLb": 31519
+     },
+     {
+      "serial": "91-16/09",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 15.8,
+      "mach": 0.33,
+      "weightLb": 30046
+     },
+     {
+      "serial": "91-16/10",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 16.9,
+      "mach": 0.31,
+      "weightLb": 30166
+     },
+     {
+      "serial": "91-16/11",
+      "flight": "91-16",
+      "group": "I",
+      "alphaDeg": 17.8,
+      "mach": 0.29,
+      "weightLb": 28862
+     },
+     {
+      "serial": "91-17/07",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 18.6,
+      "mach": 0.29,
+      "weightLb": 30096
+     },
+     {
+      "serial": "91-17/09",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 20.2,
+      "mach": 0.27,
+      "weightLb": 29768
+     },
+     {
+      "serial": "91-17/10",
+      "flight": "91-17",
+      "group": "I",
+      "alphaDeg": 21.3,
+      "mach": 0.26,
+      "weightLb": 29646
+     },
+     {
+      "serial": "91-13/11",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 13.9,
+      "mach": 0.42,
+      "weightLb": 29238
+     },
+     {
+      "serial": "91-13/05",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 14.9,
+      "mach": 0.41,
+      "weightLb": 30022
+     },
+     {
+      "serial": "91-13/10",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 16.1,
+      "mach": 0.39,
+      "weightLb": 29244
+     },
+     {
+      "serial": "91-13/06",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 17,
+      "mach": 0.38,
+      "weightLb": 32089
+     },
+     {
+      "serial": "91-13/07",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 18.8,
+      "mach": 0.35,
+      "weightLb": 32612
+     },
+     {
+      "serial": "91-13/08",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 20.5,
+      "mach": 0.34,
+      "weightLb": 32488
+     },
+     {
+      "serial": "91-13/09",
+      "flight": "91-13",
+      "group": "II",
+      "alphaDeg": 22.5,
+      "mach": 0.32,
+      "weightLb": 32076
+     },
+     {
+      "serial": "91-15/06",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 13.9,
+      "mach": 0.54,
+      "weightLb": 29548
+     },
+     {
+      "serial": "91-14/07",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 14.8,
+      "mach": 0.53,
+      "weightLb": 31431
+     },
+     {
+      "serial": "91-15/08",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 15.8,
+      "mach": 0.5,
+      "weightLb": 31070
+     },
+     {
+      "serial": "91-14/08",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 16.8,
+      "mach": 0.49,
+      "weightLb": 32253
+     },
+     {
+      "serial": "91-14/09",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 17.7,
+      "mach": 0.47,
+      "weightLb": 29067
+     },
+     {
+      "serial": "91-14/10",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 18.7,
+      "mach": 0.45,
+      "weightLb": 29034
+     },
+     {
+      "serial": "91-14/11",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 19.7,
+      "mach": 0.44,
+      "weightLb": 30031
+     },
+     {
+      "serial": "91-14/12",
+      "flight": "91-14",
+      "group": "III",
+      "alphaDeg": 20.5,
+      "mach": 0.42,
+      "weightLb": 30191
+     },
+     {
+      "serial": "91-15/10",
+      "flight": "91-15",
+      "group": "III",
+      "alphaDeg": 21.9,
+      "mach": 0.4,
+      "weightLb": 28907
+     },
+     {
+      "serial": "91-13/04",
+      "flight": "91-13",
+      "group": "V",
+      "alphaDeg": 8.5,
+      "mach": 0.5,
+      "weightLb": 35670
+     },
+     {
+      "serial": "91-15/09",
+      "flight": "91-15",
+      "group": "V",
+      "alphaDeg": 21.7,
+      "mach": 0.41,
+      "weightLb": 30557
+     }
+    ]
+   }
+  ],
+  "blend": {
+   "onsetDeg": 14,
+   "fullDeg": 21
+  },
+  "heldOut": [
+   {
+    "flight": "91-13",
+    "n": 8,
+    "blend": {
+     "onsetDeg": 16,
+     "fullDeg": 19
+    },
+    "cv": 0.082,
+    "meanWeightLb": 31481
+   },
+   {
+    "flight": "91-14",
+    "n": 6,
+    "blend": {
+     "onsetDeg": 12,
+     "fullDeg": 22
+    },
+    "cv": 0.057,
+    "meanWeightLb": 30754
+   },
+   {
+    "flight": "91-15",
+    "n": 7,
+    "blend": {
+     "onsetDeg": 12,
+     "fullDeg": 21
+    },
+    "cv": 0.05,
+    "meanWeightLb": 31079
+   },
+   {
+    "flight": "91-16",
+    "n": 3,
+    "blend": {
+     "onsetDeg": 14,
+     "fullDeg": 21
+    },
+    "cv": 0.02,
+    "meanWeightLb": 29691
+   },
+   {
+    "flight": "91-17",
+    "n": 3,
+    "blend": {
+     "onsetDeg": 14,
+     "fullDeg": 21
+    },
+    "cv": 0.006,
+    "meanWeightLb": 29837
+   }
+  ],
+  "heldOutCv": 0.058,
+  "curve": [
+   {
+    "alphaDeg": 0,
+    "sharp": 0,
+    "attached": 0,
+    "fitted": 0,
+    "share": 0
+   },
+   {
+    "alphaDeg": 1,
+    "sharp": 0.034,
+    "attached": 0.033,
+    "fitted": 0.033,
+    "share": 0
+   },
+   {
+    "alphaDeg": 2,
+    "sharp": 0.069,
+    "attached": 0.065,
+    "fitted": 0.065,
+    "share": 0
+   },
+   {
+    "alphaDeg": 3,
+    "sharp": 0.106,
+    "attached": 0.098,
+    "fitted": 0.098,
+    "share": 0
+   },
+   {
+    "alphaDeg": 4,
+    "sharp": 0.144,
+    "attached": 0.13,
+    "fitted": 0.13,
+    "share": 0
+   },
+   {
+    "alphaDeg": 5,
+    "sharp": 0.184,
+    "attached": 0.162,
+    "fitted": 0.162,
+    "share": 0
+   },
+   {
+    "alphaDeg": 6,
+    "sharp": 0.225,
+    "attached": 0.194,
+    "fitted": 0.194,
+    "share": 0
+   },
+   {
+    "alphaDeg": 7,
+    "sharp": 0.267,
+    "attached": 0.225,
+    "fitted": 0.225,
+    "share": 0
+   },
+   {
+    "alphaDeg": 8,
+    "sharp": 0.31,
+    "attached": 0.256,
+    "fitted": 0.256,
+    "share": 0
+   },
+   {
+    "alphaDeg": 9,
+    "sharp": 0.354,
+    "attached": 0.286,
+    "fitted": 0.286,
+    "share": 0
+   },
+   {
+    "alphaDeg": 10,
+    "sharp": 0.399,
+    "attached": 0.316,
+    "fitted": 0.316,
+    "share": 0
+   },
+   {
+    "alphaDeg": 11,
+    "sharp": 0.445,
+    "attached": 0.345,
+    "fitted": 0.345,
+    "share": 0
+   },
+   {
+    "alphaDeg": 12,
+    "sharp": 0.492,
+    "attached": 0.373,
+    "fitted": 0.373,
+    "share": 0
+   },
+   {
+    "alphaDeg": 13,
+    "sharp": 0.539,
+    "attached": 0.401,
+    "fitted": 0.401,
+    "share": 0
+   },
+   {
+    "alphaDeg": 14,
+    "sharp": 0.587,
+    "attached": 0.427,
+    "fitted": 0.427,
+    "share": 0
+   },
+   {
+    "alphaDeg": 15,
+    "sharp": 0.602,
+    "attached": 0.453,
+    "fitted": 0.461,
+    "share": 0.055
+   },
+   {
+    "alphaDeg": 16,
+    "sharp": 0.625,
+    "attached": 0.478,
+    "fitted": 0.507,
+    "share": 0.198
+   },
+   {
+    "alphaDeg": 17,
+    "sharp": 0.655,
+    "attached": 0.502,
+    "fitted": 0.562,
+    "share": 0.394
+   },
+   {
+    "alphaDeg": 18,
+    "sharp": 0.683,
+    "attached": 0.524,
+    "fitted": 0.621,
+    "share": 0.606
+   },
+   {
+    "alphaDeg": 19,
+    "sharp": 0.709,
+    "attached": 0.546,
+    "fitted": 0.677,
+    "share": 0.802
+   },
+   {
+    "alphaDeg": 20,
+    "sharp": 0.734,
+    "attached": 0.567,
+    "fitted": 0.725,
+    "share": 0.945
+   },
+   {
+    "alphaDeg": 21,
+    "sharp": 0.757,
+    "attached": 0.586,
+    "fitted": 0.757,
+    "share": 1
+   },
+   {
+    "alphaDeg": 22,
+    "sharp": 0.79,
+    "attached": 0.604,
+    "fitted": 0.79,
+    "share": 1
+   },
+   {
+    "alphaDeg": 23,
+    "sharp": 0.81,
+    "attached": 0.621,
+    "fitted": 0.81,
+    "share": 1
+   },
+   {
+    "alphaDeg": 24,
+    "sharp": 0.829,
+    "attached": 0.637,
+    "fitted": 0.829,
+    "share": 1
+   },
+   {
+    "alphaDeg": 25,
+    "sharp": 0.857,
+    "attached": 0.651,
+    "fitted": 0.857,
+    "share": 1
+   },
+   {
+    "alphaDeg": 26,
+    "sharp": 0.874,
+    "attached": 0.664,
+    "fitted": 0.874,
+    "share": 1
+   }
+  ]
+ },
+ "criteria": {
+  "F1": {
+   "text": "Trim point: fitted model's lift within 5% of the lift the published condition requires",
+   "pass": true,
+   "value": 0.032
+  },
+  "F2": {
+   "text": "Trim point: predicted elevon within 1.0° of the published angle",
+   "pass": true,
+   "value": 0.469
+  },
+  "F3": {
+   "text": "Flight table: held-out spread of implied weight within a flight at most 5%",
+   "pass": false,
+   "value": 0.058
+  },
+  "F4": {
+   "text": "Flight table: mean implied weight between 27,400 lb (NASA's simulation weight) and 38,360 lb",
+   "pass": true,
+   "value": 30545
+  }
+ },
+ "limits": [
+  "The flight weight of each run is not published: the flight table tests the shape of the lift curve and gives only a plausibility check on its level.",
+  "Fuel burned between runs of one flight lowers the true weight by an unknown amount, which the within-flight spread includes.",
+  "The trim point is NASA's simulation model (from 0.15-scale wind-tunnel tests), gear down and speed brakes out; density is assumed sea-level standard.",
+  "The centre of gravity in flight is taken as the 28% of the simulation report.",
+  "No fuselage, fin, camber or compressibility in the model."
+ ]
+}

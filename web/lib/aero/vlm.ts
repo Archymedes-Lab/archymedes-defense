@@ -132,6 +132,43 @@ export function solveDense(A: Float64Array, rhs: Float64Array, n: number): Float
   return x;
 }
 
+/** Symmetric influence matrix: downwash at each control point from each right-half horseshoe and its mirror image. */
+function influence(panels: readonly Panel[]): Float64Array {
+  const n = panels.length, A = new Float64Array(n * n);
+  for (let r = 0; r < n; r++) {
+    const pr = panels[r];
+    if (pr === undefined) continue;
+    for (let c = 0; c < n; c++) {
+      const pc = panels[c];
+      if (pc === undefined) continue;
+      A[r * n + c] = horseshoeW(pr.cp.x, pr.cp.y, pc.a, pc.b) + horseshoeW(pr.cp.x, pr.cp.y, { x: pc.b.x, y: -pc.b.y }, { x: pc.a.x, y: -pc.a.y });
+    }
+  }
+  return A;
+}
+
+export interface IncidenceLoad {
+  /** Lift coefficient per unit sine of the incidence applied (on the reference area). */
+  readonly k: number;
+  /** x of the centre of pressure of that load. */
+  readonly xCp: number;
+}
+
+/**
+ * Potential-flow load from a local incidence distribution on an already solved lattice: `share(panel)` is the part of
+ * a unit incidence each panel sees (1 everywhere reproduces Kp; 1 aft of a hinge line and 0 ahead of it is a
+ * trailing-edge control deflected trailing edge down). Linear, so loads superpose with the angle-of-attack load.
+ */
+export function incidenceLoad(v: VlmResult, share: (panel: Panel) => number): IncidenceLoad {
+  const n = v.panels.length;
+  const rhs = new Float64Array(n);
+  v.panels.forEach((pn, k) => { rhs[k] = -share(pn); });
+  const g = solveDense(influence(v.panels), rhs, n);
+  let lift = 0, moment = 0;
+  v.panels.forEach((pn, k) => { const dl = (g[k] ?? 0) * (pn.b.y - pn.a.y); lift += dl; moment += dl * 0.5 * (pn.a.x + pn.b.x); });
+  return { k: (4 * lift) / v.props.sRef, xCp: Math.abs(lift) > 1e-14 ? moment / lift : 0 };
+}
+
 export function solveVlm(p: Planform, mesh: Mesh = DEFAULT_MESH): VlmResult {
   if (!(Number.isInteger(mesh.nSpan) && Number.isInteger(mesh.nChord) && mesh.nSpan >= 4 && mesh.nChord >= 2 && mesh.nSpan * mesh.nChord <= 2400)) {
     throw new Error("mesh must have 4 ≤ nSpan, 2 ≤ nChord and at most 2400 panels per half");
@@ -156,19 +193,7 @@ export function solveVlm(p: Planform, mesh: Mesh = DEFAULT_MESH): VlmResult {
     }
   }
   const n = panels.length;
-  const A = new Float64Array(n * n), rhs = new Float64Array(n);
-  for (let r = 0; r < n; r++) {
-    const pr = panels[r];
-    if (pr === undefined) continue;
-    for (let c = 0; c < n; c++) {
-      const pc = panels[c];
-      if (pc === undefined) continue;
-      // Right-half horseshoe plus its mirror image (left half, same circulation sense).
-      const w = horseshoeW(pr.cp.x, pr.cp.y, pc.a, pc.b) + horseshoeW(pr.cp.x, pr.cp.y, { x: pc.b.x, y: -pc.b.y }, { x: pc.a.x, y: -pc.a.y });
-      A[r * n + c] = w;
-    }
-    rhs[r] = -1; // flow tangency: w_induced + U sin α = 0 with U sin α = 1
-  }
+  const A = influence(panels), rhs = new Float64Array(n).fill(-1); // flow tangency: w_induced + U sin α = 0, U sin α = 1
   const gamma = Array.from(solveDense(A, rhs, n));
 
   // Lift (Kutta-Joukowski on bound vortices): CL = 2 Σ_half Γ Δy · 2 / S for unit U, sin α.

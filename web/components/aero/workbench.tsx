@@ -4,10 +4,10 @@ import { useMemo, useState } from "react";
 import { Legend, Panel } from "@/components/ui/primitives";
 import { Segmented } from "@/components/ui/segmented";
 import type { Bands } from "@/lib/aero/error-model";
-import { type Planform, deltaWing } from "@/lib/aero/geometry";
-import { harvPlanform } from "@/lib/aero/harv";
+import { AIRCRAFT, aircraftById } from "@/lib/aero/aircraft";
 import { alphaSweep, analyse } from "@/lib/aero/predict";
-import { deg } from "@/lib/aero/units";
+import { type EdgeBlend, trimModel, trimmedLiftBlend } from "@/lib/aero/trim";
+import { deg, toDeg, toRad } from "@/lib/aero/units";
 import { type DataPoint, LiftChart, REGIME_LEGEND } from "./chart";
 import { WingDrawing } from "./drawing";
 import { HarvDrawing } from "./harv-drawing";
@@ -15,20 +15,11 @@ import { HarvDrawing } from "./harv-drawing";
 const HarvScene = dynamic(() => import("@/components/three/harv").then((m) => m.HarvScene), { ssr: false, loading: () => <div className="aspect-[4/3] w-full animate-pulse bg-surface sm:aspect-[16/10]" /> });
 const WingScene = dynamic(() => import("@/components/three/wing").then((m) => m.WingScene), { ssr: false, loading: () => <div className="aspect-[4/3] w-full animate-pulse bg-surface sm:aspect-[16/10]" /> });
 
-export type PresetId = "harv" | "d60" | "d65" | "d70" | "d75" | "d80" | "custom";
+export type PresetId = "harv" | "f16xl" | "f106b";
 export interface CaseView { id: string; label: string; source: string; points: DataPoint[]; coverage: number | null; rmsAttached: number | null; note: string }
 
-const PRESETS: { value: PresetId; label: string; caseId?: string }[] = [
-  { value: "harv", label: "F/A-18 HARV", caseId: "fa18-hatp" },
-  { value: "d60", label: "60°", caseId: "wk-60" }, { value: "d65", label: "65°", caseId: "wk-65" }, { value: "d70", label: "70°", caseId: "wk-70" },
-  { value: "d75", label: "75°", caseId: "wk-75" }, { value: "d80", label: "80°", caseId: "wk-80" }, { value: "custom", label: "Custom" },
-];
-
-function planformFor(p: PresetId, sweep: number): Planform {
-  if (p === "harv") return harvPlanform();
-  const s = p === "custom" ? sweep : Number(p.slice(1));
-  return { ...deltaWing(deg(s)), name: `${s}° delta` };
-}
+/** Real aircraft only (lib/aero/aircraft.ts): every one a NASA research aircraft with published geometry. */
+const PRESETS: { value: PresetId; label: string }[] = AIRCRAFT.map((a) => ({ value: a.id as PresetId, label: a.name }));
 
 function Readout({ label, value, hint, tone }: { label: string; value: string; hint?: string; tone?: "accent" | "warning" }) {
   return (
@@ -40,38 +31,54 @@ function Readout({ label, value, hint, tone }: { label: string; value: string; h
   );
 }
 
-export function AeroWorkbench({ bands, retained, cases, date }: { bands: Bands; retained: number; cases: Record<string, CaseView>; date: string }) {
+export function AeroWorkbench({ bands, retained, cases, date, flightBlend }: { bands: Bands; retained: number; cases: Record<string, CaseView>; date: string; flightBlend: Record<string, EdgeBlend> }) {
   const [preset, setPreset] = useState<PresetId>("harv");
-  const [sweep, setSweep] = useState(68);
   const [alpha, setAlpha] = useState(30);
   const [lattice, setLattice] = useState<"shown" | "hidden">("shown");
   const fighter = preset === "harv";
   const alphaMax = fighter ? 70 : 50;
   const a = Math.min(alpha, alphaMax);
-  const planform = useMemo(() => planformFor(preset, sweep), [preset, sweep]);
+  const aircraft = aircraftById(preset) ?? AIRCRAFT[0];
+  const planform = useMemo(() => (aircraftById(preset) ?? AIRCRAFT[0])?.planform() ?? { name: "", stations: [] }, [preset]);
   const analysis = useMemo(() => analyse(planform, { alphas: alphaSweep(deg(0), deg(alphaMax), deg(1)), bands, retained }), [planform, alphaMax, bands, retained]);
   const at = useMemo(() => analyse(planform, { alphas: [deg(a)], bands, retained }).points[0], [planform, a, bands, retained]);
-  const caseId = PRESETS.find((p) => p.value === preset)?.caseId;
-  const view = caseId ? cases[caseId] : undefined;
-  const unit = fighter ? "ft" : "c₀";
-  if (!at) return null;
+  const view = aircraft?.dataCaseId ? cases[aircraft.dataCaseId] : undefined;
+  // Aircraft with an elevon and a flight-fitted leading edge: lift trimmed for zero pitching moment, as it flies.
+  const trimmed = useMemo(() => {
+    const blend = aircraft ? flightBlend[aircraft.id] : undefined;
+    if (!aircraft?.elevon || !blend) return null;
+    const t = trimmedLiftBlend(analysis.vlm, analysis.vortex, trimModel(analysis.vlm, aircraft), toRad(deg(a)), blend);
+    return { cl: t.cl, elevonDeg: toDeg(t.elevon), share: t.share };
+  }, [aircraft, flightBlend, analysis, a]);
+  const unit = "ft";
+  if (!at || !aircraft) return null;
   const burstPct = at.burstXi >= 0 ? `${Math.round(at.burstXi * 100)}% of c₀ from TE` : "aft of the wing";
   return (
     <div className="grid gap-6">
       <div className="flex flex-wrap items-end gap-x-6 gap-y-4">
-        <div className="grid gap-1.5"><span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-fg-2">Planform</span>
-          <div className="max-w-full overflow-x-auto"><Segmented label="Planform" value={preset} options={PRESETS} onChange={setPreset} /></div></div>
-        {preset === "custom" && (
-          <label className="grid min-w-[220px] gap-1.5 font-mono text-[10.5px] uppercase tracking-[0.12em] text-fg-2">
-            <span className="flex justify-between">Leading-edge sweep<span className="num normal-case tracking-normal text-fg">{sweep}°</span></span>
-            <input type="range" min={45} max={85} step={1} value={sweep} onChange={(e) => setSweep(Number(e.target.value))} className="accent-[var(--accent)]" />
-          </label>
-        )}
+        <div className="grid gap-1.5"><span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-fg-2">Aircraft</span>
+          <div className="max-w-full overflow-x-auto"><Segmented label="Aircraft" value={preset} options={PRESETS} onChange={setPreset} /></div></div>
         <label className="grid min-w-[240px] flex-1 gap-1.5 font-mono text-[10.5px] uppercase tracking-[0.12em] text-fg-2">
           <span className="flex justify-between">Angle of attack<span className="num normal-case tracking-normal text-fg">{a}°</span></span>
           <input type="range" min={0} max={alphaMax} step={1} value={a} onChange={(e) => setAlpha(Number(e.target.value))} className="accent-[var(--accent)]" />
         </label>
       </div>
+
+      <Panel className="grid gap-3 p-4 sm:p-5">
+        <div className="flex flex-wrap items-baseline justify-between gap-2"><div className="eyebrow">{aircraft.airframe}</div><span className="font-mono text-[11px] text-fg-3">{aircraft.programme}</span></div>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-[13px] sm:grid-cols-3 lg:grid-cols-4">
+          {Object.entries(aircraft.published).map(([k, v]) => (
+            <div key={k} className="flex items-baseline justify-between gap-2 border-b border-line/60 pb-1">
+              <span className="text-fg-2">{k.replace(/(Ft2|Ft|Deg|Lb|In|Pct|SlugFt2)$/, "").replace(/([A-Z])/g, " $1").toLowerCase()}</span>
+              <span className="num font-mono">{v.value.toLocaleString("en", { maximumFractionDigits: 3 })}{v.unit === "°" || v.unit === "%" ? v.unit : v.unit ? ` ${v.unit}` : ""}</span>
+            </div>
+          ))}
+        </div>
+        <div className="text-[12.5px] text-fg-3">Published values, read from: {aircraft.sources.map((src, i) => (
+          <span key={src.report}>{i > 0 ? "; " : ""}<a className="link" href={src.url} target="_blank" rel="noopener noreferrer">{src.report}</a> ({src.where})</span>
+        ))}.{aircraft.traced.length > 0 && <> Traced from a drawing, not a table: {aircraft.traced.map((t) => `${t.what}${t.value ? ` ${t.value} ${t.unit}` : ""} (±${t.tolerance} ${t.unit})`).join("; ")}.</>}</div>
+        <ul className="list-disc pl-5 text-[12.5px] text-fg-2">{aircraft.caveats.map((c) => <li key={c}>{c}</li>)}</ul>
+      </Panel>
 
       {!analysis.domain.ok && (
         <div className="border border-warning/50 bg-warning/5 px-4 py-3 text-[13.5px] text-fg-2">
@@ -96,7 +103,8 @@ export function AeroWorkbench({ bands, retained, cases, date }: { bands: Bands; 
         <Panel className="grid content-start gap-5 p-4 sm:p-5">
           <div className="eyebrow">At α = {a}°</div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-5">
-            <Readout label="Lift coefficient" value={at.cl.toFixed(3)} hint={`band ${at.lo.toFixed(2)} to ${at.hi.toFixed(2)}`} tone="accent" />
+            <Readout label={trimmed ? "Lift, sharp flat plate" : "Lift coefficient"} value={at.cl.toFixed(3)} hint={`band ${at.lo.toFixed(2)} to ${at.hi.toFixed(2)}`} tone={trimmed ? undefined : "accent"} />
+            {trimmed && <Readout label="Lift as flown (trimmed)" value={trimmed.cl.toFixed(3)} hint={`elevon ${trimmed.elevonDeg.toFixed(1)}° · vortex ${Math.round(trimmed.share * 100)}% formed · ${a >= 8.5 && a <= 22.5 ? "inside the flight data (8.5–22.5°)" : "beyond the flight data (8.5–22.5°): extrapolated"}`} tone={a >= 8.5 && a <= 22.5 ? "accent" : "warning"} />}
             <Readout label="Flow regime" value={at.regime} hint={`vortex lift lost ${Math.round(at.lost * 100)}%`} tone={at.regime === "attached" ? undefined : "warning"} />
             <Readout label="Vortex burst" value={at.burstXi >= 0 ? `${Math.round(at.burstXi * 100)}%` : "—"} hint={burstPct} />
             <Readout label="Pitching moment" value={at.cm.toFixed(3)} hint="about 0.25 MAC" />
@@ -117,7 +125,7 @@ export function AeroWorkbench({ bands, retained, cases, date }: { bands: Bands; 
           {!fighter && <Segmented label="Lattice" value={lattice} options={[{ value: "shown", label: "Lattice on" }, { value: "hidden", label: "Lattice off" }]} onChange={setLattice} />}</div>
         <div className="overflow-x-auto"><div className="min-w-[640px]">
           {fighter ? <HarvDrawing at={at} burstXi={at.burstXi} date={date} /> : <WingDrawing s={{
-            designation: `AD-AERO-${preset === "custom" ? `D${sweep}` : `D${preset.slice(1)}`}`, planform, props: analysis.vlm.props,
+            designation: `AD-AERO-${aircraft.name.replace(/[^A-Z0-9]/gi, "").toUpperCase()}`, planform, props: analysis.vlm.props,
             panels: lattice === "shown" ? analysis.vlm.panels : [], at, kp: analysis.vortex.kp, kv: analysis.vortex.kv, unit, date, burstXi: at.burstXi, domainOk: analysis.domain.ok,
           }} />}
         </div></div>
@@ -133,7 +141,7 @@ export function AeroWorkbench({ bands, retained, cases, date }: { bands: Bands; 
         )}
         <p className="text-[12.5px] text-fg-3">{fighter
           ? "Built from NASA's published dimensions and the traced NASA three-view: lofted fuselage, canopy, NACA-section wing with 4.3° anhedral, LEX, all-moving stabilators, twin tails canted 20°, wingtip research pods. LEX vortex cores are illustrative; the burst point is the model's."
-          : "Panel colour: vortex-lattice loading (Γ per panel chord). Vortex cores are placed at measured delta-wing positions (≈ 60% of the local semispan) for illustration; the burst point is the model's."}</p>
+          : "Wing planform from NASA's published dimensions (the fuselage and tails of this aircraft are not modelled in 3D). Panel colour: vortex-lattice loading (Γ per panel chord). Vortex cores are placed at measured delta-wing positions (≈ 60% of the local semispan) for illustration; the burst point is the model's."}</p>
       </Panel>
     </div>
   );

@@ -146,3 +146,31 @@ Owner request: a better fighter model, with proper geometric practice. `lib/aero
   flipped face, inside-out solid).
 - Viewer: crease-angle normals (35°) keep curved skin smooth and trailing edges, caps and corners sharp; the floor
   grid moved below the tail at high angle of attack (it used to cut through the stabilator and fins).
+
+## Real aircraft only, flight validation, and a standing value review (2026-11-23, late)
+
+Owner requests: only real fighter models; accuracy against real, tangible results; review continuously whether the
+work is valuable (ORION, aftermath, moat score) and say why in the interface.
+
+- **Real aircraft only** (`lib/aero/aircraft.ts`): F/A-18 HARV, F-16XL-1 (NASA TP-2001-210629, Table 3 and Fig. 2)
+  and F-106B (NASA TP-3374; TP-2747). Every published number names its report; planforms are built from those
+  numbers. The generic delta presets and the custom slider left the workbench; the NASA wind-tunnel wings remain
+  only as the validation corpus. F-106B's published area, chord and aspect ratio follow from its triangle within
+  0.1%; the straight-edged F-16XL planform is 5% larger than the published wing area (stated).
+- **Elevon and trim** (`vlm.incidenceLoad`, `lib/aero/trim.ts`): control-surface lift and centre of pressure from
+  the same lattice; trim for zero pitching moment; a rounded-edge blend between attached flow and full vortex lift.
+- **Flight validation** (`scripts/validate_flight.ts`, `lib/data/aero-flight.json`), F-106B:
+  - NASA trim point (TP-2747 Table III; lift required 0.342 at α 11.3°): bare sharp-edge wing +63%; with the
+    published elevon, sharp edge +40%, attached edge +6%; fitted rounded edge, trimmed by the model, **+3%**, elevon
+    predicted −4.60° against −4.13° published. The trim point is never used in the fit.
+  - NASA flight table (TP-3374 Table I, 27 subsonic points, five flights; weight not published): within-flight spread
+    of implied weight 11% (sharp), 11% (attached), **4%** with vortex onset 14°, full by 21°; leave-one-flight-out
+    **5.8%** (criterion 5%: missed, shown). Mean implied weight 30,545 lb.
+  - Criteria: F1 met, F2 met, F3 missed, F4 met. The seven Mach 0.67–0.81 points are excluded (no compressibility).
+- **Value review** (`plans/20261120-aero/value_review.ts` → `web/lib/data/aero-value.json`, shown on /aero):
+  Compass judge (moat = defensibility, quality, impact), ORION ranking, ORION aftermath; verdict by a fixed rule
+  (useful ≥ 2, moat ≥ 2, proven). Result: 0 valuable, 3 useful but easy to copy (flight validation first, real-aircraft
+  registry, error bands), 4 low value (unsteady lift, next-data, solid geometry, flight path), 1 rejected on evidence.
+  A test fails if any module in `lib/aero` is not covered by a reviewed item, so the review must be rerun with new work.
+  Reading: the solver is a commodity; what could become a moat is the validation record against real aircraft. The
+  next work should add measured data for all three aircraft, not more model features.
