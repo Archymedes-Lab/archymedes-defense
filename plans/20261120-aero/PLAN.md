@@ -174,3 +174,22 @@ work is valuable (ORION, aftermath, moat score) and say why in the interface.
   A test fails if any module in `lib/aero` is not covered by a reviewed item, so the review must be rerun with new work.
   Reading: the solver is a commodity; what could become a moat is the validation record against real aircraft. The
   next work should add measured data for all three aircraft, not more model features.
+
+## One criterion: high value only (owner, 2026-11-23, night)
+
+The value review now has a single rule: an item is high value when its impact score is at least 2.5 of 4. Each item
+is judged three times and averaged (scores repeat within ±0.04). Work a high-value item cannot run without is kept
+as a prerequisite; everything else is cut from the page (code stays in the repository).
+
+- High value: measured lift curves for all three aircraft (2.53; a next step, not built).
+- Kept as prerequisites: F-106B flight validation (2.44), error-band engine (2.29), real-aircraft registry (2.06).
+- Cut: validation report (2.37 once built and judged on its real evidence; 2.51 as a promise), unsteady lift (1.56),
+  solid HARV geometry (1.39), HARV flight path (0.99). Their sections left /aero; the workbench shows every aircraft as
+  its published planform.
+- Rejected on evidence: gradual breakdown model.
+- Candidates below the bar: compressibility and the faster F-106B runs (1.67), F-16XL-1 flight comparison (1.75),
+  identifying the unsteady time constant (1.72).
+
+The validation report (`web/scripts/make_aero_report.ts` → `reports/aero-validation-report.md`, v1.0) was built
+because it ranked first as a candidate; it is kept in the repository and tested against the data digests, but is not
+linked from the page.

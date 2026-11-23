@@ -1,24 +1,130 @@
 {
- "generated": "2026-11-23T20:13:28.701Z",
+ "generated": "2026-11-23T20:28:58.609Z",
  "model": "jev-1.14.0",
- "engine": "Compass judge (moat, quality and ORION's seven dimensions; Jev beliefs over described situations) · ORION prioritisation (Borda over RICE, ICE, WSJF, leverage, Eisenhower) · ORION aftermath",
+ "engine": "Compass judge (impact, moat, quality and ORION's dimensions; Jev beliefs over described situations) · ORION prioritisation (Borda over RICE, ICE, WSJF, leverage, Eisenhower) · ORION aftermath",
  "criteria": {
-  "usefulMin": 2,
-  "moatMin": 2,
-  "useful": "Useful: Jev's impact score is at least 2 of 4 (\"noticeably\" moves the goal).",
-  "moat": "Defensible: Jev's moat score is at least 2 of 4 (leaves something a competitor would need months to rebuild).",
-  "proven": "Proven: the repository holds tests for it, or it is validated against published data.",
-  "verdicts": "valuable = useful, defensible and proven · useful, easy to copy = useful and proven but not defensible · promising, unproven = useful, no evidence yet · low value = not useful · rejected on evidence = tried and measured worse or unidentified."
+  "highValueMin": 2.5,
+  "rule": "High value: impact score at least 2.5 of 4 (halfway from \"noticeably\" to \"substantially\" moves the most important goal).",
+  "verdicts": "high value = meets the rule · kept as a prerequisite = below the rule, but a high-value item cannot run without it · cut = below the rule and nothing high-value needs it · rejected on evidence = tried and measured worse or unidentified."
  },
- "agreement": 0.77,
- "evidenceDigest": "0328a9f55a615b3e",
- "note": "The scores are a model's judgment of the descriptions and evidence shown here; the verdict is the fixed rule applied to them. The context told the judge that the code is open source and easy to copy.",
+ "repeats": 3,
+ "agreement": 0.93,
+ "agreementCandidates": 1,
+ "evidenceDigest": "4d69e7c526de2b3b",
+ "note": "The scores are a model's judgment of the descriptions and evidence shown here; the verdict is the fixed rule applied to them.",
  "items": [
+  {
+   "id": "report",
+   "title": "A citable validation report",
+   "detail": "One generated document with every comparison against published NASA data, when each criterion was written, the hits and the misses, the data-file digests and a version number, so an engineer can cite which estimates to trust and by how much.",
+   "status": "done",
+   "requires": [
+    "flightval",
+    "bands"
+   ],
+   "files": [],
+   "evidence": {
+    "tests": 3,
+    "validated": true,
+    "line": "Version 1.0 generated from the result files: 5 of 8 criteria met, the three misses listed; a test fails if the report does not match the current data."
+   },
+   "levels": {
+    "impact": 2.37,
+    "defensibility": 1.78,
+    "quality": 3.37,
+    "confidence": 2.21,
+    "effort": 1.95,
+    "leverage": 2.83,
+    "urgency": 1.95,
+    "reach": 1.73,
+    "reversibility": 2.37
+   },
+   "orion": {
+    "rank": 1,
+    "pFirst": 0.33,
+    "eisenhower": "schedule",
+    "effortMatrix": "quick_win",
+    "door": "one_way"
+   },
+   "verdict": "cut",
+   "impactRange": [
+    2.35,
+    2.41
+   ],
+   "borderline": false,
+   "neededBy": [],
+   "why": {
+    "useful": "Impact 2.4 of 4, nearest to: \"Noticeably\".",
+    "moat": "Moat 1.8 of 4, nearest to: \"It leaves something a competitor would need months to rebuild, such as our own code, a signed release or a working process\".",
+    "quality": "Quality 3.4 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "evidence": "Version 1.0 generated from the result files: 5 of 8 criteria met, the three misses listed; a test fails if the report does not match the current data."
+   },
+   "aftermath": [
+    {
+     "days": 7,
+     "when": "First week",
+     "value": -0.1,
+     "well": 0.15,
+     "mixed": 0.65,
+     "hard": 0.2,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 30,
+     "when": "One month",
+     "value": 0.09,
+     "well": 0.25,
+     "mixed": 0.55,
+     "hard": 0.2,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
+    },
+    {
+     "days": 90,
+     "when": "Three months",
+     "value": 0.55,
+     "well": 0.4,
+     "mixed": 0.4,
+     "hard": 0.2,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 180,
+     "when": "Six months",
+     "value": 0.9,
+     "well": 0.5,
+     "mixed": 0.35,
+     "hard": 0.15,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
+    },
+    {
+     "days": 365,
+     "when": "One year",
+     "value": 1.11,
+     "well": 0.5,
+     "mixed": 0.35,
+     "hard": 0.15,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
+    },
+    {
+     "days": 1095,
+     "when": "Three years",
+     "value": 1.04,
+     "well": 0.5,
+     "mixed": 0.3,
+     "hard": 0.2,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
+    }
+   ]
+  },
   {
    "id": "flightval",
    "title": "Checked against real F-106B flight and trim data",
    "detail": "Elevon lift and trim from the same lattice, a rounded-leading-edge blend, and a comparison with NASA's published F-106B trim table (absolute) and 27 flight points (shape), scored leave-one-flight-out.",
    "status": "done",
+   "requires": [
+    "bands",
+    "aircraft"
+   ],
    "files": [
     "lib/aero/trim.ts",
     "lib/aero/flightdata.ts"
@@ -29,35 +135,43 @@
     "line": "Lift error at NASA's trim point 63% before, 3% after; elevon within 0.469°; held-out weight spread 6% (target 5%)."
    },
    "levels": {
-    "impact": 2.58,
-    "defensibility": 1.75,
-    "quality": 3.51,
-    "confidence": 2.54,
-    "effort": 2.8,
-    "leverage": 2.86,
-    "urgency": 1.73,
-    "reach": 1.3,
-    "reversibility": 2.38
+    "impact": 2.44,
+    "defensibility": 1.77,
+    "quality": 3.49,
+    "confidence": 2.5,
+    "effort": 2.79,
+    "leverage": 2.74,
+    "urgency": 1.58,
+    "reach": 1.26,
+    "reversibility": 2.48
    },
    "orion": {
-    "rank": 1,
-    "pFirst": 0.23,
+    "rank": 2,
+    "pFirst": 0.15,
     "eisenhower": "schedule",
     "effortMatrix": "quick_win",
     "door": "two_way"
    },
-   "verdict": "useful, easy to copy",
+   "verdict": "kept as a prerequisite",
+   "impactRange": [
+    2.42,
+    2.46
+   ],
+   "borderline": false,
+   "neededBy": [
+    "next-curves"
+   ],
    "why": {
-    "useful": "Impact 2.6 of 4, nearest to: \"Substantially\".",
+    "useful": "Impact 2.4 of 4, nearest to: \"Noticeably\".",
     "moat": "Moat 1.8 of 4, nearest to: \"It leaves something a competitor would need months to rebuild, such as our own code, a signed release or a working process\".",
-    "quality": "Quality 3.5 of 4, nearest to: \"It sets a standard customers and investors would cite as a reason to trust Archymedes\".",
+    "quality": "Quality 3.5 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
     "evidence": "Lift error at NASA's trim point 63% before, 3% after; elevon within 0.469°; held-out weight spread 6% (target 5%)."
    },
    "aftermath": [
     {
      "days": 7,
      "when": "First week",
-     "value": -0.2,
+     "value": -0.25,
      "well": 0.1,
      "mixed": 0.7,
      "hard": 0.2,
@@ -66,7 +180,7 @@
     {
      "days": 30,
      "when": "One month",
-     "value": 0.04,
+     "value": -0.04,
      "well": 0.2,
      "mixed": 0.6,
      "hard": 0.2,
@@ -75,7 +189,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": 0.66,
+     "value": 0.54,
      "well": 0.4,
      "mixed": 0.45,
      "hard": 0.15,
@@ -84,203 +198,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": 1.16,
-     "well": 0.55,
-     "mixed": 0.3,
-     "hard": 0.15,
-     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
-    },
-    {
-     "days": 365,
-     "when": "One year",
-     "value": 1.49,
-     "well": 0.55,
-     "mixed": 0.3,
-     "hard": 0.15,
-     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
-    },
-    {
-     "days": 1095,
-     "when": "Three years",
-     "value": 1.44,
-     "well": 0.55,
-     "mixed": 0.3,
-     "hard": 0.15,
-     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
-    }
-   ]
-  },
-  {
-   "id": "aircraft",
-   "title": "Real aircraft only, each tied to its NASA report",
-   "detail": "F/A-18 HARV, F-16XL-1 and F-106B: every dimension names the NASA table or figure it was read from; planforms are built from those numbers; no invented layouts.",
-   "status": "done",
-   "files": [
-    "lib/aero/aircraft.ts"
-   ],
-   "evidence": {
-    "tests": 18,
-    "validated": true,
-    "line": "F-106B's published area, chord and aspect ratio are reproduced from its triangle within 0.1%; the F-16XL planform is 5% larger than the published wing area, and says so."
-   },
-   "levels": {
-    "impact": 2.04,
-    "defensibility": 1.17,
-    "quality": 3.09,
-    "confidence": 2.26,
-    "effort": 2.37,
-    "leverage": 2.72,
-    "urgency": 1.57,
-    "reach": 1.65,
-    "reversibility": 2.29
-   },
-   "orion": {
-    "rank": 2,
-    "pFirst": 0.2,
-    "eisenhower": "schedule",
-    "effortMatrix": "big_bet",
-    "door": "two_way"
-   },
-   "verdict": "useful, easy to copy",
-   "why": {
-    "useful": "Impact 2.0 of 4, nearest to: \"Noticeably\".",
-    "moat": "Moat 1.2 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 3.1 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
-    "evidence": "F-106B's published area, chord and aspect ratio are reproduced from its triangle within 0.1%; the F-16XL planform is 5% larger than the published wing area, and says so."
-   },
-   "aftermath": [
-    {
-     "days": 7,
-     "when": "First week",
-     "value": -0.63,
-     "well": 0.05,
-     "mixed": 0.6,
-     "hard": 0.35,
-     "sign": "Does effort and time spent still feel like a strain?"
-    },
-    {
-     "days": 30,
-     "when": "One month",
-     "value": -0.59,
-     "well": 0.1,
-     "mixed": 0.5,
-     "hard": 0.4,
-     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
-    },
-    {
-     "days": 90,
-     "when": "Three months",
-     "value": -0.4,
-     "well": 0.2,
-     "mixed": 0.45,
-     "hard": 0.35,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
-    },
-    {
-     "days": 180,
-     "when": "Six months",
-     "value": -0.31,
-     "well": 0.3,
-     "mixed": 0.4,
-     "hard": 0.3,
-     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
-    },
-    {
-     "days": 365,
-     "when": "One year",
-     "value": -0.36,
-     "well": 0.3,
-     "mixed": 0.4,
-     "hard": 0.3,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
-    },
-    {
-     "days": 1095,
-     "when": "Three years",
-     "value": -0.57,
-     "well": 0.35000000000000003,
-     "mixed": 0.35000000000000003,
-     "hard": 0.30000000000000004,
-     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
-    }
-   ]
-  },
-  {
-   "id": "bands",
-   "title": "Lift estimates with measured error bands",
-   "detail": "Vortex lattice plus the Polhamus suction analogy and a vortex-breakdown limit, with a band beside every estimate measured by leave-one-wing-out on 200 digitized NASA points. Misses are published.",
-   "status": "done",
-   "files": [
-    "lib/aero/vlm.ts",
-    "lib/aero/vortex.ts",
-    "lib/aero/geometry.ts",
-    "lib/aero/units.ts",
-    "lib/aero/units.typecheck.ts",
-    "lib/aero/error-model.ts",
-    "lib/aero/predict.ts"
-   ],
-   "evidence": {
-    "tests": 42,
-    "validated": true,
-    "line": "Held-out band coverage 90% on 9 wings; 2 of 4 pre-registered criteria met, the misses shown."
-   },
-   "levels": {
-    "impact": 2.36,
-    "defensibility": 1.98,
-    "quality": 3.39,
-    "confidence": 2.18,
-    "effort": 3.17,
-    "leverage": 2.55,
-    "urgency": 1.79,
-    "reach": 1.39,
-    "reversibility": 2.21
-   },
-   "orion": {
-    "rank": 3,
-    "pFirst": 0.12,
-    "eisenhower": "schedule",
-    "effortMatrix": "big_bet",
-    "door": "two_way"
-   },
-   "verdict": "useful, easy to copy",
-   "why": {
-    "useful": "Impact 2.4 of 4, nearest to: \"Noticeably\".",
-    "moat": "Moat 2.0 of 4, nearest to: \"It leaves something a competitor would need months to rebuild, such as our own code, a signed release or a working process\".",
-    "quality": "Quality 3.4 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
-    "evidence": "Held-out band coverage 90% on 9 wings; 2 of 4 pre-registered criteria met, the misses shown."
-   },
-   "aftermath": [
-    {
-     "days": 7,
-     "when": "First week",
-     "value": -0.32,
-     "well": 0.1,
-     "mixed": 0.65,
-     "hard": 0.25,
-     "sign": "Does effort and time spent still feel like a strain?"
-    },
-    {
-     "days": 30,
-     "when": "One month",
-     "value": -0.1,
-     "well": 0.2,
-     "mixed": 0.55,
-     "hard": 0.25,
-     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
-    },
-    {
-     "days": 90,
-     "when": "Three months",
-     "value": 0.5,
-     "well": 0.4,
-     "mixed": 0.4,
-     "hard": 0.2,
-     "sign": "Does effort and time spent still feel like a strain?"
-    },
-    {
-     "days": 180,
-     "when": "Six months",
-     "value": 0.97,
+     "value": 1,
      "well": 0.5,
      "mixed": 0.35,
      "hard": 0.15,
@@ -298,7 +216,7 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": 1.29,
+     "value": 1.25,
      "well": 0.55,
      "mixed": 0.3,
      "hard": 0.15,
@@ -307,190 +225,221 @@
    ]
   },
   {
-   "id": "unsteady",
-   "title": "Lift that lags in pitching motion",
-   "detail": "One state for the share of vortex lift present, relaxing with a time constant of the order reported for delta wings; exact stepping; reduces to the static polar.",
+   "id": "aircraft",
+   "title": "Real aircraft only, each tied to its NASA report",
+   "detail": "F/A-18 HARV, F-16XL-1 and F-106B: every dimension names the NASA table or figure it was read from; planforms are built from those numbers; no invented layouts.",
    "status": "done",
+   "requires": [
+    "bands"
+   ],
    "files": [
-    "lib/aero/unsteady.ts"
+    "lib/aero/aircraft.ts"
    ],
    "evidence": {
-    "tests": 10,
-    "validated": false,
-    "line": "Reproduces the published linear frequency response to 3 decimals; the time constant is the reported order of magnitude, not identified for these aircraft."
+    "tests": 21,
+    "validated": true,
+    "line": "F-106B's published area, chord and aspect ratio are reproduced from its triangle within 0.1%; the F-16XL planform is 5% larger than the published wing area, and says so."
    },
    "levels": {
-    "impact": 1.59,
-    "defensibility": 1.13,
-    "quality": 2.14,
-    "confidence": 1.79,
-    "effort": 2.25,
-    "leverage": 1.73,
-    "urgency": 1.32,
-    "reach": 0.93,
-    "reversibility": 2.69
+    "impact": 2.06,
+    "defensibility": 1.18,
+    "quality": 3.07,
+    "confidence": 2.26,
+    "effort": 2.3,
+    "leverage": 2.68,
+    "urgency": 1.46,
+    "reach": 1.72,
+    "reversibility": 2.34
    },
    "orion": {
-    "rank": 4,
-    "pFirst": 0.15,
+    "rank": 3,
+    "pFirst": 0.12,
     "eisenhower": "drop",
     "effortMatrix": "fill_in",
     "door": "two_way"
    },
-   "verdict": "low value",
+   "verdict": "kept as a prerequisite",
+   "impactRange": [
+    2.03,
+    2.08
+   ],
+   "borderline": false,
+   "neededBy": [
+    "flightval",
+    "next-curves"
+   ],
    "why": {
-    "useful": "Impact 1.6 of 4, nearest to: \"Noticeably\".",
-    "moat": "Moat 1.1 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 2.1 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
-    "evidence": "Reproduces the published linear frequency response to 3 decimals; the time constant is the reported order of magnitude, not identified for these aircraft."
+    "useful": "Impact 2.1 of 4, nearest to: \"Noticeably\".",
+    "moat": "Moat 1.2 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 3.1 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "evidence": "F-106B's published area, chord and aspect ratio are reproduced from its triangle within 0.1%; the F-16XL planform is 5% larger than the published wing area, and says so."
    },
    "aftermath": [
     {
      "days": 7,
      "when": "First week",
-     "value": -1.02,
+     "value": -0.61,
      "well": 0.05,
-     "mixed": 0.45,
-     "hard": 0.5,
+     "mixed": 0.6,
+     "hard": 0.35,
      "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 30,
      "when": "One month",
-     "value": -1.13,
-     "well": 0.05,
-     "mixed": 0.4,
-     "hard": 0.55,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+     "value": -0.57,
+     "well": 0.1,
+     "mixed": 0.55,
+     "hard": 0.35,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     },
     {
      "days": 90,
      "when": "Three months",
-     "value": -1.23,
-     "well": 0.1,
-     "mixed": 0.4,
-     "hard": 0.5,
-     "sign": "Does effort and time spent still feel like a strain?"
+     "value": -0.38,
+     "well": 0.2,
+     "mixed": 0.45,
+     "hard": 0.35,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
     },
     {
      "days": 180,
      "when": "Six months",
-     "value": -1.38,
-     "well": 0.15,
+     "value": -0.28,
+     "well": 0.3,
      "mixed": 0.4,
-     "hard": 0.45,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+     "hard": 0.3,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     },
     {
      "days": 365,
      "when": "One year",
-     "value": -1.58,
-     "well": 0.2,
+     "value": -0.33,
+     "well": 0.3,
      "mixed": 0.4,
-     "hard": 0.4,
+     "hard": 0.3,
      "sign": "Does moat: reputation and data that compound still feel like a strain?"
     },
     {
      "days": 1095,
      "when": "Three years",
-     "value": -1.71,
-     "well": 0.25,
-     "mixed": 0.4,
-     "hard": 0.35,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+     "value": -0.54,
+     "well": 0.35000000000000003,
+     "mixed": 0.35000000000000003,
+     "hard": 0.30000000000000004,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     }
    ]
   },
   {
-   "id": "next-data",
-   "title": "Next: measured lift curves for all three aircraft, and compressibility",
-   "detail": "Digitise published wind-tunnel and flight lift curves for the F-16XL-1 and F-106B, add a compressibility correction, and bring the seven Mach 0.67-0.81 F-106B flight points into the comparison.",
-   "status": "next",
-   "files": [],
+   "id": "bands",
+   "title": "Lift estimates with measured error bands",
+   "detail": "Vortex lattice plus the Polhamus suction analogy and a vortex-breakdown limit, with a band beside every estimate measured by leave-one-wing-out on 200 digitized NASA points. Misses are published.",
+   "status": "done",
+   "requires": [],
+   "files": [
+    "lib/aero/vlm.ts",
+    "lib/aero/vortex.ts",
+    "lib/aero/geometry.ts",
+    "lib/aero/units.ts",
+    "lib/aero/units.typecheck.ts",
+    "lib/aero/error-model.ts",
+    "lib/aero/predict.ts"
+   ],
    "evidence": {
-    "tests": 0,
-    "validated": false,
-    "line": "Not started. It would turn the flight comparison from one aircraft into three and from 27 points into 34."
+    "tests": 42,
+    "validated": true,
+    "line": "Held-out band coverage 90% on 9 wings; 2 of 4 pre-registered criteria met, the misses shown."
    },
    "levels": {
-    "impact": 1.73,
-    "defensibility": 1.21,
-    "quality": 2.5,
-    "confidence": 1.53,
-    "effort": 2.12,
-    "leverage": 2.16,
-    "urgency": 1.57,
-    "reach": 1.19,
-    "reversibility": 2.79
+    "impact": 2.29,
+    "defensibility": 2.03,
+    "quality": 3.29,
+    "confidence": 2.13,
+    "effort": 3.14,
+    "leverage": 2.46,
+    "urgency": 1.7,
+    "reach": 1.39,
+    "reversibility": 2.23
    },
    "orion": {
-    "rank": 5,
-    "pFirst": 0.04,
+    "rank": 4,
+    "pFirst": 0.14,
     "eisenhower": "schedule",
     "effortMatrix": "big_bet",
     "door": "two_way"
    },
-   "verdict": "low value",
+   "verdict": "kept as a prerequisite",
+   "impactRange": [
+    2.26,
+    2.32
+   ],
+   "borderline": false,
+   "neededBy": [
+    "flightval",
+    "aircraft",
+    "next-curves"
+   ],
    "why": {
-    "useful": "Impact 1.7 of 4, nearest to: \"Noticeably\".",
-    "moat": "Moat 1.2 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 2.5 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
-    "evidence": "Not started. It would turn the flight comparison from one aircraft into three and from 27 points into 34."
+    "useful": "Impact 2.3 of 4, nearest to: \"Noticeably\".",
+    "moat": "Moat 2.0 of 4, nearest to: \"It leaves something a competitor would need months to rebuild, such as our own code, a signed release or a working process\".",
+    "quality": "Quality 3.3 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "evidence": "Held-out band coverage 90% on 9 wings; 2 of 4 pre-registered criteria met, the misses shown."
    },
    "aftermath": [
     {
      "days": 7,
      "when": "First week",
-     "value": -0.81,
-     "well": 0.05,
-     "mixed": 0.5,
-     "hard": 0.45,
+     "value": -0.34,
+     "well": 0.1,
+     "mixed": 0.65,
+     "hard": 0.25,
      "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 30,
      "when": "One month",
-     "value": -0.86,
-     "well": 0.1,
-     "mixed": 0.45,
-     "hard": 0.45,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+     "value": -0.14,
+     "well": 0.2,
+     "mixed": 0.55,
+     "hard": 0.25,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     },
     {
      "days": 90,
      "when": "Three months",
-     "value": -0.84,
-     "well": 0.15,
-     "mixed": 0.45,
-     "hard": 0.4,
+     "value": 0.43,
+     "well": 0.4,
+     "mixed": 0.4,
+     "hard": 0.2,
      "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 180,
      "when": "Six months",
-     "value": -0.89,
-     "well": 0.2,
-     "mixed": 0.45,
-     "hard": 0.35,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+     "value": 0.87,
+     "well": 0.5,
+     "mixed": 0.35,
+     "hard": 0.15,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     },
     {
      "days": 365,
      "when": "One year",
-     "value": -1.01,
-     "well": 0.25,
-     "mixed": 0.45,
-     "hard": 0.3,
+     "value": 1.18,
+     "well": 0.5,
+     "mixed": 0.35,
+     "hard": 0.15,
      "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     },
     {
      "days": 1095,
      "when": "Three years",
-     "value": -1.12,
-     "well": 0.3,
-     "mixed": 0.4,
-     "hard": 0.3,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+     "value": 1.19,
+     "well": 0.5,
+     "mixed": 0.3,
+     "hard": 0.2,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     }
    ]
   },
@@ -499,6 +448,7 @@
    "title": "HARV rebuilt as a closed solid",
    "detail": "Monotone cubic curves through traced stations; every component a closed, oriented, welded 2-manifold; mesh checker tested on known and broken meshes.",
    "status": "done",
+   "requires": [],
    "files": [
     "lib/aero/harv.ts",
     "lib/aero/harv-mesh.ts",
@@ -511,53 +461,59 @@
     "line": "Fuselage volume converges to the exact section integral; wing planform within 0.5% of the analytic trapezoid; outlines traced to ±0.3 ft, so no more accurate to the aircraft than its sources."
    },
    "levels": {
-    "impact": 1.48,
-    "defensibility": 1.26,
-    "quality": 2.54,
-    "confidence": 2.35,
-    "effort": 2.7,
-    "leverage": 2.16,
-    "urgency": 1.43,
-    "reach": 1.01,
+    "impact": 1.39,
+    "defensibility": 1.24,
+    "quality": 2.39,
+    "confidence": 2.27,
+    "effort": 2.71,
+    "leverage": 2.08,
+    "urgency": 1.37,
+    "reach": 1.07,
     "reversibility": 2.54
    },
    "orion": {
-    "rank": 6,
-    "pFirst": 0.08,
+    "rank": 5,
+    "pFirst": 0.06,
     "eisenhower": "drop",
-    "effortMatrix": "money_pit",
+    "effortMatrix": "fill_in",
     "door": "two_way"
    },
-   "verdict": "low value",
+   "verdict": "cut",
+   "impactRange": [
+    1.35,
+    1.44
+   ],
+   "borderline": false,
+   "neededBy": [],
    "why": {
-    "useful": "Impact 1.5 of 4, nearest to: \"A little\".",
-    "moat": "Moat 1.3 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 2.5 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "useful": "Impact 1.4 of 4, nearest to: \"A little\".",
+    "moat": "Moat 1.2 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 2.4 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
     "evidence": "Fuselage volume converges to the exact section integral; wing planform within 0.5% of the analytic trapezoid; outlines traced to ±0.3 ft, so no more accurate to the aircraft than its sources."
    },
    "aftermath": [
     {
      "days": 7,
      "when": "First week",
-     "value": -1.04,
+     "value": -1.12,
      "well": 0.05,
-     "mixed": 0.45,
-     "hard": 0.5,
+     "mixed": 0.4,
+     "hard": 0.55,
      "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 30,
      "when": "One month",
-     "value": -1.14,
+     "value": -1.24,
      "well": 0.05,
-     "mixed": 0.4,
-     "hard": 0.55,
+     "mixed": 0.35,
+     "hard": 0.6,
      "sign": "Does usefulness to engineers (impact) still feel like a strain?"
     },
     {
      "days": 90,
      "when": "Three months",
-     "value": -1.17,
+     "value": -1.33,
      "well": 0.1,
      "mixed": 0.4,
      "hard": 0.5,
@@ -566,7 +522,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": -1.27,
+     "value": -1.48,
      "well": 0.15,
      "mixed": 0.4,
      "hard": 0.45,
@@ -575,7 +531,7 @@
     {
      "days": 365,
      "when": "One year",
-     "value": -1.44,
+     "value": -1.68,
      "well": 0.2,
      "mixed": 0.4,
      "hard": 0.4,
@@ -584,9 +540,111 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": -1.62,
-     "well": 0.25,
+     "value": -1.84,
+     "well": 0.2,
+     "mixed": 0.45,
+     "hard": 0.35,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    }
+   ]
+  },
+  {
+   "id": "unsteady",
+   "title": "Lift that lags in pitching motion",
+   "detail": "One state for the share of vortex lift present, relaxing with a time constant of the order reported for delta wings; exact stepping; reduces to the static polar.",
+   "status": "done",
+   "requires": [],
+   "files": [
+    "lib/aero/unsteady.ts"
+   ],
+   "evidence": {
+    "tests": 10,
+    "validated": false,
+    "line": "Reproduces the published linear frequency response to 3 decimals; the time constant is the reported order of magnitude, not identified for these aircraft."
+   },
+   "levels": {
+    "impact": 1.56,
+    "defensibility": 1.12,
+    "quality": 2.1,
+    "confidence": 1.8,
+    "effort": 2.29,
+    "leverage": 1.73,
+    "urgency": 1.33,
+    "reach": 1.01,
+    "reversibility": 2.7
+   },
+   "orion": {
+    "rank": 6,
+    "pFirst": 0.07,
+    "eisenhower": "drop",
+    "effortMatrix": "fill_in",
+    "door": "two_way"
+   },
+   "verdict": "cut",
+   "impactRange": [
+    1.53,
+    1.58
+   ],
+   "borderline": false,
+   "neededBy": [],
+   "why": {
+    "useful": "Impact 1.6 of 4, nearest to: \"Noticeably\".",
+    "moat": "Moat 1.1 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 2.1 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
+    "evidence": "Reproduces the published linear frequency response to 3 decimals; the time constant is the reported order of magnitude, not identified for these aircraft."
+   },
+   "aftermath": [
+    {
+     "days": 7,
+     "when": "First week",
+     "value": -1.05,
+     "well": 0.05,
+     "mixed": 0.45,
+     "hard": 0.5,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 30,
+     "when": "One month",
+     "value": -1.17,
+     "well": 0.05,
      "mixed": 0.4,
+     "hard": 0.55,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 90,
+     "when": "Three months",
+     "value": -1.29,
+     "well": 0.1,
+     "mixed": 0.4,
+     "hard": 0.5,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 180,
+     "when": "Six months",
+     "value": -1.45,
+     "well": 0.15,
+     "mixed": 0.4,
+     "hard": 0.45,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 365,
+     "when": "One year",
+     "value": -1.66,
+     "well": 0.2,
+     "mixed": 0.4,
+     "hard": 0.4,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 1095,
+     "when": "Three years",
+     "value": -1.79,
+     "well": 0.2,
+     "mixed": 0.45,
      "hard": 0.35,
      "sign": "Does moat: reputation and data that compound still feel like a strain?"
     }
@@ -597,6 +655,7 @@
    "title": "HARV flight path",
    "detail": "Speed, flight-path angle and height under prescribed angle of attack and thrust, standard atmosphere, NASA's published weight.",
    "status": "done",
+   "requires": [],
    "files": [
     "lib/aero/flight.ts"
    ],
@@ -606,24 +665,30 @@
     "line": "Energy conserved to 1e-7 without drag or thrust; trim holds level; not compared with flight records."
    },
    "levels": {
-    "impact": 1.02,
-    "defensibility": 0.83,
-    "quality": 1.55,
-    "confidence": 1.23,
-    "effort": 1.92,
-    "leverage": 1.41,
-    "urgency": 1.37,
-    "reach": 0.83,
-    "reversibility": 2.77
+    "impact": 0.99,
+    "defensibility": 0.82,
+    "quality": 1.61,
+    "confidence": 1.22,
+    "effort": 1.86,
+    "leverage": 1.38,
+    "urgency": 1.3,
+    "reach": 0.79,
+    "reversibility": 2.87
    },
    "orion": {
     "rank": 7,
-    "pFirst": 0.12,
+    "pFirst": 0.08,
     "eisenhower": "drop",
     "effortMatrix": "fill_in",
     "door": "two_way"
    },
-   "verdict": "low value",
+   "verdict": "cut",
+   "impactRange": [
+    0.97,
+    1.03
+   ],
+   "borderline": false,
+   "neededBy": [],
    "why": {
     "useful": "Impact 1.0 of 4, nearest to: \"A little\".",
     "moat": "Moat 0.8 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
@@ -634,7 +699,7 @@
     {
      "days": 7,
      "when": "First week",
-     "value": -1.41,
+     "value": -1.39,
      "well": 0.05,
      "mixed": 0.3,
      "hard": 0.65,
@@ -643,7 +708,7 @@
     {
      "days": 30,
      "when": "One month",
-     "value": -1.66,
+     "value": -1.65,
      "well": 0.05,
      "mixed": 0.25,
      "hard": 0.7,
@@ -652,7 +717,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": -2.05,
+     "value": -2.04,
      "well": 0.05,
      "mixed": 0.35,
      "hard": 0.6,
@@ -692,6 +757,7 @@
    "title": "Gradual vortex-breakdown model",
    "detail": "A smooth ramp of the burst share instead of a step. Lower error out of sample, but the fitted width ran to the edge of every range tried.",
    "status": "rejected",
+   "requires": [],
    "files": [],
    "evidence": {
     "tests": 4,
@@ -699,44 +765,50 @@
     "line": "Pooled held-out error 0.121 → 0.104, but the parameter is not identified: kept as an option, default unchanged."
    },
    "levels": {
-    "impact": 1.25,
-    "defensibility": 0.94,
-    "quality": 1.49,
-    "confidence": 1.57,
-    "effort": 2.17,
-    "leverage": 1.28,
-    "urgency": 1.03,
-    "reach": 0.86,
-    "reversibility": 3.07
+    "impact": 1.22,
+    "defensibility": 0.99,
+    "quality": 1.55,
+    "confidence": 1.59,
+    "effort": 2.07,
+    "leverage": 1.29,
+    "urgency": 1,
+    "reach": 0.85,
+    "reversibility": 3.12
    },
    "orion": {
     "rank": 8,
-    "pFirst": 0.07,
+    "pFirst": 0.04,
     "eisenhower": "drop",
     "effortMatrix": "fill_in",
     "door": "two_way"
    },
    "verdict": "rejected on evidence",
+   "impactRange": [
+    1.21,
+    1.24
+   ],
+   "borderline": false,
+   "neededBy": [],
    "why": {
-    "useful": "Impact 1.3 of 4, nearest to: \"A little\".",
-    "moat": "Moat 0.9 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 1.5 of 4, nearest to: \"A small fix that few people would notice\".",
+    "useful": "Impact 1.2 of 4, nearest to: \"A little\".",
+    "moat": "Moat 1.0 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 1.6 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
     "evidence": "Pooled held-out error 0.121 → 0.104, but the parameter is not identified: kept as an option, default unchanged."
    },
    "aftermath": [
     {
      "days": 7,
      "when": "First week",
-     "value": -1.35,
+     "value": -1.31,
      "well": 0.05,
-     "mixed": 0.3,
-     "hard": 0.65,
+     "mixed": 0.35,
+     "hard": 0.6,
      "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 30,
      "when": "One month",
-     "value": -1.59,
+     "value": -1.54,
      "well": 0.05,
      "mixed": 0.3,
      "hard": 0.65,
@@ -745,37 +817,449 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": -1.91,
+     "value": -1.86,
      "well": 0.05,
      "mixed": 0.35,
      "hard": 0.6,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+     "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 180,
      "when": "Six months",
-     "value": -2.25,
+     "value": -2.2,
      "well": 0.1,
      "mixed": 0.4,
      "hard": 0.5,
-     "sign": "Does usefulness to engineers (impact) still feel like a strain?"
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
     },
     {
      "days": 365,
      "when": "One year",
-     "value": -2.57,
+     "value": -2.51,
+     "well": 0.15,
+     "mixed": 0.45,
+     "hard": 0.4,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 1095,
+     "when": "Three years",
+     "value": -2.6,
+     "well": 0.15,
+     "mixed": 0.5,
+     "hard": 0.35,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    }
+   ]
+  }
+ ],
+ "candidates": [
+  {
+   "id": "next-curves",
+   "title": "Measured lift curves for all three aircraft",
+   "detail": "Digitise wind-tunnel and flight lift curves from the NASA reports for the F-16XL-1 and F-106B, as already done for the HARV, so every aircraft has absolute lift data beside its estimate.",
+   "status": "next",
+   "requires": [
+    "aircraft",
+    "bands",
+    "flightval"
+   ],
+   "files": [],
+   "evidence": {
+    "tests": 0,
+    "validated": false,
+    "line": "Not started. Today only the HARV has measured lift in the corpus; the F-106B has one absolute point."
+   },
+   "levels": {
+    "impact": 2.53,
+    "defensibility": 1.45,
+    "quality": 3.14,
+    "confidence": 1.41,
+    "effort": 2.56,
+    "leverage": 3,
+    "urgency": 1.95,
+    "reach": 1.4,
+    "reversibility": 2.64
+   },
+   "orion": {
+    "rank": 1,
+    "pFirst": 0.39,
+    "eisenhower": "schedule",
+    "effortMatrix": "big_bet",
+    "door": "two_way"
+   },
+   "verdict": "high value",
+   "impactRange": [
+    2.51,
+    2.54
+   ],
+   "borderline": false,
+   "neededBy": [],
+   "why": {
+    "useful": "Impact 2.5 of 4, nearest to: \"Substantially\".",
+    "moat": "Moat 1.4 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 3.1 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "evidence": "Not started. Today only the HARV has measured lift in the corpus; the F-106B has one absolute point."
+   },
+   "aftermath": [
+    {
+     "days": 7,
+     "when": "First week",
+     "value": -0.36,
+     "well": 0.1,
+     "mixed": 0.65,
+     "hard": 0.25,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 30,
+     "when": "One month",
+     "value": -0.19,
+     "well": 0.2,
+     "mixed": 0.5,
+     "hard": 0.3,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
+    },
+    {
+     "days": 90,
+     "when": "Three months",
+     "value": 0.21,
+     "well": 0.35,
+     "mixed": 0.4,
+     "hard": 0.25,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 180,
+     "when": "Six months",
+     "value": 0.48,
+     "well": 0.4,
+     "mixed": 0.4,
+     "hard": 0.2,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 365,
+     "when": "One year",
+     "value": 0.59,
+     "well": 0.45,
+     "mixed": 0.35,
+     "hard": 0.2,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
+    },
+    {
+     "days": 1095,
+     "when": "Three years",
+     "value": 0.44,
+     "well": 0.45,
+     "mixed": 0.35,
+     "hard": 0.2,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    }
+   ]
+  },
+  {
+   "id": "next-mach",
+   "title": "Compressibility, to use NASA's seven faster F-106B flight runs",
+   "detail": "A Prandtl-Glauert-type correction to the lattice, then the seven published F-106B runs at Mach 0.67-0.81 and load factors 1.6-3.9 g join the comparison: manoeuvring flight, not only 1 g.",
+   "status": "next",
+   "requires": [
+    "flightval"
+   ],
+   "files": [],
+   "evidence": {
+    "tests": 0,
+    "validated": false,
+    "line": "Not started. The data are already transcribed from NASA TP-3374 Table I; 27 points become 34 and the comparison reaches 3.9 g."
+   },
+   "levels": {
+    "impact": 1.67,
+    "defensibility": 1,
+    "quality": 2.54,
+    "confidence": 0.91,
+    "effort": 1.74,
+    "leverage": 2.04,
+    "urgency": 1.39,
+    "reach": 1.03,
+    "reversibility": 3
+   },
+   "orion": {
+    "rank": 2,
+    "pFirst": 0.27,
+    "eisenhower": "schedule",
+    "effortMatrix": "quick_win",
+    "door": "two_way"
+   },
+   "verdict": "cut",
+   "impactRange": [
+    1.66,
+    1.67
+   ],
+   "borderline": false,
+   "neededBy": [],
+   "why": {
+    "useful": "Impact 1.7 of 4, nearest to: \"Noticeably\".",
+    "moat": "Moat 1.0 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 2.5 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "evidence": "Not started. The data are already transcribed from NASA TP-3374 Table I; 27 points become 34 and the comparison reaches 3.9 g."
+   },
+   "aftermath": [
+    {
+     "days": 7,
+     "when": "First week",
+     "value": -0.81,
+     "well": 0.05,
+     "mixed": 0.5,
+     "hard": 0.45,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 30,
+     "when": "One month",
+     "value": -0.86,
      "well": 0.1,
      "mixed": 0.45,
      "hard": 0.45,
      "sign": "Does moat: reputation and data that compound still feel like a strain?"
     },
     {
+     "days": 90,
+     "when": "Three months",
+     "value": -0.91,
+     "well": 0.2,
+     "mixed": 0.4,
+     "hard": 0.4,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 180,
+     "when": "Six months",
+     "value": -1.01,
+     "well": 0.2,
+     "mixed": 0.45,
+     "hard": 0.35,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 365,
+     "when": "One year",
+     "value": -1.16,
+     "well": 0.25,
+     "mixed": 0.45,
+     "hard": 0.3,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
+    },
+    {
      "days": 1095,
      "when": "Three years",
-     "value": -2.66,
-     "well": 0.15,
-     "mixed": 0.5,
+     "value": -1.26,
+     "well": 0.3,
+     "mixed": 0.4,
+     "hard": 0.3,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    }
+   ]
+  },
+  {
+   "id": "next-xl",
+   "title": "The same flight comparison for the F-16XL-1",
+   "detail": "NASA TP-2001-210629 Table 5 lists the F-16XL-1 flight conditions (angle of attack, Mach, load factor); transcribe them and run the same weight-consistency check on a second real aircraft with a different wing.",
+   "status": "next",
+   "requires": [
+    "flightval"
+   ],
+   "files": [],
+   "evidence": {
+    "tests": 0,
+    "validated": false,
+    "line": "Not started. A second aircraft would show whether the F-106B result is a property of the method or of one wing."
+   },
+   "levels": {
+    "impact": 1.75,
+    "defensibility": 1.36,
+    "quality": 2.58,
+    "confidence": 1.16,
+    "effort": 1.78,
+    "leverage": 2.47,
+    "urgency": 1.53,
+    "reach": 0.79,
+    "reversibility": 3.16
+   },
+   "orion": {
+    "rank": 3,
+    "pFirst": 0.26,
+    "eisenhower": "schedule",
+    "effortMatrix": "quick_win",
+    "door": "two_way"
+   },
+   "verdict": "cut",
+   "impactRange": [
+    1.74,
+    1.76
+   ],
+   "borderline": false,
+   "neededBy": [],
+   "why": {
+    "useful": "Impact 1.8 of 4, nearest to: \"Noticeably\".",
+    "moat": "Moat 1.4 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 2.6 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "evidence": "Not started. A second aircraft would show whether the F-106B result is a property of the method or of one wing."
+   },
+   "aftermath": [
+    {
+     "days": 7,
+     "when": "First week",
+     "value": -0.64,
+     "well": 0.05,
+     "mixed": 0.6,
      "hard": 0.35,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 30,
+     "when": "One month",
+     "value": -0.66,
+     "well": 0.1,
+     "mixed": 0.5,
+     "hard": 0.4,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 90,
+     "when": "Three months",
+     "value": -0.61,
+     "well": 0.2,
+     "mixed": 0.45,
+     "hard": 0.35,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 180,
+     "when": "Six months",
+     "value": -0.63,
+     "well": 0.25,
+     "mixed": 0.45,
+     "hard": 0.3,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 365,
+     "when": "One year",
+     "value": -0.7,
+     "well": 0.3,
+     "mixed": 0.4,
+     "hard": 0.3,
+     "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
+    },
+    {
+     "days": 1095,
+     "when": "Three years",
+     "value": -0.78,
+     "well": 0.3,
+     "mixed": 0.45,
+     "hard": 0.25,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    }
+   ]
+  },
+  {
+   "id": "next-tau",
+   "title": "Identify the vortex time constant from dynamic test data",
+   "detail": "Digitise published large-amplitude pitch data for a delta wing and identify the Goman-Khrabrov time constants instead of using the reported order of magnitude.",
+   "status": "next",
+   "requires": [
+    "unsteady"
+   ],
+   "files": [],
+   "evidence": {
+    "tests": 0,
+    "validated": false,
+    "line": "Not started. The unsteady model is currently unvalidated against any motion data."
+   },
+   "levels": {
+    "impact": 1.72,
+    "defensibility": 1.19,
+    "quality": 2.18,
+    "confidence": 0.5,
+    "effort": 2.54,
+    "leverage": 2.08,
+    "urgency": 1.46,
+    "reach": 0.72,
+    "reversibility": 2.95
+   },
+   "orion": {
+    "rank": 4,
+    "pFirst": 0.07,
+    "eisenhower": "drop",
+    "effortMatrix": "money_pit",
+    "door": "two_way"
+   },
+   "verdict": "cut",
+   "impactRange": [
+    1.69,
+    1.77
+   ],
+   "borderline": false,
+   "neededBy": [],
+   "why": {
+    "useful": "Impact 1.7 of 4, nearest to: \"Noticeably\".",
+    "moat": "Moat 1.2 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 2.2 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
+    "evidence": "Not started. The unsteady model is currently unvalidated against any motion data."
+   },
+   "aftermath": [
+    {
+     "days": 7,
+     "when": "First week",
+     "value": -0.99,
+     "well": 0.05,
+     "mixed": 0.45,
+     "hard": 0.5,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 30,
+     "when": "One month",
+     "value": -1.02,
+     "well": 0.1,
+     "mixed": 0.4,
+     "hard": 0.5,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 90,
+     "when": "Three months",
+     "value": -0.99,
+     "well": 0.2,
+     "mixed": 0.35,
+     "hard": 0.45,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 180,
+     "when": "Six months",
+     "value": -1.02,
+     "well": 0.25,
+     "mixed": 0.35,
+     "hard": 0.4,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 365,
+     "when": "One year",
+     "value": -1.1,
+     "well": 0.25,
+     "mixed": 0.45,
+     "hard": 0.3,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 1095,
+     "when": "Three years",
+     "value": -1.13,
+     "well": 0.3,
+     "mixed": 0.4,
+     "hard": 0.3,
      "sign": "Does moat: reputation and data that compound still feel like a strain?"
     }
    ]

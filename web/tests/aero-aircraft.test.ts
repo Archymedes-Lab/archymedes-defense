@@ -1,5 +1,6 @@
 import { describe, expect, setDefaultTimeout, test } from "bun:test";
-import { readdirSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { AIRCRAFT, type Aircraft, aircraftById } from "../lib/aero/aircraft";
 import { planformProps, validatePlanform } from "../lib/aero/geometry";
@@ -7,6 +8,8 @@ import { HARV_MASS } from "../lib/aero/flight";
 import { HARV_PUBLISHED } from "../lib/aero/harv";
 import { analyse } from "../lib/aero/predict";
 import { deg, toDeg } from "../lib/aero/units";
+import flightJson from "../lib/data/aero-flight.json";
+import validation from "../lib/data/aero-validation.json";
 import value from "../lib/data/aero-value.json";
 
 setDefaultTimeout(120_000);
@@ -138,32 +141,55 @@ describe("F/A-18 HARV stays as it was", () => {
 // ---------------------------------------------------------------- the value review covers all the work
 
 const LEVEL_KEYS = ["impact", "defensibility", "quality", "confidence", "effort"] as const;
+const sha16 = (f: string) => createHash("sha256").update(readFileSync(join(import.meta.dir, "../lib/data", f))).digest("hex").slice(0, 16);
 
-describe("value review: every piece of the aero work is judged, by fixed criteria", () => {
-  const items = value.items;
+describe("validation report is generated from the current results", () => {
+  const report = readFileSync(join(import.meta.dir, "../../reports/aero-validation-report.md"), "utf8");
+  test("it carries the digests of the data files as they are now (regenerate it when the data change)", () => {
+    for (const f of ["aero-corpus.json", "aero-validation.json", "aero-flight.json"]) expect({ f, current: report.includes(sha16(f)) }).toEqual({ f, current: true });
+  });
+  test("every criterion appears with its result, and every miss is named in the summary", () => {
+    const all = { ...validation.criteria, ...flightJson.criteria } as Record<string, { pass: boolean }>;
+    for (const [id, c] of Object.entries(all)) expect(report).toContain(`| ${id} |`);
+    const misses = Object.entries(all).filter(([, c]) => !c.pass).map(([id]) => id);
+    expect(report).toContain(`Misses: ${misses.join(", ")}`);
+    expect(report).toContain(`**${Object.values(all).filter((c) => c.pass).length} of ${Object.keys(all).length} criteria met.**`);
+  });
+  test("it names every aircraft, a version, and how to cite it", () => {
+    for (const a of AIRCRAFT) expect(report).toContain(a.name);
+    expect(report).toMatch(/version \d+\.\d+/);
+    expect(report).toContain("## How to cite");
+  });
+});
+
+describe("value review: every piece of the aero work is judged against the one criterion, high value", () => {
+  const items = value.items, candidates = value.candidates, all = [...items, ...candidates];
   test("every module in lib/aero belongs to a reviewed item (new work cannot ship unreviewed)", () => {
     const files = readdirSync(join(import.meta.dir, "../lib/aero")).filter((f) => f.endsWith(".ts")).map((f) => `lib/aero/${f}`);
     const reviewed = new Set(items.flatMap((i) => i.files));
     for (const f of files) expect({ f, reviewed: reviewed.has(f) }).toEqual({ f, reviewed: true });
   });
-  test("every item has scores from 0 to 4, an ORION rank, an aftermath and a written reason for each criterion", () => {
-    expect(items.length).toBeGreaterThan(5);
-    const ranks = items.map((i) => i.orion.rank).sort((a, b) => a - b);
-    expect(ranks).toEqual(items.map((_, k) => k + 1));
-    for (const i of items) {
+  test("every item was judged several times, has scores from 0 to 4 with their range, an ORION rank, an aftermath and reasons", () => {
+    expect(value.repeats).toBeGreaterThanOrEqual(3);
+    for (const group of [items, candidates]) expect(group.map((i) => i.orion.rank).sort((a, b) => a - b)).toEqual(group.map((_, k) => k + 1));
+    for (const i of all) {
       for (const k of LEVEL_KEYS) { expect(i.levels[k]).toBeGreaterThanOrEqual(0); expect(i.levels[k]).toBeLessThanOrEqual(4); }
-      expect(i.orion.pFirst).toBeGreaterThanOrEqual(0); expect(i.orion.pFirst).toBeLessThanOrEqual(1);
-      expect(i.why.useful.length).toBeGreaterThan(10); expect(i.why.moat.length).toBeGreaterThan(10); expect(i.why.evidence.length).toBeGreaterThan(10);
+      expect(i.impactRange[0]).toBeLessThanOrEqual(i.levels.impact + 0.006); expect(i.impactRange[1]).toBeGreaterThanOrEqual(i.levels.impact - 0.006);
+      expect(i.why.useful.length).toBeGreaterThan(10); expect(i.why.evidence.length).toBeGreaterThan(10);
       expect(i.aftermath.length).toBeGreaterThan(1);
       for (const s of i.aftermath) expect(s.well + s.mixed + s.hard).toBeCloseTo(1, 6);
     }
   });
-  test("the verdict is the one the published rule gives for the scores (no hand-edited verdicts)", () => {
-    const c = value.criteria;
-    for (const i of items) {
-      const useful = i.levels.impact >= c.usefulMin, moat = i.levels.defensibility >= c.moatMin, proven = i.evidence.tests > 0 || i.evidence.validated;
-      const want = i.status === "rejected" ? "rejected on evidence" : useful && moat && proven ? "valuable" : useful && proven ? "useful, easy to copy" : useful ? "promising, unproven" : "low value";
+  test("the verdict is the one rule applied to the scores: high value, kept only if high-value work needs it, otherwise cut", () => {
+    const min = value.criteria.highValueMin;
+    const high = (id: string) => (all.find((i) => i.id === id)?.levels.impact ?? 0) >= min;
+    const needed = new Set<string>();
+    const need = (id: string) => { for (const r of all.find((i) => i.id === id)?.requires ?? []) if (!needed.has(r)) { needed.add(r); need(r); } };
+    for (const i of all) if (high(i.id) && i.status !== "rejected") need(i.id);
+    for (const i of all) {
+      const want = i.status === "rejected" ? "rejected on evidence" : high(i.id) ? "high value" : needed.has(i.id) ? "kept as a prerequisite" : "cut";
       expect({ id: i.id, verdict: i.verdict }).toEqual({ id: i.id, verdict: want });
+      expect(i.borderline).toBe(i.impactRange[0] < min && i.impactRange[1] >= min);
     }
   });
   test("the review says which model judged, when, and on what evidence", () => {

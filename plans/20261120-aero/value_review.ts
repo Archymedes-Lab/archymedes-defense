@@ -26,29 +26,38 @@ const tests = (f: string) => (readFileSync(`${root}/web/tests/${f}`, "utf8").mat
 const pct = (x: number) => `${(x * 100).toFixed(0)}%`;
 const trimRows = fl.trim.rows as { label: string; cl: number; error: number }[];
 
+// Dependencies (`requires`) are stated for what an item cannot run without: the aircraft registry feeds planforms to
+// the engine; measured aircraft lift can only be compared with a trimmed model, so the lift-curve work needs the
+// engine, the registry and the trim model. A report needs nothing downstream of it.
+// The one criterion (owner, 2026-11-23): HIGH VALUE ONLY. An item is high value when Jev's impact score is at least
+// 2.5 of 4: at least halfway from "Noticeably" (2) to "Substantially" (3) on "how much would this move the most
+// important goal". Work a high-value item cannot run without is kept as a prerequisite and labelled so. Everything
+// else is cut from the product. Moat, quality and aftermath are still reported, but they no longer decide.
 export const CRITERIA = {
-  usefulMin: 2, moatMin: 2,
+  highValueMin: 2.5,
   text: {
-    useful: "Useful: Jev's impact score is at least 2 of 4 (\"noticeably\" moves the goal).",
-    moat: "Defensible: Jev's moat score is at least 2 of 4 (leaves something a competitor would need months to rebuild).",
-    proven: "Proven: the repository holds tests for it, or it is validated against published data.",
-    verdicts: "valuable = useful, defensible and proven · useful, easy to copy = useful and proven but not defensible · promising, unproven = useful, no evidence yet · low value = not useful · rejected on evidence = tried and measured worse or unidentified.",
+    rule: "High value: impact score at least 2.5 of 4 (halfway from \"noticeably\" to \"substantially\" moves the most important goal).",
+    verdicts: "high value = meets the rule · kept as a prerequisite = below the rule, but a high-value item cannot run without it · cut = below the rule and nothing high-value needs it · rejected on evidence = tried and measured worse or unidentified.",
   },
 };
 
-interface Item { id: string; title: string; label: string; detail: string; track: string; status: "done" | "rejected" | "next"; files: string[]; evidence: { tests: number; validated: boolean; line: string } }
+interface Item { id: string; title: string; label: string; detail: string; track: string; status: "done" | "rejected" | "next"; requires?: string[]; files: string[]; evidence: { tests: number; validated: boolean; line: string } }
 const items: Item[] = [
   { id: "bands", title: "Lift estimates with measured error bands", label: "Vortex-lift engine with error bands measured on NASA wind-tunnel data",
     detail: "Vortex lattice plus the Polhamus suction analogy and a vortex-breakdown limit, with a band beside every estimate measured by leave-one-wing-out on 200 digitized NASA points. Misses are published.",
     track: "data_loop", status: "done", files: ["lib/aero/vlm.ts", "lib/aero/vortex.ts", "lib/aero/geometry.ts", "lib/aero/units.ts", "lib/aero/units.typecheck.ts", "lib/aero/error-model.ts", "lib/aero/predict.ts"],
     evidence: { tests: tests("aero.test.ts"), validated: true, line: `Held-out band coverage ${pct(val.coverage.widened)} on ${val.inDomain.length} wings; ${Object.values(val.criteria).filter((c: any) => c.pass).length} of 4 pre-registered criteria met, the misses shown.` } },
+  { id: "report", title: "A citable validation report", label: "Validation record published as a citable report with data and misses",
+    detail: "One generated document with every comparison against published NASA data, when each criterion was written, the hits and the misses, the data-file digests and a version number, so an engineer can cite which estimates to trust and by how much.",
+    track: "trust", status: "done", requires: ["flightval", "bands"], files: [],
+    evidence: { tests: 3, validated: true, line: `Version 1.0 generated from the result files: ${[...Object.values(val.criteria), ...Object.values(fl.criteria)].filter((c: any) => c.pass).length} of 8 criteria met, the three misses listed; a test fails if the report does not match the current data.` } },
   { id: "flightval", title: "Checked against real F-106B flight and trim data", label: "Model checked against published F-106B flight and trim data, with elevon trim",
     detail: "Elevon lift and trim from the same lattice, a rounded-leading-edge blend, and a comparison with NASA's published F-106B trim table (absolute) and 27 flight points (shape), scored leave-one-flight-out.",
-    track: "quality", status: "done", files: ["lib/aero/trim.ts", "lib/aero/flightdata.ts"],
+    track: "quality", status: "done", requires: ["bands", "aircraft"], files: ["lib/aero/trim.ts", "lib/aero/flightdata.ts"],
     evidence: { tests: tests("aero-flight.test.ts"), validated: true, line: `Lift error at NASA's trim point ${pct(Math.abs(trimRows[0].error))} before, ${pct(Math.abs(trimRows[trimRows.length - 1].error))} after; elevon within ${fl.criteria.F2.value}°; held-out weight spread ${pct(fl.flight.heldOutCv)} (target 5%).` } },
   { id: "aircraft", title: "Real aircraft only, each tied to its NASA report", label: "Registry of real NASA research aircraft built only from published numbers",
     detail: "F/A-18 HARV, F-16XL-1 and F-106B: every dimension names the NASA table or figure it was read from; planforms are built from those numbers; no invented layouts.",
-    track: "trust", status: "done", files: ["lib/aero/aircraft.ts"],
+    track: "trust", status: "done", requires: ["bands"], files: ["lib/aero/aircraft.ts"],
     evidence: { tests: tests("aero-aircraft.test.ts"), validated: true, line: "F-106B's published area, chord and aspect ratio are reproduced from its triangle within 0.1%; the F-16XL planform is 5% larger than the published wing area, and says so." } },
   { id: "unsteady", title: "Lift that lags in pitching motion", label: "Unsteady vortex lift (Goman-Khrabrov state-space model)",
     detail: "One state for the share of vortex lift present, relaxing with a time constant of the order reported for delta wings; exact stepping; reduces to the static polar.",
@@ -66,10 +75,22 @@ const items: Item[] = [
     detail: "A smooth ramp of the burst share instead of a step. Lower error out of sample, but the fitted width ran to the edge of every range tried.",
     track: "quality", status: "rejected", files: [],
     evidence: { tests: 4, validated: true, line: "Pooled held-out error 0.121 → 0.104, but the parameter is not identified: kept as an option, default unchanged." } },
-  { id: "next-data", title: "Next: measured lift curves for all three aircraft, and compressibility", label: "Digitise measured lift of all three aircraft and add compressibility",
-    detail: "Digitise published wind-tunnel and flight lift curves for the F-16XL-1 and F-106B, add a compressibility correction, and bring the seven Mach 0.67-0.81 F-106B flight points into the comparison.",
-    track: "data_loop", status: "next", files: [],
-    evidence: { tests: 0, validated: false, line: "Not started. It would turn the flight comparison from one aircraft into three and from 27 points into 34." } },
+];
+
+/** Candidate next steps: judged and ranked the same way, so the review also says what to do next. */
+const candidates: Item[] = [
+  { id: "next-mach", title: "Compressibility, to use NASA's seven faster F-106B flight runs", label: "Add compressibility and compare with the Mach 0.67-0.81 F-106B flight runs",
+    detail: "A Prandtl-Glauert-type correction to the lattice, then the seven published F-106B runs at Mach 0.67-0.81 and load factors 1.6-3.9 g join the comparison: manoeuvring flight, not only 1 g.",
+    track: "quality", status: "next", requires: ["flightval"], files: [], evidence: { tests: 0, validated: false, line: "Not started. The data are already transcribed from NASA TP-3374 Table I; 27 points become 34 and the comparison reaches 3.9 g." } },
+  { id: "next-xl", title: "The same flight comparison for the F-16XL-1", label: "Compare the model with published F-16XL-1 flight conditions",
+    detail: "NASA TP-2001-210629 Table 5 lists the F-16XL-1 flight conditions (angle of attack, Mach, load factor); transcribe them and run the same weight-consistency check on a second real aircraft with a different wing.",
+    track: "data_loop", status: "next", requires: ["flightval"], files: [], evidence: { tests: 0, validated: false, line: "Not started. A second aircraft would show whether the F-106B result is a property of the method or of one wing." } },
+  { id: "next-curves", title: "Measured lift curves for all three aircraft", label: "Digitise published measured lift curves for the three aircraft",
+    detail: "Digitise wind-tunnel and flight lift curves from the NASA reports for the F-16XL-1 and F-106B, as already done for the HARV, so every aircraft has absolute lift data beside its estimate.",
+    track: "data_loop", status: "next", requires: ["aircraft", "bands", "flightval"], files: [], evidence: { tests: 0, validated: false, line: "Not started. Today only the HARV has measured lift in the corpus; the F-106B has one absolute point." } },
+  { id: "next-tau", title: "Identify the vortex time constant from dynamic test data", label: "Fit the unsteady time constant to published pitch-oscillation data",
+    detail: "Digitise published large-amplitude pitch data for a delta wing and identify the Goman-Khrabrov time constants instead of using the reported order of magnitude.",
+    track: "quality", status: "next", requires: ["unsteady"], files: [], evidence: { tests: 0, validated: false, line: "Not started. The unsteady model is currently unvalidated against any motion data." } },
 ];
 
 const context = [
@@ -84,17 +105,28 @@ const mean = (p: number[]) => p.reduce((a, x, k) => a + k * x, 0);
 const r2 = (x: number) => Math.round(x * 100) / 100;
 
 // 1. Compass judge: nine dimensions per item (moat = defensibility)
+const REPEATS = 3;
 const judged = [];
-for (const it of items) {
-  const j = await judge({ title: it.title, detail: `${it.detail} Evidence: ${it.evidence.line}`, track: it.track }, context, apiKey);
-  judged.push({ it, levels: Object.fromEntries(DIMS.map((d) => [d, r2(mean(j.dims[d]))])) as Record<string, number>, beliefs: j.dims, promptHash: j.promptHash });
-  console.error(`judged ${it.id}: moat ${r2(mean(j.dims.defensibility))} impact ${r2(mean(j.dims.impact))}`);
+for (const it of [...items, ...candidates]) {
+  // Judged REPEATS times: the model's answer to the same question is not perfectly repeatable, so the score is the
+  // mean and the range is kept. An item whose range straddles the bar is reported as borderline.
+  const runs = [];
+  for (let k = 0; k < REPEATS; k++) runs.push(await judge({ title: it.title, detail: `${it.detail} Evidence: ${it.evidence.line}`, track: it.track }, context, apiKey));
+  const per = (d: string) => runs.map((j) => mean((j.dims as any)[d]));
+  const impacts = per("impact");
+  judged.push({ it, levels: Object.fromEntries(DIMS.map((d) => [d, r2(per(d).reduce((x, y) => x + y, 0) / REPEATS)])) as Record<string, number>,
+    impactRange: [r2(Math.min(...impacts)), r2(Math.max(...impacts))] as [number, number], beliefs: runs[0]!.dims, promptHash: runs[0]!.promptHash });
+  console.error(`judged ${it.id}: impact ${impacts.map(r2).join(" ")}`);
 }
 
-// 2. ORION ranking
-const req = PrioritizeRequestSchema.parse({ context: `${context} ${items.map((i) => `- ${i.label}: ${i.evidence.line}`).join(" ")}`.slice(0, 4000), options: items.map((i) => ({ id: i.id, label: i.label.slice(0, 80) })) });
-const ranked = prioritize(await prioritizeWithJev(req, { apiKey, timeoutMs: 60_000 })) as any;
-const rankOf = Object.fromEntries((ranked.rows as any[]).map((r) => [r.optionId, r]));
+// 2. ORION ranking: the built work and the candidate next steps are ranked separately (each list at most 8)
+const rankGroup = async (group: Item[], lead: string) => {
+  const req = PrioritizeRequestSchema.parse({ context: `${context} ${lead} ${group.map((i) => `- ${i.label}: ${i.evidence.line}`).join(" ")}`.slice(0, 4000), options: group.map((i) => ({ id: i.id, label: i.label.slice(0, 80) })) });
+  const res = prioritize(await prioritizeWithJev(req, { apiKey, timeoutMs: 60_000 })) as any;
+  return { rows: Object.fromEntries((res.rows as any[]).map((r) => [r.optionId, r])), w: r2(res.kendallW ?? res.agreement ?? 0) };
+};
+const built = await rankGroup(items, "Work already built:"), next = await rankGroup(candidates, "Candidate next steps, nothing built yet:");
+const rankOf = { ...built.rows, ...next.rows };
 
 // 3. ORION aftermath: four factors from the judged levels; benefits on −10..10 around "somewhat" (2), effort as a cost
 const factors = [
@@ -110,33 +142,41 @@ const picture = (lv: Record<string, number>, id: string, label: string) => {
   return (a?.steps ?? []).map((s) => ({ days: s.days, when: s.when, value: r2(s.value), well: s.odds.well, mixed: s.odds.mixed, hard: s.odds.hard, sign: s.sign }));
 };
 
-const verdictOf = (it: Item, lv: Record<string, number>) => {
-  const useful = lv.impact >= CRITERIA.usefulMin, moat = lv.defensibility >= CRITERIA.moatMin, proven = it.evidence.tests > 0 || it.evidence.validated;
-  return it.status === "rejected" ? "rejected on evidence" : useful && moat && proven ? "valuable" : useful && proven ? "useful, easy to copy" : useful ? "promising, unproven" : "low value";
-};
+const levelOf = Object.fromEntries(judged.map((j) => [j.it.id, j.levels]));
+const high = (id: string) => (levelOf[id]?.impact ?? 0) >= CRITERIA.highValueMin;
+const all = [...items, ...candidates];
+/** Built items a high-value item (built or candidate) cannot run without, directly or through another prerequisite. */
+const needed = new Set<string>();
+const need = (id: string) => { for (const r of all.find((i) => i.id === id)?.requires ?? []) if (!needed.has(r)) { needed.add(r); need(r); } };
+for (const i of all) if (high(i.id) && i.status !== "rejected") need(i.id);
+const verdictOf = (it: Item) => it.status === "rejected" ? "rejected on evidence" : high(it.id) ? "high value" : needed.has(it.id) ? "kept as a prerequisite" : "cut";
 const said = (dim: "impact" | "defensibility" | "quality", lv: number) => {
   const q = QUESTIONS[dim], k = Math.min(4, Math.max(0, Math.round(lv)));
   return `${lv.toFixed(1)} of 4, nearest to: "${(q.criteria ?? q.levels)[k]}"`;
 };
 
+const row = ({ it, levels, impactRange }: (typeof judged)[number]) => {
+  const r = rankOf[it.id];
+  return {
+    id: it.id, title: it.title, detail: it.detail, status: it.status, requires: it.requires ?? [], files: it.files, evidence: it.evidence,
+    levels: { impact: levels.impact, defensibility: levels.defensibility, quality: levels.quality, confidence: levels.confidence, effort: levels.effort, leverage: levels.leverage, urgency: levels.urgency, reach: levels.reach, reversibility: levels.reversibility },
+    orion: { rank: r.rank as number, pFirst: r2(r.pFirst), eisenhower: r.eisenhower as string, effortMatrix: r.effortMatrix as string, door: r.door as string },
+    verdict: verdictOf(it), impactRange, borderline: impactRange[0] < CRITERIA.highValueMin && impactRange[1] >= CRITERIA.highValueMin,
+    neededBy: all.filter((o) => (o.requires ?? []).includes(it.id) && (high(o.id) || needed.has(o.id))).map((o) => o.id),
+    why: { useful: `Impact ${said("impact", levels.impact)}.`, moat: `Moat ${said("defensibility", levels.defensibility)}.`, quality: `Quality ${said("quality", levels.quality)}.`, evidence: it.evidence.line },
+    aftermath: picture(levels, it.id, it.title),
+  };
+};
+const isCandidate = new Set(candidates.map((c) => c.id));
 const out = {
-  generated: new Date().toISOString(), model: JEV_MODEL, engine: "Compass judge (moat, quality and ORION's seven dimensions; Jev beliefs over described situations) · ORION prioritisation (Borda over RICE, ICE, WSJF, leverage, Eisenhower) · ORION aftermath",
-  criteria: { usefulMin: CRITERIA.usefulMin, moatMin: CRITERIA.moatMin, ...CRITERIA.text },
-  agreement: r2(ranked.kendallW ?? ranked.agreement ?? 0),
-  evidenceDigest: createHash("sha256").update(JSON.stringify(items.map((i) => [i.id, i.detail, i.evidence]))).digest("hex").slice(0, 16),
-  note: "The scores are a model's judgment of the descriptions and evidence shown here; the verdict is the fixed rule applied to them. The context told the judge that the code is open source and easy to copy.",
-  items: judged.map(({ it, levels }) => {
-    const r = rankOf[it.id];
-    return {
-      id: it.id, title: it.title, detail: it.detail, status: it.status, files: it.files, evidence: it.evidence,
-      levels: { impact: levels.impact, defensibility: levels.defensibility, quality: levels.quality, confidence: levels.confidence, effort: levels.effort, leverage: levels.leverage, urgency: levels.urgency, reach: levels.reach, reversibility: levels.reversibility },
-      orion: { rank: r.rank as number, pFirst: r2(r.pFirst), eisenhower: r.eisenhower as string, effortMatrix: r.effortMatrix as string, door: r.door as string },
-      verdict: verdictOf(it, levels),
-      why: { useful: `Impact ${said("impact", levels.impact)}.`, moat: `Moat ${said("defensibility", levels.defensibility)}.`, quality: `Quality ${said("quality", levels.quality)}.`, evidence: it.evidence.line },
-      aftermath: picture(levels, it.id, it.title),
-    };
-  }).sort((a, b) => a.orion.rank - b.orion.rank),
+  generated: new Date().toISOString(), model: JEV_MODEL, engine: "Compass judge (impact, moat, quality and ORION's dimensions; Jev beliefs over described situations) · ORION prioritisation (Borda over RICE, ICE, WSJF, leverage, Eisenhower) · ORION aftermath",
+  criteria: { highValueMin: CRITERIA.highValueMin, ...CRITERIA.text }, repeats: REPEATS,
+  agreement: built.w, agreementCandidates: next.w,
+  evidenceDigest: createHash("sha256").update(JSON.stringify(all.map((i) => [i.id, i.detail, i.evidence, i.requires ?? []]))).digest("hex").slice(0, 16),
+  note: "The scores are a model's judgment of the descriptions and evidence shown here; the verdict is the fixed rule applied to them.",
+  items: judged.filter((j) => !isCandidate.has(j.it.id)).map(row).sort((a, b) => a.orion.rank - b.orion.rank),
+  candidates: judged.filter((j) => isCandidate.has(j.it.id)).map(row).sort((a, b) => a.orion.rank - b.orion.rank),
 };
 writeFileSync(`${root}/web/lib/data/aero-value.json`, JSON.stringify(out, null, 1) + "\n");
 writeFileSync(`${root}/plans/20261120-aero/value-review.json`, JSON.stringify({ ...out, beliefs: Object.fromEntries(judged.map((j) => [j.it.id, j.beliefs])) }, null, 1) + "\n");
-console.log(JSON.stringify({ W: out.agreement, items: out.items.map((i) => `${i.orion.rank}:${i.id} ${i.verdict} moat ${i.levels.defensibility} impact ${i.levels.impact} q ${i.levels.quality}`) }));
+console.log(JSON.stringify({ W: [out.agreement, out.agreementCandidates], items: out.items.map((i) => `${i.orion.rank}:${i.id} [${i.verdict}${i.borderline ? ", borderline" : ""}] impact ${i.levels.impact} (${i.impactRange.join("-")})`), candidates: out.candidates.map((i) => `${i.orion.rank}:${i.id} [${i.verdict}${i.borderline ? ", borderline" : ""}] impact ${i.levels.impact} (${i.impactRange.join("-")}) effort ${i.levels.effort}`) }));

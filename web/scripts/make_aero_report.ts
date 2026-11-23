@@ -1,0 +1,127 @@
+/**
+ * Write the aerodynamics validation report (Markdown) from the result files. Every number comes from those files:
+ * lib/data/aero-validation.json (wind-tunnel wings), aero-flight.json (F-106B flight and trim), aero-corpus.json.
+ *   bun scripts/make_aero_report.ts            → ../reports/aero-validation-report.md
+ * The report is the citable record: what was compared, the criteria written beforehand, the hits and the misses.
+ */
+import { createHash } from "node:crypto";
+import { readFileSync, writeFileSync } from "node:fs";
+import { AIRCRAFT } from "../lib/aero/aircraft";
+import corpus from "../lib/data/aero-corpus.json";
+import flight from "../lib/data/aero-flight.json";
+import val from "../lib/data/aero-validation.json";
+
+export const REPORT_VERSION = "1.0";
+const pct = (x: number, d = 0) => `${(x * 100).toFixed(d)}%`;
+const f3 = (x: number | null | undefined) => (x === null || x === undefined ? "n/a" : x.toFixed(3));
+const sha = (f: string) => createHash("sha256").update(readFileSync(new URL(`../lib/data/${f}`, import.meta.url))).digest("hex").slice(0, 16);
+const files = ["aero-corpus.json", "aero-validation.json", "aero-flight.json"];
+const L: string[] = [];
+const w = (s = "") => L.push(s);
+const nPts = corpus.cases.reduce((a, c) => a + c.points.length, 0);
+const crit = Object.entries(val.criteria) as [string, { text: string; pass: boolean; failing?: string[]; value?: number }][];
+const fcrit = Object.entries(flight.criteria) as [string, { text: string; pass: boolean; value: number }][];
+const met = crit.filter(([, c]) => c.pass).length + fcrit.filter(([, c]) => c.pass).length, total = crit.length + fcrit.length;
+const trim = flight.trim, rows = trim.rows, first = rows[0], last = rows[rows.length - 1], fv = flight.flight.variants;
+
+w(`# Vortex-lift estimates for slender-wing aircraft: validation record, version ${REPORT_VERSION}`);
+w();
+w("Archymedes Defense, aerodynamics. Open source (Apache-2.0): https://github.com/Archymedes-Lab/archymedes-defense");
+w();
+w("## What this record is for");
+w();
+w("It says how far to trust a fast, low-order estimate of lift at high angle of attack, and where not to. Every comparison below is against data NASA published. The wind-tunnel criteria (C1 to C4) were written down before any score was known; the flight criteria (F1 to F4) were written after the unfitted model had first been compared and before the rounded edge was fitted. The misses are listed with the hits. Nothing here is a design clearance, and nothing concerns weapons, signatures or manoeuvre optimisation.");
+w();
+w("## Summary");
+w();
+w(`- **${met} of ${total} criteria met.** Misses: ${[...crit, ...fcrit].filter(([, c]) => !c.pass).map(([id]) => id).join(", ") || "none"}; each is detailed below.`);
+w(`- **Wind-tunnel wings.** ${nPts} digitized points on ${corpus.cases.length} cases from three NASA reports. On wings the model never saw (leave-one-wing-out), ${pct(val.coverage.widened)} of points fall inside the stated 90% band.`);
+w(`- **Real aircraft (F-106B).** At NASA's published trim point the lift error is ${pct(Math.abs(last?.error ?? 0))} (${pct(Math.abs(first?.error ?? 0))} for a bare sharp-edged wing), and the trim elevon is predicted within ${fcrit.find(([id]) => id === "F2")?.[1].value}°. Across 27 flight runs the weight the model implies varies by ${pct(fv[2]?.withinFlightCv ?? 0)} within a flight (${pct(fv[0]?.withinFlightCv ?? 0)} for the sharp-edged wing); ${pct(flight.flight.heldOutCv, 1)} on flights held out of the fit.`);
+w("- **Use it for:** relative comparisons and first estimates of lift for thin, highly swept wings below Mach 0.6, with the band as the error to carry forward. **Do not use it for:** absolute performance of a real aircraft outside the cases checked here, anything above Mach 0.6, lateral behaviour, or loads.");
+w();
+w("## Method");
+w();
+w("- Planar vortex lattice for attached (potential) lift; leading-edge suction converted to vortex lift by the Polhamus analogy; vortex-breakdown loss from the Wentz and Kohlman breakdown map with one calibrated parameter (the share of vortex lift kept behind a burst, " + val.retained + ").");
+w(`- Error band: split-conformal intervals of scaled residuals per flow regime, widened by a factor ${val.widen} chosen by nested leave-one-wing-out, so reported coverage is out of sample.`);
+w("- Real aircraft: geometry only from NASA tables and figures; elevon lift and trim from the same lattice; a rounded leading edge modelled as a smooth onset of vortex lift between two angles.");
+w();
+w("## Aircraft and sources");
+w();
+w("| Aircraft | Airframe | Published geometry read from |");
+w("|---|---|---|");
+for (const a of AIRCRAFT) w(`| ${a.name} | ${a.airframe} | ${a.sources.map((s) => `${s.report} (${s.where})`).join("; ")} |`);
+w();
+w("## Part 1: wind-tunnel wings");
+w();
+w("Criteria written 2026-11-20, before the first run, and not changed since.");
+w();
+w("| | Criterion | Result | Detail |");
+w("|---|---|---|---|");
+for (const [id, c] of crit) w(`| ${id} | ${c.text} | ${c.pass ? "met" : "**missed**"} | ${c.failing?.length ? `misses: ${c.failing.join(", ")}` : c.value !== undefined ? pct(c.value, 1) : "all cases"} |`);
+w();
+w("| Wing | Source figure | Points | RMS error before breakdown | RMS error, all | Maximum lift: data → model | Inside the band |");
+w("|---|---|---:|---:|---:|---|---:|");
+for (const r of val.inDomain) {
+  w(`| ${r.sweepDeg}° delta | ${r.figure} | ${r.n} | ${f3(r.rmsAttached)} | ${f3(r.rmsAll)} | ${r.clMax ? `${r.clMax.data.toFixed(2)} at ${r.clMax.dataAlpha}° → ${r.clMax.model.toFixed(2)} at ${r.clMax.modelAlpha}°` : "data stop before the peak"} | ${pct(r.coverage)} |`);
+}
+for (const r of val.outOfDomain) w(`| ${r.kind === "aircraft" ? "F/A-18 HARV (wind tunnel)" : `${r.sweepDeg}° delta`} | ${r.figure} | ${r.n} | outside the validated range | ${f3(r.rmsAll)} | n/a | ${pct(r.coverage)} (band doubled) |`);
+w();
+w(`Validated range: sharp-edged, pointed delta wings with ${val.sweepValidated[0]}° to ${val.sweepValidated[1]}° leading-edge sweep, to 50° angle of attack. Outside it every point is labelled an extrapolation and the band is doubled.`);
+w();
+w("## Part 2: a real aircraft, the F-106B");
+w();
+w("### Trim point (absolute)");
+w();
+w(`${trim.source}: the basic aircraft at ${trim.alphaDeg}° angle of attack. Weight, speed, flight-path angle and thrust are published, so the lift coefficient required is ${trim.clRequired.toFixed(3)}. Assumed: ${trim.assumed}. This point was not used to fit anything.`);
+w();
+w("| Model | Lift coefficient | Error | Elevon |");
+w("|---|---:|---:|---:|");
+for (const r of rows) w(`| ${r.label} | ${r.cl.toFixed(3)} | ${r.error > 0 ? "+" : ""}${pct(r.error)} | ${r.elevonDeg === null ? "n/a" : `${r.elevonDeg.toFixed(2)}°`} |`);
+w();
+w(`Published elevon ${trim.publishedElevonDeg}°; predicted ${trim.predictedElevonDeg.fitted.toFixed(2)}°.`);
+w();
+w("### Flight table (shape of the lift curve)");
+w();
+w(`${flight.flight.source}: ${flight.flight.pointsUsed} runs on ${flight.flight.flights.length} flights with published angle of attack, altitude, Mach number and load factor (${flight.flight.pointsExcluded} more excluded: ${flight.flight.excludedWhy}). The weight of each run is not published. In steady flight, load factor × weight = lift, so each run gives the weight the model implies; a correct lift curve gives one weight per flight.`);
+w();
+w("| Leading-edge model | Spread of implied weight within a flight | Mean implied weight |");
+w("|---|---:|---:|");
+for (const x of fv) w(`| ${x.label} | ${pct(x.withinFlightCv, 1)} | ${x.meanWeightLb.toLocaleString("en")} lb |`);
+w();
+w(`The fitted rounded edge starts shedding a vortex at ${flight.flight.blend.onsetDeg}° and is fully formed by ${flight.flight.blend.fullDeg}°. Fitted on four flights and scored on the fifth, in turn:`);
+w();
+w("| Flight held out | Runs | Fitted onset → full | Spread on the held-out flight |");
+w("|---|---:|---|---:|");
+for (const h of flight.flight.heldOut) w(`| ${h.flight} | ${h.n} | ${h.blend.onsetDeg}° → ${h.blend.fullDeg}° | ${pct(h.cv, 1)} |`);
+w();
+w("Criteria written 2026-11-23, after the first comparison of the unfitted variants and before the fit.");
+w();
+w("| | Criterion | Result | Value |");
+w("|---|---|---|---:|");
+for (const [id, c] of fcrit) w(`| ${id} | ${c.text} | ${c.pass ? "met" : "**missed**"} | ${c.value > 100 ? `${c.value.toLocaleString("en")} lb` : id === "F2" ? `${c.value}°` : pct(c.value, 1)} |`);
+w();
+w("## Known misses and limits");
+w();
+for (const [id, c] of [...crit, ...fcrit].filter(([, c]) => !c.pass)) w(`- **${id} missed:** ${c.text}.`);
+for (const t of flight.limits) w(`- ${t}`);
+w("- The F-16XL-1 and the F/A-18 HARV have no flight comparison yet; both are outside the validated range of wing shapes.");
+w("- Thin flat wings only: no thickness, camber, fuselage, tails, flaps, compressibility or Reynolds-number effects in the lift model.");
+w();
+w("## Data and reproduction");
+w();
+w("| File | SHA-256 (first 16) |");
+w("|---|---|");
+for (const f of files) w(`| \`web/lib/data/${f}\` | \`${sha(f)}\` |`);
+w();
+w("Reproduce: `cd web && bun scripts/validate_aero.ts && bun scripts/validate_flight.ts && bun scripts/make_aero_report.ts`; tests: `bun test tests/aero*.test.ts`.");
+w();
+w("## How to cite");
+w();
+w(`Archymedes Defense (2026). *Vortex-lift estimates for slender-wing aircraft: validation record*, version ${REPORT_VERSION}. https://github.com/Archymedes-Lab/archymedes-defense (data digests above).`);
+w();
+w("## Sources");
+w();
+for (const s of ["Polhamus 1966, NASA TN D-3767 (suction analogy; delta-wing lift data)", "Wentz & Kohlman 1968, NASA CR-98737 (vortex-breakdown map; lift curves)", "NASA TM-112360, 1996 (F/A-18 wind-tunnel lift)",
+  "NASA TP-2001-210629, 2001 (F-16XL-1 geometry)", "NASA TP-3374, 1993 (F-106B geometry and flight table)", "NASA TP-2747, 1987 (F-106B mass and trim table)", "Vovk, Gammerman & Shafer 2005 (conformal intervals)"]) w(`- ${s}`);
+writeFileSync(new URL("../../reports/aero-validation-report.md", import.meta.url), `${L.join("\n")}\n`);
+console.log(`aero-validation-report.md v${REPORT_VERSION}: ${L.length} lines, ${met}/${total} criteria met`);

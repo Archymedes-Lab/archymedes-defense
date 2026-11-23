@@ -10,9 +10,7 @@ import { type EdgeBlend, trimModel, trimmedLiftBlend } from "@/lib/aero/trim";
 import { deg, toDeg, toRad } from "@/lib/aero/units";
 import { type DataPoint, LiftChart, REGIME_LEGEND } from "./chart";
 import { WingDrawing } from "./drawing";
-import { HarvDrawing } from "./harv-drawing";
 
-const HarvScene = dynamic(() => import("@/components/three/harv").then((m) => m.HarvScene), { ssr: false, loading: () => <div className="aspect-[4/3] w-full animate-pulse bg-surface sm:aspect-[16/10]" /> });
 const WingScene = dynamic(() => import("@/components/three/wing").then((m) => m.WingScene), { ssr: false, loading: () => <div className="aspect-[4/3] w-full animate-pulse bg-surface sm:aspect-[16/10]" /> });
 
 export type PresetId = "harv" | "f16xl" | "f106b";
@@ -35,8 +33,7 @@ export function AeroWorkbench({ bands, retained, cases, date, flightBlend }: { b
   const [preset, setPreset] = useState<PresetId>("harv");
   const [alpha, setAlpha] = useState(30);
   const [lattice, setLattice] = useState<"shown" | "hidden">("shown");
-  const fighter = preset === "harv";
-  const alphaMax = fighter ? 70 : 50;
+  const alphaMax = preset === "harv" ? 70 : 50; // the HARV wind-tunnel data run to 70°
   const a = Math.min(alpha, alphaMax);
   const aircraft = aircraftById(preset) ?? AIRCRAFT[0];
   const planform = useMemo(() => (aircraftById(preset) ?? AIRCRAFT[0])?.planform() ?? { name: "", stations: [] }, [preset]);
@@ -122,26 +119,22 @@ export function AeroWorkbench({ bands, retained, cases, date, flightBlend }: { b
 
       <Panel className="grid gap-3 p-3 sm:p-4">
         <div className="flex flex-wrap items-center justify-between gap-3"><div className="eyebrow">Engineering drawing</div>
-          {!fighter && <Segmented label="Lattice" value={lattice} options={[{ value: "shown", label: "Lattice on" }, { value: "hidden", label: "Lattice off" }]} onChange={setLattice} />}</div>
+          <Segmented label="Lattice" value={lattice} options={[{ value: "shown", label: "Lattice on" }, { value: "hidden", label: "Lattice off" }]} onChange={setLattice} /></div>
         <div className="overflow-x-auto"><div className="min-w-[640px]">
-          {fighter ? <HarvDrawing at={at} burstXi={at.burstXi} date={date} /> : <WingDrawing s={{
+          <WingDrawing s={{
             designation: `AD-AERO-${aircraft.name.replace(/[^A-Z0-9]/gi, "").toUpperCase()}`, planform, props: analysis.vlm.props,
             panels: lattice === "shown" ? analysis.vlm.panels : [], at, kp: analysis.vortex.kp, kv: analysis.vortex.kv, unit, date, burstXi: at.burstXi, domainOk: analysis.domain.ok,
-          }} />}
+          }} />
         </div></div>
       </Panel>
 
       <Panel className="grid gap-3 p-3 sm:p-4">
         <div className="flex flex-wrap items-baseline justify-between gap-2"><div className="eyebrow">3D · loading and leading-edge vortices</div><span className="font-mono text-[11px] text-fg-3">{`wind from the left · α ${a}° · ${at.burstXi >= 0 ? `vortex burst at ${Math.round(at.burstXi * 100)}% of the root chord from the trailing edge` : "vortex intact"} · drag to orbit`}</span></div>
-        {fighter ? (
-          <HarvScene alphaDeg={a} burstXi={at.burstXi} label={`3D model of the NASA F/A-18 HARV at ${a} degrees angle of attack with LEX vortex cores`} />
-        ) : (
+        {(
           <WingScene planform={planform} panels={analysis.vlm.panels} gamma={analysis.vlm.gamma} alphaDeg={a} burstXi={at.burstXi}
             label={`3D view of the ${planform.name} at ${a} degrees angle of attack, coloured by panel loading, with leading-edge vortex cores`} />
         )}
-        <p className="text-[12.5px] text-fg-3">{fighter
-          ? "Built from NASA's published dimensions and the traced NASA three-view: lofted fuselage, canopy, NACA-section wing with 4.3° anhedral, LEX, all-moving stabilators, twin tails canted 20°, wingtip research pods. LEX vortex cores are illustrative; the burst point is the model's."
-          : "Wing planform from NASA's published dimensions (the fuselage and tails of this aircraft are not modelled in 3D). Panel colour: vortex-lattice loading (Γ per panel chord). Vortex cores are placed at measured delta-wing positions (≈ 60% of the local semispan) for illustration; the burst point is the model's."}</p>
+        <p className="text-[12.5px] text-fg-3">{"Wing planform from NASA's published dimensions (the fuselage and tails of this aircraft are not modelled in 3D). Panel colour: vortex-lattice loading (Γ per panel chord). Vortex cores are placed at measured delta-wing positions (≈ 60% of the local semispan) for illustration; the burst point is the model's."}</p>
       </Panel>
     </div>
   );
