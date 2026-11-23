@@ -41,7 +41,9 @@ export const CRITERIA = {
   },
 };
 
-interface Item { id: string; title: string; label: string; detail: string; track: string; status: "done" | "rejected" | "next"; requires?: string[]; files: string[]; evidence: { tests: number; validated: boolean; line: string } }
+interface Item { id: string; title: string; label: string; detail: string; track: string; status: "done" | "rejected" | "next"; requires?: string[];
+  /** Built because the owner asked for it directly: shown in the product even when the rule would cut it (stated on the page). */
+  ownerRequest?: string; files: string[]; evidence: { tests: number; validated: boolean; line: string } }
 const items: Item[] = [
   { id: "bands", title: "Lift estimates with measured error bands", label: "Vortex-lift engine with error bands measured on NASA wind-tunnel data",
     detail: "Vortex lattice plus the Polhamus suction analogy and a vortex-breakdown limit, with a band beside every estimate measured by leave-one-wing-out on 200 digitized NASA points. Misses are published.",
@@ -59,6 +61,10 @@ const items: Item[] = [
     detail: "F-16, F/A-18 HARV, F-16XL-1 and F-106B: every dimension names the NASA table or figure it was read from; planforms are built from those numbers; anything traced from a drawing is labelled with its tolerance; no invented layouts.",
     track: "trust", status: "done", requires: ["bands"], files: ["lib/aero/aircraft.ts"],
     evidence: { tests: tests("aero-aircraft.test.ts"), validated: true, line: "F-106B's published area, chord and aspect ratio are reproduced from its triangle within 0.1%; the F-16's published area, span and mean chord exactly, with the sweep fitted to NASA's drawing (40.2° ± 2.5°); the F-16XL planform is 5% larger than the published wing area, and says so." } },
+  { id: "live", title: "Fly it: live simulation in the app", label: "Live pilot-in-the-loop flight simulation of the real aircraft in the browser",
+    detail: "Stick and throttle, integrated at a fixed 120 Hz step in the browser: flight path, lift and vortex state live, NASA's F-16 thrust table, published weights and wing areas, a generated F-16 3D model scaled to NASA's dimensions; whole-aircraft drag and the stick response are stated assumptions.",
+    track: "distribution", status: "done", requires: ["bands", "aircraft", "unsteady"], ownerRequest: "2026-11-23: a live simulation in the app, smooth, like professional software", files: ["lib/aero/live.ts", "lib/aero/f16data.ts"],
+    evidence: { tests: tests("aero-live.test.ts"), validated: false, line: "Frame-rate independent (same flight for any split of time into frames); matches the reference integrator step for step; trim holds level; energy change equals thrust-minus-drag work; NASA thrust table checked against its own SI half. Drag is an allowance, not measured." } },
   { id: "unsteady", title: "Lift that lags in pitching motion", label: "Unsteady vortex lift (Goman-Khrabrov state-space model)",
     detail: "One state for the share of vortex lift present, relaxing with a time constant of the order reported for delta wings; exact stepping; reduces to the static polar.",
     track: "quality", status: "done", files: ["lib/aero/unsteady.ts"],
@@ -125,8 +131,11 @@ const rankGroup = async (group: Item[], lead: string) => {
   const res = prioritize(await prioritizeWithJev(req, { apiKey, timeoutMs: 60_000 })) as any;
   return { rows: Object.fromEntries((res.rows as any[]).map((r) => [r.optionId, r])), w: r2(res.kendallW ?? res.agreement ?? 0) };
 };
-const built = await rankGroup(items, "Work already built:"), next = await rankGroup(candidates, "Candidate next steps, nothing built yet:");
-const rankOf = { ...built.rows, ...next.rows };
+// ORION takes at most 8 options: work rejected on evidence is already decided and is listed after the ranked items.
+const rankable = items.filter((i) => i.status !== "rejected"), rejected = items.filter((i) => i.status === "rejected");
+const built = await rankGroup(rankable, "Work already built:"), next = await rankGroup(candidates, "Candidate next steps, nothing built yet:");
+const rankOf: Record<string, any> = { ...built.rows, ...next.rows };
+rejected.forEach((i, k) => { rankOf[i.id] = { rank: rankable.length + k + 1, pFirst: 0, eisenhower: "not ranked: rejected on evidence", effortMatrix: "n/a", door: "n/a" }; });
 
 // 3. ORION aftermath: four factors from the judged levels; benefits on −10..10 around "somewhat" (2), effort as a cost
 const factors = [
@@ -158,7 +167,7 @@ const said = (dim: "impact" | "defensibility" | "quality", lv: number) => {
 const row = ({ it, levels, impactRange }: (typeof judged)[number]) => {
   const r = rankOf[it.id];
   return {
-    id: it.id, title: it.title, detail: it.detail, status: it.status, requires: it.requires ?? [], files: it.files, evidence: it.evidence,
+    id: it.id, title: it.title, detail: it.detail, status: it.status, requires: it.requires ?? [], ownerRequest: it.ownerRequest ?? null, files: it.files, evidence: it.evidence,
     levels: { impact: levels.impact, defensibility: levels.defensibility, quality: levels.quality, confidence: levels.confidence, effort: levels.effort, leverage: levels.leverage, urgency: levels.urgency, reach: levels.reach, reversibility: levels.reversibility },
     orion: { rank: r.rank as number, pFirst: r2(r.pFirst), eisenhower: r.eisenhower as string, effortMatrix: r.effortMatrix as string, door: r.door as string },
     verdict: verdictOf(it), impactRange, borderline: impactRange[0] < CRITERIA.highValueMin && impactRange[1] >= CRITERIA.highValueMin,

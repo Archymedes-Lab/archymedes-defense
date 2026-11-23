@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ScatterChart, type Series } from "@/components/aero/dynamics";
+import { LiveFlightLoader } from "@/components/aero/live-flight-loader";
 import { AeroWorkbench, type CaseView } from "@/components/aero/workbench";
 import { PageHeader, Panel, Section, Stat } from "@/components/ui/primitives";
 import type { Bands } from "@/lib/aero/error-model";
@@ -56,6 +57,7 @@ export default function AeroPage() {
   const counts = reviewed.reduce<Record<string, number>>((a, i) => ({ ...a, [i.verdict]: (a[i.verdict] ?? 0) + 1 }), {});
   const titleOf = (id: string) => reviewed.find((i) => i.id === id)?.title ?? id;
   const highValue = reviewed.filter((i) => i.verdict === "high value");
+  const ownerShown = value.items.filter((i) => i.ownerRequest && i.verdict === "cut");
   const cr = validation.criteria;
   const nPts = corpus.cases.reduce((a, c) => a + c.points.length, 0);
   const criteria = [
@@ -75,6 +77,11 @@ export default function AeroPage() {
           <Stat value={pct(Math.abs(trimLast?.error ?? 0))} label="lift error at NASA's F-106B trim point" hint={`was ${pct(Math.abs(trimFirst?.error ?? 0))} before the elevon and rounded-edge model`} />
         </div>
       </PageHeader>
+
+      <Section eyebrow="Live simulation" title="Fly it: the aerodynamics running in real time"
+        description="Pick an aircraft, press Fly, and work the stick and throttle. The flight path, the lift coefficient and the leading-edge vortex state are integrated live at a fixed 120 Hz step in your browser, from the same code and tests as the rest of this page. Every assumption is listed under the charts.">
+        <LiveFlightLoader />
+      </Section>
 
       <Section eyebrow="Workbench" title="Real aircraft: published data, lift curve, drawing and 3D view"
         description={`Only real airframes: ${AIRCRAFT.map((a) => a.name).join(", ")}. Each is a NASA research aircraft, and every dimension shown names the NASA table or figure it was read from. There are no invented layouts.`}>
@@ -125,8 +132,9 @@ export default function AeroPage() {
         </div>
         <Panel className="grid gap-2 p-5">
           <div className="eyebrow">Result</div>
-          <p className="text-[14px]">{highValue.length === 0 ? "Nothing clears the bar." : <>High value: {highValue.map((i) => `${i.title} (${i.levels.impact.toFixed(2)}${i.status === "next" ? ", not built yet" : ""})`).join("; ")}.</>} {value.items.every((i) => i.verdict !== "high value") && "Nothing built so far clears the bar on its own: what is shown on this page is here because the high-value work needs it."}</p>
-          <p className="text-[13px] text-fg-2">Cut from this page (the code stays in the repository): {reviewed.filter((i) => i.verdict === "cut" && i.status === "done").map((i) => `${i.title} (${i.levels.impact.toFixed(2)})`).join("; ")}. Candidate next steps that do not clear the bar: {value.candidates.filter((i) => i.verdict === "cut").map((i) => `${i.title} (${i.levels.impact.toFixed(2)})`).join("; ")}.</p>
+          <p className="text-[14px]">{highValue.length === 0 ? "Nothing clears the bar." : <>High value: {highValue.map((i) => `${i.title} (${i.levels.impact.toFixed(2)}${i.status === "next" ? ", not built yet" : ""})`).join("; ")}.</>} {value.items.every((i) => i.verdict !== "high value") && "Nothing built so far clears the bar on its own: what is shown on this page is here because the high-value work needs it, or because the owner asked for it."}</p>
+          {ownerShown.length > 0 && <p className="text-[13px] text-fg-2">Shown although the rule cuts it, at the owner&apos;s request: {ownerShown.map((i) => `${i.title} (${i.levels.impact.toFixed(2)}; asked ${i.ownerRequest})`).join("; ")}.</p>}
+          <p className="text-[13px] text-fg-2">Cut from this page (the code stays in the repository): {reviewed.filter((i) => i.verdict === "cut" && i.status === "done" && !i.ownerRequest).map((i) => `${i.title} (${i.levels.impact.toFixed(2)})`).join("; ")}. Candidate next steps that do not clear the bar: {value.candidates.filter((i) => i.verdict === "cut").map((i) => `${i.title} (${i.levels.impact.toFixed(2)})`).join("; ")}.</p>
         </Panel>
         {([["Built work", value.items], ["Candidate next steps", value.candidates]] as const).map(([heading, group]) => (
           <div key={heading} className="panel overflow-x-auto">

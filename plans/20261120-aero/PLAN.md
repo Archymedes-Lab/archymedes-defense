@@ -193,3 +193,26 @@ as a prerequisite; everything else is cut from the page (code stays in the repos
 The validation report (`web/scripts/make_aero_report.ts` → `reports/aero-validation-report.md`, v1.0) was built
 because it ranked first as a candidate; it is kept in the repository and tested against the data digests, but is not
 linked from the page.
+
+## F-16, a generated 3D model, and a live simulation in the app (2026-11-23, late night)
+
+- **F-16 added** from NASA TP-1538 (Nguyen et al., 1979): Table I (area 300 ft², span 30 ft, mean chord 11.32 ft,
+  weight 20,500 lb, inertias), Fig. 2 (length 15.09 m, height 5.01 m, span over launchers 9.45 m), Table VI (thrust:
+  idle, military and maximum by Mach 0.2–1.0 and altitude 0–50,000 ft; transcribed exactly and checked against the SI
+  half). Taper 0.2275 follows exactly from area, span and mean chord; the leading-edge sweep (40.2° ± 2.5°) is fitted to
+  both wings of Fig. 2 and labelled traced. NASA's table has idle above military thrust at Mach 0.2 / 50,000 ft;
+  kept as published.
+- **3D model**: Tripo multiview-to-model (H3.1, detailed geometry and texture, PBR) from the owner's three-view, front
+  and side views (task 3e1d1833, 60 credits). Optimised with gltf-transform 4.1.1: 1.93 M → 115,628 triangles,
+  WebP 2K textures, meshopt (63.7 MB → 1.14 MB). The viewer scales it to NASA's length, height and span; the generated
+  span was 19% wide because the source views are drawn at different scales. The GLB is NOT in git until the rights
+  are confirmed (Tripo gives distribution rights only on paid plans; provenance in web/public/aero/models/f16.json).
+- **Live simulation** (`lib/aero/live.ts`, `components/aero/live-flight.tsx`): stick (commanded angle of attack) and
+  throttle, fixed 120 Hz steps inside requestAnimationFrame, flight path, lift and vortex state live, strip charts on
+  a canvas, keyboard control. 0.2 ms of computation per frame for the F-16. Tests: frame-rate independence (identical
+  state for any split of time into frames), agreement with the reference integrator step for step, trim holds level,
+  energy change equals thrust-minus-drag work, lags never overshoot. Assumptions shown in the app: CD0 0.02 allowance
+  (the aerodynamic model covers the wing only), stick response 0.35 s lag and 25°/s, engine lag 1.2 s.
+- **Value review**: the live simulation scores 1.41 (cut by the high-value rule); it is shown at the owner's request,
+  and the page says so. Next high-value step unchanged: measured whole-aircraft data — the F-16's are in TP-1538
+  Table III (scanned in mixed orientations; transcription not started).

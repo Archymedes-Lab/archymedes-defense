@@ -197,6 +197,8 @@ describe("value review: every piece of the aero work is judged against the one c
   test("every item was judged several times, has scores from 0 to 4 with their range, an ORION rank, an aftermath and reasons", () => {
     expect(value.repeats).toBeGreaterThanOrEqual(3);
     for (const group of [items, candidates]) expect(group.map((i) => i.orion.rank).sort((a, b) => a - b)).toEqual(group.map((_, k) => k + 1));
+    for (const i of items) if (i.status === "rejected") expect(i.orion.pFirst).toBe(0); // decided on evidence, not ranked
+    for (const i of all) if (i.ownerRequest !== null) expect(i.ownerRequest.length).toBeGreaterThan(10); // an owner request says when and what
     for (const i of all) {
       for (const k of LEVEL_KEYS) { expect(i.levels[k]).toBeGreaterThanOrEqual(0); expect(i.levels[k]).toBeLessThanOrEqual(4); }
       expect(i.impactRange[0]).toBeLessThanOrEqual(i.levels.impact + 0.006); expect(i.impactRange[1]).toBeGreaterThanOrEqual(i.levels.impact - 0.006);

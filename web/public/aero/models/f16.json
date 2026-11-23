@@ -1,0 +1,16 @@
+{
+ "aircraft": "f16",
+ "generator": "Tripo API v3, multiview-to-model (H3.1, model v3.1-20260211), via tripo-cli 0.11.2",
+ "task_id": "3e1d1833-b0ac-4a7c-9086-985c1a5b3ec1",
+ "credits": 60,
+ "params": {
+  "texture_quality": "detailed",
+  "geometry_quality": "detailed",
+  "pbr": true
+ },
+ "inputs": "front and side views cropped from an F-16 three-view supplied by the owner",
+ "optimised": "gltf-transform 4.1.1: simplified 1,927,255 -> 115,628 triangles, WebP textures at 2048 px, meshopt compression (63.7 MB -> 1.14 MB)",
+ "sha256": "d594719dc23d1965451f5da01b1072f9853246af1f62cebc35495cae0214c0f8",
+ "scaling": "the viewer scales length, height and span to NASA TP-1538 Fig. 2 (15.09 m, 5.01 m, 9.45 m with wingtip launchers); the generated span was 19% wide because the source views are drawn at different scales",
+ "rights": "pending: depends on the Tripo plan that paid for the credits; not committed to git until confirmed"
+}

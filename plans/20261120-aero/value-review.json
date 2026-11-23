@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T20:38:22.612Z",
+ "generated": "2026-11-23T20:58:29.756Z",
  "model": "jev-1.14.0",
  "engine": "Compass judge (impact, moat, quality and ORION's dimensions; Jev beliefs over described situations) · ORION prioritisation (Borda over RICE, ICE, WSJF, leverage, Eisenhower) · ORION aftermath",
  "criteria": {
@@ -8,9 +8,9 @@
   "verdicts": "high value = meets the rule · kept as a prerequisite = below the rule, but a high-value item cannot run without it · cut = below the rule and nothing high-value needs it · rejected on evidence = tried and measured worse or unidentified."
  },
  "repeats": 3,
- "agreement": 0.93,
- "agreementCandidates": 0.94,
- "evidenceDigest": "8dbabc936676af43",
+ "agreement": 0.78,
+ "agreementCandidates": 1,
+ "evidenceDigest": "f6a8fd15e1d0121e",
  "note": "The scores are a model's judgment of the descriptions and evidence shown here; the verdict is the fixed rule applied to them.",
  "items": [
   {
@@ -22,6 +22,7 @@
     "flightval",
     "bands"
    ],
+   "ownerRequest": null,
    "files": [],
    "evidence": {
     "tests": 3,
@@ -29,27 +30,27 @@
     "line": "Version 1.0 generated from the result files: 5 of 8 criteria met, the three misses listed; a test fails if the report does not match the current data."
    },
    "levels": {
-    "impact": 2.35,
-    "defensibility": 1.8,
-    "quality": 3.37,
-    "confidence": 2.15,
-    "effort": 1.99,
-    "leverage": 2.81,
-    "urgency": 1.93,
-    "reach": 1.74,
-    "reversibility": 2.37
+    "impact": 2.36,
+    "defensibility": 1.82,
+    "quality": 3.36,
+    "confidence": 2.24,
+    "effort": 1.97,
+    "leverage": 2.83,
+    "urgency": 1.97,
+    "reach": 1.75,
+    "reversibility": 2.36
    },
    "orion": {
     "rank": 1,
-    "pFirst": 0.32,
+    "pFirst": 0.29,
     "eisenhower": "schedule",
     "effortMatrix": "quick_win",
     "door": "two_way"
    },
    "verdict": "cut",
    "impactRange": [
-    2.34,
-    2.36
+    2.32,
+    2.4
    ],
    "borderline": false,
    "neededBy": [],
@@ -63,7 +64,7 @@
     {
      "days": 7,
      "when": "First week",
-     "value": -0.11,
+     "value": -0.09,
      "well": 0.15,
      "mixed": 0.65,
      "hard": 0.2,
@@ -72,7 +73,7 @@
     {
      "days": 30,
      "when": "One month",
-     "value": 0.08,
+     "value": 0.1,
      "well": 0.25,
      "mixed": 0.55,
      "hard": 0.2,
@@ -81,16 +82,16 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": 0.53,
+     "value": 0.56,
      "well": 0.4,
-     "mixed": 0.4,
-     "hard": 0.2,
+     "mixed": 0.45,
+     "hard": 0.15,
      "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 180,
      "when": "Six months",
-     "value": 0.88,
+     "value": 0.92,
      "well": 0.5,
      "mixed": 0.35,
      "hard": 0.15,
@@ -99,7 +100,7 @@
     {
      "days": 365,
      "when": "One year",
-     "value": 1.1,
+     "value": 1.15,
      "well": 0.5,
      "mixed": 0.35,
      "hard": 0.15,
@@ -108,7 +109,7 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": 1.03,
+     "value": 1.09,
      "well": 0.5,
      "mixed": 0.3,
      "hard": 0.2,
@@ -125,6 +126,7 @@
     "bands",
     "aircraft"
    ],
+   "ownerRequest": null,
    "files": [
     "lib/aero/trim.ts",
     "lib/aero/flightdata.ts"
@@ -135,34 +137,34 @@
     "line": "Lift error at NASA's trim point 63% before, 3% after; elevon within 0.469°; held-out weight spread 6% (target 5%)."
    },
    "levels": {
-    "impact": 2.45,
-    "defensibility": 1.81,
-    "quality": 3.46,
+    "impact": 2.43,
+    "defensibility": 1.77,
+    "quality": 3.45,
     "confidence": 2.51,
-    "effort": 2.81,
+    "effort": 2.76,
     "leverage": 2.74,
-    "urgency": 1.56,
-    "reach": 1.3,
+    "urgency": 1.59,
+    "reach": 1.31,
     "reversibility": 2.5
    },
    "orion": {
     "rank": 2,
-    "pFirst": 0.17,
+    "pFirst": 0.13,
     "eisenhower": "schedule",
     "effortMatrix": "quick_win",
     "door": "two_way"
    },
    "verdict": "kept as a prerequisite",
    "impactRange": [
-    2.44,
-    2.46
+    2.41,
+    2.47
    ],
    "borderline": false,
    "neededBy": [
     "next-curves"
    ],
    "why": {
-    "useful": "Impact 2.5 of 4, nearest to: \"Noticeably\".",
+    "useful": "Impact 2.4 of 4, nearest to: \"Noticeably\".",
     "moat": "Moat 1.8 of 4, nearest to: \"It leaves something a competitor would need months to rebuild, such as our own code, a signed release or a working process\".",
     "quality": "Quality 3.5 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
     "evidence": "Lift error at NASA's trim point 63% before, 3% after; elevon within 0.469°; held-out weight spread 6% (target 5%)."
@@ -171,7 +173,7 @@
     {
      "days": 7,
      "when": "First week",
-     "value": -0.24,
+     "value": -0.26,
      "well": 0.1,
      "mixed": 0.7,
      "hard": 0.2,
@@ -180,7 +182,7 @@
     {
      "days": 30,
      "when": "One month",
-     "value": -0.03,
+     "value": -0.05,
      "well": 0.2,
      "mixed": 0.6,
      "hard": 0.2,
@@ -189,7 +191,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": 0.56,
+     "value": 0.52,
      "well": 0.4,
      "mixed": 0.45,
      "hard": 0.15,
@@ -198,7 +200,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": 1.03,
+     "value": 0.96,
      "well": 0.5,
      "mixed": 0.35,
      "hard": 0.15,
@@ -207,7 +209,7 @@
     {
      "days": 365,
      "when": "One year",
-     "value": 1.34,
+     "value": 1.25,
      "well": 0.55,
      "mixed": 0.3,
      "hard": 0.15,
@@ -216,9 +218,9 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": 1.31,
-     "well": 0.55,
-     "mixed": 0.3,
+     "value": 1.21,
+     "well": 0.5,
+     "mixed": 0.35,
      "hard": 0.15,
      "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     }
@@ -232,6 +234,7 @@
    "requires": [
     "bands"
    ],
+   "ownerRequest": null,
    "files": [
     "lib/aero/aircraft.ts"
    ],
@@ -241,27 +244,27 @@
     "line": "F-106B's published area, chord and aspect ratio are reproduced from its triangle within 0.1%; the F-16's published area, span and mean chord exactly, with the sweep fitted to NASA's drawing (40.2° ± 2.5°); the F-16XL planform is 5% larger than the published wing area, and says so."
    },
    "levels": {
-    "impact": 2.17,
-    "defensibility": 1.43,
-    "quality": 3.21,
-    "confidence": 2.33,
-    "effort": 2.58,
-    "leverage": 2.82,
-    "urgency": 1.5,
-    "reach": 1.64,
-    "reversibility": 2.28
+    "impact": 2.2,
+    "defensibility": 1.42,
+    "quality": 3.25,
+    "confidence": 2.34,
+    "effort": 2.55,
+    "leverage": 2.78,
+    "urgency": 1.47,
+    "reach": 1.68,
+    "reversibility": 2.29
    },
    "orion": {
     "rank": 3,
-    "pFirst": 0.12,
+    "pFirst": 0.11,
     "eisenhower": "drop",
     "effortMatrix": "fill_in",
     "door": "two_way"
    },
    "verdict": "kept as a prerequisite",
    "impactRange": [
-    2.15,
-    2.2
+    2.17,
+    2.23
    ],
    "borderline": false,
    "neededBy": [
@@ -271,14 +274,14 @@
    "why": {
     "useful": "Impact 2.2 of 4, nearest to: \"Noticeably\".",
     "moat": "Moat 1.4 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 3.2 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "quality": "Quality 3.3 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
     "evidence": "F-106B's published area, chord and aspect ratio are reproduced from its triangle within 0.1%; the F-16's published area, span and mean chord exactly, with the sweep fitted to NASA's drawing (40.2° ± 2.5°); the F-16XL planform is 5% larger than the published wing area, and says so."
    },
    "aftermath": [
     {
      "days": 7,
      "when": "First week",
-     "value": -0.5,
+     "value": -0.48,
      "well": 0.05,
      "mixed": 0.65,
      "hard": 0.3,
@@ -287,7 +290,7 @@
     {
      "days": 30,
      "when": "One month",
-     "value": -0.4,
+     "value": -0.37,
      "well": 0.15,
      "mixed": 0.55,
      "hard": 0.3,
@@ -296,7 +299,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": -0.07,
+     "value": -0.02,
      "well": 0.3,
      "mixed": 0.45,
      "hard": 0.25,
@@ -305,7 +308,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": 0.16,
+     "value": 0.21,
      "well": 0.35,
      "mixed": 0.4,
      "hard": 0.25,
@@ -314,7 +317,7 @@
     {
      "days": 365,
      "when": "One year",
-     "value": 0.24,
+     "value": 0.3,
      "well": 0.4,
      "mixed": 0.35,
      "hard": 0.25,
@@ -323,7 +326,7 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": 0.09,
+     "value": 0.14,
      "well": 0.4,
      "mixed": 0.35,
      "hard": 0.25,
@@ -337,6 +340,7 @@
    "detail": "Vortex lattice plus the Polhamus suction analogy and a vortex-breakdown limit, with a band beside every estimate measured by leave-one-wing-out on 200 digitized NASA points. Misses are published.",
    "status": "done",
    "requires": [],
+   "ownerRequest": null,
    "files": [
     "lib/aero/vlm.ts",
     "lib/aero/vortex.ts",
@@ -352,27 +356,27 @@
     "line": "Held-out band coverage 90% on 9 wings; 2 of 4 pre-registered criteria met, the misses shown."
    },
    "levels": {
-    "impact": 2.27,
-    "defensibility": 2.04,
+    "impact": 2.29,
+    "defensibility": 2.02,
     "quality": 3.31,
-    "confidence": 2.11,
-    "effort": 3.14,
-    "leverage": 2.46,
-    "urgency": 1.71,
-    "reach": 1.37,
-    "reversibility": 2.26
+    "confidence": 2.15,
+    "effort": 3.13,
+    "leverage": 2.48,
+    "urgency": 1.7,
+    "reach": 1.4,
+    "reversibility": 2.22
    },
    "orion": {
     "rank": 4,
-    "pFirst": 0.14,
+    "pFirst": 0.12,
     "eisenhower": "schedule",
     "effortMatrix": "big_bet",
     "door": "two_way"
    },
    "verdict": "kept as a prerequisite",
    "impactRange": [
-    2.22,
-    2.3
+    2.29,
+    2.29
    ],
    "borderline": false,
    "neededBy": [
@@ -417,7 +421,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": 0.87,
+     "value": 0.88,
      "well": 0.5,
      "mixed": 0.35,
      "hard": 0.15,
@@ -426,16 +430,16 @@
     {
      "days": 365,
      "when": "One year",
-     "value": 1.18,
-     "well": 0.5,
-     "mixed": 0.35,
+     "value": 1.19,
+     "well": 0.55,
+     "mixed": 0.3,
      "hard": 0.15,
      "sign": "Do you notice a real improvement in quality people can rely on (trust, future)?"
     },
     {
      "days": 1095,
      "when": "Three years",
-     "value": 1.19,
+     "value": 1.2,
      "well": 0.5,
      "mixed": 0.3,
      "hard": 0.2,
@@ -449,6 +453,7 @@
    "detail": "One state for the share of vortex lift present, relaxing with a time constant of the order reported for delta wings; exact stepping; reduces to the static polar.",
    "status": "done",
    "requires": [],
+   "ownerRequest": null,
    "files": [
     "lib/aero/unsteady.ts"
    ],
@@ -458,26 +463,26 @@
     "line": "Reproduces the published linear frequency response to 3 decimals; the time constant is the reported order of magnitude, not identified for these aircraft."
    },
    "levels": {
-    "impact": 1.56,
-    "defensibility": 1.15,
-    "quality": 2.09,
-    "confidence": 1.76,
-    "effort": 2.29,
-    "leverage": 1.73,
-    "urgency": 1.35,
-    "reach": 1.02,
-    "reversibility": 2.67
+    "impact": 1.57,
+    "defensibility": 1.14,
+    "quality": 2.14,
+    "confidence": 1.73,
+    "effort": 2.25,
+    "leverage": 1.75,
+    "urgency": 1.36,
+    "reach": 1.03,
+    "reversibility": 2.72
    },
    "orion": {
     "rank": 5,
-    "pFirst": 0.08,
+    "pFirst": 0.11,
     "eisenhower": "drop",
     "effortMatrix": "fill_in",
     "door": "two_way"
    },
    "verdict": "cut",
    "impactRange": [
-    1.52,
+    1.53,
     1.61
    ],
    "borderline": false,
@@ -492,7 +497,7 @@
     {
      "days": 7,
      "when": "First week",
-     "value": -1.04,
+     "value": -1.02,
      "well": 0.05,
      "mixed": 0.45,
      "hard": 0.5,
@@ -501,7 +506,7 @@
     {
      "days": 30,
      "when": "One month",
-     "value": -1.16,
+     "value": -1.13,
      "well": 0.05,
      "mixed": 0.4,
      "hard": 0.55,
@@ -510,7 +515,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": -1.27,
+     "value": -1.24,
      "well": 0.1,
      "mixed": 0.4,
      "hard": 0.5,
@@ -519,7 +524,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": -1.42,
+     "value": -1.38,
      "well": 0.15,
      "mixed": 0.4,
      "hard": 0.45,
@@ -528,7 +533,7 @@
     {
      "days": 365,
      "when": "One year",
-     "value": -1.62,
+     "value": -1.58,
      "well": 0.2,
      "mixed": 0.4,
      "hard": 0.4,
@@ -537,10 +542,221 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": -1.74,
+     "value": -1.7,
      "well": 0.25,
      "mixed": 0.4,
      "hard": 0.35,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    }
+   ]
+  },
+  {
+   "id": "live",
+   "title": "Fly it: live simulation in the app",
+   "detail": "Stick and throttle, integrated at a fixed 120 Hz step in the browser: flight path, lift and vortex state live, NASA's F-16 thrust table, published weights and wing areas, a generated F-16 3D model scaled to NASA's dimensions; whole-aircraft drag and the stick response are stated assumptions.",
+   "status": "done",
+   "requires": [
+    "bands",
+    "aircraft",
+    "unsteady"
+   ],
+   "ownerRequest": "2026-11-23: a live simulation in the app, smooth, like professional software",
+   "files": [
+    "lib/aero/live.ts",
+    "lib/aero/f16data.ts"
+   ],
+   "evidence": {
+    "tests": 12,
+    "validated": false,
+    "line": "Frame-rate independent (same flight for any split of time into frames); matches the reference integrator step for step; trim holds level; energy change equals thrust-minus-drag work; NASA thrust table checked against its own SI half. Drag is an allowance, not measured."
+   },
+   "levels": {
+    "impact": 1.4,
+    "defensibility": 0.92,
+    "quality": 1.86,
+    "confidence": 1.73,
+    "effort": 2.55,
+    "leverage": 1.54,
+    "urgency": 1.44,
+    "reach": 1.09,
+    "reversibility": 2.62
+   },
+   "orion": {
+    "rank": 6,
+    "pFirst": 0.07,
+    "eisenhower": "drop",
+    "effortMatrix": "money_pit",
+    "door": "two_way"
+   },
+   "verdict": "cut",
+   "impactRange": [
+    1.38,
+    1.41
+   ],
+   "borderline": false,
+   "neededBy": [],
+   "why": {
+    "useful": "Impact 1.4 of 4, nearest to: \"A little\".",
+    "moat": "Moat 0.9 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 1.9 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
+    "evidence": "Frame-rate independent (same flight for any split of time into frames); matches the reference integrator step for step; trim holds level; energy change equals thrust-minus-drag work; NASA thrust table checked against its own SI half. Drag is an allowance, not measured."
+   },
+   "aftermath": [
+    {
+     "days": 7,
+     "when": "First week",
+     "value": -1.31,
+     "well": 0.05,
+     "mixed": 0.35,
+     "hard": 0.6,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 30,
+     "when": "One month",
+     "value": -1.49,
+     "well": 0.05,
+     "mixed": 0.3,
+     "hard": 0.65,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 90,
+     "when": "Three months",
+     "value": -1.71,
+     "well": 0.1,
+     "mixed": 0.35,
+     "hard": 0.55,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 180,
+     "when": "Six months",
+     "value": -1.97,
+     "well": 0.1,
+     "mixed": 0.4,
+     "hard": 0.5,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 365,
+     "when": "One year",
+     "value": -2.25,
+     "well": 0.15,
+     "mixed": 0.4,
+     "hard": 0.45,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 1095,
+     "when": "Three years",
+     "value": -2.39,
+     "well": 0.2,
+     "mixed": 0.4,
+     "hard": 0.4,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    }
+   ]
+  },
+  {
+   "id": "flightpath",
+   "title": "HARV flight path",
+   "detail": "Speed, flight-path angle and height under prescribed angle of attack and thrust, standard atmosphere, NASA's published weight.",
+   "status": "done",
+   "requires": [],
+   "ownerRequest": null,
+   "files": [
+    "lib/aero/flight.ts"
+   ],
+   "evidence": {
+    "tests": 13,
+    "validated": false,
+    "line": "Energy conserved to 1e-7 without drag or thrust; trim holds level; not compared with flight records."
+   },
+   "levels": {
+    "impact": 0.99,
+    "defensibility": 0.81,
+    "quality": 1.56,
+    "confidence": 1.22,
+    "effort": 1.85,
+    "leverage": 1.36,
+    "urgency": 1.28,
+    "reach": 0.79,
+    "reversibility": 2.87
+   },
+   "orion": {
+    "rank": 7,
+    "pFirst": 0.1,
+    "eisenhower": "drop",
+    "effortMatrix": "fill_in",
+    "door": "two_way"
+   },
+   "verdict": "cut",
+   "impactRange": [
+    0.97,
+    1.02
+   ],
+   "borderline": false,
+   "neededBy": [],
+   "why": {
+    "useful": "Impact 1.0 of 4, nearest to: \"A little\".",
+    "moat": "Moat 0.8 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
+    "quality": "Quality 1.6 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
+    "evidence": "Energy conserved to 1e-7 without drag or thrust; trim holds level; not compared with flight records."
+   },
+   "aftermath": [
+    {
+     "days": 7,
+     "when": "First week",
+     "value": -1.41,
+     "well": 0.05,
+     "mixed": 0.3,
+     "hard": 0.65,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 30,
+     "when": "One month",
+     "value": -1.67,
+     "well": 0.05,
+     "mixed": 0.25,
+     "hard": 0.7,
+     "sign": "Does usefulness to engineers (impact) still feel like a strain?"
+    },
+    {
+     "days": 90,
+     "when": "Three months",
+     "value": -2.07,
+     "well": 0.05,
+     "mixed": 0.35,
+     "hard": 0.6,
+     "sign": "Does effort and time spent still feel like a strain?"
+    },
+    {
+     "days": 180,
+     "when": "Six months",
+     "value": -2.46,
+     "well": 0.1,
+     "mixed": 0.35,
+     "hard": 0.55,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 365,
+     "when": "One year",
+     "value": -2.81,
+     "well": 0.1,
+     "mixed": 0.45,
+     "hard": 0.45,
+     "sign": "Does moat: reputation and data that compound still feel like a strain?"
+    },
+    {
+     "days": 1095,
+     "when": "Three years",
+     "value": -2.85,
+     "well": 0.15,
+     "mixed": 0.45,
+     "hard": 0.4,
      "sign": "Does moat: reputation and data that compound still feel like a strain?"
     }
    ]
@@ -551,6 +767,7 @@
    "detail": "Monotone cubic curves through traced stations; every component a closed, oriented, welded 2-manifold; mesh checker tested on known and broken meshes.",
    "status": "done",
    "requires": [],
+   "ownerRequest": null,
    "files": [
     "lib/aero/harv.ts",
     "lib/aero/harv-mesh.ts",
@@ -563,27 +780,27 @@
     "line": "Fuselage volume converges to the exact section integral; wing planform within 0.5% of the analytic trapezoid; outlines traced to ±0.3 ft, so no more accurate to the aircraft than its sources."
    },
    "levels": {
-    "impact": 1.38,
-    "defensibility": 1.24,
-    "quality": 2.41,
-    "confidence": 2.28,
-    "effort": 2.7,
+    "impact": 1.39,
+    "defensibility": 1.23,
+    "quality": 2.42,
+    "confidence": 2.29,
+    "effort": 2.71,
     "leverage": 2.11,
-    "urgency": 1.35,
+    "urgency": 1.36,
     "reach": 1.04,
     "reversibility": 2.58
    },
    "orion": {
-    "rank": 6,
-    "pFirst": 0.06,
+    "rank": 8,
+    "pFirst": 0.07,
     "eisenhower": "drop",
     "effortMatrix": "fill_in",
     "door": "two_way"
    },
    "verdict": "cut",
    "impactRange": [
-    1.36,
-    1.4
+    1.35,
+    1.43
    ],
    "borderline": false,
    "neededBy": [],
@@ -624,7 +841,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": -1.48,
+     "value": -1.47,
      "well": 0.15,
      "mixed": 0.4,
      "hard": 0.45,
@@ -651,113 +868,12 @@
    ]
   },
   {
-   "id": "flightpath",
-   "title": "HARV flight path",
-   "detail": "Speed, flight-path angle and height under prescribed angle of attack and thrust, standard atmosphere, NASA's published weight.",
-   "status": "done",
-   "requires": [],
-   "files": [
-    "lib/aero/flight.ts"
-   ],
-   "evidence": {
-    "tests": 13,
-    "validated": false,
-    "line": "Energy conserved to 1e-7 without drag or thrust; trim holds level; not compared with flight records."
-   },
-   "levels": {
-    "impact": 1,
-    "defensibility": 0.8,
-    "quality": 1.6,
-    "confidence": 1.22,
-    "effort": 1.91,
-    "leverage": 1.36,
-    "urgency": 1.29,
-    "reach": 0.79,
-    "reversibility": 2.89
-   },
-   "orion": {
-    "rank": 7,
-    "pFirst": 0.08,
-    "eisenhower": "drop",
-    "effortMatrix": "fill_in",
-    "door": "two_way"
-   },
-   "verdict": "cut",
-   "impactRange": [
-    0.98,
-    1.02
-   ],
-   "borderline": false,
-   "neededBy": [],
-   "why": {
-    "useful": "Impact 1.0 of 4, nearest to: \"A little\".",
-    "moat": "Moat 0.8 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 1.6 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
-    "evidence": "Energy conserved to 1e-7 without drag or thrust; trim holds level; not compared with flight records."
-   },
-   "aftermath": [
-    {
-     "days": 7,
-     "when": "First week",
-     "value": -1.41,
-     "well": 0.05,
-     "mixed": 0.3,
-     "hard": 0.65,
-     "sign": "Does effort and time spent still feel like a strain?"
-    },
-    {
-     "days": 30,
-     "when": "One month",
-     "value": -1.67,
-     "well": 0.05,
-     "mixed": 0.25,
-     "hard": 0.7,
-     "sign": "Does usefulness to engineers (impact) still feel like a strain?"
-    },
-    {
-     "days": 90,
-     "when": "Three months",
-     "value": -2.06,
-     "well": 0.05,
-     "mixed": 0.35,
-     "hard": 0.6,
-     "sign": "Does effort and time spent still feel like a strain?"
-    },
-    {
-     "days": 180,
-     "when": "Six months",
-     "value": -2.44,
-     "well": 0.1,
-     "mixed": 0.35,
-     "hard": 0.55,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
-    },
-    {
-     "days": 365,
-     "when": "One year",
-     "value": -2.78,
-     "well": 0.1,
-     "mixed": 0.45,
-     "hard": 0.45,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
-    },
-    {
-     "days": 1095,
-     "when": "Three years",
-     "value": -2.83,
-     "well": 0.15,
-     "mixed": 0.45,
-     "hard": 0.4,
-     "sign": "Does moat: reputation and data that compound still feel like a strain?"
-    }
-   ]
-  },
-  {
    "id": "ramp",
    "title": "Gradual vortex-breakdown model",
    "detail": "A smooth ramp of the burst share instead of a step. Lower error out of sample, but the fitted width ran to the edge of every range tried.",
    "status": "rejected",
    "requires": [],
+   "ownerRequest": null,
    "files": [],
    "evidence": {
     "tests": 4,
@@ -765,27 +881,27 @@
     "line": "Pooled held-out error 0.121 → 0.104, but the parameter is not identified: kept as an option, default unchanged."
    },
    "levels": {
-    "impact": 1.18,
-    "defensibility": 0.97,
-    "quality": 1.53,
-    "confidence": 1.57,
-    "effort": 2.1,
-    "leverage": 1.28,
+    "impact": 1.19,
+    "defensibility": 1.01,
+    "quality": 1.52,
+    "confidence": 1.55,
+    "effort": 2.02,
+    "leverage": 1.29,
     "urgency": 1,
-    "reach": 0.86,
-    "reversibility": 3.12
+    "reach": 0.82,
+    "reversibility": 3.1
    },
    "orion": {
-    "rank": 8,
-    "pFirst": 0.04,
-    "eisenhower": "drop",
-    "effortMatrix": "fill_in",
-    "door": "two_way"
+    "rank": 9,
+    "pFirst": 0,
+    "eisenhower": "not ranked: rejected on evidence",
+    "effortMatrix": "n/a",
+    "door": "n/a"
    },
    "verdict": "rejected on evidence",
    "impactRange": [
-    1.17,
-    1.19
+    1.15,
+    1.22
    ],
    "borderline": false,
    "neededBy": [],
@@ -799,16 +915,16 @@
     {
      "days": 7,
      "when": "First week",
-     "value": -1.34,
+     "value": -1.31,
      "well": 0.05,
-     "mixed": 0.3,
-     "hard": 0.65,
+     "mixed": 0.35,
+     "hard": 0.6,
      "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 30,
      "when": "One month",
-     "value": -1.58,
+     "value": -1.54,
      "well": 0.05,
      "mixed": 0.3,
      "hard": 0.65,
@@ -817,7 +933,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": -1.92,
+     "value": -1.88,
      "well": 0.05,
      "mixed": 0.35,
      "hard": 0.6,
@@ -826,7 +942,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": -2.26,
+     "value": -2.21,
      "well": 0.1,
      "mixed": 0.4,
      "hard": 0.5,
@@ -835,16 +951,16 @@
     {
      "days": 365,
      "when": "One year",
-     "value": -2.59,
-     "well": 0.1,
-     "mixed": 0.5,
+     "value": -2.53,
+     "well": 0.15,
+     "mixed": 0.45,
      "hard": 0.4,
      "sign": "Does moat: reputation and data that compound still feel like a strain?"
     },
     {
      "days": 1095,
      "when": "Three years",
-     "value": -2.67,
+     "value": -2.6,
      "well": 0.15,
      "mixed": 0.5,
      "hard": 0.35,
@@ -864,6 +980,7 @@
     "bands",
     "flightval"
    ],
+   "ownerRequest": null,
    "files": [],
    "evidence": {
     "tests": 0,
@@ -871,29 +988,29 @@
     "line": "Not started. Today only the HARV has measured lift in the corpus; the F-106B has one absolute point."
    },
    "levels": {
-    "impact": 2.5,
-    "defensibility": 1.44,
-    "quality": 3.12,
-    "confidence": 1.45,
-    "effort": 2.54,
-    "leverage": 2.96,
-    "urgency": 1.95,
-    "reach": 1.39,
-    "reversibility": 2.68
+    "impact": 2.54,
+    "defensibility": 1.45,
+    "quality": 3.14,
+    "confidence": 1.38,
+    "effort": 2.56,
+    "leverage": 3.01,
+    "urgency": 1.97,
+    "reach": 1.36,
+    "reversibility": 2.63
    },
    "orion": {
     "rank": 1,
-    "pFirst": 0.38,
+    "pFirst": 0.4,
     "eisenhower": "schedule",
-    "effortMatrix": "big_bet",
+    "effortMatrix": "quick_win",
     "door": "two_way"
    },
    "verdict": "high value",
    "impactRange": [
-    2.49,
-    2.52
+    2.51,
+    2.56
    ],
-   "borderline": true,
+   "borderline": false,
    "neededBy": [],
    "why": {
     "useful": "Impact 2.5 of 4, nearest to: \"Substantially\".",
@@ -905,16 +1022,16 @@
     {
      "days": 7,
      "when": "First week",
-     "value": -0.37,
+     "value": -0.35,
      "well": 0.1,
-     "mixed": 0.6,
-     "hard": 0.3,
+     "mixed": 0.65,
+     "hard": 0.25,
      "sign": "Does effort and time spent still feel like a strain?"
     },
     {
      "days": 30,
      "when": "One month",
-     "value": -0.22,
+     "value": -0.19,
      "well": 0.2,
      "mixed": 0.5,
      "hard": 0.3,
@@ -923,7 +1040,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": 0.18,
+     "value": 0.22,
      "well": 0.35,
      "mixed": 0.4,
      "hard": 0.25,
@@ -932,7 +1049,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": 0.44,
+     "value": 0.49,
      "well": 0.4,
      "mixed": 0.4,
      "hard": 0.2,
@@ -941,7 +1058,7 @@
     {
      "days": 365,
      "when": "One year",
-     "value": 0.54,
+     "value": 0.6,
      "well": 0.45,
      "mixed": 0.35,
      "hard": 0.2,
@@ -950,7 +1067,7 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": 0.39,
+     "value": 0.45,
      "well": 0.45,
      "mixed": 0.35,
      "hard": 0.2,
@@ -966,6 +1083,7 @@
    "requires": [
     "flightval"
    ],
+   "ownerRequest": null,
    "files": [],
    "evidence": {
     "tests": 0,
@@ -973,26 +1091,26 @@
     "line": "Not started. The data are already transcribed from NASA TP-3374 Table I; 27 points become 34 and the comparison reaches 3.9 g."
    },
    "levels": {
-    "impact": 1.68,
-    "defensibility": 0.96,
+    "impact": 1.67,
+    "defensibility": 0.98,
     "quality": 2.56,
-    "confidence": 0.91,
-    "effort": 1.68,
+    "confidence": 0.94,
+    "effort": 1.67,
     "leverage": 2.05,
-    "urgency": 1.38,
-    "reach": 1.06,
-    "reversibility": 3.01
+    "urgency": 1.37,
+    "reach": 1.02,
+    "reversibility": 3
    },
    "orion": {
     "rank": 2,
-    "pFirst": 0.31,
+    "pFirst": 0.27,
     "eisenhower": "schedule",
     "effortMatrix": "quick_win",
     "door": "two_way"
    },
    "verdict": "cut",
    "impactRange": [
-    1.65,
+    1.64,
     1.7
    ],
    "borderline": false,
@@ -1007,7 +1125,7 @@
     {
      "days": 7,
      "when": "First week",
-     "value": -0.8,
+     "value": -0.79,
      "well": 0.05,
      "mixed": 0.5,
      "hard": 0.45,
@@ -1016,7 +1134,7 @@
     {
      "days": 30,
      "when": "One month",
-     "value": -0.86,
+     "value": -0.85,
      "well": 0.1,
      "mixed": 0.45,
      "hard": 0.45,
@@ -1034,7 +1152,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": -1.02,
+     "value": -1.01,
      "well": 0.2,
      "mixed": 0.45,
      "hard": 0.35,
@@ -1043,7 +1161,7 @@
     {
      "days": 365,
      "when": "One year",
-     "value": -1.18,
+     "value": -1.17,
      "well": 0.25,
      "mixed": 0.45,
      "hard": 0.3,
@@ -1052,7 +1170,7 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": -1.29,
+     "value": -1.28,
      "well": 0.25,
      "mixed": 0.45,
      "hard": 0.3,
@@ -1068,6 +1186,7 @@
    "requires": [
     "flightval"
    ],
+   "ownerRequest": null,
    "files": [],
    "evidence": {
     "tests": 0,
@@ -1075,34 +1194,34 @@
     "line": "Not started. A second aircraft would show whether the F-106B result is a property of the method or of one wing."
    },
    "levels": {
-    "impact": 1.74,
+    "impact": 1.76,
     "defensibility": 1.33,
-    "quality": 2.55,
-    "confidence": 1.17,
-    "effort": 1.76,
-    "leverage": 2.44,
+    "quality": 2.58,
+    "confidence": 1.22,
+    "effort": 1.81,
+    "leverage": 2.45,
     "urgency": 1.51,
-    "reach": 0.79,
-    "reversibility": 3.17
+    "reach": 0.77,
+    "reversibility": 3.15
    },
    "orion": {
     "rank": 3,
-    "pFirst": 0.23,
+    "pFirst": 0.26,
     "eisenhower": "schedule",
     "effortMatrix": "quick_win",
     "door": "two_way"
    },
    "verdict": "cut",
    "impactRange": [
-    1.71,
-    1.76
+    1.75,
+    1.77
    ],
    "borderline": false,
    "neededBy": [],
    "why": {
-    "useful": "Impact 1.7 of 4, nearest to: \"Noticeably\".",
+    "useful": "Impact 1.8 of 4, nearest to: \"Noticeably\".",
     "moat": "Moat 1.3 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 2.5 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
+    "quality": "Quality 2.6 of 4, nearest to: \"Something people rely on becomes clearly more reliable, tested or trustworthy\".",
     "evidence": "Not started. A second aircraft would show whether the F-106B result is a property of the method or of one wing."
    },
    "aftermath": [
@@ -1127,7 +1246,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": -0.65,
+     "value": -0.63,
      "well": 0.2,
      "mixed": 0.45,
      "hard": 0.35,
@@ -1136,7 +1255,7 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": -0.68,
+     "value": -0.65,
      "well": 0.25,
      "mixed": 0.4,
      "hard": 0.35,
@@ -1145,7 +1264,7 @@
     {
      "days": 365,
      "when": "One year",
-     "value": -0.76,
+     "value": -0.73,
      "well": 0.3,
      "mixed": 0.4,
      "hard": 0.3,
@@ -1154,7 +1273,7 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": -0.84,
+     "value": -0.81,
      "well": 0.3,
      "mixed": 0.45,
      "hard": 0.25,
@@ -1170,6 +1289,7 @@
    "requires": [
     "unsteady"
    ],
+   "ownerRequest": null,
    "files": [],
    "evidence": {
     "tests": 0,
@@ -1177,14 +1297,14 @@
     "line": "Not started. The unsteady model is currently unvalidated against any motion data."
    },
    "levels": {
-    "impact": 1.69,
-    "defensibility": 1.19,
-    "quality": 2.16,
-    "confidence": 0.49,
-    "effort": 2.52,
-    "leverage": 2.06,
-    "urgency": 1.46,
-    "reach": 0.76,
+    "impact": 1.73,
+    "defensibility": 1.18,
+    "quality": 2.15,
+    "confidence": 0.51,
+    "effort": 2.51,
+    "leverage": 2.07,
+    "urgency": 1.43,
+    "reach": 0.72,
     "reversibility": 2.98
    },
    "orion": {
@@ -1196,22 +1316,22 @@
    },
    "verdict": "cut",
    "impactRange": [
-    1.64,
-    1.73
+    1.68,
+    1.75
    ],
    "borderline": false,
    "neededBy": [],
    "why": {
     "useful": "Impact 1.7 of 4, nearest to: \"Noticeably\".",
     "moat": "Moat 1.2 of 4, nearest to: \"It leaves little behind, or only what is public or quick to rebuild\".",
-    "quality": "Quality 2.2 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
+    "quality": "Quality 2.1 of 4, nearest to: \"It removes a problem customers or investors could actually run into\".",
     "evidence": "Not started. The unsteady model is currently unvalidated against any motion data."
    },
    "aftermath": [
     {
      "days": 7,
      "when": "First week",
-     "value": -1,
+     "value": -0.99,
      "well": 0.05,
      "mixed": 0.45,
      "hard": 0.5,
@@ -1220,7 +1340,7 @@
     {
      "days": 30,
      "when": "One month",
-     "value": -1.04,
+     "value": -1.02,
      "well": 0.1,
      "mixed": 0.4,
      "hard": 0.5,
@@ -1229,7 +1349,7 @@
     {
      "days": 90,
      "when": "Three months",
-     "value": -1.02,
+     "value": -1,
      "well": 0.15,
      "mixed": 0.4,
      "hard": 0.45,
@@ -1238,16 +1358,16 @@
     {
      "days": 180,
      "when": "Six months",
-     "value": -1.06,
-     "well": 0.2,
-     "mixed": 0.4,
+     "value": -1.03,
+     "well": 0.25,
+     "mixed": 0.35,
      "hard": 0.4,
      "sign": "Does moat: reputation and data that compound still feel like a strain?"
     },
     {
      "days": 365,
      "when": "One year",
-     "value": -1.14,
+     "value": -1.12,
      "well": 0.25,
      "mixed": 0.45,
      "hard": 0.3,
@@ -1256,7 +1376,7 @@
     {
      "days": 1095,
      "when": "Three years",
-     "value": -1.17,
+     "value": -1.15,
      "well": 0.3,
      "mixed": 0.4,
      "hard": 0.3,
@@ -1268,782 +1388,847 @@
  "beliefs": {
   "bands": {
    "impact": [
-    0.03190727508469488,
-    0.14706267748350932,
-    0.34976063189288464,
-    0.4330392950446322,
-    0.03823012049427891
+    0.0316708779451561,
+    0.15140523627202146,
+    0.35299088532774975,
+    0.4259466751603049,
+    0.03798632529476772
    ],
    "urgency": [
-    0.047374166337832806,
-    0.353387395841871,
-    0.43716199715383924,
-    0.13821928516588952,
-    0.0238571555005675
+    0.045934547202827566,
+    0.3485056267907662,
+    0.4429697727740113,
+    0.1470495286360839,
+    0.015540524596311058
    ],
    "reach": [
-    0.23810805211481362,
-    0.412689571015209,
-    0.16388372075077567,
-    0.10958296999742305,
-    0.0757356861217787
+    0.24241282883470122,
+    0.3874320525889591,
+    0.16949651537247568,
+    0.11810823846658479,
+    0.0825503647372792
    ],
    "confidence": [
-    0.023252953397487744,
-    0.1466184210689316,
-    0.5615400827212852,
-    0.2354629314899058,
-    0.03312561132238967
+    0.023087262003311234,
+    0.14168934417797363,
+    0.5623076888511264,
+    0.2399404257755586,
+    0.03297527919203014
    ],
    "effort": [
-    0.031427767820605315,
-    0.04550216353582811,
-    0.10346882691245901,
-    0.392516083064367,
-    0.4270851586667405
+    0.03199653988082752,
+    0.04605695068995349,
+    0.10396601597424203,
+    0.37434970550439184,
+    0.44363078795058514
    ],
    "leverage": [
-    0.024271302626551115,
-    0.11129733338825297,
-    0.3421335247803638,
-    0.4176006514426098,
-    0.10469718776222216
+    0.02275110617016389,
+    0.10173793348132862,
+    0.33176808095477844,
+    0.4276020560108125,
+    0.11614082338291658
    ],
    "reversibility": [
-    0.0664374620125827,
-    0.16902787747462047,
-    0.3592576754426363,
-    0.2980458724805513,
-    0.10723111258960907
+    0.07178130188279633,
+    0.17607838720146088,
+    0.3505954079234793,
+    0.2897893310792991,
+    0.11175557191296448
    ],
    "defensibility": [
-    0.054111469414762914,
-    0.26810488261061394,
-    0.31336225850289656,
-    0.24968002415402551,
-    0.11474136531770113
+    0.0696256365497652,
+    0.27393377381089884,
+    0.3046301900431238,
+    0.24144954818757847,
+    0.11036085140863364
    ],
    "quality": [
-    0.016601554480923052,
-    0.016601554480923052,
-    0.06768771032722602,
-    0.4334318420951843,
-    0.4656773386157435
+    0.019287344385659558,
+    0.019287344385659558,
+    0.06999952757859734,
+    0.4293672476334051,
+    0.4620585360166785
    ]
   },
   "report": {
    "impact": [
-    0.050758398011059205,
-    0.1355363001394518,
-    0.28373366977544484,
-    0.4669307053412403,
-    0.06304092673280388
+    0.04324018709682418,
+    0.1412576847533527,
+    0.28413994793045316,
+    0.4673384199308615,
+    0.06402376028850851
    ],
    "urgency": [
-    0.04538077586907298,
-    0.2725659613174543,
-    0.4489817474500761,
-    0.20148013832980846,
-    0.031591377033588136
+    0.044693295641836155,
+    0.23571606176724103,
+    0.40423190648482565,
+    0.2781138560253336,
+    0.03724488008076344
    ],
    "reach": [
-    0.17299231169597648,
-    0.33672481609401234,
-    0.20332112256561422,
-    0.1739544995452655,
-    0.11300725009913153
+    0.18382189479728997,
+    0.31633199354115854,
+    0.20691644711012197,
+    0.17317532042554176,
+    0.11975434412588792
    ],
    "confidence": [
-    0.0562010475365288,
-    0.19852862401492183,
-    0.3737493917769363,
-    0.266952399502037,
-    0.10456853716957609
+    0.04340103841656442,
+    0.17057552202130943,
+    0.3794974258447851,
+    0.29365563391352173,
+    0.11287037980381946
    ],
    "effort": [
-    0.08085727825182241,
-    0.2518871114317679,
-    0.3462568175360362,
-    0.21864942430696693,
-    0.10234936847340659
+    0.07433088415254961,
+    0.25611342730135567,
+    0.35098040212662207,
+    0.2202624257810317,
+    0.09831286063844101
    ],
    "leverage": [
-    0.0414749216854183,
-    0.0883102788984968,
-    0.18218262796877815,
-    0.40873826471431546,
-    0.27929390673299115
+    0.03909643777907814,
+    0.07566746758229274,
+    0.17041016175302678,
+    0.4047549196625821,
+    0.3100710132230204
    ],
    "reversibility": [
-    0.0768130586154673,
-    0.140722141428073,
-    0.26522365434459455,
-    0.33043131772868084,
-    0.1868098278831843
+    0.07758453010003183,
+    0.14991151908010203,
+    0.278154568230194,
+    0.3195144180734172,
+    0.17483496451625474
    ],
    "defensibility": [
-    0.10807035304918591,
-    0.3013854917263567,
-    0.3604080638149977,
-    0.16814783570633265,
-    0.06198825570312713
+    0.08942261990804817,
+    0.28262912899603404,
+    0.3707568530900054,
+    0.19006650136545133,
+    0.06712489664046109
    ],
    "quality": [
-    0.01713383125467033,
-    0.02408801101809287,
-    0.07319692951353882,
-    0.35221102484977096,
-    0.533370203363927
+    0.017174531705126447,
+    0.02414693223097932,
+    0.06817220343675774,
+    0.35259447840666025,
+    0.5379118542204763
    ]
   },
   "flightval": {
    "impact": [
-    0.03173823579253689,
-    0.11873374988955028,
-    0.28542790672011037,
-    0.5055099522963842,
-    0.05859015530141824
+    0.03176678949314889,
+    0.10868461727135911,
+    0.28568760868828824,
+    0.5094870474190454,
+    0.06437393712815834
    ],
    "urgency": [
-    0.07041966934363338,
-    0.42472292260823946,
-    0.37658937748438387,
-    0.11295437586345107,
-    0.015313654700292117
+    0.06492356181245044,
+    0.4396669551492199,
+    0.3702552494609516,
+    0.10919935017625404,
+    0.01595488340112399
    ],
    "reach": [
-    0.2696478068576438,
-    0.38008584990660926,
-    0.17876250190637133,
-    0.10834204946299084,
-    0.06316179186638465
+    0.26052641715783054,
+    0.39124830901237734,
+    0.1899849654916257,
+    0.1036130100438192,
+    0.05462729829434703
    ],
    "confidence": [
-    0.03088453441947185,
-    0.10563889105797988,
-    0.31470816799078266,
-    0.4245833070863318,
-    0.12418509944543381
+    0.03138361223107178,
+    0.10036478151905823,
+    0.30673577864241547,
+    0.42371294953452004,
+    0.13780287807293434
    ],
    "effort": [
-    0.036719158219403907,
-    0.08387337063205627,
-    0.20913277296016278,
-    0.3820264823013983,
-    0.2882482158869788
+    0.04341896332430856,
+    0.09329968345608405,
+    0.20717784555862842,
+    0.3730204744550812,
+    0.2830830332058978
    ],
    "leverage": [
-    0.03141066813197015,
-    0.0853633352355677,
-    0.20413218609568118,
-    0.4530065590538425,
-    0.22608725148293854
+    0.03267546317499733,
+    0.0863882582704347,
+    0.1959805705732659,
+    0.44560934187054024,
+    0.23934636611076182
    ],
    "reversibility": [
-    0.043835256024496595,
-    0.11303801137556645,
-    0.29935403600309046,
-    0.3649193006908657,
-    0.17885339590598084
+    0.044549185530322194,
+    0.11795683030538123,
+    0.30588377826351304,
+    0.3614354994347315,
+    0.17017470646605207
    ],
    "defensibility": [
-    0.11271406074894015,
-    0.30371105361972844,
-    0.30192222755030207,
-    0.2038377345056521,
-    0.07781492357537714
+    0.10673985536692387,
+    0.3103713931521112,
+    0.32318651787179503,
+    0.18770569147470076,
+    0.07199654213446915
    ],
    "quality": [
-    0.01762448367148574,
-    0.024708782600107795,
-    0.04699204137815941,
-    0.3201259246649691,
-    0.590548767685278
+    0.01712546066530163,
+    0.024254964936730187,
+    0.04136022930329863,
+    0.3134780964939369,
+    0.6037812486007327
    ]
   },
   "aircraft": {
    "impact": [
-    0.06870180121541455,
-    0.16581328868046577,
-    0.303755488472458,
-    0.42464342136483957,
-    0.0370860002668223
+    0.08433475512516857,
+    0.16346755319047948,
+    0.2971119851718944,
+    0.4107841921594081,
+    0.044301514353049375
    ],
    "urgency": [
-    0.08713449112728192,
-    0.4509730873532285,
-    0.3437957580237757,
-    0.10261277045428913,
-    0.015483893041424772
+    0.0975850892361287,
+    0.46698532098975226,
+    0.3178551161307255,
+    0.10230613845142585,
+    0.015268335191967863
    ],
    "reach": [
-    0.2672485799889989,
-    0.2717187774542084,
-    0.1683615520121594,
-    0.152128976414469,
-    0.14054211413016432
+    0.24278944624352222,
+    0.2847078062659837,
+    0.1712016998484207,
+    0.15613598261835493,
+    0.14516506502371845
    ],
    "confidence": [
-    0.06618084602613714,
-    0.16150377814312664,
-    0.2940832611981653,
-    0.3700744589790262,
-    0.10815765565354468
+    0.06124028055383555,
+    0.1530058295018085,
+    0.2880901608092984,
+    0.38013863729769676,
+    0.1175250918373608
    ],
    "effort": [
-    0.0492823950342644,
-    0.13022866698315305,
-    0.24854655595176683,
-    0.34085327347304756,
-    0.23108910855776824
+    0.055754024050779304,
+    0.12938926921707786,
+    0.23760661321728777,
+    0.3498623014084906,
+    0.22738779210636448
    ],
    "leverage": [
-    0.05571228401310813,
-    0.09920896723627882,
-    0.1714262024964671,
-    0.32696141742760426,
-    0.3466911288265418
+    0.06361816668592307,
+    0.10941691177466409,
+    0.17046947956489808,
+    0.324527310755463,
+    0.33196813121905183
    ],
    "reversibility": [
-    0.06517002409629115,
-    0.1757856176076804,
-    0.31161283834739434,
-    0.3051543905384025,
-    0.14227712941023174
+    0.05606790638562299,
+    0.17613373316207126,
+    0.32598017102340776,
+    0.2946013930890685,
+    0.14721679633982943
    ],
    "defensibility": [
-    0.17912926671097237,
-    0.35967462835471303,
-    0.31841895374424634,
-    0.09345584612282629,
-    0.049321305067242
+    0.1932489968732307,
+    0.3643975501566801,
+    0.2927500586001603,
+    0.09352019621634276,
+    0.05608319815358622
    ],
    "quality": [
-    0.02501357092788912,
-    0.03486859812353779,
-    0.08498848443986644,
-    0.3694967853145188,
-    0.4856325611941879
+    0.017887306037984187,
+    0.034638773669561196,
+    0.08502629582564179,
+    0.3919828886999077,
+    0.470464735766905
+   ]
+  },
+  "live": {
+   "impact": [
+    0.13904261515126073,
+    0.45064260645983784,
+    0.2880702857808991,
+    0.10679437244947088,
+    0.015450120158531488
+   ],
+   "urgency": [
+    0.08435154869091899,
+    0.48539277866559866,
+    0.3499873479971915,
+    0.06334617634105555,
+    0.016922148305235075
+   ],
+   "reach": [
+    0.26053979151351114,
+    0.48869434536581297,
+    0.16994257873664845,
+    0.05761529135671047,
+    0.023207993027316992
+   ],
+   "confidence": [
+    0.09826159586889768,
+    0.31508032207892267,
+    0.3697013993600313,
+    0.16248499888364368,
+    0.0544716838085046
+   ],
+   "effort": [
+    0.048479002775812664,
+    0.1343194463970884,
+    0.28282403039715953,
+    0.34141372558124283,
+    0.19296379484869663
+   ],
+   "leverage": [
+    0.11441882907436504,
+    0.4139480973408855,
+    0.3251130911251729,
+    0.11549296664274444,
+    0.031027015816832128
+   ],
+   "reversibility": [
+    0.03104146904512699,
+    0.07413507408194839,
+    0.31414317109037804,
+    0.4103611460556782,
+    0.17031913972686846
+   ],
+   "defensibility": [
+    0.35112310933432594,
+    0.4238032438724768,
+    0.160149330521041,
+    0.04752030875084514,
+    0.017404007521311014
+   ],
+   "quality": [
+    0.12251556579289748,
+    0.26527980980321864,
+    0.27598010855755817,
+    0.26527980980321864,
+    0.07094470604310729
    ]
   },
   "unsteady": {
    "impact": [
-    0.09971505389937313,
-    0.43300470818854525,
-    0.32969073530511483,
-    0.12188434521261768,
-    0.015705157394349096
+    0.07745111966497788,
+    0.41343465723945,
+    0.3515266528113193,
+    0.1416723821213517,
+    0.015915188162901155
    ],
    "urgency": [
-    0.08113636673132069,
-    0.5658099088424986,
-    0.2926987339277054,
-    0.041920959756748796,
-    0.018434030741726358
+    0.07342219867322029,
+    0.5500221193521144,
+    0.3177355456850117,
+    0.04116760748299297,
+    0.017652528806660624
    ],
    "reach": [
-    0.34905483768025525,
-    0.43190672177792405,
-    0.13673045047670768,
-    0.051077926646210095,
-    0.031230063418902835
+    0.3070571932509325,
+    0.44539320013724465,
+    0.1586997516467699,
+    0.05762916129819441,
+    0.031220693666858684
    ],
    "confidence": [
-    0.057983099953304675,
-    0.34904396779190433,
-    0.4352375205574846,
-    0.12632410480777317,
-    0.031411306889533266
+    0.05134624493028093,
+    0.33995447498144005,
+    0.4542378582643474,
+    0.12306771310892473,
+    0.03139370871500671
    ],
    "effort": [
-    0.06026184588049787,
-    0.18322840918818803,
-    0.33289676341468144,
-    0.2813767948372428,
-    0.14223618667938978
+    0.0656373354743879,
+    0.1832487075834006,
+    0.3286843792924337,
+    0.2804552957611922,
+    0.1419742818885855
    ],
    "leverage": [
-    0.07914036218960811,
-    0.37427997418965864,
-    0.3540790435771937,
-    0.14253536534865108,
-    0.049965254694888474
+    0.06891665932369453,
+    0.3604439315960868,
+    0.36827605555430076,
+    0.15160108011976595,
+    0.05076227340615202
    ],
    "reversibility": [
-    0.023602825048337425,
-    0.05939557829706818,
-    0.3131217002044356,
-    0.4358560797400098,
-    0.168023816710149
+    0.016149777086075245,
+    0.058799135816068264,
+    0.3068881499396374,
+    0.44109747926543524,
+    0.17706545789278388
    ],
    "defensibility": [
-    0.28593423521948846,
-    0.4273987138714456,
-    0.20924454950789928,
-    0.04557396560002649,
-    0.0318485358011401
+    0.26833189956150255,
+    0.4333420987106654,
+    0.21083315907075129,
+    0.05347466248012131,
+    0.03401818017695935
    ],
    "quality": [
-    0.06433156330870214,
-    0.23026905016561694,
-    0.3292577600724859,
-    0.318079196104602,
-    0.05806243034859303
+    0.04982782318674551,
+    0.20176200335312272,
+    0.3323552892373874,
+    0.35967916078618756,
+    0.056375723436556835
    ]
   },
   "flightpath": {
    "impact": [
-    0.278718681606615,
-    0.49395472193235096,
-    0.16642707868974557,
-    0.04570335922104989,
-    0.015196158550238485
+    0.3112919137410446,
+    0.4689937029252855,
+    0.15745601848842394,
+    0.046321981441107864,
+    0.015936383404138013
    ],
    "urgency": [
-    0.11659394352309677,
-    0.5516587268216661,
-    0.2773156936733443,
-    0.038889421345801804,
-    0.015542214636091215
+    0.1216876576707218,
+    0.5545009878981608,
+    0.26903573136266545,
+    0.03904931322822308,
+    0.015726309840228745
    ],
    "reach": [
-    0.47256853357287487,
-    0.3681000440267046,
-    0.09494578052067609,
-    0.04030851428612158,
-    0.02407712759362283
+    0.44731651196720795,
+    0.402121489518668,
+    0.09436928323923767,
+    0.033015690705269565,
+    0.023177024569616803
    ],
    "confidence": [
-    0.14727701360709228,
-    0.5842406256283622,
-    0.2199140071474186,
-    0.03273818392658222,
-    0.015830169690544658
+    0.137276074962234,
+    0.5869830186432394,
+    0.22063873466669265,
+    0.03928313880916553,
+    0.01581903291866829
    ],
    "effort": [
-    0.10054392173700097,
-    0.2540210652600304,
-    0.3302096927832774,
-    0.20980689976380448,
-    0.10541842045588669
+    0.12124419467494028,
+    0.2859110770030698,
+    0.3165019454742072,
+    0.1787919863032675,
+    0.09755079654451512
    ],
    "leverage": [
-    0.1916829508760525,
-    0.45577141320422543,
-    0.23411676087483962,
-    0.08049236796705814,
-    0.037936507077824234
+    0.17760940643588818,
+    0.467932777410574,
+    0.23913978510712142,
+    0.07610435137821733,
+    0.039213679668199254
    ],
    "reversibility": [
-    0.01736784829789393,
-    0.03984100586000323,
-    0.24650644700240676,
-    0.45309212242762814,
-    0.2431925764120679
+    0.01533751500778314,
+    0.05124259210578631,
+    0.2427297929514005,
+    0.4433856867876879,
+    0.24730441314734217
    ],
    "defensibility": [
-    0.4318866892784379,
-    0.3863855571246524,
-    0.12424660424252196,
-    0.03693137750887871,
-    0.020549771845509063
+    0.46100343593662313,
+    0.38498025500756344,
+    0.10372149954452221,
+    0.03348220854690379,
+    0.016812600964387307
    ],
    "quality": [
-    0.13150272424117865,
-    0.35050262660820813,
-    0.326077794938114,
-    0.15976400417336425,
-    0.032152850039135025
+    0.13311765263813416,
+    0.3630159844844814,
+    0.33152664070739185,
+    0.1481215733896835,
+    0.024218148780309035
    ]
   },
   "geometry": {
    "impact": [
-    0.15045382749386815,
-    0.4570038642071387,
-    0.2690131533629831,
-    0.10731732690905735,
-    0.01621182802695274
+    0.14513667004735661,
+    0.4769532848917018,
+    0.27091396843523147,
+    0.09183029486478546,
+    0.015165781760924563
    ],
    "urgency": [
-    0.10041891897686024,
-    0.5319011731415471,
-    0.29846757865282075,
-    0.05317164271552835,
-    0.016040686513243627
+    0.09948866309380286,
+    0.5275988215832802,
+    0.29845978386874455,
+    0.059231972772916655,
+    0.01522075868125578
    ],
    "reach": [
-    0.3463781239440242,
-    0.3703171907767282,
-    0.150345007875243,
-    0.08564583179418928,
-    0.04731384560981547
+    0.3889625239209713,
+    0.34145514679804695,
+    0.14677857265787,
+    0.08018691097555576,
+    0.04261684564755602
    ],
    "confidence": [
-    0.050191576672036456,
-    0.1546661150720724,
-    0.3474498692441826,
-    0.3507854926473631,
-    0.09690694636434546
+    0.049796160185939894,
+    0.15015411768548817,
+    0.3436056526740665,
+    0.35370396817509525,
+    0.10274010127941022
    ],
    "effort": [
-    0.04366916985720466,
-    0.10742521960071809,
-    0.2329162835531616,
-    0.3563591624603579,
-    0.2596301645285578
+    0.043379373168049656,
+    0.10287979851044919,
+    0.24070890095555977,
+    0.3643627424324386,
+    0.24866918493350276
    ],
    "leverage": [
-    0.06050923196884654,
-    0.27220129752833616,
-    0.30796476452929256,
-    0.2147558276480141,
-    0.14456887832551055
+    0.0655588879148089,
+    0.28127868028135505,
+    0.3040056788701729,
+    0.1993884191088036,
+    0.1497683338248595
    ],
    "reversibility": [
-    0.03172397559780596,
-    0.08375304404445916,
-    0.33129100346167545,
-    0.39575924411346214,
-    0.1574727327825972
+    0.031229888708234375,
+    0.0790871103143767,
+    0.3285196063546488,
+    0.40374554371970534,
+    0.15741785090303476
    ],
    "defensibility": [
-    0.21945611435904414,
-    0.3445059949214197,
-    0.3832538236440269,
-    0.03762325703828036,
-    0.015160810037228929
+    0.23085199976270743,
+    0.36535452989038064,
+    0.35108897952100315,
+    0.03756627636401497,
+    0.015138214461893878
    ],
    "quality": [
-    0.06295706459945968,
-    0.11960136330799272,
-    0.2852335594139699,
-    0.43156415359433914,
-    0.10064385908423848
+    0.0565279576542723,
+    0.12028873893452931,
+    0.28576285023717163,
+    0.4312643725210596,
+    0.1061560806529672
    ]
   },
   "ramp": {
    "impact": [
-    0.1732024218677177,
-    0.5459455534514611,
-    0.22238631095977568,
-    0.04074098174130798,
-    0.01772473197973741
+    0.18111480719487302,
+    0.5282812432457162,
+    0.22522841317428266,
+    0.04796053492129448,
+    0.017415001463833586
    ],
    "urgency": [
-    0.23330829954065133,
-    0.5646988611739778,
-    0.17111804597824365,
-    0.015437396653563662,
-    0.015437396653563662
+    0.2465737721510318,
+    0.5694191440166667,
+    0.1526629790614013,
+    0.015672052385450184,
+    0.015672052385450184
    ],
    "reach": [
-    0.4408876868032388,
-    0.3574517781580946,
-    0.11747209474099023,
-    0.05205213097412641,
-    0.03213630932354986
+    0.46504744896994366,
+    0.35383882584226045,
+    0.10329635124396123,
+    0.04595388367702377,
+    0.031863490266810894
    ],
    "confidence": [
-    0.046825241304737406,
-    0.4340475330178376,
-    0.4376809677904064,
-    0.0658803701148136,
-    0.01556588777220476
+    0.04709176476931694,
+    0.4577649390114859,
+    0.42618586927744173,
+    0.05330370327785803,
+    0.01565372366389744
    ],
    "effort": [
-    0.07711292582646016,
-    0.22365192529573089,
-    0.3485091892116309,
-    0.22659921850816028,
-    0.12412674115801775
+    0.0919483392852487,
+    0.22642888994855392,
+    0.34419902806444697,
+    0.22230154604980085,
+    0.1151221966519494
    ],
    "leverage": [
-    0.12836320867415119,
-    0.5366448152783414,
-    0.27135566788787613,
-    0.04725751963333832,
-    0.01637878852629306
+    0.12665561811393608,
+    0.5516045703077987,
+    0.2586322076241946,
+    0.04706156869760021,
+    0.01604603525647037
    ],
    "reversibility": [
-    0.01544631200487446,
-    0.01544631200487446,
-    0.13554281662698736,
-    0.4378344137738961,
-    0.3957301455893676
+    0.017250339402072875,
+    0.02398806971384441,
+    0.14814290145684542,
+    0.45125426514222033,
+    0.35936442428501697
    ],
    "defensibility": [
-    0.3311955988368252,
-    0.45591808106781545,
-    0.14308884820436146,
-    0.0428266183158532,
-    0.02697085357514477
+    0.3231371064747113,
+    0.46522777340539867,
+    0.13526563592489643,
+    0.041338419558145476,
+    0.03503106463684814
    ],
    "quality": [
-    0.09422908676262087,
-    0.4483412425854465,
-    0.32435294049157115,
-    0.11575843430530217,
-    0.01731829585505959
+    0.08364546724790192,
+    0.47555552881386487,
+    0.3164583127766435,
+    0.10649847167140385,
+    0.01784221949018584
    ]
   },
   "next-mach": {
    "impact": [
-    0.03833282663893214,
-    0.38348685869706045,
-    0.428807331563117,
-    0.13393079462134416,
-    0.015442188479546372
+    0.03929209896860477,
+    0.41343682873162535,
+    0.41758279375016033,
+    0.1133829309381241,
+    0.016305347611485502
    ],
    "urgency": [
-    0.07895412457101693,
-    0.5445847718176481,
-    0.327625338561245,
-    0.032919215916349845,
-    0.01591654913374015
+    0.07396800993171891,
+    0.5245771548972178,
+    0.34397097524080716,
+    0.04047002662332827,
+    0.017013833306927777
    ],
    "reach": [
-    0.29737911663789796,
-    0.4280657901544492,
-    0.17157575552831153,
-    0.06420094835514907,
-    0.03877838932419233
+    0.33507157634691237,
+    0.43871669855945905,
+    0.15127594621910154,
+    0.05215374929059204,
+    0.022782029583934896
    ],
    "confidence": [
-    0.3404666194765819,
-    0.45946719178720663,
-    0.15303825526632872,
-    0.03176614315727377,
-    0.015261790312608837
+    0.34203678803540416,
+    0.45121339187703496,
+    0.15050134333396784,
+    0.039499008429377,
+    0.016749468324216102
    ],
    "effort": [
-    0.10125081688093966,
-    0.3375752778021191,
-    0.3804416762856207,
-    0.13254884557784902,
-    0.048183383453471396
+    0.10758961028714316,
+    0.3422440832886499,
+    0.37570015710766347,
+    0.12404011775027537,
+    0.0504260315662679
    ],
    "leverage": [
-    0.031411484801831216,
-    0.2443339625734905,
-    0.40342572669815446,
-    0.28319526974001397,
-    0.03763355618650995
+    0.03170042623264678,
+    0.23285058912476167,
+    0.42485529983605336,
+    0.2726531090092362,
+    0.03794057579730184
    ],
    "reversibility": [
-    0.016466430402711774,
-    0.03275671248834187,
-    0.19684671418229116,
-    0.44018493604056635,
-    0.3137452068860889
+    0.015487648206114034,
+    0.0318011802578286,
+    0.2000995829447062,
+    0.434144118618084,
+    0.318467469973267
    ],
    "defensibility": [
-    0.3440804715302553,
-    0.4642808018223898,
-    0.11547257540085742,
-    0.049865446174800966,
-    0.026300705071696392
+    0.33143604805468596,
+    0.4606221610426143,
+    0.12224296481665743,
+    0.05279646625469743,
+    0.032902359831344964
    ],
    "quality": [
-    0.02311356924635365,
-    0.07783276757710636,
-    0.28247691583038903,
-    0.5387439797690445,
-    0.07783276757710636
+    0.023608493918775935,
+    0.08754161413993124,
+    0.30860601900385376,
+    0.514051986762555,
+    0.06619188617488413
    ]
   },
   "next-xl": {
    "impact": [
-    0.03166476628415281,
-    0.3596985789741466,
-    0.45420470070666413,
-    0.1393231056814871,
-    0.015108848353549266
+    0.031839892473941096,
+    0.3448142026318773,
+    0.46414348608969946,
+    0.14390543899349822,
+    0.015296979810983968
    ],
    "urgency": [
-    0.07203447019062185,
-    0.4770580079567732,
-    0.3826312018638135,
-    0.052776126571086025,
-    0.015500193417705308
+    0.0660653202017773,
+    0.47479673143495693,
+    0.37685063099041005,
+    0.0660653202017773,
+    0.01622199717107843
    ],
    "reach": [
-    0.48398825851725685,
-    0.35779873000230544,
-    0.09187235777471713,
-    0.03317032685286031,
-    0.03317032685286031
+    0.4709506423258054,
+    0.3491675970842703,
+    0.1058505006839111,
+    0.040209058519985456,
+    0.0338222013860277
    ],
    "confidence": [
-    0.2705263565379333,
-    0.40306608183266024,
-    0.22679370851971004,
-    0.07464007509369618,
-    0.024973778016000175
+    0.2258899329282623,
+    0.40753186226205185,
+    0.2524997914863588,
+    0.0893703158605063,
+    0.024708097462820815
    ],
    "effort": [
-    0.07960274665262639,
-    0.3128879243029244,
-    0.4040821409917917,
-    0.15189694960851727,
-    0.05153023844414025
+    0.09037377608123989,
+    0.31752183354464436,
+    0.38867600241521677,
+    0.15159528024875843,
+    0.05183310771014064
    ],
    "leverage": [
-    0.026048994980175138,
-    0.12300269413921718,
-    0.3351240544644242,
-    0.4284148673943029,
-    0.08740938902188061
+    0.023068793648670333,
+    0.11806510904059225,
+    0.32998371887513833,
+    0.4434626335307907,
+    0.0854197449048085
    ],
    "reversibility": [
-    0.016631991863224463,
-    0.023361508355669903,
-    0.15905750046955314,
-    0.351635537064078,
-    0.4493134622474745
+    0.015166084286481918,
+    0.031565564736048,
+    0.17448046405557094,
+    0.3456876890652986,
+    0.43310019785660053
    ],
    "defensibility": [
-    0.275934118789222,
-    0.39913147283092243,
-    0.13678415580702974,
-    0.13127794467597884,
-    0.056872307896846865
+    0.2683288998819394,
+    0.393909551568503,
+    0.13924292522431253,
+    0.1355746280835817,
+    0.06294399524166333
    ],
    "quality": [
-    0.02505515883192972,
-    0.07778500266672497,
-    0.27757762495287275,
-    0.5590796202623162,
-    0.06050259328615651
+    0.025829854665798343,
+    0.07849920087558689,
+    0.27279896651115376,
+    0.561635358122869,
+    0.06123661982459198
    ]
   },
   "next-curves": {
    "impact": [
-    0.01586851046277366,
-    0.08484233377883142,
-    0.33020478856650076,
-    0.53626582958359,
-    0.03281853760830409
+    0.015964735789068887,
+    0.08447582961181052,
+    0.3163136975284573,
+    0.5360239912679421,
+    0.0472217458027212
    ],
    "urgency": [
-    0.03231724589675633,
-    0.27292803003457583,
-    0.4673751036531353,
-    0.20468505397826975,
-    0.0226945664372628
+    0.03127693088570117,
+    0.255995409217752,
+    0.4657711345705316,
+    0.21567959444031407,
+    0.03127693088570117
    ],
    "reach": [
-    0.2518036524030204,
-    0.32777211744709694,
-    0.21214065038568106,
-    0.13835720859562428,
-    0.06992637116857726
+    0.2782394479368575,
+    0.33708473620618973,
+    0.1949573206423279,
+    0.1266503942670288,
+    0.06306810094759617
    ],
    "confidence": [
-    0.16002035825758187,
-    0.3775976535974297,
-    0.3329439175653556,
-    0.09902079708422723,
-    0.03041727349540544
+    0.1774191746305694,
+    0.40099120614521205,
+    0.2975013340173739,
+    0.09329951843016798,
+    0.030788766776676794
    ],
    "effort": [
-    0.03363741964882246,
-    0.10307763546435755,
-    0.3017377940644805,
-    0.3845508269870434,
-    0.176996323835296
+    0.03137521094815774,
+    0.10365675449523906,
+    0.3024782025328017,
+    0.3815310589724832,
+    0.18095877305131838
    ],
    "leverage": [
-    0.02598879811273499,
-    0.049430889353578415,
-    0.1494225033503477,
-    0.47942612196810624,
-    0.2957316872152326
+    0.028125179699349384,
+    0.05714407402116086,
+    0.14469833966951964,
+    0.4387790408589796,
+    0.33125336575099057
    ],
    "reversibility": [
-    0.03003298589189206,
-    0.0782285570589238,
-    0.31682153677754926,
-    0.32373998088097694,
-    0.251176939390658
+    0.030957290804798098,
+    0.08410560478142458,
+    0.33779421404861437,
+    0.31990448347658745,
+    0.2272384068885756
    ],
    "defensibility": [
-    0.21164813701362695,
-    0.403746443225654,
-    0.21077214067145333,
-    0.11824410411878097,
-    0.05558917497048484
+    0.18168601702759546,
+    0.40710614379831295,
+    0.22646681620580347,
+    0.13477231080176535,
+    0.049968712166522836
    ],
    "quality": [
-    0.01927041537433483,
-    0.026196205140178643,
-    0.0821205676730225,
-    0.5540879664979287,
-    0.3183248453145353
+    0.01802698047439967,
+    0.01802698047439967,
+    0.08151319458174824,
+    0.565600145238005,
+    0.31683269923144736
    ]
   },
   "next-tau": {
    "impact": [
-    0.08362640708017019,
-    0.34669672180510935,
-    0.37489260087294085,
-    0.1794320124498728,
-    0.01535225779190687
+    0.08572860818631672,
+    0.34939213889967047,
+    0.3747866096102509,
+    0.1743537612141325,
+    0.015738882089629477
    ],
    "urgency": [
-    0.06637118141782493,
-    0.4592090971192832,
-    0.38622405041009206,
-    0.07144248749430857,
-    0.016753183558491227
+    0.07758472985659431,
+    0.4900982250458616,
+    0.3641056333197233,
+    0.05272584950367785,
+    0.015485562274142842
    ],
    "reach": [
-    0.5007586647709859,
-    0.3231335502867205,
-    0.1114684290913717,
-    0.040415579659691794,
-    0.02422377619123004
+    0.5131589396575814,
+    0.3210901424766468,
+    0.10121851250933321,
+    0.04040175223228689,
+    0.024130653124151538
    ],
    "confidence": [
-    0.6424148449411657,
-    0.28385221315129755,
-    0.04098584623044163,
-    0.016373547838547536,
-    0.016373547838547536
+    0.6418606376920012,
+    0.2832843817434175,
+    0.04134236761105672,
+    0.016756306476762305,
+    0.016756306476762305
    ],
    "effort": [
-    0.03653883468686482,
-    0.12140628369067369,
-    0.30010718984055207,
-    0.35478789979122594,
-    0.18715979199068353
+    0.0366869305724686,
+    0.1266248115200472,
+    0.30689607129468083,
+    0.3473176324249928,
+    0.18247455418781053
    ],
    "leverage": [
-    0.07138623238998947,
-    0.23687780758284646,
-    0.3185508599046134,
-    0.25934930656336924,
-    0.11383579355918133
+    0.08059756438538745,
+    0.24835253231228355,
+    0.325342709364065,
+    0.24102792801503653,
+    0.10467926592322736
    ],
    "reversibility": [
-    0.016564942132882326,
-    0.0327440157778095,
-    0.2288602048924822,
-    0.4110432669294728,
-    0.3107875702673531
+    0.015491872212047727,
+    0.04538005272849934,
+    0.24268195339202595,
+    0.40534539855096413,
+    0.2911007231164629
    ],
    "defensibility": [
-    0.3142840924492257,
-    0.36583009374942127,
-    0.17935021445682076,
-    0.09559920149940758,
-    0.04493639784512464
+    0.31521292299380904,
+    0.37573332352279787,
+    0.17432764773445822,
+    0.09337781561534278,
+    0.041348290133591994
    ],
    "quality": [
-    0.11096465930333048,
-    0.16066801546280554,
-    0.29076301179944974,
-    0.3657347331394015,
-    0.0718695802950128
+    0.09163304530624175,
+    0.15650514187965978,
+    0.29139451438245645,
+    0.37226193076016895,
+    0.0882053676714731
    ]
   }
  }

@@ -25,3 +25,6 @@ __pycache__/
 *.zip
 /plans/*/sources/
 /.feasibility/**/fulltext/
+
+# Generated 3D models: rights pending (see web/public/aero/models/*.json)
+/web/public/aero/models/*.glb

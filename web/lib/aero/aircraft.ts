@@ -151,6 +151,7 @@ export const AIRCRAFT: readonly Aircraft[] = [
       spanFt: pub(32.4, "ft", TP210629), aspectRatio: pub(1.75, "", TP210629), theoreticalRootChordFt: pub(41.75, "ft", TP210629),
       crankButtLineIn: pub(137.096, "in", TP210629), tipChordFt: pub(5.4, "ft", TP210629), inboardSweepDeg: pub(70, "°", TP210629),
       outboardSweepDeg: pub(50, "°", TP210629), lengthFt: pub(54.155, "ft", TP210629), heightFt: pub(17.606, "ft", TP210629), weightLb: pub(35000, "lb", TP210629),
+      maxThrustLb: pub(23830, "lbf", TP210629),
     },
     traced: [],
     caveats: ["The S-blend at the wing apex and the trailing-edge details are not modelled: the straight-edged planform is about 5% larger than the published wing area.",
