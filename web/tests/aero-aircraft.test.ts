@@ -2,7 +2,7 @@ import { describe, expect, setDefaultTimeout, test } from "bun:test";
 import { createHash } from "node:crypto";
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
-import { AIRCRAFT, type Aircraft, aircraftById } from "../lib/aero/aircraft";
+import { AIRCRAFT, type Aircraft, F16_TRACED_SWEEP_DEG, aircraftById } from "../lib/aero/aircraft";
 import { planformProps, validatePlanform } from "../lib/aero/geometry";
 import { HARV_MASS } from "../lib/aero/flight";
 import { HARV_PUBLISHED } from "../lib/aero/harv";
@@ -17,8 +17,8 @@ const rel = (a: number, b: number) => Math.abs(a - b) / Math.abs(b);
 const get = (id: string): Aircraft => { const a = aircraftById(id); if (!a) throw new Error(id); return a; };
 
 describe("only real aircraft, each tied to its published source", () => {
-  test("the registry holds exactly the three NASA research aircraft", () => {
-    expect(AIRCRAFT.map((a) => a.id)).toEqual(["harv", "f16xl", "f106b"]);
+  test("the registry holds exactly the four aircraft with NASA-published geometry", () => {
+    expect(AIRCRAFT.map((a) => a.id)).toEqual(["f16", "harv", "f16xl", "f106b"]);
   });
 
   test("every aircraft names the real airframe, its NASA programme and at least one NASA report with a table or figure", () => {
@@ -125,6 +125,31 @@ describe("F-16XL-1 (NASA TP-2001-210629): cranked arrow from the published three
     const r = analyse(a.planform(), { alphas: [deg(10)] });
     expect(r.domain.ok).toBe(false);
     expect(r.points[0]?.extrapolated).toBe(true);
+  });
+});
+
+describe("F-16 (NASA TP-1538): published reference wing, taper derived, sweep traced", () => {
+  const a = get("f16"), pub = a.published;
+  test("published values are carried exactly", () => {
+    expect(pub.referenceAreaFt2?.value).toBe(300); expect(pub.spanFt?.value).toBe(30); expect(pub.referenceChordFt?.value).toBe(11.32);
+    expect(pub.weightLb?.value).toBe(20500); expect(pub.iyySlugFt2?.value).toBe(55814);
+    expect(pub.lengthFt?.value).toBeCloseTo(49.508, 3); expect(pub.heightFt?.value).toBeCloseTo(16.437, 3);
+  });
+  test("the planform reproduces the published area, span and mean chord exactly, and the taper they imply", () => {
+    const props = planformProps(a.planform()), p = a.planform();
+    expect(props.area).toBeCloseTo(300, 6); expect(props.span).toBeCloseTo(30, 9); expect(props.mac).toBeCloseTo(11.32, 6);
+    expect((p.stations[1]?.chord ?? 0) / (p.stations[0]?.chord ?? 1)).toBeCloseTo(0.2275, 3);
+    expect(props.aspectRatio).toBeCloseTo(3, 9);
+  });
+  test("the traced sweep is recorded as traced, with its tolerance, and used by the planform", () => {
+    const t = a.traced.find((x) => x.what.includes("sweep"));
+    expect(t?.value).toBe(F16_TRACED_SWEEP_DEG); expect(F16_TRACED_SWEEP_DEG).toBe(40.2); expect(t?.tolerance).toBe(2.5);
+    expect(toDeg(planformProps(a.planform()).segments[0]?.sweepLe ?? deg(0))).toBeCloseTo(40.2, 6);
+    expect(Object.keys(a.published)).not.toContain("leadingEdgeSweepDeg");
+  });
+  test("outside the validated sweep range, and labelled", () => {
+    const r = analyse(a.planform(), { alphas: [deg(15)] });
+    expect(r.domain.ok).toBe(false);
   });
 });
 

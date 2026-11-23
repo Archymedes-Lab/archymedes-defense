@@ -41,6 +41,8 @@ const TP210629: Source = { report: "NASA TP-2001-210629", title: "Flight, Wind-T
 const TP3374: Source = { report: "NASA TP-3374", title: "Leading-Edge Vortex-System Details Obtained on F-106B Aircraft Using a Rotating Vapor-Screen and Surface Techniques (Lamar et al., 1993)", where: "p. 3, Fig. 1 and Table I", url: "https://www.cs.odu.edu/~mln/ltrs-pdfs/tp3374.pdf" };
 const TP2747: Source = { report: "NASA TP-2747", title: "Piloted-Simulation Study of Effects of Vortex Flaps on Low-Speed Handling Qualities of a Delta-Wing Airplane (1987)", where: "Table I and Table III", url: "https://ntrs.nasa.gov/citations/19870017489" };
 
+const TP1538: Source = { report: "NASA TP-1538", title: "Simulator Study of Stall/Post-Stall Characteristics of a Fighter Airplane With Relaxed Longitudinal Static Stability (Nguyen et al., 1979)", where: "Table I and Fig. 2", url: "https://ntrs.nasa.gov/citations/19800005879" };
+
 const pub = (value: number, unit: string, s: Source): Published => ({ value, unit, report: s.report });
 const D = Math.PI / 180;
 
@@ -86,9 +88,48 @@ function f16xlPlanform(): Planform {
   return { name: "F-16XL-1 wing", stations, sRef: 600, cRef: 24.7 }; // moment reference: quarter chord of the planform's own MAC
 }
 
+// ---------------------------------------------------------------- F-16
+
+/**
+ * F-16 wing as NASA's simulation reference wing: the trapezoid extended to the centreline. Area 300 ft², span 30 ft
+ * and mean aerodynamic chord 11.32 ft are published (TP-1538 Table I); together they fix the taper exactly
+ * (MAC = ⅔ c_r (1 + λ + λ²)/(1 + λ) with c_r = 2S / (b (1 + λ)) gives λ = 0.2275, c_r = 16.29 ft). The leading-edge
+ * sweep is not in the report's text: it is fitted to both wings of the report's Fig. 2, with each axis scaled by its
+ * published dimension (41.8° and 38.5°, mean 40.2°). The forebody strake is not modelled.
+ */
+export const F16_TRACED_SWEEP_DEG = 40.2;
+function f16Taper(): number {
+  const S = 300, b = 30, mac = 11.32;
+  let lo = 0.01, hi = 0.99;
+  for (let k = 0; k < 80; k++) {
+    const l = (lo + hi) / 2, cr = (2 * S) / (b * (1 + l));
+    if ((2 / 3) * cr * ((1 + l + l * l) / (1 + l)) > mac) lo = l; else hi = l;
+  }
+  return (lo + hi) / 2;
+}
+function f16Planform(): Planform {
+  const S = 300, b = 30, l = f16Taper(), cr = (2 * S) / (b * (1 + l)), semi = b / 2, t = Math.tan(F16_TRACED_SWEEP_DEG * D);
+  return { name: "F-16 wing", stations: [{ y: 0, xLe: 0, chord: cr }, { y: semi, xLe: semi * t, chord: cr * l }], sRef: S, cRef: 11.32 };
+}
+
 // ---------------------------------------------------------------- registry
 
 export const AIRCRAFT: readonly Aircraft[] = [
+  {
+    id: "f16", name: "F-16", airframe: "F-16 configuration of NASA Langley's high-angle-of-attack simulation, from F-16 wind-tunnel tests",
+    programme: "NASA Langley differential maneuvering simulator, stall/post-stall study, 1979", sources: [TP1538],
+    published: {
+      referenceAreaFt2: pub(300, "ft²", TP1538), referenceChordFt: pub(11.32, "ft", TP1538), spanFt: pub(30, "ft", TP1538),
+      lengthFt: pub(15.09 / 0.3048, "ft", TP1538), heightFt: pub(5.01 / 0.3048, "ft", TP1538), spanWithLaunchersFt: pub(9.45 / 0.3048, "ft", TP1538),
+      weightLb: pub(20500, "lb", TP1538), ixxSlugFt2: pub(9496, "slug·ft²", TP1538), iyySlugFt2: pub(55814, "slug·ft²", TP1538),
+      izzSlugFt2: pub(63100, "slug·ft²", TP1538), cgFractionOfChord: pub(0.35, "", TP1538),
+    },
+    traced: [{ what: "wing leading-edge sweep, fitted to both wings of Fig. 2", value: F16_TRACED_SWEEP_DEG, unit: "°", tolerance: 2.5 }],
+    caveats: ["The forebody strake (leading-edge extension) and the fuselage are not in the aerodynamic model: lift below the strake's vortex onset is the wing's, above it is underestimated.",
+      "Wing sweep about 40° is below the vortex-breakdown map (55–80°): lift is an extrapolation.",
+      "NASA's simulation weight (20,500 lb) is light for an F-16 in service; it is the report's value."],
+    planform: f16Planform,
+  },
   {
     id: "harv", name: "F/A-18 HARV", airframe: "NASA 840, the F/A-18 High Alpha Research Vehicle (unarmed, flown 1987–1996)",
     programme: "NASA High-Alpha Technology Program, Dryden", sources: [TP206573, TM110216, TM112360],
