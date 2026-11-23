@@ -1,0 +1,21 @@
+{
+  "model": "jev-1.14.0",
+  "answers": {
+    "next": {
+      "type": "choice",
+      "choice": "real_traces",
+      "confidence": 1.0,
+      "probabilities": {
+        "real_traces": 1.0,
+        "calibrate": 0.0,
+        "blender": 0.0,
+        "outreach": 0.0,
+        "unknown": 0.0
+      }
+    },
+    "claim": {
+      "type": "noul",
+      "noul": 0.05
+    }
+  }
+}

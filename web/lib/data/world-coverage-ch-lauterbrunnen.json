@@ -1,0 +1,270 @@
+{
+ "method": "IEC 62676-4 detect density (25 px/m) for the camera's resolution and lens, field of view and line of sight over measured terrain, buildings and canopy; target 1 m above ground; 2 m samples",
+ "site": "ch-lauterbrunnen",
+ "variants": {
+  "4k-masts": {
+   "band": {
+    "area_m2": 17196,
+    "seen_share": 0.4152
+   },
+   "band_m": 30.0,
+   "fence": {
+    "blind_m": 176.0,
+    "gaps": [
+     {
+      "from": 39,
+      "length_m": 64.0,
+      "mid": [
+       2636260.0,
+       1158550.0
+      ],
+      "points": 32,
+      "side": "south"
+     },
+     {
+      "from": 159,
+      "length_m": 64.0,
+      "mid": [
+       2636180.0,
+       1158650.0
+      ],
+      "points": 32,
+      "side": "north"
+     },
+     {
+      "from": 109,
+      "length_m": 24.0,
+      "mid": [
+       2636290.0,
+       1158640.0
+      ],
+      "points": 12,
+      "side": "east"
+     },
+     {
+      "from": 229,
+      "length_m": 24.0,
+      "mid": [
+       2636150.0,
+       1158560.0
+      ],
+      "points": 12,
+      "side": "west"
+     }
+    ],
+    "length_m": 480.0,
+    "seen_by_two_share": 0.0,
+    "seen_share": 0.6333
+   },
+   "masts": 4,
+   "sample_step_m": 2.0,
+   "yard": {
+    "area_m2": 12320,
+    "seen_share": 0.6896
+   }
+  },
+  "baseline": {
+   "band": {
+    "area_m2": 17196,
+    "seen_share": 0.1903
+   },
+   "band_m": 30.0,
+   "fence": {
+    "blind_m": 472.0,
+    "gaps": [
+     {
+      "from": 1,
+      "length_m": 138.0,
+      "mid": [
+       2636220.0,
+       1158550.0
+      ],
+      "points": 69,
+      "side": "south"
+     },
+     {
+      "from": 121,
+      "length_m": 138.0,
+      "mid": [
+       2636220.0,
+       1158650.0
+      ],
+      "points": 69,
+      "side": "north"
+     },
+     {
+      "from": 71,
+      "length_m": 98.0,
+      "mid": [
+       2636290.0,
+       1158600.0
+      ],
+      "points": 49,
+      "side": "east"
+     },
+     {
+      "from": 191,
+      "length_m": 98.0,
+      "mid": [
+       2636150.0,
+       1158600.0
+      ],
+      "points": 49,
+      "side": "west"
+     }
+    ],
+    "length_m": 480.0,
+    "seen_by_two_share": 0.0,
+    "seen_share": 0.0167
+   },
+   "masts": 4,
+   "sample_step_m": 2.0,
+   "yard": {
+    "area_m2": 12320,
+    "seen_share": 0.0006
+   }
+  },
+  "mid-masts": {
+   "band": {
+    "area_m2": 17196,
+    "seen_share": 0.2982
+   },
+   "band_m": 30.0,
+   "fence": {
+    "blind_m": 468.0,
+    "gaps": [
+     {
+      "from": 71,
+      "length_m": 98.0,
+      "mid": [
+       2636290.0,
+       1158600.0
+      ],
+      "points": 49,
+      "side": "east"
+     },
+     {
+      "from": 191,
+      "length_m": 98.0,
+      "mid": [
+       2636150.0,
+       1158600.0
+      ],
+      "points": 49,
+      "side": "west"
+     },
+     {
+      "from": 1,
+      "length_m": 68.0,
+      "mid": [
+       2636186.0,
+       1158550.0
+      ],
+      "points": 34,
+      "side": "south"
+     },
+     {
+      "from": 36,
+      "length_m": 68.0,
+      "mid": [
+       2636256.0,
+       1158550.0
+      ],
+      "points": 34,
+      "side": "south"
+     },
+     {
+      "from": 121,
+      "length_m": 68.0,
+      "mid": [
+       2636254.0,
+       1158650.0
+      ],
+      "points": 34,
+      "side": "north"
+     },
+     {
+      "from": 156,
+      "length_m": 68.0,
+      "mid": [
+       2636184.0,
+       1158650.0
+      ],
+      "points": 34,
+      "side": "north"
+     }
+    ],
+    "length_m": 480.0,
+    "seen_by_two_share": 0.0,
+    "seen_share": 0.025
+   },
+   "masts": 6,
+   "sample_step_m": 2.0,
+   "yard": {
+    "area_m2": 12320,
+    "seen_share": 0.0006
+   }
+  },
+  "re-aimed-masts": {
+   "band": {
+    "area_m2": 17196,
+    "seen_share": 0.1289
+   },
+   "band_m": 30.0,
+   "fence": {
+    "blind_m": 328.0,
+    "gaps": [
+     {
+      "from": 20,
+      "length_m": 102.0,
+      "mid": [
+       2636240.0,
+       1158550.0
+      ],
+      "points": 51,
+      "side": "south"
+     },
+     {
+      "from": 140,
+      "length_m": 102.0,
+      "mid": [
+       2636200.0,
+       1158650.0
+      ],
+      "points": 51,
+      "side": "north"
+     },
+     {
+      "from": 90,
+      "length_m": 62.0,
+      "mid": [
+       2636290.0,
+       1158620.0
+      ],
+      "points": 31,
+      "side": "east"
+     },
+     {
+      "from": 210,
+      "length_m": 62.0,
+      "mid": [
+       2636150.0,
+       1158580.0
+      ],
+      "points": 31,
+      "side": "west"
+     }
+    ],
+    "length_m": 480.0,
+    "seen_by_two_share": 0.0,
+    "seen_share": 0.3167
+   },
+   "masts": 4,
+   "sample_step_m": 2.0,
+   "yard": {
+    "area_m2": 12320,
+    "seen_share": 0.2049
+   }
+  }
+ }
+}

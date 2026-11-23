@@ -1,0 +1,53 @@
+{
+ "model": "jev-1.14.0",
+ "answers": {
+  "grid_vs_metric": {
+   "p": 0.4,
+   "hazard": "Running the sim in projected national-grid coordinates instead of a true metric frame distorts distances or speeds enough to matter over a 4 km site."
+  },
+  "los_sampling": {
+   "p": 0.8,
+   "hazard": "Line of sight sampled every 2 m against a 4 m terrain mesh will miss thin obstacles or ridge crests and report false visibility."
+  },
+  "no_vegetation": {
+   "p": 0.87,
+   "hazard": "Ignoring forest canopy in line of sight makes detection ranges in wooded terrain unrealistically optimistic."
+  },
+  "osm_graph_gaps": {
+   "p": 0.85,
+   "hazard": "The OSM path graph has disconnected components or missing links, so routing fails or agents take absurd detours."
+  },
+  "float_replay": {
+   "p": 0.81,
+   "hazard": "Floating-point math in routing or line of sight breaks bit-identical replay across machines or library versions."
+  },
+  "rng_coupling": {
+   "p": 0.72,
+   "hazard": "Adding or removing one agent changes the random numbers other agents receive, making runs incomparable."
+  },
+  "dwell_determinism": {
+   "p": 0.86,
+   "hazard": "A purely geometric dwell-time detection model overstates how reliably human guards and cameras detect people."
+  },
+  "interrupt_teleport": {
+   "p": 0.75,
+   "hazard": "Re-tasking an agent in the middle of a leg causes a position jump or a speed-limit violation."
+  },
+  "drone_cliff": {
+   "p": 0.78,
+   "hazard": "A straight-line terrain-following drone path over 300 m cliffs demands impossible climb rates or clips terrain."
+  },
+  "quiet_skip": {
+   "p": 0.47,
+   "hazard": "Skipping sensing while no drill subject is present hides events that should have happened, so long-horizon results differ from full stepping."
+  },
+  "off_road": {
+   "p": 0.8,
+   "hazard": "Restricting people and robot dogs to mapped paths misrepresents intruders, who would move cross-country."
+  },
+  "dual_use": {
+   "p": 0.8,
+   "hazard": "A simulator that scores guard detection and response at a site could be used to plan how to evade guards at a real facility."
+  }
+ }
+}

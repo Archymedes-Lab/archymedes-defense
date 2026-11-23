@@ -1,0 +1,1364 @@
+{
+ "source": "OpenAlex API",
+ "queries": {
+  "battery": [
+   "thermal runaway propagation battery module modeling",
+   "thermal runaway propagation cylindrical cells spacing barrier",
+   "fractional thermal runaway calorimetry heat ejected mass lithium-ion",
+   "battery failure databank thermal runaway heat output variability",
+   "thermal runaway propagation mitigation interstitial material aerogel",
+   "accelerating rate calorimetry thermal runaway onset temperature NMC LFP"
+  ],
+  "armor": [
+   "dimensionless parameters textile body armor V50 areal density Cunniff",
+   "backface deformation soft body armor clay witness modeling",
+   "ballistic limit UHMWPE composite analytical model",
+   "ceramic composite armor analytical ballistic limit Florence model",
+   "behind armor blunt trauma backface signature injury criteria",
+   "ballistic limit V50 statistical estimation armor testing"
+  ]
+ },
+ "papers": [
+  {
+   "project": "armor",
+   "queries": [
+    "dimensionless parameters textile body armor V50 areal density Cunniff"
+   ],
+   "title": "A new membrane model for the ballistic impact response and V50 performance of multi-ply fibrous systems",
+   "year": 2003,
+   "doi": "https://doi.org/10.1016/s0020-7683(03)00329-9",
+   "venue": "International Journal of Solids and Structures",
+   "cited_by": 339,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "S. Leigh Phoenix",
+    "Pankaj K. Porwal"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "behind armor blunt trauma backface signature injury criteria"
+   ],
+   "title": "Injury Risk in Behind Armor Blunt Thoracic Trauma",
+   "year": 2006,
+   "doi": "https://doi.org/10.1080/10803548.2006.11076702",
+   "venue": "International Journal of Occupational Safety and Ergonomics",
+   "cited_by": 87,
+   "oa_url": "https://www.tandfonline.com/doi/pdf/10.1080/10803548.2006.11076702?needAccess=true&role=button",
+   "is_oa": true,
+   "authors": [
+    "Cameron R. Bass",
+    "Robert Scott Salzar",
+    "Scott R. Lucas",
+    "Martin B. Davis"
+   ],
+   "abstract": "First responders and military personnel are particularly susceptible to behind armor blunt thoracic trauma in occupational scenarios. The objective of this study was to develop an armored thorax injury risk criterion for short duration ballistic impacts. 9 cadavers and 2 anthropomorphic test dummies (AUSMAN and NIJ 0101.04 surrogate) were tested over a range of velocities encompassing low severity impacts, medium severity impacts, and high severity impacts based upon risk of sternal fracture. Thoracic injuries ranged from minor skin abrasions (abbreviated injury scale [AIS] 1) to severe sternal fractures (AIS 3+) and were well correlated with impact velocity and bone mineral density. 8 male cadavers were used in the injury risk criterion development. A 50% risk of AIS 3+ injury corresponded to a peak impact force of 24,900 +/- 1,400 N. The AUSMAN impact force correlated strongly with impact velocity. Recommendations to improve the biofidelity of the AUSMAN include implementing more realistic viscera and decreasing the skin thickness."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit UHMWPE composite analytical model"
+   ],
+   "title": "An analytical model for the ballistic performance of ultra-high molecular weight polyethylene composites",
+   "year": 2017,
+   "doi": "https://doi.org/10.1016/j.compstruct.2017.07.074",
+   "venue": "Composite Structures",
+   "cited_by": 68,
+   "oa_url": "https://www.sciencedirect.com/science/article/am/pii/S0263822316324199",
+   "is_oa": true,
+   "authors": [
+    "Tye Langston"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit UHMWPE composite analytical model"
+   ],
+   "title": "Mechanism-driven analytical modelling of UHMWPE laminates under ballistic impact",
+   "year": 2023,
+   "doi": "https://doi.org/10.1016/j.ijmecsci.2023.108132",
+   "venue": "International Journal of Mechanical Sciences",
+   "cited_by": 53,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "Rui Zhang",
+    "Bin Han",
+    "Yi Zhou",
+    "Lu-Sheng Qiang"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit V50 statistical estimation armor testing"
+   ],
+   "title": "Virtual ballistic impact testing of Kevlar soft armor: Predictive and validated finite element modeling of the V 0 - V 100 probabilistic penetration response",
+   "year": 2018,
+   "doi": "https://doi.org/10.1016/j.dt.2018.03.001",
+   "venue": "Defence Technology",
+   "cited_by": 46,
+   "oa_url": "https://www.sciencedirect.com/science/article/pii/S2214914717302416/pdf",
+   "is_oa": true,
+   "authors": [
+    "Gaurav Nilakantan",
+    "Suzanne Horner",
+    "Virginia Halls",
+    "James Q. Zheng"
+   ],
+   "abstract": "This works presents the first fully validated and predictive capability to model the V0-V100 probabilistic penetration response of a woven fabric using a yarn-level fabric finite element model. The V0-V100 curve describes the probability of complete fabric penetration as a function of projectile impact velocity. The exemplar case considered in this paper comprises of a single-layer, fully-clamped, plain-weave Kevlar fabric impacted at the center by a 17-gr, 0.22 cal FSP or fragment-simulating projectile. Each warp and fill yarn in the fabric is individually modeled using 3D finite elements and the virtual fabric microstructure is validated in detail against the experimental fabric microstructure. Material and testing sources of statistical variability including yarn strength and modulus, inter-yarn friction, precise projectile impact location, and projectile rotation are mapped into the finite element model. A series of impact simulations at varying projectile impact velocities is executed using LS-DYNA on the fabric models, with each model comprising unique mappings. The impact velocities together with the outcomes (penetration, non-penetration) are used to generate the numerical V0-V100 curve which is then validated against the experimental V0-V100 curve. The numerical Vi-Vr data (impact, residual velocities) is also validated against the experimental Vi-Vr data. For completeness, this paper also reports the experimental characterization data and its statistical analysis used for model input, viz. the Kevlar yarn tensile strengths, moduli, and inter-yarn friction, and the experimental ballistic test data used for model validation."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "backface deformation soft body armor clay witness modeling"
+   ],
+   "title": "Armours for soft bodies: how far can bioinspiration take us?",
+   "year": 2018,
+   "doi": "https://doi.org/10.1088/1748-3190/aababa",
+   "venue": "Bioinspiration & Biomimetics",
+   "cited_by": 39,
+   "oa_url": "https://iopscience.iop.org/article/10.1088/1748-3190/aababa/pdf",
+   "is_oa": true,
+   "authors": [
+    "Zachary White",
+    "Franck J. Vernerey"
+   ],
+   "abstract": "The development of armour is as old as the dawn of civilization. Early man looked to natural structures to harvest or replicate for protection, leaning on millennia of evolutionary developments in natural protection. Since the advent of more modern weaponry, Armor development has seemingly been driven more by materials research than bio-inspiration. However, parallels can still be drawn between modern bullet-protective armours and natural defensive structures. Soft armour for handgun and fragmentation threats can be likened to mammalian skin, and similarly, hard armour can be compared with exoskeletons and turtle shells. Via bio-inspiration, it may be possible to develop structures previously un-researched for ballistic protection. This review will cover current modern ballistic protective structures focusing on energy dissipation and absorption methods, and their natural analogues. As all armour is a compromise between weight, flexibility and protection, the imbricated structure of scaled skin will be presented as a better balance between these factors."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ceramic composite armor analytical ballistic limit Florence model"
+   ],
+   "title": "Numerical and analytical simulation of ballistic projectile penetration due to high velocity impact on ceramic target",
+   "year": 2020,
+   "doi": "https://doi.org/10.3221/igf-esis.54.17",
+   "venue": "Frattura ed Integrit\u00e0 Strutturale",
+   "cited_by": 33,
+   "oa_url": "https://www.fracturae.com/index.php/fis/article/download/2816/3109",
+   "is_oa": true,
+   "authors": [
+    "Amin Moslemi Petrudi",
+    "Khodadad Vahedi",
+    "Masoud Rahmani",
+    "MohammadAli Moslemi Petrudi"
+   ],
+   "abstract": "Simulation and analysis of the projectile impact and penetration problem and its effects are among the practical topics that can be used to design bulletproof panel and military equipment, construction of impact and penetration resistant structures, design of projectiles with appropriate penetration strength and High performance noted. One of the most important parameters affecting penetration is the impact velocity of the projectile. The mechanism of penetration varies in different speed ranges. In this paper, Ansys Autodyn software is used for intrusion simulation. The simulation carried out in this study is based on the accuracy and physical conditions of the problem and the compatibility of numerical simulation with the governing analytical relationships indicates the validity and accuracy of the assumptions made in the simulation. In this study, we selected materials such as material behavior, grating, contact surfaces, and controls, as well as collision of the blunt projectile with angles of 0\u00ba,15\u00ba,30\u00ba,45\u00ba by of high velocity impact 1000 m/s with the same mass and diameter and shape of the projectile nose and properties. Ceramic materials are discussed. The result of the numerical simulation comparison shows relatively good agreement between them."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit V50 statistical estimation armor testing"
+   ],
+   "title": "A Comparison of Ballistic Resistance Testing Techniques in the Department of Defense",
+   "year": 2014,
+   "doi": "https://doi.org/10.1109/access.2014.2377633",
+   "venue": "IEEE Access",
+   "cited_by": 30,
+   "oa_url": "https://ieeexplore.ieee.org/ielx7/6287639/6705689/06974993.pdf",
+   "is_oa": true,
+   "authors": [
+    "Thomas H. Johnson",
+    "Laura Freeman",
+    "Janice Hester",
+    "Jonathan L. Bell"
+   ],
+   "abstract": "Ballistic resistance testing is conducted in the Department of Defense (DoD) to estimate the probability that a projectile will perforate the armor of a system under test. Ballistic resistance testing routinely employs sensitivity experiment techniques where sequential test designs are used to estimate a particular quantile of the probability of perforation. Statistical procedures used to estimate the ballistic resistance of armor in the DoD have remained relatively unchanged for decades. In the current fiscal atmosphere of sequestration and budget deficits, efficiency is critical for test and evaluation. In this paper, we review and compare sequential methods, estimators, and stopping criteria used in the DoD to those found in literature. Using Monte Carlo simulation, we find that the three-phase optimal design, a probit model, and a break separation stopping criteria are most accurate and efficient at estimating V50, while the three-phase optimal design or Robbins-Monroe-Joseph method should be used to estimate V10."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit UHMWPE composite analytical model"
+   ],
+   "title": "Response to Ballistic Impact of Alumina-UHMWPE Composites",
+   "year": 2018,
+   "doi": "https://doi.org/10.1590/1980-5373-mr-2017-0959",
+   "venue": "Materials Research",
+   "cited_by": 19,
+   "oa_url": "http://www.scielo.br/pdf/mr/v21n5/1516-1439-mr-21-05-e20170959.pdf",
+   "is_oa": true,
+   "authors": [
+    "Andr\u00e9 Ben\u2010Hur da Silva Figueiredo",
+    "\u00c9dio Pereira Lima J\u00fanior",
+    "Alaelson Vieira Gomes",
+    "Gabriel Burlandy Mota de Melo"
+   ],
+   "abstract": "The response to ballistic impact of alumina-ultra high molecular weight polyethylene (UHMWPE) composites with different relative concentrations of alumina was investigated. The impact tests were carried out at subsonic speed using a compressed air system. The results showed that the depth of penetration (DOP) in a Medium Density Fiberboard (MDF) bulkhead protected by a disk of the composite decreased with increasing concentration of alumina in the composite. Scanning electron microscopy (SEM) images of composites with 80 %, 85 % and 95 % alumina showed transgranular, intergranular and ductile fracture mechanisms."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit V50 statistical estimation armor testing"
+   ],
+   "title": "Ballistic Limit Estimation Approaches for Ballistic Resistance Assessment",
+   "year": 2020,
+   "doi": "https://doi.org/10.14429/dsj.70.14122",
+   "venue": "Defence Science Journal",
+   "cited_by": 19,
+   "oa_url": "https://publications.drdo.gov.in/ojs/index.php/dsj/article/download/14122/7218",
+   "is_oa": true,
+   "authors": [
+    "Beya Tahenti",
+    "FREDERIK COGHE",
+    "Rachid Nasri"
+   ],
+   "abstract": "The armour technologist conducts ballistic impact testing either for evaluating armour materials and systems or for studying material\u2019s defeating mechanism. Most standards make use of the ballistic limit velocity for ballistic assessment. This is the bullet impact velocity that leads to the protection perforation in 50 per cent of the cases. Various models have been emerged to estimate this key metric. The present article summarises the popular models developed for ballistic limit estimation. An attempt is made to point out models\u2019 strength and weakness. First, the experimental set-up used for that goal is displayed. Next, a concise overview of ballistic limit estimation methods is presented. Lastly, a discussion is dedicated to model\u2019s comparison and analysis. This literature survey reveals that the main drawback of already existing methods is that they are purely statistical. Moreover, existing methods are based on the normality assumption of perforation velocities which tends from -infinity to infinity. The main conclusion of this survey is that the presented methods offer a comparable accuracy in estimating the ballistic limit velocity. However, a given variability is remarked when extreme values estimation is of interest, impact velocities leading to low and high perforation probability. Finally, existing models\u2019 performances decay with the reduction of the experimental sample size which represent a constraining requirement in ballistic resistance assessment."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "dimensionless parameters textile body armor V50 areal density Cunniff"
+   ],
+   "title": "Ballistic Impact Resistance Mechanism of Woven Fabrics and their Composites",
+   "year": 2015,
+   "doi": null,
+   "venue": "Goce Delchev University Repository (Goce Del\u010dev University of \u0160tip)",
+   "cited_by": 17,
+   "oa_url": "http://eprints.ugd.edu.mk/15240/1/V4I12_IJERTV4IS120160.pdf",
+   "is_oa": true,
+   "authors": [
+    "Dim\u043a\u043e Dimeski",
+    "Vineta Srebrenkoska",
+    "Natasa Mirceska"
+   ],
+   "abstract": "The development of the new generation of tough, high-strength, high-modulus fibers has led to the use of fabrics and their composites for a number of ballistic protection applications, in particular, for body armor. Numerous studies have been conducted to identify material properties and ballistic impact resistance mechanism that are important to the performance of ballistic fibers and their composites. The paper reviews the factors that influence ballistic performance including mechanisms of ballistic impact resistance, specifically, material properties of the yarn, fabric architecture, projectile geometry and impact velocity, boundary conditions, multiple plies and friction effect. It is important to note that almost all of the parameters that affect ballistic penetration resistance of a fabric are interrelated and the attempts to single out an individual effect cannot lead to a conclusive result. This makes the studies very complicated."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "backface deformation soft body armor clay witness modeling"
+   ],
+   "title": "Rheological Characterization of Next-Generation Ballistic Witness Materials for Body Armor Testing",
+   "year": 2019,
+   "doi": "https://doi.org/10.3390/polym11030447",
+   "venue": "Polymers",
+   "cited_by": 16,
+   "oa_url": "https://www.mdpi.com/2073-4360/11/3/447/pdf?version=1552038436",
+   "is_oa": true,
+   "authors": [
+    "Ran Tao",
+    "Kirk D. Rice",
+    "Anicet S. Djakeu",
+    "Randy A. Mrozek"
+   ],
+   "abstract": "Roma Plastilina No. 1 (RP1), an artist modeling clay that has been used as a ballistic clay, is essential for evaluation and certification in standards-based ballistic resistance testing of body armor. It serves as a ballistic witness material (BWM) behind the armor, where the magnitude of the plastic deformation in the clay after a ballistic impact is the figure of merit (known as \"backface signature\"). RP1 is known to exhibit complex thermomechanical behavior that requires temperature conditioning and frequent performance-based evaluations to verify that its deformation response satisfies requirements. A less complex BWM formulation that allows for room-temperature storage and use as well as a more consistent thermomechanical behavior than RP1 is desired, but a validation based only on ballistic performance would be extensive and expensive to accommodate the different ballistic threats. A framework of lab-scale metrologies for measuring the effects of strain, strain rate, and temperature dependence on mechanical properties are needed to guide BWM development. The current work deals with rheological characterization of a candidate BWM, i.e., silicone composite backing material (SCBM), to understand the fundamental structure\u207bproperty relationships in comparison to those of RP1. Small-amplitude oscillatory shear frequency sweep experiments were performed at temperatures that ranged from 20 \u00b0C to 50 \u00b0C to map elastic and damping contributions in the linear elastic regime. Large amplitude oscillatory shear (LAOS) experiments were conducted in the non-linear region and the material response was analyzed in the form of Lissajous curve representations with the values of perfect plastic dissipation ratio reported to identify the degree of plasticity. The results show that the "
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ceramic composite armor analytical ballistic limit Florence model"
+   ],
+   "title": "Experimental and numerical studies of ballistic resistance of hybrid sandwich composite body armor",
+   "year": 2024,
+   "doi": "https://doi.org/10.1515/eng-2022-0543",
+   "venue": "Open Engineering",
+   "cited_by": 16,
+   "oa_url": "https://www.degruyter.com/document/doi/10.1515/eng-2022-0543/pdf",
+   "is_oa": true,
+   "authors": [
+    "Waad Adnan Khalaf",
+    "Mohsin Noori Hamzah"
+   ],
+   "abstract": "Abstract Defense mechanisms remain important and indispensable due to the different types of pistols and ordnance besides many guns. Hybrid composite sandwich panels are an attractive focus because of their ingrained characteristics, such as high stuffiness and high energy absorption. Hybrid composite sandwich panels are among the most important in armoring various structures. Despite the high density of these panels, they have significant qualities that qualify them to be the first selection for use in armored vehicles or body armor. Recently, there have been several types of structures, and selecting the appropriate structure as armor against the projectiles is very important. The study subjected three samples to the ballistic impact test using a 7.62 \u00d7 39 mm bullet. The first sample, S1, consists of ultra high molecular weight polyethylene (UHMWPE)/epoxy, unfilled honeycomb core, Kevlar/epoxy, unfilled honeycomb core, Kevlar/epoxy, and UHMWPE/epoxy; the second sample, S2, comprises Kevlar/epoxy, unfilled honeycomb core, Kevlar/epoxy, unfilled honeycomb core, and UHMWPE/epoxy, and the third sample, S3, comprises Al 2 O 3 , Kevlar/epoxy, unfilled honeycomb core, carbon/epoxy, unfilled honeycomb core, and carbon/epoxy. ABAQUS software was used to evaluate the ballistic impact numerically, and after that, the study examined the same armor samples experimentally. The results manifested that only the armor S3 succeeded in stopping the bullet. This is attributed to the structure of the cores, which helps compress and accumulate the cells under the projectile. The speeds of the bullet after penetration (residual velocity; VR) were 748.5 and 715.3 m/s for S1 and S2 armors, respectively, where the back face signature for S3 was 1.5 mm, which is optimum and within the allowed r"
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "behind armor blunt trauma backface signature injury criteria"
+   ],
+   "title": "Behind Armor Blunt Trauma: Liver Injuries Using a Live Animal Model",
+   "year": 2024,
+   "doi": "https://doi.org/10.1093/milmed/usae214",
+   "venue": "Military Medicine",
+   "cited_by": 16,
+   "oa_url": "https://epublications.marquette.edu/cgi/viewcontent.cgi?article=1734&context=bioengin_fac",
+   "is_oa": true,
+   "authors": [
+    "Narayan Yoganandan",
+    "Alok Suresh Shah",
+    "Jared Koser",
+    "Brian D. Stemper"
+   ],
+   "abstract": "INTRODUCTION: While the 44-mm clay penetration criterion was developed in the 1970s for soft body armor applications, and the researchers acknowledged the need to conduct additional tests, the same behind the armor blunt trauma displacement limit is used for both soft and hard body armor evaluations and design considerations. Because the human thoraco-abdominal contents are heterogeneous, have different skeletal coverage, and have different functional requirements, the same level of penetration limit does not imply the same level of protection. It is important to determine the regional responses of different thoraco-abdominal organs to better describe human tolerance and improve the current behind armor blunt trauma standard. The purpose of this study was to report on the methods, procedures, and data collected from swine. MATERIALS AND METHODS: Live swine tests were conducted after obtaining approvals from the local institution and the Army Care and Use Review Office of the U.S. Department of Defense. Trachea tubes and an intravenous line were introduced before administering anesthesia. Pressure transducers were inserted into the lungs and aorta. An indenter simulating the backface deformation profiles produced by body armor from military-relevant ballistics to human cadavers was used to deliver impact loading to the liver region. A triaxial accelerometer was included in the indenter design. The animals were monitored for 6 hours, necropsies were performed, and injuries were identified. Biomechanical data of the energy, velocity, deflection, viscous criterion, force, and impulse variables were obtained for each test. RESULTS: Peak accelerations, velocities, deflections, forces, impulse, and energies ranged from 897 to 5,808 g, 21 to 59 m/s, 1.96 to 8.87 cm, 2.3 to 13.1"
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "behind armor blunt trauma backface signature injury criteria"
+   ],
+   "title": "The use of finite element models for backface deformation and body armour design: a systematic review",
+   "year": 2023,
+   "doi": "https://doi.org/10.1080/10255842.2023.2281275",
+   "venue": "Computer Methods in Biomechanics & Biomedical Engineering",
+   "cited_by": 13,
+   "oa_url": "https://www.tandfonline.com/doi/pdf/10.1080/10255842.2023.2281275?needAccess=true",
+   "is_oa": true,
+   "authors": [
+    "A.R. Sarhan",
+    "Melanie Franklyn",
+    "Peter Vee Sin Lee"
+   ],
+   "abstract": "While injuries sustained from body armour backface deformation (BFD) have not been well-documented in military injury trauma registries, data from US law enforcement officers, animal tests and currently available data pertaining to military combatants has shown that BFD can not only cause minor injuries, but also result in serious trauma. However, the nature and severity of injuries sustained depends on a multitude of factors including the projectile type, the impact location and velocity, and the specific type of body armour worn. The difficulties involved in current measurement techniques for ballistic testing has led researchers to seek alternative techniques to evaluate the level of protection from body armour, such as the finite element (FE) method. In the current study, a systematic review of the open literature was undertaken using the Preferred Reporting Items for Systematic Reviews and Meta-Analyses methodology. The aim was to summarise the literature pertaining to the development and application of FE models to investigate body armour BFD and behind armour blunt trauma (BABT), and included FE models representing the projectile, clay-based mediums, ballistic gelatine and the human torso. Using the keywords 'behind armour*', 'ballistic blunt trauma', 'BABT', 'backface signature', 'backface deformation', 'BFS', 'BFD', 'wound ballistic', 'ballistic impact testing', 'body armour', 'bullet proof vest', 'ballistic vest', 'Finite Element*' and 'FE', an electronic database search of EBSCOhost, Google Scholar, ProQuest, Scopus, Standards, Web of Science and PubMed was conducted, and included peer-reviewed journal articles, review papers, research reports, conference papers, and MSc or PhD theses. While this research demonstrates the potential of FE analysis for recreati"
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "dimensionless parameters textile body armor V50 areal density Cunniff",
+    "ballistic limit V50 statistical estimation armor testing"
+   ],
+   "title": "Linking Theory to Practice: Predicting Ballistic Performance from Mechanical Properties of Aged Body Armor",
+   "year": 2020,
+   "doi": "https://doi.org/10.6028/jres.125.026",
+   "venue": "Journal of Research of the National Institute of Standards and Technology",
+   "cited_by": 11,
+   "oa_url": "https://doi.org/10.6028/jres.125.026",
+   "is_oa": true,
+   "authors": [
+    "Amanda L. Forster",
+    "Dennis D. Leber",
+    "Amy Engelbrecht-Wiggans",
+    "Virginie Landais"
+   ],
+   "abstract": "It has long been a goal of the body armor testing community to establish an individualized, scientific-based protocol for predicting the ballistic performance end of life for fielded body armor. A major obstacle in achieving this goal is the test methods used to ascertain ballistic performance, which are destructive in nature and require large sample sizes. In this work, using both the Cunniff and Phoenix-Porwal models, we derived two separate but similar theoretical relationships between the observed degradation in mechanical properties of aged body armor and its decreased ballistic performance. We present two studies used to validate the derived functions. The first correlates the degradation in mechanical properties of fielded body armor to the degradation produced by a laboratory accelerated-aging protocol. The second examines the ballistic resistance and the extracted-yarn mechanical properties of new and laboratory-aged body armor made from poly(p-phenylene-2,6-benzobisoxazole), or PBO, and poly(p-phenylene terephthalamide), or PPTA. We present correlations found between the tensile strengths of yarns extracted from armor and the ballistic limit (V50) when significant degradation of the mechanical properties of the extracted yarns was observed. These studies provided the basis for a validation data set in which we compared the experimentally measured V50 ballistic limit results to the theoretically predicted V50 results. The theoretical estimates were generally shown to provide a conservative prediction of the ballistic performance of the armor. This approach is promising for the development of a tool for fielded armor performance surveillance relying upon mechanical testing of armor coupon samples."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit UHMWPE composite analytical model"
+   ],
+   "title": "Ballistic Tests of Alumina-UHMWPE Composites Submitted to Gamma Radiation",
+   "year": 2019,
+   "doi": "https://doi.org/10.1590/1980-5373-mr-2019-0251",
+   "venue": "Materials Research",
+   "cited_by": 8,
+   "oa_url": "http://www.scielo.br/pdf/mr/v22s1/1516-1439-mr-22-s1-e20190251.pdf",
+   "is_oa": true,
+   "authors": [
+    "Andr\u00e9 Ben\u2010Hur da Silva Figueiredo",
+    "H\u00e9lio de Carvalho Vital",
+    "Ricardo Pond\u00e9 Weber",
+    "\u00c9dio Pereira Lima J\u00fanior"
+   ],
+   "abstract": "The energy absorption in ballistic tests of alumina-ultra high molecular weight polyethylene (UHMWPE) composites with 60, 80 and 90 wt% alumina submitted to gamma radiation doses of 25, 50 and 75 kGy was investigated. The ballistic tests were carried out at subsonic speed using a compressed air system. The results showed that the composite with 80% alumina irradiated with 50 kGy yields the best ballistic results. Gel content, Differential scanning calorimetry (DSC) and X-ray diffraction (XRD) results showed that this composite is the one with the highest concentration of crosslinks and the lowest volume fraction of amorphous UHMWPE. Scanning electron microscopy (SEM) images of the same composite showed a high pullout, suggesting that gamma irradiation increases the adhesion between alumina and UHMWPE."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "behind armor blunt trauma backface signature injury criteria"
+   ],
+   "title": "An Experimental Cold Gas Cannon for the Study of Porcine Lung Contusion and Behind Armor Blunt Trauma",
+   "year": 2023,
+   "doi": "https://doi.org/10.1007/s10439-023-03334-7",
+   "venue": "Annals of Biomedical Engineering",
+   "cited_by": 8,
+   "oa_url": "https://link.springer.com/content/pdf/10.1007/s10439-023-03334-7.pdf",
+   "is_oa": true,
+   "authors": [
+    "Tomas Karlsson",
+    "Lars-Gunnar Olsson",
+    "Jenny Gustavsson",
+    "Ulf P. Arborelius"
+   ],
+   "abstract": "Abstract Behind armor blunt trauma (BABT) is a non-penetrating injury caused by the rapid deformation of body armor, by a projectile, which may in extreme circumstances cause death. The understanding of the mechanisms is still low, in relation to what is needed for safety threshold levels. Few models of graded kinetic energy transfer to the body exist. We established an experimental model for graded BABT. The cold gas cannon was air-driven, consisted of a pressure vessel, a barrel, and a pressure actuator. It required short training to operate and was constructed by standard components. It produced standardized expulsion of plastic projectiles with 65 mm and weight 58 g. Velocity correlated linearly to pressure ( R 0.9602, p < 0.0001), equation Y = 6.558* X + 46.50. Maximum tested pressure was 10 bar, velocity 110 m/s and kinetic energy ( E k ) 351 J. Crossbred male swine ( n = 10) mean weight (SD) 56 \u00b1 3 kg, were subjected to BABT, mean E k (SD) 318 (61) J, to a fix point on the right lateral thorax. Pulmonary contusion was confirmed by physiological parameters pO 2 ( p < 0.05), SaO 2 ( p < 0.01), pCO 2 ( p < 0.01), etCO 2 ( p < 0.01), MPAP ( p < 0.01), Cstat ( p < 0.01), intrapulmonary shunt ( Q \u2032 s / Q \u2032 t ) ( p < 0.05), and qualified trans-thoracic ultrasound ( p < 0.0001). The consistent injury profile enabled for the addition of future experimental interventions."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "dimensionless parameters textile body armor V50 areal density Cunniff"
+   ],
+   "title": "Optimization of soft armor: the response of homogenous and hybrid multi-ply para-aramid and ultra-high molecular weight polyethylene fabrics under ballistic impact",
+   "year": 2023,
+   "doi": "https://doi.org/10.1177/00405175231194365",
+   "venue": "Textile Research Journal",
+   "cited_by": 7,
+   "oa_url": "https://journals.sagepub.com/doi/pdf/10.1177/00405175231194365",
+   "is_oa": true,
+   "authors": [
+    "Calvin Ralph",
+    "L. L. Baker",
+    "Edward Archer",
+    "Alistair McIlhagger"
+   ],
+   "abstract": "This research investigated the ballistic response of homogenous and hybrid multi-ply fabrics toward developing a full-scale hybridized soft armor system. Fabrics with varying yarn and thread counts were manufactured from para-aramid and ultra-high molecular weight polyethylene yarns through a plain-woven architecture. Homogeneous fabrics used the same yarn and thread count for two- and three-ply systems. For hybrid systems, two- and three-ply stacks were assembled in various sequences including increasing and decreasing cover factor ( C fab ) and varying yarn types as the strike face and rear face. Ballistic impact testing was performed on all fabrics at low (340 m s \u22121 ) and high velocity (620 m s \u22121 ). Observations and measurements were performed to determine failure mechanisms, energy absorption, transverse wave propagation, and system effects of multi-ply systems. Hybrid systems showed significant differences in specific energy absorbed (SEA), dependent on the layer order. The para-aramid hybrid systems impacted at 340 m\u00b7s \u22121 showed a significantly greater SEA when the fabrics were ordered with an increasing rather than a decreasing cover factor. At 620 m\u00b7s \u22121 the difference in SEA was less pronounced or absent entirely. It was concluded that hybridization would enhance the performance of a soft armor system and was likely to be most effective for the rear layers of the system where fabrics with a progressively increasing cover factor that were manufactured of fine (550 dTex) para-aramid yarns would offer an advantage. The front layers of the system, subjected to higher strain loading, would benefit from low cover factor fabrics (0.76), which maximize the dissipation of strain from the point of impact."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "behind armor blunt trauma backface signature injury criteria"
+   ],
+   "title": "Matched-pair hybrid test paradigm for behind armor blunt trauma using an experimental animal model",
+   "year": 2024,
+   "doi": "https://doi.org/10.1136/tsaco-2023-001194",
+   "venue": "Trauma Surgery & Acute Care Open",
+   "cited_by": 7,
+   "oa_url": "https://doi.org/10.1136/tsaco-2023-001194",
+   "is_oa": true,
+   "authors": [
+    "Narayan Yoganandan",
+    "Alok Suresh Shah",
+    "Jamie L. Baisden",
+    "Brian D. Stemper"
+   ],
+   "abstract": "Background: The current behind armor blunt trauma (BABT) injury criterion uses a single penetration limit of 44 mm in Roma Plastilina clay and is not specific to thoracoabdominal regions. However, different regions in the human body have different injury tolerances. This manuscript presents a matched-pair hybrid test paradigm with different experimental models and candidate metrics to develop regional human injury criteria. Methods: Live and cadaver swine were used as matched pair experimental models. An impactor simulating backface deformation profiles produced by body armor from military-relevant ballistics was used to deliver BABT loading to liver and lung regions in cadaver and live swine. Impact loading was characterized using peak accelerations and energy. For live swine, physiological parameters were monitored for 6 hours, animals were euthanized, and a detailed necropsy was done to identify injuries to skeletal structures, organs and soft tissues. A similar process was used to identify injuries to the cadaver swine for targeted thoracoabdominal regions. Results: Two cadavers and one live swine were subjected to BABT impacts to the liver. One cadaver and one live swine were subjected to BABT impacts to the left lung. Injuries to both regions were similar at similar energies between the cadaver and live models. Conclusions: Swine is an established animal for thoracoabdominal impact studies in automotive standards, although at lower insult levels. Similarities in BABT responses between cadaver and live swine allow for extending testing protocols to human cadavers and for the development of scaling relationships between animal and human cadavers, acting as a hybrid protocol between species and live and cadaver models. Injury tolerances and injury risk curves from li"
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ceramic composite armor analytical ballistic limit Florence model"
+   ],
+   "title": "Ballistic prediction of ceramic armor backed by thin metal plate against threats of small and medium\u2010calibers",
+   "year": 2023,
+   "doi": "https://doi.org/10.1111/ijac.14558",
+   "venue": "International Journal of Applied Ceramic Technology",
+   "cited_by": 4,
+   "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ijac.14558",
+   "is_oa": true,
+   "authors": [
+    "Linlong Dou",
+    "Liling He",
+    "Yihui Yin"
+   ],
+   "abstract": "Abstract Based on the principle of energy balance, a new analytical model is established to estimate the ballistic performance of ceramic\u2010faced armor against small and medium\u2010caliber projectiles. The energy consumption of ceramic is described as the product of compressive strength and erosion volume of ceramic. Despite its simple form, it represents the main response characteristic of ceramic erosion. Moreover, considering the dependence of the fracture cone half\u2010angle on the ceramic/metal thickness ratio and projectile velocity, one has innovatively incorporated them in the present model to predict reasonably the half\u2010angle evolution. To further simplify the analytical calculation and facilitate its application, an explicit prediction formula of the central deflection on thin metal plate is adopted. Then, the accuracy of analytical prediction has been carefully checked with the ballistic test data of small and medium\u2010caliber projectiles to penetrate light ceramic\u2010faced armor. The satisfactory consistency between the experimental and analytical results has confirmed the validity of the present model. It is therefore expected to be a powerful tool for the optimal design of new ceramic\u2010faced armor."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "dimensionless parameters textile body armor V50 areal density Cunniff"
+   ],
+   "title": "COMPUTATIONAL BALLISTIC IMPACT ANALYSIS OF AIRCRAFT ARMORS",
+   "year": 2017,
+   "doi": null,
+   "venue": "Havac\u0131l\u0131k ve uzay teknolojileri dergisi",
+   "cited_by": 3,
+   "oa_url": "https://jast.msu.edu.tr/index.php/JAST/article/download/29/22",
+   "is_oa": true,
+   "authors": [
+    "Seher Eken",
+    "A. Kadir Yavuz",
+    "S. Leigh Phoenix"
+   ],
+   "abstract": "Lightweight and ballistic resistance are significant parameters in the design of aircraft armors. Aircraft should not compromise the payload or its maneuverability due to the armors added to the system. In addition to this, the aircraft has to sustain high ballistic resistance under enemy fire. In the design of aircraft armors choosing light and high strength materials that respond to these demands ballistic impact resistant concepts are being developed. In this study numerical simulation of ballistic impact is carried out for the aircraft armors. The ballistic impact response of the fiber reinforced composite armor is computed using forward finite difference method. Cylindrical rigid projectile hitting the woven crimp composite fabric at an angle 90\u00b0 is analyzed. The yarn segments between hinged joints at crossovers are modeled using discrete mass-spring-damper in pin-joint systems consisting of planar square lattices. After a certain time of impact; displacement of the fabric, change in the velocities and the failure in the material is computed and depicted graphically. The effect of crimp and slip viscosity on the ballistic performance of the fabric is examined and discussed."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "backface deformation soft body armor clay witness modeling"
+   ],
+   "title": "Ballistic Performance of Raffia Fabric-Reinforced Epoxy Composites as an Intermediate Layer in Multilayered Armor Systems",
+   "year": 2025,
+   "doi": "https://doi.org/10.3390/polym17212827",
+   "venue": "Polymers",
+   "cited_by": 3,
+   "oa_url": "https://www.mdpi.com/2073-4360/17/21/2827/pdf?version=1761225502",
+   "is_oa": true,
+   "authors": [
+    "Douglas Santos Silva",
+    "Ra\u00ed Felipe Pereira Junio",
+    "Let\u00edcia dos Santos Aguilera",
+    "S\u00e9rgio Neves Monteiro"
+   ],
+   "abstract": "This study investigates the ballistic performance of epoxy matrix composites reinforced with raffia fabric, aiming to evaluate their potential as the second layer in multilayered armor systems (MAS), replacing conventional synthetic aramid (Kevlar\u2122) laminates. Composite plates with different volumetric fractions of raffia fabric (10, 20, and 30%) were manufactured and integrated with a ceramic front layer (Al2O3/Nb2O5) in MAS structures, which were then subjected to ballistic impact tests using high-energy 7.62 mm caliber ammunition. The backface signature (indentation depth) measured in ballistic clay, used as a human body simulant, showed that only the 10% raffia-reinforced composite (ER10) met the National Institute of Justice (NIJ 0101.06) safety threshold of 44 mm. Higher raffia contents (20% and 30%) led to increased indentation, compromising ballistic integrity. Scanning electron microscopy (SEM) of the fractured surfaces revealed typical energy dissipation mechanisms, such as fiber rupture, fiber pull-out, and interfacial delamination. The results indicate that raffia fabric composites with 10% fiber content can serve as a cost-effective and sustainable alternative to Kevlar\u2122 in personal armor applications, while maintaining compliance with ballistic protection standards."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit UHMWPE composite analytical model"
+   ],
+   "title": "Study of Dynamic Impact Behaviors and Ballistic Properties of Ceramic/UHMWPE Composite Armor",
+   "year": 2011,
+   "doi": "https://doi.org/10.4028/www.scientific.net/amm.121-126.397",
+   "venue": "Applied Mechanics and Materials",
+   "cited_by": 3,
+   "oa_url": "https://www.scientific.net/AMM.121-126.397",
+   "is_oa": true,
+   "authors": [
+    "Ying Nan Guo",
+    "Sun Qin",
+    "Ling Wu"
+   ],
+   "abstract": "The ballistic properties of different thickness combinations of ceramic/UHMWPE composite armors were studied in this paper, in order to find a better ballistic property structure subject to 12.7mm bullet. Powder-gun ballistic testing system was used to carry out the normal impact tests to determine the response and the ballistic limit of these combinations of ceramic/UHMWPE composite armors subject to impact loading. Compared with the test, an explicit finite element (FE) model was built with LS-DYNA Code to simulate the impact process. The influence of different parameters on the impact behavior was considered analytically. Results show very good agreement with the experimental data."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit V50 statistical estimation armor testing"
+   ],
+   "title": "A Study on V50 Calculation in Bulletproof Test using Logistic Regression Model",
+   "year": 2018,
+   "doi": "https://doi.org/10.7469/jksqm.2018.46.3.453",
+   "venue": "Journal of the Korean society for quality management",
+   "cited_by": 3,
+   "oa_url": "https://www.jksqm.org/upload/pdf/jksqm-46-3-453.pdf",
+   "is_oa": true,
+   "authors": [
+    "Seung-Hwan Gu",
+    "Seung Min Noh",
+    "Seung Hwan Song"
+   ],
+   "abstract": "Purpose: The purpose of this study is to propose a solution to the case where V50 calculation is impossible in the process of bulletproof test.Methods: In this study, we proposed a V50 estimation method using logistic regression analysis. Six scenarios were applied by combining the homogeneity of the sample and the speed range. Then, 1,000 simulations were performed per scenario and six assumptions reflecting the reality were applied.Results: The result of the study, it was confirmed that there was no statistical difference between the V50 value calculated by the conventional method and the V50 value calculated by the improvement method. Therefore, in situations where V50 can not be calculated, it is reasonable to use logistic regression analysis. Conclusion: This study develops a methodology that is easy to use and reliable by using statistical model based on actual data."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "dimensionless parameters textile body armor V50 areal density Cunniff"
+   ],
+   "title": "A NUMERICAL MODEL FOR BALLISTIC IMPACT RESPONSE OF COMPOSITE ARMORS",
+   "year": 2018,
+   "doi": null,
+   "venue": "Havac\u0131l\u0131k ve uzay teknolojileri dergisi",
+   "cited_by": 2,
+   "oa_url": "https://jast.msu.edu.tr/index.php/JAST/article/download/308/271",
+   "is_oa": true,
+   "authors": [
+    "Demet Balkan",
+    "Seher Eken"
+   ],
+   "abstract": "In this study, we present a numerical model to simulate the ballistic impact of a rigid right circular cylinder (RCC) projectile into a woven fabric target. The numerical solution of transverse ballistic impact on a laminar biaxial fabric is obtained using a forward finite-difference method. The ballistic impact analysis for different materials of targets made of aramid and polyethylene fibers are simulated to investigate the effect of fabric material on the ballistic resistance. Numerical simulations are performed to reveal the influences of crimp factor and fabric material on the ballistic performance of woven fabrics. Various cases have been presented showing the variations of yarn strains, yarn velocities, and yarn displacements over time."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "behind armor blunt trauma backface signature injury criteria"
+   ],
+   "title": "A Systematic Literature Review of Impact Systems for Developing Generalized Medical Injury Criteria for Behind Armor Blunt Trauma",
+   "year": 2025,
+   "doi": "https://doi.org/10.1093/milmed/usaf291",
+   "venue": "Military Medicine",
+   "cited_by": 2,
+   "oa_url": "https://academic.oup.com/milmed/article-pdf/190/Supplement_2/632/64288122/usaf291.pdf",
+   "is_oa": true,
+   "authors": [
+    "Narayan Yoganandan",
+    "Brian D. Stemper",
+    "Cameron R. Bass",
+    "Robert Scott Salzar"
+   ],
+   "abstract": "INTRODUCTION: The focus of previous reviews on behind armor blunt trauma (BABT) as applied to the thoraco-abdominal region has been the rationale for the clay deformation-based standard of 44 mm and injuries from field and laboratory studies. The objective of this study was to conduct a systematic literature review of BABT studies with a focus on impact systems used to deliver high-rate compressive loads to the thorax and development of injury criteria in the form of risk curves for enhanced medical injury criteria. MATERIALS AND METHODS: The widely used PubMed database was accessed to identify articles for a systematic literature review ranging from its inception until November 15, 2024. The detailed review focused on articles covering thoraco-abdominal injuries using biological and other models, impact delivery systems, presence of body armor, and development of injury risk curves (IRCs). RESULTS: The systematic review identified literature involving different surrogates in the database: human cadavers in 4, animals in 18, physical models in 10, and numerical simulations in 14 articles. Three field/case and 7 review articles were also identified in the database. Human cadaver research focused on the thorax and spine regions, while the swine studies targeted the lung, spine, liver, and heart regions. Behind armor blunt trauma impacts with actual round and different types of body armor to the live swine produced varying types of injuries and injury severities to skeletal structures and organ and soft tissue traumas. Although external metrics such as velocity and energy were reported, IRCs were not developed in live swine experiments. Impacts with indenter impact systems to the live swine without armor protection produced injuries similar to those with armor-covered and "
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "backface deformation soft body armor clay witness modeling"
+   ],
+   "title": "HOW do we improve the testing of female ballistic body armour? \u2013 a comparison of roma plastilina no.1, 10% ballistic gelatine and sebs gel",
+   "year": 2025,
+   "doi": "https://doi.org/10.1007/s00414-025-03578-z",
+   "venue": "International Journal of Legal Medicine",
+   "cited_by": 1,
+   "oa_url": "https://link.springer.com/content/pdf/10.1007/s00414-025-03578-z.pdf",
+   "is_oa": true,
+   "authors": [
+    "CHRISTOPHER MALBON",
+    "Clare Knock",
+    "Debra J. Carr"
+   ],
+   "abstract": "Abstract Body armour designed for use by police officers in England and Wales is currently tested using Roma Plastilina No1 (RP1) as the witness material for the measurement of back face signature (BFS). However, this material has limitations when testing body armour designed for females, as it is not possible to measure the BFS in the breast region due to the way the breast shapes are formed. Therefore, to enable measurement of BFS for females over the breast, an alternative backing material is required to form surrogate breasts and torso which would enable BFS to be measured. A comparison was conducted between RP1, 10% ballistic gelatine and a 30/70% styrene-etylene / butylene-styrene (SEBS) gel, using standardised ballistic test packs and two projectiles: DM11A1B2 9 mm FMJ at velocities 365 \u00b1 10 ms \u22121 ; Remington R357M3 0.357\u201d JSP at velocities 390 \u00b1 10 ms \u22121 . The results showed that there was a statistically significant difference identified in measured BFS among the three backing materials with both projectile types. RP1 had the overall smallest variance in measured BFS for both projectile types, however the limitation in being able to mould to create a breast shape is a major limiting factor. With 10% ballistic gelatine, when testing with the 0.357\u201d projectile, a greater variance in measured BFS was shown compared to the other materials. The SEBS gel was consistent for the 0.357\u201d projectile, but with the 9 mm projectile there was greater variance in results. Both 10% ballistic gelatine and SEBS gel would enable a moulded female test form to be created, however SEBS gel has a much longer shelf life and showed resistance to damage, although neither of these materials could be considered as a biofidelic substitute for breast tissue."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit UHMWPE composite analytical model"
+   ],
+   "title": "Advances in analytical and numerical models for ballistic limits of fiber-reinforced composites",
+   "year": 2024,
+   "doi": "https://doi.org/10.1360/tb-2024-0399",
+   "venue": "Chinese Science Bulletin (Chinese Version)",
+   "cited_by": 1,
+   "oa_url": "https://www.sciengine.com/doi/pdf/9CAAA506AF544AA7B1C0E8FF7FE1B0F6",
+   "is_oa": true,
+   "authors": [
+    "Chaonan Cong",
+    "Wenqing Zhu",
+    "Junjie Liu",
+    "Xiaoding Wei"
+   ],
+   "abstract": "In recent years, fiber-reinforced polymer (FRP) composites have become increasingly popular in protective design and engineering due to their low specific gravity, high specific strength and stiffness, and exceptional impact resistance. A comprehensive understanding of the energy absorption of the FRP composites during the impact and penetration and precise prediction of the ballistic threshold would provide helpful guidance for the construction of sophisticated bulletproof composites. The main characteristics of impact and penetration of the FRP composites are high loading intensity and short action time. High stress is distributed over the contact area of the projectile and FRP composite target during the impact and penetration process, leading to the plastic deformation and failure of the target. The impact and penetration of the FRP composites are complex dynamic processes, in which the deformation and failure modes of composite targets are influenced by various internal and external factors. The ballistic response of the FRP composites subjected to a ballistic impact mostly depends on a combination of internal and external factors in a synchronous manner. Therefore, accurately forecasting the ballistic limits of FRP composites is challenging. This challenge poses a substantial obstacle to the development of advanced bulletproof composites. This paper reviews the analytical and numerical models for the ballistic limit prediction for FRP composites and summarizes the associated energy absorption mechanisms, expecting to provide a reference for the modeling of the ballistic limits of FRP composites and the design of bulletproof composites. Besides, the effects of target component characteristic, target structure, and projectile characteristic are discussed. The early "
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ceramic composite armor analytical ballistic limit Florence model"
+   ],
+   "title": "Ballistic property of steel/ceramic/steel composite armor",
+   "year": 2007,
+   "doi": null,
+   "venue": "Journal of University of Science and Technology Beijing",
+   "cited_by": 1,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "Jing Kun Yu"
+   ],
+   "abstract": "A model for predicting the ballistic limit velocity was developed by combining Florence's model with the plug equation for the projectile penetration into sheet.The effects of structure parameters,including facesheet thickness,ceramic core thickness and back plate thickness,on the ballistic limit velocity of steel/ceramic/steel composite armor against 7.62 mm plain steel projectiles was investigated to optimize the armor structure and identify the validity of the model analytically and experimentally.The results reveal that the model is in good agreement with experimental values,with the relative error less than 15%,and it is optimum as the thickness ratio of ceramic tile to steel back sheet is between 1.5 to 4.5."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ceramic composite armor analytical ballistic limit Florence model"
+   ],
+   "title": "Experimental, analytical, and numerical investigation of the ballistic performance of three\u2010layer composite targets",
+   "year": 2025,
+   "doi": "https://doi.org/10.1111/ijac.15135",
+   "venue": "International Journal of Applied Ceramic Technology",
+   "cited_by": 1,
+   "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ijac.15135",
+   "is_oa": true,
+   "authors": [
+    "Seyed Sajad Jafari",
+    "A. Alavi Nia"
+   ],
+   "abstract": "Abstract In this research, the ballistic performance of three\u2010layer composite targets has been investigated using experimental, analytical, and numerical methods. In another research, an analytical equation was presented to estimate the value of the ballistic limit velocity of these targets. In this research, by using the experimental results, the amount of energy absorption of targets and their ballistic limit velocity were extracted. Then, the effect of each layer on ballistic resistance as well as the half angle of the conical crack in the ceramic layer was determined using a numerical method. Based on the experimental and numerical results, approximately 56.3% of the initial velocity of the projectile is reduced by the ceramic, and this velocity reduction is 25.9% and 17.8% for aluminum and polyurea, respectively. Based on the optimization results, the ceramic with 64.37% has the greatest effect in increasing the energy absorption, whereas the portion of polyurea and aluminum layers is 13.03% and 22.54%, respectively. In the analytical section, due to the large difference between the results of the Florence's equation and the experimental results, the Florence's equation was modified. Then, this modified equation was developed for the three\u2010layer ceramic\u2013polyurea\u2013aluminum target and a new equation was derived to predict ballistic limit velocity."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "backface deformation soft body armor clay witness modeling"
+   ],
+   "title": "Comparative analysis of manual and 3D scanning methods for backface deformation on anatomically complex surfaces",
+   "year": 2026,
+   "doi": "https://doi.org/10.1038/s41598-026-72888-y",
+   "venue": "Scientific Reports",
+   "cited_by": 0,
+   "oa_url": "https://www.nature.com/articles/s41598-026-72888-y_reference.pdf",
+   "is_oa": true,
+   "authors": [
+    "Andrea Porter",
+    "D. Lemons",
+    "C. Baetge",
+    "Thomas K. Ferris"
+   ],
+   "abstract": "This study compared a traditional and a novel method for measuring backface deformation in body armor testing. The traditional method, defined in ASTM E3068\u201320, employs a bridge with a depth gauge that contacts the backface witness material during measurement, whereas the novel approach uses an Artec Eva handheld structured-light 3D scanner and Geomagic Control X software to obtain digital, non-contact measurements. Ballistic tests were conducted on an anatomically realistic female Roma Plastilina No. 1 clay manikin wearing soft unisex body armor. Using 9 mm Luger FMJ RN rounds, impacts were delivered to three anatomical locations: the xiphoid process, inframammary region, and superior medial chest. Results showed no statistically significant overall difference between measurement methods, but agreement between methods varied by anatomical location. Manual measurements tended to yield deeper deformation depths at the inframammary region where deformations were less uniform, suggesting that complex surface geometry influences measurement differences between methods."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "backface deformation soft body armor clay witness modeling"
+   ],
+   "title": "Quantifying air gap depth between the female anterior torso and soft body armor using handheld 3D scanning",
+   "year": 2026,
+   "doi": "https://doi.org/10.1016/j.apergo.2026.104854",
+   "venue": "Applied Ergonomics",
+   "cited_by": 0,
+   "oa_url": "https://www.sciencedirect.com/science/article/pii/S0003687026001328/pdf",
+   "is_oa": true,
+   "authors": [
+    "A. Porter",
+    "C. Baetge",
+    "Nancy J. Currie",
+    "Thomas K. Ferris"
+   ],
+   "abstract": "This study investigated the air gaps, or ease, between the anterior female torso and two types of soft body armor, planar and nonplanar, using a novel 3D torso scanning method. To account for differences in breast morphology, participants who were professionally fitted into B-, D-, and F-cup bras were recruited for the study. After an initial scan was taken in the bra, the subjects were scanned wearing each type of armor without any other base layers. The bra scan was overlaid with the armor scans and the difference between the two at six landmarks (left nipple, right nipple, midpoint between the nipples, xiphoid process, and the left and right cup-strap intersections on the bra) quantified the air gap depth or compression at each point. Although air gap measurement did not significantly differ by bra size, the nonplanar armor produced significantly larger gaps than the planar armor, suggesting that the contoured, nonplanar design for females better accommodates breast morphology. These findings quantify the air gap depth between the female and her armor and provide empirical data to inform body armor testing protocols on the female anterior torso."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ceramic composite armor analytical ballistic limit Florence model"
+   ],
+   "title": "Optimum Design of Ceramic-Composite Armors Against Ballistic Impact of Projectiles by Genetic Algorithm",
+   "year": 2012,
+   "doi": null,
+   "venue": "ADST Journal",
+   "cited_by": 0,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "R Davoudinejad",
+    "H Khodarahm"
+   ],
+   "abstract": "One of the most important issues in passive defence is the design of bullet penetration resistant structures and panels. Two-component ceramic-composite armors are widely used in the bulletproof panels. In the recent decades, optimum design of thickness and material of ceramic and composite has been seriously considered by ballistic experts. Florence analytical model provides a good prediction of ballistic limit velocity of ceramic-composite armors. In this paper, based on the Florence and Bendor model, an effective methodology for optimum design of two-component ceramic-composite armors is presented, by a genetic algorithm solving technique. The design goal is achieving a minimum areal density for a given ballistic limit velocity of armor. The criterion is having the highest level of protection. In this method, material and thickness of ceramic and composite layers are considered as the design parameters. Using the results of the optimal solution, armors are designed to be resistant against two types of bullets with 7.62 and 12.7 mm caliber for different distances from target to firing place."
+  },
+  {
+   "project": "armor",
+   "queries": [
+    "ballistic limit V50 statistical estimation armor testing"
+   ],
+   "title": "Ballistic efficiency of glass-polymer transparent armor: Architecture-driven transition from glass-dominated to hybrid response regimes",
+   "year": 2026,
+   "doi": "https://doi.org/10.1016/j.damage.2026.100003",
+   "venue": "Damage",
+   "cited_by": 0,
+   "oa_url": "https://www.sciencedirect.com/science/article/pii/S3117844826000035/pdf",
+   "is_oa": true,
+   "authors": [
+    "Samuel Thimounier Ferreira",
+    "Samuel M\u00e1rcio Toffoli"
+   ],
+   "abstract": "This study investigates the influence of laminate architecture on the ballistic response of transparent glass-polymer armor systems, with an emphasis on architecture-driven performance transitions rather than on isolated material substitutions. Eight configurations (C1\u2013C8) were manufactured and tested under MIL-STD-662F using.44 Magnum ammunition, systematically varying the polymer interlayer (PVB, EVA, TPU, and ionomeric SentryGlas) and the presence or absence of a polycarbonate (PC) backing layer (LEXAN 9030, Sabic; 3 mm, bonded via 1.27 mm TPU interlayer), while holding all other parameters constant. In glass-only laminates, interlayer variations produce modest changes in V 50 and negligible differences in mass-normalized efficiency metrics, supporting a glass-dominated regime. The introduction of a PC backing layer, together with the associated changes in total thickness and rear-surface boundary response, leads to a marked shift toward a hybrid glass-polycarbonate response regime, increasing V 50 by 121%\u2013150% across all paired configurations. Laminates with PC backing exhibit systematic gains of approximately 2.0\u20132.2 \u00d7 in areal efficiency ( E ma ) and 2.4\u20132.8 \u00d7 in volumetric efficiency ( E mv ); the corresponding kinetic-energy-normalized indicator ( E kn = E k / \u03c1 a , where E k = \u00bd\u00b7 m p \u00b7V 50 2 is the projectile kinetic energy at the ballistic limit) yields gains of 4.4\u20135.6 \u00d7 , consistent with the quadratic dependence of absorbed energy on V 50 . These gains persist after normalization by independently measured mass and thickness, confirming that the performance improvement reflects a genuine architectural effect rather than simple mass accumulation. The results indicate that within the tested design space, laminate architecture is the primary factor governing mas"
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation battery module modeling"
+   ],
+   "title": "A 3D thermal runaway propagation model for a large format lithium ion battery module",
+   "year": 2016,
+   "doi": "https://doi.org/10.1016/j.energy.2016.08.094",
+   "venue": "Energy",
+   "cited_by": 494,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "Xuning Feng",
+    "Languang Lu",
+    "Minggao Ouyang",
+    "Jiangqiu Li"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation cylindrical cells spacing barrier"
+   ],
+   "title": "Experimental Analysis of Thermal Runaway and Propagation in Lithium-Ion Battery Modules",
+   "year": 2015,
+   "doi": "https://doi.org/10.1149/2.0921509jes",
+   "venue": "Journal of The Electrochemical Society",
+   "cited_by": 420,
+   "oa_url": "https://iopscience.iop.org/article/10.1149/2.0921509jes/pdf",
+   "is_oa": true,
+   "authors": [
+    "Carlos F. Lopez",
+    "Judith A. Jeevarajan",
+    "Partha P. Mukherjee"
+   ],
+   "abstract": "While the energy and power density of lithium-ion batteries (LIBs) are steadily improving, thermal safety continues to remain a critical challenge. Under abuse conditions, exothermic reactions may lead to the release of heat that can trigger subsequent unsafe reactions. The situation worsens in a module configuration, as the released heat from an abused cell can activate a chain of reactions in the neighboring cells, causing catastrophic thermal runaway. This work focuses on experimental elucidation and analysis of different LIB module configurations to characterize the thermal behavior and determine safe practices. The abuse test consists of a heat-to-vent setting where a single cell in a module is triggered into thermal runaway via a heating element. The cell-to-cell thermal runaway propagation behavior has been characterized. Results have shown that increasing the inter-cell spacing in a module containing cylindrical cells significantly decreases the probability of thermal runaway propagation. Additionally, it was determined that appropriate tab configuration combined with cell form factors exhibit a major influence on thermal runaway propagation. Different thermal insulation materials have been analyzed to determine their ability to ameliorate and/or potentially mitigate propagation effects."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation battery module modeling"
+   ],
+   "title": "Experimental and modeling analysis of thermal runaway propagation over the large format energy storage battery module with Li4Ti5O12 anode",
+   "year": 2016,
+   "doi": "https://doi.org/10.1016/j.apenergy.2016.08.160",
+   "venue": "Applied Energy",
+   "cited_by": 254,
+   "oa_url": "http://wrap.warwick.ac.uk/81660/1/WRAP_Applied%20energy%20final%20submitted%20%28002%29.pdf",
+   "is_oa": true,
+   "authors": [
+    "Peifeng Huang",
+    "Ping Ping",
+    "Ke Li",
+    "Haodong Chen"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "accelerating rate calorimetry thermal runaway onset temperature NMC LFP"
+   ],
+   "title": "Experimental Analysis of Thermal Runaway in 18650 Cylindrical Li-Ion Cells Using an Accelerating Rate Calorimeter",
+   "year": 2017,
+   "doi": "https://doi.org/10.3390/batteries3020014",
+   "venue": "Batteries",
+   "cited_by": 195,
+   "oa_url": "https://www.mdpi.com/2313-0105/3/2/14/pdf?version=1492001349",
+   "is_oa": true,
+   "authors": [
+    "Boxia Lei",
+    "Wenjiao Zhao",
+    "Carlos Ziebert",
+    "Nils Uhlmann"
+   ],
+   "abstract": "In this work, commercial 18650 lithium-ion cells with LiMn2O4, LiFePO4, and Li(Ni0.33Mn0.33Co0.33)O2 cathodes were exposed to external heating in an accelerating rate calorimeter (es-ARC, Thermal Hazard Technology (THT), Bletchley, UK), to investigate the thermal behavior under abuse conditions. New procedures for measuring the external and internal pressure change of cells were developed. The external pressure was measured utilizing a gas-tight cylinder inside the calorimeter chamber, in order to detect the venting of the cells. For internal pressure measurements, a pressure line connected to a pressure transducer was directly inserted into the cell. During the thermal runaway experiments, three stages (low rate, medium rate, and high rate reactions) were observed. Both the pressure and temperature change indicated different stages of exothermic reactions, which produced gases or/and heat. The onset temperature of the thermal runaway was estimated according to the temperature and pressure changes. Moreover, the different activation energies for the exothermic reactions could be derived from Arrhenius plots."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation battery module modeling"
+   ],
+   "title": "Heating power and heating energy effect on the thermal runaway propagation characteristics of lithium-ion battery module: Experiments and modeling",
+   "year": 2022,
+   "doi": "https://doi.org/10.1016/j.apenergy.2022.118760",
+   "venue": "Applied Energy",
+   "cited_by": 191,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "Changyong Jin",
+    "Yuedong Sun",
+    "Huaibin Wang",
+    "Yuejiu Zheng"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation cylindrical cells spacing barrier"
+   ],
+   "title": "Inhibition effect of different interstitial materials on thermal runaway propagation in the cylindrical lithium-ion battery module",
+   "year": 2019,
+   "doi": "https://doi.org/10.1016/j.applthermaleng.2019.02.127",
+   "venue": "Applied Thermal Engineering",
+   "cited_by": 160,
+   "oa_url": "https://www.research.ed.ac.uk/en/publications/993a720a-99c8-4f5f-8e82-ef0eb34161ca",
+   "is_oa": true,
+   "authors": [
+    "Chengchao Yuan",
+    "Qingsong Wang",
+    "Yu Wang",
+    "Yang Zhao"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation cylindrical cells spacing barrier"
+   ],
+   "title": "Alleviation on battery thermal runaway propagation: Effects of oxygen level and dilution gas",
+   "year": 2021,
+   "doi": "https://doi.org/10.1016/j.jpowsour.2021.230340",
+   "venue": "Journal of Power Sources",
+   "cited_by": 115,
+   "oa_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0378775321008521-ga1_lrg.jpg",
+   "is_oa": true,
+   "authors": [
+    "Jingwen Weng",
+    "Dongxu Ouyang",
+    "Yanhui Liu",
+    "Mingyi Chen"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "accelerating rate calorimetry thermal runaway onset temperature NMC LFP"
+   ],
+   "title": "Thermal and Mechanical Safety Assessment of Type 21700 Lithium-Ion Batteries with NMC, NCA and LFP Cathodes\u2013Investigation of Cell Abuse by Means of Accelerating Rate Calorimetry (ARC)",
+   "year": 2023,
+   "doi": "https://doi.org/10.3390/batteries9050237",
+   "venue": "Batteries",
+   "cited_by": 114,
+   "oa_url": "https://www.mdpi.com/2313-0105/9/5/237/pdf?version=1682302678",
+   "is_oa": true,
+   "authors": [
+    "Sebastian Ohneseit",
+    "Philipp Finster",
+    "Claire Floras",
+    "Niklas Lubenau"
+   ],
+   "abstract": "In this experimental investigation, we studied the safety and thermal runaway behavior of commercial lithium-ion batteries of type 21700. The different cathode materials NMC, NCA and LFP were compared, as well as high power and high energy cells. After characterization of all relevant components of the batteries to assure comparability, two abuse methods were applied: thermal abuse by the heat-wait-seek test and mechanical abuse by nail penetration, both in an accelerating rate calorimeter. Several critical temperatures and temperature rates, as well as exothermal data, were determined. Furthermore, the grade of destruction, mass loss and, for the thermal abuse scenario, activation energy and enthalpy, were calculated for critical points. It was found that NMC cells reacted first, but NCA cells went into thermal runaway a little earlier than NMC cells. LFP cells reacted, as expected, more slowly and at significantly higher temperatures, making the cell chemistry considerably safer. For mechanical abuse, no thermal runaway was observed for LFP cells, as well as at state of charge (SOC) zero for the other chemistries tested. For thermal abuse, at SOC 0 and SOC 30 for LFP cells and at SOC 0 for the other cell chemistries, no thermal runaway occurred until 350 \u00b0C. In this study, the experimental data are provided for further simulation approaches and system safety design."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation mitigation interstitial material aerogel"
+   ],
+   "title": "Mitigating thermal runaway propagation of NCM 811 prismatic batteries via hollow glass microspheres plates",
+   "year": 2022,
+   "doi": "https://doi.org/10.1016/j.psep.2022.04.049",
+   "venue": "Process Safety and Environmental Protection",
+   "cited_by": 99,
+   "oa_url": "http://ira.lib.polyu.edu.hk/bitstream/10397/108057/1/Niu_Mitigating_Thermal_Runaway.pdf",
+   "is_oa": true,
+   "authors": [
+    "Huichang Niu",
+    "Caixing Chen",
+    "Yanhui Liu",
+    "Lei Li"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "battery failure databank thermal runaway heat output variability"
+   ],
+   "title": "The battery failure databank: Insights from an open-access database of thermal runaway behaviors of Li-ion cells and a resource for benchmarking risks",
+   "year": 2024,
+   "doi": "https://doi.org/10.1016/j.jpowsour.2024.234106",
+   "venue": "Journal of Power Sources",
+   "cited_by": 86,
+   "oa_url": "https://doi.org/10.1016/j.jpowsour.2024.234106",
+   "is_oa": true,
+   "authors": [
+    "Donal P. Finegan",
+    "Julia Billman",
+    "John J. Darst",
+    "Peter J. Hughes"
+   ],
+   "abstract": "The thermal response of Li-ion cells can greatly vary for identical cell designs tested under identical conditions, the distribution of which is costly to fully characterize experimentally. The open-source Battery Failure Databank presented here contains robust, high-quality data from hundreds of abuse tests spanning numerous commercial cell designs and testing conditions. Data was gathered using a fractional thermal runaway calorimeter and contains the fractional breakdown of heat and mass that was ejected, as well as high-speed synchrotron radiography of the internal dynamic response of cells during thermal runaway. The distribution of thermal output, mass ejection, and internal response of commercial cells are compared for different abuse-test conditions, which when normalized on a per amp-hour basis show a strong positive correlation between heat output from cells, the fraction of mass ejected from the cells, their energy- and power-density. Ejected mass was shown to contain 10 \u00d7 more heat per gram than non-ejected mass. The causes of \u2018outlier\u2019 thermal and ejection responses i.e., extreme cases, are elucidated by high-speed radiography which showed how occurrences such as vent clogging can create more hazardous conditions. High-speed radiography also demonstrated how the time-resolved interplay of thermal runaway propagation and mass ejection influences the total heat generated."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "accelerating rate calorimetry thermal runaway onset temperature NMC LFP"
+   ],
+   "title": "Investigating the Role of Energy Density in Thermal Runaway of Lithium-Ion Batteries with Accelerating Rate Calorimetry",
+   "year": 2021,
+   "doi": "https://doi.org/10.1149/1945-7111/ac0699",
+   "venue": "Journal of The Electrochemical Society",
+   "cited_by": 84,
+   "oa_url": "https://iopscience.iop.org/article/10.1149/1945-7111/ac0699/pdf",
+   "is_oa": true,
+   "authors": [
+    "Joshua Lamb",
+    "Loraine Torres-Castro",
+    "John C. Hewson",
+    "Randy C. Shurtz"
+   ],
+   "abstract": "This work uses accelerating rate calorimetry to evaluate the impact of cell chemistry, state of charge, cell capacity, and ultimately cell energy density on the total energy release and peak heating rates observed during thermal runaway of Li-ion batteries. While the traditional focus has been using calorimetry to compare different chemistries in cells of similar sizes, this work seeks to better understand how applicable small cell data is to understand the thermal runaway behavior of large cells as well as determine if thermal runaway behaviors can be more generally tied to aspects of lithium-ion cells such as total stored energy and specific energy. We have found a strong linear correlation between the total enthalpy of the thermal runaway process and the stored energy of the cell, apparently independent of cell size and state of charge. We have also shown that peak heating rates and peak temperatures reached during thermal runaway events are more closely tied to specific energy, increasing exponentially in the case of peak heating rates."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation battery module modeling"
+   ],
+   "title": "Coupled electrochemical-abuse-heat-transfer model to predict thermal runaway propagation and mitigation strategy for an EV battery module",
+   "year": 2021,
+   "doi": "https://doi.org/10.1016/j.est.2021.102619",
+   "venue": "Journal of Energy Storage",
+   "cited_by": 83,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "Puneet Jindal",
+    "Banoth Sravan Kumar",
+    "Jishnu Bhattacharya"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "battery failure databank thermal runaway heat output variability"
+   ],
+   "title": "The effect of cell geometry and trigger method on the risks associated with thermal runaway of lithium-ion batteries",
+   "year": 2022,
+   "doi": "https://doi.org/10.1016/j.jpowsour.2021.230645",
+   "venue": "Journal of Power Sources",
+   "cited_by": 82,
+   "oa_url": "https://www.sciencedirect.com/science/article/am/pii/S0378775321011411",
+   "is_oa": true,
+   "authors": [
+    "William Q. Walker",
+    "Kylie Cooper",
+    "Peter Hughes",
+    "Ian Doemling"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation battery module modeling"
+   ],
+   "title": "Dynamic thermophysical modeling of thermal runaway propagation and parametric sensitivity analysis for large format lithium-ion battery modules",
+   "year": 2021,
+   "doi": "https://doi.org/10.1016/j.jpowsour.2021.230724",
+   "venue": "Journal of Power Sources",
+   "cited_by": 81,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "Huaibin Wang",
+    "Bo Liu",
+    "Chengshan Xu",
+    "Changyong Jin"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "fractional thermal runaway calorimetry heat ejected mass lithium-ion"
+   ],
+   "title": "Prevention of lithium-ion battery thermal runaway using polymer-substrate current collectors",
+   "year": 2021,
+   "doi": "https://doi.org/10.1016/j.xcrp.2021.100360",
+   "venue": "Cell Reports Physical Science",
+   "cited_by": 77,
+   "oa_url": "https://www.sciencedirect.com/science/article/am/pii/S266638642100045X?via%3Dihub",
+   "is_oa": true,
+   "authors": [
+    "Martin Pham",
+    "John J. Darst",
+    "William Q. Walker",
+    "Thomas M. M. Heenan"
+   ],
+   "abstract": "Isolating electronically conducting material from internal short circuits is a promising way to prevent the onset of thermal runaway within lithium-ion cells. Here, a metal-coated polymer current collector, which is designed to disconnect internal short circuits by withdrawing from the heating region, is tested in 18650 cells. In addition to having lower mass and manufacturing costs, cells with metal-coated polymer current collectors demonstrate a reduced risk of thermal runaway during nail penetration. High-speed synchrotron X-ray radiography of 18650 cells during nail-penetration testing, in tandem with pre- and post-mortem X-ray computed tomography, provides insights into the function of the current collectors. The results are compared with those of 18650 cells with standard commercial aluminum and copper current collectors. Cells with aluminum-coated polymer current collectors demonstrated 100% success in thermal runaway prevention during nail penetration, retaining a cell voltage >4.00 V, while standard cells consistently experienced thermal runaway."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation battery module modeling"
+   ],
+   "title": "An experimental-based Domino prediction model of thermal runaway propagation in 18,650 lithium-ion battery modules",
+   "year": 2021,
+   "doi": "https://doi.org/10.1016/j.ijheatmasstransfer.2021.122024",
+   "venue": "International Journal of Heat and Mass Transfer",
+   "cited_by": 67,
+   "oa_url": null,
+   "is_oa": false,
+   "authors": [
+    "Hongju Zhai",
+    "Huang Li",
+    "Ping Ping",
+    "Zonghou Huang"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation cylindrical cells spacing barrier"
+   ],
+   "title": "Layer-to-layer thermal runaway propagation of open-circuit cylindrical li-ion batteries: Effect of ambient pressure",
+   "year": 2022,
+   "doi": "https://doi.org/10.1016/j.est.2022.105709",
+   "venue": "Journal of Energy Storage",
+   "cited_by": 59,
+   "oa_url": "http://ira.lib.polyu.edu.hk/bitstream/10397/108061/1/Liu_Layer-To-Layer_Thermal_Runaway.pdf",
+   "is_oa": true,
+   "authors": [
+    "Yanhui Liu",
+    "Huichang Niu",
+    "Jing Liu",
+    "Xinyan Huang"
+   ],
+   "abstract": null
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "fractional thermal runaway calorimetry heat ejected mass lithium-ion",
+    "battery failure databank thermal runaway heat output variability"
+   ],
+   "title": "Predicting the heat release variability of Li-ion cells under thermal runaway with few or no calorimetry data",
+   "year": 2024,
+   "doi": "https://doi.org/10.1038/s41467-024-52653-3",
+   "venue": "Nature Communications",
+   "cited_by": 55,
+   "oa_url": "https://www.nature.com/articles/s41467-024-52653-3.pdf",
+   "is_oa": true,
+   "authors": [
+    "Karina Masalkovait\u0117",
+    "Paul Joseph Gasper",
+    "Donal P. Finegan"
+   ],
+   "abstract": "Accurate measurement of the variability of thermal runaway behavior of lithium-ion cells is critical for designing safe battery systems. However, experimentally determining such variability is challenging, expensive, and time-consuming. Here, we utilize a transfer learning approach to accurately estimate the variability of heat output during thermal runaway using only ejected mass measurements and cell metadata, leveraging 139 calorimetry measurements on commercial lithium-ion cells available from the open-access Battery Failure Databank. We show that the distribution of heat output, including outliers, can be predicted accurately and with high confidence for new cell types using just 0 to 5 calorimetry measurements by leveraging behaviors learned from the Battery Failure Databank. Fractional heat ejection from the positive vent, cell body, and negative vent are also accurately predicted. We demonstrate that by using low cost and fast measurements, we can predict the variability in thermal behaviors of cells, thus accelerating critical safety characterization efforts. Characterizing the variation in thermal behavior of Li-ion cells during thermal runaway is time-consuming and expensive. Here, authors show that by training a machine learning model on open-access data, the thermal behavior of a Li-ion cell can be predicted with high accuracy using the specifications of the cell and the ejected mass."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "fractional thermal runaway calorimetry heat ejected mass lithium-ion",
+    "battery failure databank thermal runaway heat output variability"
+   ],
+   "title": "Thermal Runaway of Li-Ion Cells: How Internal Dynamics, Mass Ejection, and Heat Vary with Cell Geometry and Abuse Type",
+   "year": 2022,
+   "doi": "https://doi.org/10.1149/1945-7111/ac4fef",
+   "venue": "Journal of The Electrochemical Society",
+   "cited_by": 51,
+   "oa_url": "https://iopscience.iop.org/article/10.1149/1945-7111/ac4fef/pdf",
+   "is_oa": true,
+   "authors": [
+    "Matthew Sharp",
+    "John J. Darst",
+    "Peter Hughes",
+    "Julia Billman"
+   ],
+   "abstract": "Thermal runaway of lithium-ion batteries can involve various types of failure mechanisms each with their own unique characteristics. Using fractional thermal runaway calorimetry and high-speed radiography, the response of three different geometries of cylindrical cell (18650, 21700, and D-cell) to different abuse mechanisms (thermal, internal short circuiting, and nail penetration) are quantified and statistically examined. Correlations between the geometry of cells and their thermal behavior are identified, such as increasing heat output per amp-hour (kJ Ah\u22121) of cells with increasing cell diameter during nail penetration. High-speed radiography reveals that the rate of thermal runaway propagation within cells is generally highest for nail penetration where there is a relative increase in rate of propagation with increasing diameter, compared to thermal or internal short-circuiting abuse. For a given cell model tested under the same conditions, a distribution of heat output is observed with a trend of increasing heat output with increased mass ejection. Finally, internal temperature measurements using thermocouples embedded in the penetrating nail are shown to be unreliable thus demonstrating the need for care when using thermocouples where the temperature is rapidly changing. All data used in this manuscript are open access through the NREL and NASA Battery Failure Databank."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation cylindrical cells spacing barrier"
+   ],
+   "title": "Passive Mitigation of Thermal Runaway Propagation in Dense 18650 Lithium Ion Cell Assemblies",
+   "year": 2020,
+   "doi": "https://doi.org/10.1149/1945-7111/ab8978",
+   "venue": "Journal of The Electrochemical Society",
+   "cited_by": 46,
+   "oa_url": "https://iopscience.iop.org/article/10.1149/1945-7111/ab8978/pdf",
+   "is_oa": true,
+   "authors": [
+    "Christopher Lee",
+    "Ahmed O. Said",
+    "Stanislav I. Stoliarov"
+   ],
+   "abstract": "The dynamics, heating rates, gaseous emissions and energetics of thermally-induced thermal runaway propagation in dense arrays consisting of 12\u201315 fully charged 18650 lithium ion cells have been quantified to determine the effectiveness of several passive mitigation strategies. These strategies include implementing 5 mm gaps between select rows and columns in the array, and inserting physical barriers, such as double-layer stainless steel, intumescent material or ceramic fiber board into the gaps. All experiments were performed in a wind tunnel facility that allows tracking of thermal runaway propagation through the arrays with well-defined experimental conditions. None of the tested mitigation strategies completely prevented propagation. However, the physical barriers were found to be effective in slowing the propagation speed. Among the barriers, ceramic fiber board was found to be the most effective slowing down the propagation by more than a factor of 30. Additionally, contributions of different heat transfer processes driving the propagation were quantified. In air experiments on the arrays without gaps or barriers, 50% of heat flow to downstream (non-failed) cells was associated with flaming combustion of ejected battery materials, 20% was associated with direct cell-to-cell conduction and the rest was associated with convective and radiative heat transfer between cells."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "fractional thermal runaway calorimetry heat ejected mass lithium-ion"
+   ],
+   "title": "Evaluation of Large-Format Lithium-Ion Cell Thermal Runaway Response Triggered by Nail Penetration using Novel Fractional Thermal Runaway Calorimetry and Gas Collection Methodology",
+   "year": 2022,
+   "doi": "https://doi.org/10.1149/1945-7111/ac7897",
+   "venue": "Journal of The Electrochemical Society",
+   "cited_by": 32,
+   "oa_url": "https://iopscience.iop.org/article/10.1149/1945-7111/ac7897/pdf",
+   "is_oa": true,
+   "authors": [
+    "William Q. Walker",
+    "Gary A. Bayles",
+    "Kenneth L. Johnson",
+    "Ryan P. Brown"
+   ],
+   "abstract": "To simultaneously optimize the battery design, reduce risk, and maintain safety margin, it is important to design from the ground up based on test determined cell-specific thermal runaway behavior as a function of heat output and analysis of the expelled gases. These data will inform the analytical models used for design optimization. Here we analyze the thermal runaway behavior of the 134 A-h GS Yuasa Li-ion cell (LSE134) using a novel large format fractional thermal runaway calorimeter and gas collection methodology. Results indicate an average total thermal runaway energy yield of 2.86 MJ, or 1.6 times the stored electrochemical energy; this follows an assertion commonly found in literature that energy yield scales linearly with capacity. The average fractional energy distribution was 2% through the cell body, 53% through the electrode winding, and 45% through the ejecta material and gases. Lot-to-lot variability in heat output was also identified. Additionally, it was found that an average of 416.6 SL of gas was generated which is approximately 3.1 l A-h \u22121 . The exhaust gas was determined to be a mixture of carbon dioxide, methane, ethane, oxygen, hydrogen, and other short chain hydrocarbons. Carbon dioxide was the largest component by volume with a range of 41% to 52% followed by hydrogen which ranged from 28% to 41%. Larger cells appear to result in strong ejecta flow driven events with higher fractions of the total energy delivered via the flow as compared to smaller format Li-ion cells (e.g. 18650 and 21700)."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation mitigation interstitial material aerogel"
+   ],
+   "title": "Inhibition of Thermal Runaway Propagation in Lithium-Ion Battery Pack by Minichannel Cold Plates and Insulation Layers",
+   "year": 2023,
+   "doi": "https://doi.org/10.1155/2023/6661693",
+   "venue": "International Journal of Energy Research",
+   "cited_by": 26,
+   "oa_url": "https://downloads.hindawi.com/journals/ijer/2023/6661693.pdf",
+   "is_oa": true,
+   "authors": [
+    "Xinyu Liu",
+    "Zhifu Zhou",
+    "Wei\u2010Tao Wu",
+    "Jizu Lv"
+   ],
+   "abstract": "The main concern hindering the large-scale application of lithium-ion batteries (LIBs) in electric vehicles (EV) is thermal runaway (TR). In this work, three-dimensional (3D) TR and conjugate heat transfer modeling of a LIB pack consisting of 12 prismatic cells is performed. Three strategies of thermal spread protection are investigated by numerical simulation. Inserting insulation layers with different thermal conductivities between adjacent LIBs, it is observed that the time to trigger TR in cell 2 delays by 23 s, 31 s, 51 s, and 132 s. When the insulation layer material is 2 mm and 3 mm aerogel, cell 2 produces TR time of 312 s and 944 s. It has reached the standard of safety, and adjacent LIBs could not generate in TR for at least 300 s. The study also shows cell 2 causing TR at 56 s, 51 s, 48 s, and 46 s with cold plates by different mainstream velocities. To completely block the propagation of TR, this study proposes a novel hybrid protective strategy based on insulation layers and cold plates. As a result, the average temperature of cell 2 does not reach more than 80\u00b0C, LIB pack tends to be in thermal equilibrium to prevent safety accidents from occurring. The modeling approach used in this study is demonstrated to be an effective tool for the thermal protection design of power system in EV."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation cylindrical cells spacing barrier"
+   ],
+   "title": "Thermal and Electrochemical Analysis of Thermal Runaway Propagation of Samsung Cylindrical Cells in Lithium-ion Battery Modules",
+   "year": 2022,
+   "doi": "https://doi.org/10.1149/1945-7111/aca939",
+   "venue": "Journal of The Electrochemical Society",
+   "cited_by": 22,
+   "oa_url": "https://iopscience.iop.org/article/10.1149/1945-7111/aca939/pdf",
+   "is_oa": true,
+   "authors": [
+    "Jeffrey R. Belt",
+    "Alexander Sorensen"
+   ],
+   "abstract": "Thermal runaway propagation analysis at the module and cell level was performed using the Samsung 30Q 18650 cylindrical cells. Measurements such as cell enthalpy, maximum thermal runaway temperature, and thermal runaway onset and initiation temperatures were collected and shown to be consistent by means of accelerated rate calorimetry (ARC). This study showed, using the module billet as a thermal runaway propagation mitigation strategy, the cell energy was successfully absorbed during a failure event and prevented thermal runaway propagation from between cells. However, the module level tests showed average maximum temperatures that were 229 \u00b0C higher than the average maximum temperatures in the cell level tests, showing the importance of evaluating both the cell level thermal runaway response and the module level response, as they can be different. This work shows the differences between cell TR and module level TR and an effective mitigation strategy based on effective spacing and thermal mass."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "fractional thermal runaway calorimetry heat ejected mass lithium-ion"
+   ],
+   "title": "A calorimeter for analyzing ejected and non-ejected heat during Li-ion battery thermal runaway",
+   "year": 2025,
+   "doi": "https://doi.org/10.1016/j.isci.2025.112941",
+   "venue": "iScience",
+   "cited_by": 19,
+   "oa_url": "https://doi.org/10.1016/j.isci.2025.112941",
+   "is_oa": true,
+   "authors": [
+    "Ola Willstrand",
+    "Mohit Pushp",
+    "Petra Andersson",
+    "Daniel Brandell"
+   ],
+   "abstract": "Thermal runaway in lithium-ion battery cells poses significant safety risks due to rapid heat generation and potential thermal propagation within a battery system. This study investigates the total heat released and the fraction of energy contained in gas and particles ejected during thermal runaway using a purpose-built calorimeter setup. The results show that the fraction of ejected heat is significantly influenced by the state of charge (SOC) and cell mass loss. Notably, the non-ejected heat was higher at 75% SOC compared to 100% SOC due to higher fraction of ejected heat at high SOC. This will have implications in thermal propagation scenarios. Additionally, the study compares the results with accelerating rate calorimetry tests, highlighting the limitations of the latter in measuring the total heat released during thermal runaway. The findings show the need for comprehensive testing methods that can improve thermal management and safety in battery systems."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "battery failure databank thermal runaway heat output variability"
+   ],
+   "title": "Modeling of Li-ion Battery Thermal Runaway: Insights into Modeling and Prediction",
+   "year": 2024,
+   "doi": "https://doi.org/10.1149/2.f09243if",
+   "venue": "The Electrochemical Society Interface",
+   "cited_by": 11,
+   "oa_url": "https://iopscience.iop.org/article/10.1149/2.F09243IF/pdf",
+   "is_oa": true,
+   "authors": [
+    "Paul T. Coman",
+    "Andrew Weng",
+    "Jason K. Ostanek",
+    "Eric C. Darcy"
+   ],
+   "abstract": "This article discusses the dual challenges of modeling and predicting thermal runaway (TR) in li-ion batteries. It explores the current challenges of TR modeling, the methods for progressing from single cells to battery packs, and future directions involving the use of probabilistic methods and ML/AI to tackle this multifaceted issue. Accurate prediction of TR events remains a major challenge, especially because of the cell-to-cell variability, but also due to parametrization, which requires complex experimentation or exhaustive experimental data for training data-driven ML models. Continued research and innovation in modeling and predictive techniques are essential for ensuring safer and more reliable battery systems."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation mitigation interstitial material aerogel"
+   ],
+   "title": "A review on mitigating thermal runaway propagation in battery packs: from mechanisms to modeling and design optimization",
+   "year": 2026,
+   "doi": "https://doi.org/10.1039/d5ya00351b",
+   "venue": "Energy Advances",
+   "cited_by": 11,
+   "oa_url": "https://pubs.rsc.org/en/content/articlepdf/2026/ya/d5ya00351b",
+   "is_oa": true,
+   "authors": [
+    "Yiyue Jiang",
+    "Yuan Jiang",
+    "Pingfeng Wang"
+   ],
+   "abstract": "We unify mechanisms, modelling and optimization to mitigate thermal runaway propagation in next-generation high-energy lithium-ion packs."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "accelerating rate calorimetry thermal runaway onset temperature NMC LFP"
+   ],
+   "title": "Modeling the variability of thermal runaway behavior in large-format cylindrical cells with NMC-811 and LFP cathodes: A simulation study",
+   "year": 2026,
+   "doi": "https://doi.org/10.1016/j.jpowsour.2025.239206",
+   "venue": "Journal of Power Sources",
+   "cited_by": 5,
+   "oa_url": "https://doi.org/10.1016/j.jpowsour.2025.239206",
+   "is_oa": true,
+   "authors": [
+    "Jan Sch\u00f6berl",
+    "Stefan Schaeffler",
+    "Linus Grahl",
+    "Christopher Bach"
+   ],
+   "abstract": "Accurate thermal runaway modeling is required to mitigate thermal runaway propagation in battery systems. Since the thermal runaway of battery cells is a chaotic process, it is subject to high statistical variance. However, the variability of thermal runaway behavior is often not reflected in current simulation models. This paper presents a methodology for modeling the variability of thermal stability and heat release during thermal runaway of NMC-811 and LFP battery cells using accelerating rate calorimetry (ARC) and discretized autoclave thermal runaway calorimetry (DATRC) experiments. The thermal runaway model validation demonstrates a good agreement between simulation and experimental data within one standard deviation. In a simulation study, the thermal runaway simulation model was extended to a thermal runaway propagation model for a battery system with cylindrical 4680 cells. The simulation study revealed that thermal runaway propagation by heat transfer is unlikely in the case of a LFP cell chemistry. In contrast, thermal runaway propagation in similar systems with NMC-811 cells strongly depends on mass loss, cell spacing, and housing material. The simulation model improves an accelerated safety design concerning thermal runaway propagation in battery systems and enables a potential error estimation. Future research should focus on transferring the approach to other cell formats and validation on the system level. \u2022 Thermal runaway simulation framework for cylindrical NMC-811 and LFP cells. \u2022 Modeling the variability of thermal runaway behavior in lithium-ion batteries. \u2022 Model-based safety-related design of battery systems with cylindrical battery cells."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation mitigation interstitial material aerogel"
+   ],
+   "title": "Thermal energy storage materials for suppressing thermal runaway propagation in lithium-ion batteries: a review",
+   "year": 2026,
+   "doi": "https://doi.org/10.1039/d5eb00243e",
+   "venue": "EES batteries.",
+   "cited_by": 4,
+   "oa_url": "https://pubs.rsc.org/en/content/articlepdf/2026/eb/d5eb00243e",
+   "is_oa": true,
+   "authors": [
+    "Xinyu Zhang",
+    "Lizhi Zhang",
+    "Zhengguo Zhang",
+    "Ziye Ling"
+   ],
+   "abstract": "This review presents recent advances, enhancement strategies, and future perspectives on thermal storage materials and their integration with active cooling to suppress thermal runaway propagation in Li-ion batteries."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "fractional thermal runaway calorimetry heat ejected mass lithium-ion"
+   ],
+   "title": "Combining Fractional Calorimetry with Statistical Methods to Characterize Thermal Runaway",
+   "year": 2018,
+   "doi": null,
+   "venue": "NASA STI Repository (National Aeronautics and Space Administration)",
+   "cited_by": 1,
+   "oa_url": "https://ntrs.nasa.gov/api/citations/20180007946/downloads/20180007946.pdf",
+   "is_oa": true,
+   "authors": [
+    "William Q. Walker",
+    "John J. Darst",
+    "Donal P. Finegan",
+    "Gary A. Bayles"
+   ],
+   "abstract": "Thermal management systems designed to handle the impacts of thermal runaway (TR) are key to safe operation of lithium-ion (Li-ion) batteries. Critical factors for optimizing these systems include the total energy released and the fraction of the total energy that is released through the cell casing versus through the ejecta material. A unique calorimeter, designed to characterize said factors, was utilized to examine the TR behavior of a variety of 18650-format Li-ion cells. Statistical methods were implemented to interpret the data."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation mitigation interstitial material aerogel"
+   ],
+   "title": "Experimental and numerical investigation of various thermal barrier materials for mitigating thermal runaway propagation in lithium-ion battery modules",
+   "year": 2026,
+   "doi": "https://doi.org/10.1016/j.psep.2026.109510",
+   "venue": "Process Safety and Environmental Protection",
+   "cited_by": 1,
+   "oa_url": "https://www.sciencedirect.com/science/article/pii/S0957582026011286/pdf",
+   "is_oa": true,
+   "authors": [
+    "Hongbo Ge",
+    "Yin Yu",
+    "Hongjing Zi",
+    "Bolin Hu"
+   ],
+   "abstract": "Thermal runaway (TR) and its propagation (TRP) in large-capacity lithium-ion batteries (LIBs) have become critical obstacles to their safe application. The propagation inhibition capabilities of four thermal barrier materials (TBMs), including silicone foam (SF), composite phase change material (CPCM), mica-derived material (MDM), and ceramic fibre aerogel (CFA), within a 151 Ah LIB module were investigated. Experimental results demonstrate that CFA successfully inhibits TRP, limiting the maximum surface temperature of the adjacent battery to 248.5 \u2103, whereas SF, CPCM, and MDM, though failing to completely block propagation, all slow down the TRP process to varying degrees. Furthermore, a module-level coupled thermal diffusion barrier model was further developed, incorporating internal exothermic reaction kinetics, discrete-structure heat conduction, and equivalent flame radiation. Model validation yields relative errors \u22644% for TRP trigger time and \u226415% for peak battery surface temperature. These findings highlight that the principle of TRP suppression is essential to increase the energy threshold required for the downstream battery to initiate TR. Experimental data and theoretical foundations are provided for the thermal safety design of high-energy-density LIBs modules and the development of advanced thermal barrier technologies."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "thermal runaway propagation mitigation interstitial material aerogel"
+   ],
+   "title": "Thermal Runaway in Lithium-Ion Batteries: Modeling, Experimental Validation, and Material Effects on Propagation",
+   "year": 2025,
+   "doi": "https://doi.org/10.17350/hjse19030000367",
+   "venue": "Hittite Journal of Science & Engineering",
+   "cited_by": 1,
+   "oa_url": "https://dergipark.org.tr/en/download/article-file/5307544",
+   "is_oa": true,
+   "authors": [
+    "Sevgi Ayd\u0131n",
+    "Kadri S\u00fcleyman Yi\u011fit",
+    "\u0130smail Hakk\u0131 Savc\u0131"
+   ],
+   "abstract": "The thermal safety of lithium-ion batteries (LIBs) is a crucial challenge for electric vehicles and stationary energy storage systems, as excessive heat generation may cause accelerated aging, capacity loss, or catastrophic thermal runaway (TR). This study develops and validates a coupled electrochemical\u2013thermal model to investigate the heat generation, temperature response, and TR behavior of cylindrical 18650-type LIBs. Experimental discharge tests (1C and 2C) were performed on a 1S14P battery module, and the results were compared with numerical simulations in STAR-CCM+ and an Arrhenius-based TR model implemented in MATLAB Simulink. The model accurately captured the onset of exothermic reactions, with a maximum deviation of ~5% from experimental data. Parametric analyses revealed that higher ambient convection coefficients delay TR initiation and reduce its severity, highlighting the importance of forced-air cooling in thermal management systems. Furthermore, the effect of different enclosure materials on TR propagation was investigated. While ceramic fiber and aerogel provided the most effective thermal insulation, polystyrene demonstrated the best overall balance between heat dissipation under normal operation and insulation during TR events. The findings confirm that material selection and thermal management design play a decisive role in preventing TR propagation and ensuring battery safety. This work contributes practical guidelines for the safe and efficient design of next-generation battery systems."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "battery failure databank thermal runaway heat output variability"
+   ],
+   "title": "Why similar batteries fail differently: an empirical analysis of thermal runaway severity variability",
+   "year": 2026,
+   "doi": "https://doi.org/10.1007/s44444-026-00134-x",
+   "venue": "Journal of King Saud University - Engineering Sciences",
+   "cited_by": 0,
+   "oa_url": "https://link.springer.com/content/pdf/10.1007/s44444-026-00134-x.pdf",
+   "is_oa": true,
+   "authors": [
+    "Ningning Wei"
+   ],
+   "abstract": "Abstract Thermal runaway tests of nominally similar lithium-ion cells can yield substantially different consequences. We examine severity variability using 365 tests from an open battery failure databank and an empirical Thermal Runaway Severity Uncertainty Amplification (TR-SUA) descriptor, defined as the ratio of post-failure to recorded pre-test coefficients of variation (CVs), not as a measured physical gain. Forty-six near-replicate groups (349 tests) were defined by recorded cell description, format, and trigger ( n \u2265 3). The median available three-descriptor input CV was 0.104%, versus output CVs of 7.577% for corrected total energy, 14.730% for ejecta energy, 21.943% for unrecovered mass, and 21.903% for unrecovered-mass fraction. With a 1%-point input-CV floor, median ratios ranged from 7.577 to 21.943 and remained sensitive to alternative input definitions and floors. Exhaustive within-group log decomposition identified 1,564 valid test pairs; among 1,094 pairs with at least 10% ejecta-energy contrast, the absolute EPR term exceeded the total-energy term in 58.0%, which describes an algebraic partition, not mechanistic causality. Cluster-bootstrap P95 intervals were appreciably broad, and model-group/format holdouts revealed poor predictive transfer despite high random-fold classification AUC. The results support reporting severity dispersion and uncertainty-qualified upper-tail outcomes, while unobserved cell/protocol conditions prevent a causal physical-amplification claim."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "accelerating rate calorimetry thermal runaway onset temperature NMC LFP"
+   ],
+   "title": "Statistical Analysis of Cathode Chemistry and State-of-Charge Effects on Thermal Runaway Behavior of Type 21700 Lithium-Ion Cells",
+   "year": 2026,
+   "doi": "https://doi.org/10.29130/dubited.1967576",
+   "venue": "D\u00fczce \u00dcniversitesi Bilim ve Teknoloji Dergisi",
+   "cited_by": 0,
+   "oa_url": "https://dergipark.org.tr/en/download/article-file/6093445",
+   "is_oa": true,
+   "authors": [
+    "Merve \u00d6zt\u00fcrk"
+   ],
+   "abstract": "Thermal runaway is a critical safety concern in lithium-ion batteries, particularly because cathode chemistry and state of charge directly influence the severity of thermal abuse behavior. The present study performs a multivariate statistical analysis of thermal abuse behavior for commercial 21700-format cylindrical cells for five state-of-charge (SOC) levels (0%, 30%, 60%, 80%, 100%) and cathode chemistries (LFP, NMC, NCA-HEI, NCA-HEII, NCA-HP) using accelerating rate calorimetry data. The extracted thermal metrics are maximum temperature, thermal runaway onset temperature, self-heating onset temperature, and maximum heating rate. Two-way ANOVA with partial eta-squared (\u03b7_p^2) effect sizes assert significant main effects of SOC and chemistry, alongside a dominant chemistry and SOC interaction for thermal runaway onset temperature (\u03b7_p^2 = 0.99, p < 0.001). Non-parametric Kruskal\u2013Wallis tests confirm the parametric findings, indicating robustness to distributional assumptions. A novel data-driven Thermal Risk Index (TRI) is developed employing principal component analysis-derived weights, with the first two principal components together explaining 94.1% of the total variance. The TRI shows a moderate monotonic dependence on SOC (Spearman's \u03c1 = 0.480, p < 0.001), supporting its physical interpretation. Under fully charged conditions, NCA-HEI cells show the highest mean TRI (78.6), markedly exceeding LFP (33.4), a 2.4-fold difference between the most and least hazardous chemistries. These results quantify the chemistry-dependent safety hierarchy under operational extremes and propose an interpretable framework for comparative thermal risk assessment."
+  },
+  {
+   "project": "battery",
+   "queries": [
+    "accelerating rate calorimetry thermal runaway onset temperature NMC LFP"
+   ],
+   "title": "Failure Characteristics of Cylindrical Cells (18650 and 26700) Across Sodium-Ion, Lithium Nickel Manganese Cobalt Oxide (NMC), Lithium Iron Phosphate (LFP) and Lithium Titanate (LTO) Chemistries",
+   "year": 2026,
+   "doi": "https://doi.org/10.3390/batteries12100394",
+   "venue": "Batteries",
+   "cited_by": 0,
+   "oa_url": "https://doi.org/10.3390/batteries12100394",
+   "is_oa": true,
+   "authors": [
+    "Gemma E. Howard",
+    "Jonathan \u0395. H. Buston",
+    "Jason Gill",
+    "Steven L. Goddard"
+   ],
+   "abstract": "This study compares the failure characteristics of four 1.5 Ah 18650 cells, including lithium nickel manganese cobalt oxide (NMC), lithium iron phosphate (LFP), lithium titanate (LTO), and sodium-ion (NFM), alongside a 3 Ah 26700 NFM cell. Cells at a 100% state of charge (SoC) were evaluated using three types of failure methods. Open-field external heat testing was used to characterise visible failure behaviour, including venting, flames, and sparking. Accelerating rate calorimetry (ARC) provided high-resolution temperature data for key failure points, including venting onset, thermal runaway (TR), and peak temperature. Pressure vessel tests under an inert atmosphere enabled quantification of total gas volume and analysis of major gas species (H2, CO2, CO, and light hydrocarbons). Three open-field results for each cell type showed no ignition in any LTO or LFP tests, while NMC and NFM cells were ignited in one and two tests, respectively. ARC measurements found that LTO exhibited the lowest TR onset temperature, while that of LFP exceeded 130 \u00b0C, with NMC and NFM cells falling between. Pressure vessel results indicated that when gas volumes were normalised to L/Ah, NFM2 cells generated the largest volume of gas, and 1.23 L/Ah and NMF1 cells generated the least (0.59 L/Ah). LFP cells showed the highest H2 concentration, with LTO producing minimal gas. These findings highlight the need for application-specific assessment of cell chemistry safety."
+  }
+ ]
+}

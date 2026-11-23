@@ -1,0 +1,151 @@
+{
+  "standard": "MIL-STD-882E, tailored: system safety for a simulation used to inform physical-security decisions",
+  "system": "archworld site simulation and its assessment report",
+  "mishap": "harm that follows from a decision taken on, or a misuse of, this simulation or its outputs",
+  "severity": {
+    "1": "Catastrophic: could contribute to death or serious injury",
+    "2": "Critical: could leave a real site materially less protected than its owner believes, or enable misuse against people",
+    "3": "Marginal: wasted security spend or a wrong order of priorities, no loss of protection",
+    "4": "Negligible: cosmetic or easily caught error"
+  },
+  "probability": {
+    "A": "Frequent: expected in most uses",
+    "B": "Probable: expected several times over the life of the tool",
+    "C": "Occasional: likely to occur at some point",
+    "D": "Remote: unlikely but possible",
+    "E": "Improbable: so unlikely it can be assumed not to occur",
+    "F": "Eliminated: designed out"
+  },
+  "acceptance": {
+    "High": "not acceptable; must be reduced before release",
+    "Serious": "not acceptable; must be reduced before release",
+    "Medium": "accepted by the program owner, recorded here",
+    "Low": "accepted by the program owner, recorded here"
+  },
+  "hazards": [
+    {
+      "id": "H-01",
+      "title": "Notional results treated as a real site's security level",
+      "cause": "A reader applies the warehouse's numbers to a real facility without its own data or validation.",
+      "effect": "A real site is believed protected when it is not.",
+      "initial": {"severity": 2, "probability": "C"},
+      "mitigations": [
+        {"kind": "test", "ref": "world/tests/test_sim.py::test_zone_must_be_declared_notional", "text": "every protected zone must be declared notional"},
+        {"kind": "test", "ref": "world/tests/test_invariants.py::test_sites_are_civil_and_declared", "text": "only declared civil sites can be built"},
+        {"kind": "doc", "ref": "docs/vva/ACCREDITATION-PLAN.md", "text": "intended use excludes certifying or rating a real facility; every report says the site is notional"}
+      ],
+      "residual": {"severity": 2, "probability": "D"},
+      "status": "open: monitored"
+    },
+    {
+      "id": "H-02",
+      "title": "Optimistic sensor model drives the recommendation",
+      "cause": "Cameras credited with detection far beyond what their resolution supports (the old 200 m model).",
+      "effect": "Money spent on a measure that does not deliver the coverage shown; gaps left unwatched.",
+      "initial": {"severity": 2, "probability": "B"},
+      "mitigations": [
+        {"kind": "test", "ref": "world/tests/test_realism.py::test_no_detection_below_the_iec_detect_density", "text": "no camera detection below the IEC 62676-4 detect density"},
+        {"kind": "test", "ref": "world/tests/test_realism.py::test_every_mast_detection_is_within_the_cameras_detect_range", "text": "every mast detection in a run lies inside the camera's detect range"},
+        {"kind": "test", "ref": "world/tests/test_realism.py::test_coverage_never_rises_when_resolution_drops", "text": "coverage is monotone in resolution"}
+      ],
+      "residual": {"severity": 2, "probability": "D"},
+      "status": "open: drone, dog, vehicle and guard sensors still use the simpler range model (backlog B-04)"
+    },
+    {
+      "id": "H-03",
+      "title": "Ranking options the runs cannot tell apart",
+      "cause": "Point estimates (40/40 against 40/40) ranked as if different.",
+      "effect": "A costlier or weaker measure chosen on noise.",
+      "initial": {"severity": 3, "probability": "B"},
+      "mitigations": [
+        {"kind": "test", "ref": "world/tests/test_realism.py::test_clopper_pearson_known_values", "text": "exact 95% intervals on every rate"},
+        {"kind": "test", "ref": "world/tests/test_realism.py::test_options_that_cannot_be_told_apart_are_labelled_tied", "text": "paired test labels indistinguishable options as tied, and ORION is told"}
+      ],
+      "residual": {"severity": 3, "probability": "D"},
+      "status": "open: monitored"
+    },
+    {
+      "id": "H-04",
+      "title": "Drills that ignore equipment availability",
+      "cause": "Every intrusion starts with full batteries and patrols in step.",
+      "effect": "Measures that depend on a drone look better than they are.",
+      "initial": {"severity": 3, "probability": "A"},
+      "mitigations": [
+        {"kind": "test", "ref": "world/tests/test_realism.py::test_intrusion_time_is_seeded_inside_the_window_and_spread_out", "text": "seeded intrusion times across an 8-hour window"},
+        {"kind": "test", "ref": "world/tests/test_realism.py::test_late_intrusions_meet_equipment_in_every_state", "text": "runs meet the drone both flying and charging"}
+      ],
+      "residual": {"severity": 3, "probability": "D"},
+      "status": "closed"
+    },
+    {
+      "id": "H-05",
+      "title": "Use of the tool to plan an intrusion",
+      "cause": "Someone uses coverage maps or a route search to find where detection is weakest at a real site.",
+      "effect": "Enables harm against people or property.",
+      "initial": {"severity": 2, "probability": "D"},
+      "mitigations": [
+        {"kind": "test", "ref": "world/tests/test_sim.py::test_zone_must_be_declared_notional", "text": "no real facility layouts"},
+        {"kind": "test", "ref": "world/tests/test_ops.py::test_approach_bearing_can_be_fixed_and_an_unwalkable_one_is_refused", "text": "approaches are fixed by rule, never searched for the least-detected path"},
+        {"kind": "doc", "ref": "docs/vva/ACCREDITATION-PLAN.md", "text": "no least-detected route planner; any approach sampler must not depend on sensor placement"}
+      ],
+      "residual": {"severity": 2, "probability": "E"},
+      "status": "open: monitored"
+    },
+    {
+      "id": "H-06",
+      "title": "Scope creep into weapons, targeting or engagement",
+      "cause": "A payload, agent kind or event that applies force is added.",
+      "effect": "The tool becomes part of a weapon system, outside its purpose.",
+      "initial": {"severity": 1, "probability": "E"},
+      "mitigations": [
+        {"kind": "test", "ref": "world/tests/test_sim.py::test_scope_refuses_weapons_unknown_kinds_and_keys", "text": "weapons, unknown kinds and keys are refused"},
+        {"kind": "test", "ref": "world/tests/test_ops.py::test_new_kinds_and_events_stay_in_scope", "text": "new kinds and events stay in scope"},
+        {"kind": "test", "ref": "world/tests/test_realism.py::test_4k_is_an_allowed_payload_and_unknown_ones_are_still_refused", "text": "payload allow-list holds after adding cameras"}
+      ],
+      "residual": {"severity": 1, "probability": "E"},
+      "status": "open: monitored"
+    },
+    {
+      "id": "H-07",
+      "title": "Geometry error corrupts line of sight",
+      "cause": "Frame, terrain or building errors (floating, missing or open buildings).",
+      "effect": "Coverage and detection shown where there is none, or the reverse.",
+      "initial": {"severity": 3, "probability": "C"},
+      "mitigations": [
+        {"kind": "test", "ref": "world/tests/test_invariants.py::test_enu_round_trip_sub_millimetre", "text": "frame round trip below 1 mm"},
+        {"kind": "test", "ref": "world/tests/test_invariants.py::test_no_building_disappears_silently", "text": "no building lost"},
+        {"kind": "test", "ref": "world/tests/test_invariants.py::test_no_building_floats", "text": "no building floats"},
+        {"kind": "test", "ref": "world/tests/test_sim.py::test_line_of_sight_blocked_by_ridge_building_and_forest", "text": "line of sight blocked by ridge, building and forest"}
+      ],
+      "residual": {"severity": 3, "probability": "E"},
+      "status": "open: monitored"
+    },
+    {
+      "id": "H-08",
+      "title": "Results that cannot be reproduced",
+      "cause": "Hidden randomness or order dependence.",
+      "effect": "A recommendation nobody can check.",
+      "initial": {"severity": 3, "probability": "C"},
+      "mitigations": [
+        {"kind": "test", "ref": "world/tests/test_sim.py::test_same_seed_same_run_and_seed_matters", "text": "same seed, same run"},
+        {"kind": "test", "ref": "world/tests/test_ops.py::test_operations_replay_identically", "text": "operations replay identically"},
+        {"kind": "test", "ref": "world/tests/test_invariants.py::test_build_is_deterministic", "text": "world build is deterministic"}
+      ],
+      "residual": {"severity": 3, "probability": "E"},
+      "status": "closed"
+    },
+    {
+      "id": "H-09",
+      "title": "Secrets or personal data published with the open-source code",
+      "cause": "A key, password or personal detail committed to the public repository.",
+      "effect": "Account compromise or exposure of people.",
+      "initial": {"severity": 2, "probability": "C"},
+      "mitigations": [
+        {"kind": "gate", "ref": ".github/workflows/devsecops.yml#secrets", "text": "secret scan on every push"},
+        {"kind": "gate", "ref": ".github/workflows/devsecops.yml#supply-chain", "text": "SBOM and dependency vulnerability scan on every push"}
+      ],
+      "residual": {"severity": 2, "probability": "E"},
+      "status": "open: monitored"
+    }
+  ]
+}

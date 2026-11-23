@@ -1,0 +1,45 @@
+{
+ "model": "jev-1.14.0",
+ "answers": {
+  "assumed_delays": {
+   "p": 0.88,
+   "hazard": "Reporting a share of runs 'met in time' built on assumed fence and door delay times will be read as a real protection level although it mostly reflects the assumed numbers."
+  },
+  "single_path": {
+   "p": 0.85,
+   "hazard": "Evaluating only one approach path and one target door overstates protection, because physical-protection practice evaluates the weakest path."
+  },
+  "catch_rate": {
+   "p": 0.74,
+   "hazard": "The gate result is circular: the share of fictitious pickups stopped is essentially the assumed catch probability, so the simulation adds nothing but the queueing cost."
+  },
+  "mm1_queue": {
+   "p": 0.78,
+   "hazard": "A single-guard first-come-first-served gate with uniform service times misses real effects such as appointment windows, bunching of arrivals and a second lane, so queue figures are unrealistic."
+  },
+  "nuisance_only": {
+   "p": 0.86,
+   "hazard": "Comparing alarm policies on nuisance alarms alone hides the real risk of verify-first: slower response when the alarm is a real intrusion."
+  },
+  "verifier_reliability": {
+   "p": 0.82,
+   "hazard": "Assuming a drone or robot dog always correctly clears a nuisance alarm ignores verification errors in wind, rain, darkness or foliage."
+  },
+  "evac_no_fire": {
+   "p": 0.91,
+   "hazard": "An evacuation model without a hazard, blocked exits, crowding at doors or missing persons gives only a best-case muster time."
+  },
+  "guard_coupling": {
+   "p": 0.86,
+   "hazard": "Operations run separately miss their coupling: a guard at a gate check or on an alarm is not available for an intrusion at the same time."
+  },
+  "no_night": {
+   "p": 0.65,
+   "hazard": "Running every operation in daylight with full sensor ranges misses the hours when most warehouse burglaries happen."
+  },
+  "dual_use_timeline": {
+   "p": 0.68,
+   "hazard": "Publishing a protection timeline with barrier delays and the share of runs not met in time could help someone plan an intrusion at a real facility."
+  }
+ }
+}

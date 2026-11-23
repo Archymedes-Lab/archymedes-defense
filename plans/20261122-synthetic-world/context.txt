@@ -1,0 +1,17 @@
+Archymedes is a small startup building defensive and civil simulation prototypes from public data (battery thermal runaway,
+soft-armor screening, sensor-fault diagnosis, aerodynamics with measured error bars). Owner asks for ONE synthetic 3D world that
+approaches reality, rebuilt from open data (terrain, imagery, buildings, roads), where drones, robot dogs, ground vehicles and
+sensors run patrol, search-and-rescue and convoy missions in the same persistent world. Usefulness and defensibility first,
+heavy invariant testing. Scope rule: no weapon effects, targeting or engagement; no military or sensitive real sites.
+Facts:
+- Dev machine: 4 CPU cores, 7 GB RAM, no GPU. Isaac Sim / Unreal / Omniverse cannot run locally; rented GPU possible later.
+- Existing web app: Next.js 16, React 19, three.js via react-three-fiber, Tailwind 4, password-gated.
+- Swiss site (Lauterbrunnen, 4x4 km): swisstopo open data: swissALTI3D 0.5 m DTM, SWISSIMAGE 10 cm, swissSURFACE3D classified
+  lidar, swissBUILDINGS3D 3.0 LoD2 roofs for every building (usable as hidden ground truth). About 1 GB without lidar.
+- US site (Boulder foothills, 4x4 km): USGS 3DEP 1 m DEM, DRCOG 2020 lidar (~250 MB per km2 tile), NAIP 0.6 m imagery,
+  Overture/OSM buildings; no open LoD2, so lidar class-6 points are the building truth.
+- Kigali: Copernicus 30 m DEM, Sentinel-2 10 m, Google Open Buildings 2.5D; poor data, strongest test of deduction.
+- Netherlands: AHN lidar + 3DBAG LoD2 nationwide, very rich but flat.
+- Market: Cesium/Bentley, Bohemia VBS4, Duality Falcon, NVIDIA Omniverse/Isaac, AirSim (archived), CARLA, Parallel Domain,
+  Applied Intuition sell or ship synthetic environments; none ships per-feature provenance and measured realism error bands.
+- Open autonomy stacks: PX4/ArduPilot SITL, ROS 2 Nav2, MuJoCo Menagerie (Unitree Go2, ANYmal) run on CPU.

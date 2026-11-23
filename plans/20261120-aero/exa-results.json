@@ -1,0 +1,665 @@
+{
+ "provider": "Exa",
+ "searches": [
+  {
+   "id": "vortex-lift",
+   "query": "vortex lattice method leading edge vortex lift prediction validation high angle of attack 2024",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Review of vortex lattice method for supersonic aircraft design | The Aeronautical Journal | Cambridge Core",
+     "url": "https://www.cambridge.org/core/journals/aeronautical-journal/article/review-of-vortex-lattice-method-for-supersonic-aircraft-design/56AC0DDC2161FEF838A72EACD3748AB7",
+     "publishedDate": "2023-04-14T13:55:11.000Z",
+     "highlights": [
+      ", could predict the degree of attainment of theoretical leading edge thrust forces, and provide an estimate of detached leading edge vortex loading that results when theoretical thrust forces are not fully realised. The newly proposed method yielded"
+     ]
+    },
+    {
+     "title": "Vortex Lattice CFD Application and Modeling Validation for Ground Effect Aircraft",
+     "url": "https://doi.org/10.37394/232013.2024.19.5",
+     "publishedDate": "2024-02-09T00:00:00.000Z",
+     "highlights": [
+      "lattice computational fluid dynamics method capability to model aircraft flight near to ground, utilizing the ground effect. Computational results were\n...\nh\u0305 /b equal to 0.4, 0.6, 0.8, 1.0 and 1.5. The value of ... \u0305 /b at 1.5 was considered OGE by [5]"
+     ]
+    },
+    {
+     "title": "Improved vortex lattice method for drag prediction of supersonic wings using shock cone modelling",
+     "url": "https://doi.org/10.21203/rs.3.rs-5418595/v1",
+     "publishedDate": "2024-11-27T00:00:00.000Z",
+     "highlights": [
+      "handle shockwave impacts through panel matching, the solver achieves improved accuracy in lift and drag computations. Validation ... a 90% accuracy for delta wings, 85% for positive dihedral wings, and 95% for large"
+     ]
+    },
+    {
+     "title": "A non-linear unsteady vortex-lattice method for rotorcraft applications",
+     "url": "https://doi.org/10.1017/aer.2024.55",
+     "publishedDate": "2024-09-18T00:00:00.000Z",
+     "highlights": [
+      "Firstly, a simple finite wing benchmark case was considered consisting of a rectangular wing with an aspect ratio equal to 12, with a constant chord length equal to 1 m and a constant NACA 4415 airfoil section. Figure 1 shows the comparison between the wing lift ... In particular, DUST simulation results are related to the use of both the classical LL and VL elements and the non-linear vortex lattice method (NL-VL).\n\nThe effectiveness of the non-linear vortex-lattice method is evident in the linear range as well as in the post-stall region, as shown by the remarkable agreement with high-fidelity CFD simulations. In particular, the NL-VL results are quite similar to the ones obtained using the DUST LL approach considering viscous contributions for airloads evaluation. This result confirms the correctness of the implementation based on the integration of the viscous aerodynamic 2D data and shows the capabilities of the method to capture stalled and poststalled conditions with respect to the purely potential VL model. In addition, thanks to the possibility of the NL-VL elements to evaluate the chordwise pressure distribution, Fig. 2 shows the \u2206C p distribution evaluated between upper and lower surface of the NACA4415 airfoil by DUST simulations compared to high-fidelity CFD simulations results from (22) for a nearly stalled and post-stalled condition. This comparison shows an accuracy similar to CFD of DUST NL-VL method in terms of chordwise pressure difference over the airfoil for the nearly stalled condition characterised by a low degree of flow separation. On the other hand, due to the limitation of the VL approach for highly separated flow conditions, pressure distribution comparison at very high angle of attack shows higher discrepancy with respect to CFD.\n\nSecondly, the Lovell (23) wing test case was considered for a further validation of the DUST methodology. This test case consists in a 30.5 \u2022 leading edge swept wing (see Fig. 3 ) used for wind tunnel investigation of the effect of flap deflections. The geometry is simple, with a constant airfoil geometry along the span and experimental results are available for the isolated wing with different flap deflections. DUST numerical models were built using 50 spanwise elements for both LL and NL-VL while 5 elements in chord were used for the NL-VL model. DUST simulations results are compared to VLM coupled with RANS solutions (16) and experimental data for lift, drag and pitching moment coefficients, see Figs. 4, 5, 6 . Results comparison showed that DUST models reproduce the behaviour of the lift and polar curves obtained by Parenteau et al. (16) with a similar numerical model, thus further validating the implementation of NL-VL model. In particular, the comparison of the C L -C M curve shows a better agreement of the solution obtained with DUST with respect to experimental data."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vortex-lift",
+   "query": "nonlinear vortex lattice delta wing vortex breakdown low-order model",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Reduced-order prediction of multi-jet flow control effects on vortex breakdown over delta wings from single-jet training",
+     "url": "https://doi.org/10.1016/j.ast.2026.113176",
+     "publishedDate": "2026-07-08T00:00:00.000Z",
+     "highlights": [
+      "Vortex breakdown over delta wings strongly influences aerodynamic performance at moderate to high angles of attack. When active jet control is introduced, the flow response becomes highly sensitive to jet placement, making systematic exploration of multi-jet configurations computationally expensive. This study develops a reduced-order CFD-machine-learning framework to estimate multi-jet vortex behaviour using training data obtained solely from steady single-jet simulations. Analysis of the single-jet database shows that jets placed near the mid-span and close to the leading edge promote upstream migration of the breakdown, whereas jets positioned closer to the wing apex delay vortex breakdown. A reduced-dimensional representation of the flow is constructed to capture the dominant vortex structures, and the baseline CFD predictions are assessed against Particle Image Velocimetry measurements. Jet parameters are then mapped to this modal space to enable rapid reconstruction of planar velocity fields. ... The reconstructed fields preserve the main vortex topology, with error"
+     ]
+    },
+    {
+     "title": "Appropriate Lift Slope Model for Nonlinear Vortex Lattice Method | Journal of Aircraft",
+     "url": "https://arc.aiaa.org/doi/10.2514/1.C038299",
+     "publishedDate": "2025-10-28T19:00:53.000Z",
+     "highlights": [
+      "within the nonlinear vortex lattice method (NL-VLM). This variable plays a significant role in the accuracy of the solution for ... formulation is derived from an analysis of the VLM model on a swept geometry"
+     ]
+    },
+    {
+     "title": "Review of vortex lattice method for supersonic aircraft design",
+     "url": "https://doi.org/10.1017/aer.2023.25",
+     "publishedDate": "2023-04-14T00:00:00.000Z",
+     "highlights": [
+      "The main difference between VLM and NLVLM is the shape of the horseshoe vortex element. In the case of VLM, the shape of a trailing vortex is a semi-infinite straight line starting from the endpoint of a bound vortex to the downstream. On the contrary, the shape of the trailing vortex in NLVLM is curved to align with the local streamline. To meet this requirement, each trailing vortex is broken into many vortex segments of finite length. The coordinates of vortex segments and the strength of the horseshoe vortices are to be determined simultaneously, and this requires an iterative solution procedure. After the development of the theory for non-linear aerodynamics and its use in the formulation of a non-linear version of VLM, NASA developed the computational system for non-linear characteristics of the wing at supersonic speed in the early 1980s. Much research has been carried out for transonic and supersonic speed to better understand the complexity of the non-linear behaviour of vortices under unsteady condi tions. The already developed linearised theory could account for non-linearities in the variation of basic pressure loading with local surface slopes, could predict the degree of attainment of theoretical leading edge thrust forces, and provide an estimate of detached leading edge vortex loading that results when theoretical thrust forces are not fully realised. The newly proposed method yielded promising results, which gave significant improvement over the linearised theory for detailed pressure distribution at var ious angles of attack and for specific regions on the wing with 3D flow distribution. The method also offered precise, improved predictions of wing overall forces and moment coefficient. The more accurate prediction of the pitching moment, the more realistic estimate of the variation of drag with the camber surface, which is vital information in the early stage of aircraft design.\n\n...\n\nThe performance of the proposed method was demonstrated through example calculations for the rectangular and delta wing with a low-aspect ratio."
+     ]
+    },
+    {
+     "title": "Analytical Linearization of Aerodynamic Loads in Unsteady Vortex-Lattice Method for Nonlinear Aeroelastic Applications",
+     "url": "https://doi.org/10.2514/1.j063693",
+     "publishedDate": "2024-08-23T00:00:00.000Z",
+     "highlights": [
+      "This paper presents the analytical linearization of aerodynamic loads (computed with the unsteady vortex-lattice method), which is formulated as tangent matrices with respect to the kinematic states of the aerodynamic grid"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vortex-lift",
+   "query": "OpenVSP VSPAERO vortex lift accuracy high angle of attack",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Validation of VSPAERO for Basic Wing Simulation",
+     "url": "https://doi.org/10.23967/j.rimni.2024.10.56492",
+     "publishedDate": "2024-01-01T00:00:00.000Z",
+     "highlights": [
+      "## NACA R-1208\n\nIn this case-study, experimental data is incorporated for the accuracy assessment of VSPAERO. Specifically, the wind-tunnel measurements reported in [18] are used, which have also been recently used for simulation validation in [19] . Similarly to previous cases, the wing geometry is a swept-back wing of moderate aspect ratio shown in Fig. 1d . Further details of this wing are presented in Fig. A4 and Table A4 .\n\nThe two following analyses were carried out:\n\n1. An AOA sweep from 0\u00b0to 10\u00b0to calculate the lift and pitching moment coefficient curves of the wing.\n\n2. A load distribution analysis at a fixed AOA of 4.7\u00b0to obtain the normalized lift coefficient distribution along the span of the wing.\n\nThe resulting lift and pitching moment curve plots are shown in Fig. 5 . The lift curve shows good agreement with the experimental values throughout the linear range. On the other hand, the calculated moment coefficient values on the second half of the studied range deviate significantly from the expected experimental values even withing the linear lift range. This can be attributed to the highly non-linear behavior observed in the experimental data, which can be explained with the early tip stall phenomena characteristic of swept back wings, a phenomenon difficult to predict for an inviscid solver. A similar deviation was observed in [15] with the SURFACES VLM solver. In the case of the local lift coefficient distribution (shown in Fig. 5c ), the results computed using VSPAERO show close agreement to the reported experimental values.\n\n...\n\nWith the exception of the first two wings tested in the previous section, all lift and moment curve slope\n\n...\n\n\u2022 The resulting lift curve is limited to the linear region where viscous characteristics are mostly confined within the boundary layer.\n\n...\n\n\u2022 The study of highly swept wings, were a span-wise flow component can lead to early tip-stalling, must be kept within a conservative AOA range if good lift and moment predictions are desired."
+     ]
+    },
+    {
+     "title": "Frontiers Publishing Partnerships | An Efficient Parametric Modeling, Evaluation and Optimization Strategy for Aerodynamic Configuration Design of eVTOL Aircraft",
+     "url": "https://www.frontierspartnerships.org/journals/aerospace-research-communications/articles/10.3389/arc.2025.14986/full",
+     "publishedDate": "2025-08-07T00:00:00.000Z",
+     "highlights": [
+      "### VLM Validation\n\nBased on the above operating conditions and baseline grid configuration, the reliability of OpenVSP\u2019s VLM is verified by calculating the C l and C d at different angles of attack in NACA 0015. Figure 5 shows the comparison of the calculation results of the VLM with experimental data in the 2\u00b0\u201314\u00b0 angle of attack range. Within the 2\u00b0\u201312\u00b0 angle of attack range, the computed C l values exhibit a high degree of linear correlation with the experimental values (R 2 = 0.897), with a root mean square error (RMSE) of 0.125. At low angles of attack (\u03b1 = 2\u00b0), the relative error is 14.0% (computed value 0.154 and experimental value 0.179). As the angle of attack increases, the error gradually rises. In the stall transition region (\u03b1 = 14\u00b0), the predicted C l is 1.055, which is 15.3% lower than the experimental value of 1.245. However, the trend maintains a monotonic increase, consistent with the experimental data and does not exhibit a stall inflection point. The phase error in predicting the stall angle of attack is less than 1\u00b0 compared to the experimental data."
+     ]
+    },
+    {
+     "title": "OpenVSP 3.45.0 Released | Blogs",
+     "url": "https://openvsp.org/blogs/announcements/2025/07/19/openvsp-3-45-0-released",
+     "publishedDate": "2025-07-19T00:00:00.000Z",
+     "highlights": [
+      "you tread carefully. Give it a try and report any bugs, ... for any serious application. This also means you should go back and repeat any validation studies you have done with VSPAERO to reestablish your confidence in it and the settings you are using."
+     ]
+    },
+    {
+     "title": "Info custom VSPAERO settings",
+     "url": "https://groups.google.com/g/openvsp/c/dzsIsjisVDM",
+     "publishedDate": "2026-02-12T00:00:00.000Z",
+     "highlights": [
+      "? Typically, I'd recommend only sweeping one parameter at a time to keep the results more meaningful. If you are ... etc. rather than a distribution, you'll have to define the list in the *.vspaero input file manually and run VSPAERO from"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uq-aero",
+   "query": "uncertainty quantification low fidelity aerodynamic prediction conceptual design error model",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "End-to-End Uncertainty Quantification with Analytical Derivatives for Design Under Uncertainty | Journal of Aircraft",
+     "url": "https://arc.aiaa.org/doi/full/10.2514/1.C037976",
+     "publishedDate": "2025-03-19T16:38:50.000Z",
+     "highlights": [
+      "The overarching objective of UQ is to create a more robust design or evaluation ... by identifying sensitivities and mitigating the potential impact of uncertainties through informed, targeted resource"
+     ]
+    },
+    {
+     "title": "Multidimensional aerodynamic variable-fidelity surrogate model for the conceptual aircraft design with UNICADO",
+     "url": "https://doi.org/10.21203/rs.3.rs-7014217/v1",
+     "publishedDate": "2025-10-31T00:00:00.000Z",
+     "highlights": [
+      "model uncertainty can be expressed by the variance, which is given by:\n...\n= diag(K(X * , X * ) -K(X * , X)K -1 y K(X, X * )). (9)\n\nHowever, for a ... mainly used in an optimization context (e.g., for finding the global optimum"
+     ]
+    },
+    {
+     "title": "Multi-Fidelity Bayesian Neural Network for Uncertainty Quantification in Transonic Aerodynamic Loads",
+     "url": "https://doi.org/10.48550/arxiv.2407.05684",
+     "publishedDate": "2024-07-08T00:00:00.000Z",
+     "highlights": [
+      "## Uncertainty Quantification\n\nUncertainty quantification is crucial for understanding the reliability of the model predictions. The MF-BayNet model provides a probabilistic interpretation of predictions, offering insights into both model and data uncertainty. The total uncertainty in the prediction, the predictive uncertainty (P u ), is defined as the sum of epistemic (P u ) and aleatory uncertainty (A u ) [4, 9, 10] .\n\nP u = E u + A u (4)\n\nEpistemic uncertainty refers to the uncertainty in the model parameters. This can be visualized as the spread of the posterior weight distribution p(w|D). In ML, this type of uncertainty emerges when the model has not encountered data that adequately represents the entire design domain, or when the domain itself needs further refinement or completion. This type of uncertainty arises due to deficiencies from a lack of knowledge or information [38] . In contrast, aleatory uncertainty arises from the inherent variability in the input data. Given a specific input and fixed weight parameters, high aleatory uncertainty indicates that the output estimate is subject to noise. This kind of uncertainty refers to the intrinsic randomness in the data, which can derive from factors such as data collection errors, sensor noise, or noisy labels [38] . High aleatory uncertainty suggests insufficient information to predict the output accurately due to unobserved or latent variables that the model cannot capture. Predictive uncertainty alone cannot distinguish between different types of uncertainty. Inputs with high predictive uncertainty may have contributions from epistemic uncertainty, aleatory uncertainty, or both.\n\nIn BNN, using different weight settings could produce very confident, but disagreeing predictions. In addition, after running Monte Carlo on the weights, it is not possible to directly distinguish between the uncertainty associated with the weights and the intrinsic uncertainty of the input. Furthermore, the TL process leads to a change in the aleatory uncertainty dependence of different fidelity inputs. In fact, only the subset of neurons with trainable parameters holds the probability information about inputs of different fidelities. The possible high discrepancy between datasets of different fidelities suddenly increases the aleatory uncertainty of the process, but a higher fidelity training dataset should, by definition, contain more reliable samples compared to lower fidelity ones. It is important to consider that it is frequently not feasible to ascertain the reliability of a particular simulation model a priori. Consequently, it is not possible to assess the impact of a single alteration to the uncertainty during the TL process.\n\n...\n\nTo assess the impact of aleatoric uncertainty on the predictions, we retrained the Vanilla MF-BayNet model by adding noise to each fidelity dataset separately. The training dataset was augmented by 30% by adding"
+     ]
+    },
+    {
+     "title": "Aerodynamic variable-fidelity surrogate model for conceptual aircraft design with UNICADO",
+     "url": "https://doi.org/10.21203/rs.3.rs-7013915/v1",
+     "publishedDate": "2025-11-01T00:00:00.000Z",
+     "highlights": [
+      "indicating, that the low-fidelity aerodynamics cause a deviation of up to 3 % on a 2500 nm mission. This magnitude of deviation underlines the importance of increasing the fidelity of aerodynamics in conceptual aircraft design."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uq-aero",
+   "query": "aerodynamic database validation low-order tools versus wind tunnel error statistics",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Applying Bayesian Inference to Estimate Uncertainties in the Aerodynamic Database of CALLISTO",
+     "url": "https://doi.org/10.1109/aero55745.2023.10115932",
+     "publishedDate": "2023-03-04T00:00:00.000Z",
+     "highlights": [
+      "main source of uncertainties in the WTT datasets are created from the uncertainties in the measurements of the balance and in determination of the flow ... in the wind tunnel, like sting or wall influences on the vehicle. Compared to the actual"
+     ]
+    },
+    {
+     "title": "Physics- Based Uncertainty Quantification for Subsonic Wind Tunnel Testing Using a Validated CFD Model - Part I CFD Analysis | AIAA SciTech Forum",
+     "url": "https://arc.aiaa.org/doi/10.2514/6.2025-1283",
+     "publishedDate": "2025-01-03T00:00:00.000Z",
+     "highlights": [
+      "Although this methodology is well-tested and it provides a ... This paper provides a novel approach to improve the legacy methodology to the creation of aerodynamic databases by prioritizing select design points to test. The prioritization occurs by accounting for the underlying uncertainties in experimental errors from historical data. In the present work we demonstrate this methodology as applied to the wind tunnel testing of the AGARD-B geometry. The uncertainty data from experimental database is combined with reduced order models (ROMs) to perform probabilistic analysis to identify design points with the highest probability of failure. First, the test data which include angle of attack, side-slip angle and force and moment coefficients are used to determine the most critical input parameters influencing the force and moment coefficients. This analysis is done using Analysis of Variance which captures linear and non-linear contribution effects of the parameters and quantifies individual and combination influences of all the input parameters. The measurement data are also used to characterize the uncertainties in the inputs and the systemic uncertainties in the outputs arising from instrumentation errors. This quantification yields specific probability distribution functions along with the associated parameters which are subsequently used for the probabilistic analysis. The lab data is further utilized to build a ROM to support the probabilistic analysis. However, since measurement data may not always be available, an alternate approach is to build a ROM using 3D CFD model of the AGARD-B geometry which simulates the flow dynamics including the critical parameters identified by the sensitivity analysis. In the CFD model, the supersonic air flow around the vehicle in the wind tunnel was solved by the finite volume method using the density-based solver of the commercial solver Ansys Fluent on a polyhedral mesh. ... As the accuracy of the uncertainty analysis is reliant on the quality of the ROM, the physics model is validated with measurement data before using it to generate the data needed to build a ROM. The validated model is used to generate a ROM based on Kriging Isotropic and Linear Regression methods. The ROMs are generated by splitting the data into multiple subspaces of training and validation sets. These subspaces are used to create a k-fold validation scheme. The error from the k-fold validation is aggregated into a single error metric to quantify the goodness of fit and the extrapolation capabilities of the resulting ROMs. The two ROMs are then independently combined with the input uncertainties quantified from the test data to perform an uncertainty propagation analysis to validate the simulated uncertainties for the outputs are consistent with the measured uncertainties."
+     ]
+    },
+    {
+     "title": "Multi-Fidelity Probabilistic Aerodynamic Database Generation with the ProForMA Tool",
+     "url": "https://doi.org/10.2514/6.2023-0653",
+     "publishedDate": "2023-01-19T00:00:00.000Z",
+     "highlights": [
+      ", we have been developing a toolset for creation of probabilistic aerodynamic databases that use multi-fidelity data and combine them using enhanced implementations of Gaussian Process Regression (GPR). An adaptive Design of Experiments (DOE) approach has"
+     ]
+    },
+    {
+     "title": "Development of Aerodynamic and Propulsion Models Using the Iterative Equation Error Method",
+     "url": "https://doi.org/10.3390/aerospace11010008",
+     "publishedDate": "2023-12-21T00:00:00.000Z",
+     "highlights": [
+      "evaluate the statistical accuracy of the results, first a check was performed to find out whether the expected value was reasonable. The magnitude should be close to the real value. Next, ... were checked. The COV of any term should not exceed 50% since"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uq-aero",
+   "query": "model form uncertainty aerodynamic coefficients conceptual design",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Uncertainty Propagation With Model Form Error Estimation Using Surrogate Models for Airfoil Aerodynamics",
+     "url": "https://doi.org/10.2514/6.2026-0092",
+     "publishedDate": "2026-01-08T00:00:00.000Z",
+     "highlights": [
+      "## Abstract\n\nComputational simulations inherently contain errors and uncertainties which must be addressed through verification and validation processes to justify their use in engineering applications. Model validation and predictive capability assessment of an aerodynamic tool requires quantification and propagation of all relevant components of uncertainty ranging from parametric input over numerical to experimental measurement uncertainties. In particular, the quantification of a computational model\u2019s inability to represent the real world system is critical and becomes even more difficult at possible operating conditions for which no experimental data for model validation is available. Three different metrics for model validation are analyzed herein. Gaussian Process Regression is used to interpolate and extrapolate the estimated model form uncertainty to achieve also predictive capabilities. An efficient surrogate-based Monte Carlo sampling framework for propagation of mixed uncertainties is successfully applied to provide total uncertainty estimates. However, especially the generalization of model form uncertainty remains challenging. All capabilities are demonstrated for the 2nd AIAA UQ challenge problem using the DLR Surrogate Modeling for Aero-Data Toolbox in python."
+     ]
+    },
+    {
+     "title": "Uncertainty Quantification via Latent Gaussian Process Surrogates for the Second AIAA Fluid Dynamics UQ Challenge Problem",
+     "url": "https://doi.org/10.2514/6.2026-0095",
+     "publishedDate": "2026-01-08T00:00:00.000Z",
+     "highlights": [
+      ". Crucially, this truth data includes epistemic uncertainty intervals on both the ... , we present a Bayesian latent Gaussian Process (GP) surrogate model that integrates multiple ... framework. GP regression provides a flexible surrogate with built-in"
+     ]
+    },
+    {
+     "title": "Multidimensional aerodynamic variable-fidelity surrogate model for the conceptual aircraft design with UNICADO",
+     "url": "https://doi.org/10.21203/rs.3.rs-7014217/v1",
+     "publishedDate": "2025-10-31T00:00:00.000Z",
+     "highlights": [
+      "However, for a sampling strategy, this measure alone is not appropriate. After an initial arbitrary sample, when aiming to minimize the model uncertainty globally via minimizing the variance, the next sample locations lie on each boundary of the ... Since simulated mission data is available, the relative frequencies of flight conditions can be used to determine the next best sampling location.\n\n...\n\nWe aim for reducing the model uncertainty biased by the flight conditions, i.e., at the locations of interest. Furthermore, we want to reduce the model uncertainty globally at the locations of interest."
+     ]
+    },
+    {
+     "title": "A Bayesian latent Gaussian process framework for aerodynamic uncertainty quantification",
+     "url": "https://arxiv.org/html/2606.28871",
+     "publishedDate": "2026-06-27T00:00:00.000Z",
+     "highlights": [
+      "Predicting the aerodynamic performance (e.g. lift, drag, and moment coefficients) of an aircraft is challenging \u2013 computational models are biased and direct simulations are prohibitive. A pragmatic way to overcome this limitation is by calibrating low-fidelity computational predictions with experimental measurements. This, however, requires calibrating against sparse measurements contaminated with uncertainty in both the control inputs and the measured aerodynamic response. We develop a methodology to address this problem based on Gaussian process surrogates and the classical Kennedy-O\u2019Hagan calibration. A surrogate model learned on abundant-but-cheap low-fidelity data is calibrated with a sparse set of measurement data. Crucialy, we develop a Bayesian latent Gaussian process based approach that marginalizes the calibrated surrogate model over the input uncertainty, while also matching the marginal mean and variance of the measured output uncertainty. Once calibrated, our surrogate model predicts the uncertainty in aerodynamic coefficients with very high accuracy, including at extrapolative input settings. We validate our calibrated surrogate model predictions against measurement data with true uncertainty intervals to demonstrate that the model places $94.2-95.8\\%$ of its predictive samples inside the released $95\\%$ truth intervals, with endpoint cumulative probabilities very close to the nominal 0.025 and 0.975 levels."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uav-aero",
+   "query": "UAV aerodynamic model identification from flight logs PX4 ArduPilot",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Aerodynamic Derivatives Identification of a Fixed-Wing UAV using Flight Data",
+     "url": "https://doi.org/10.2514/6.2024-0248",
+     "publishedDate": "2024-01-04T00:00:00.000Z",
+     "highlights": [
+      "## Abstract\n\nThis paper presents a general procedure for identifying aerodynamic derivatives using flight data, that is applicable to fixed-wing Unmanned Aerial Vehicle (UAV) or Vertical Takeoff and Landing (VTOL) UAV in fixed-wing mode. The proposed method comprises seven steps, including eigenmode analysis, input design, flight data collection, data processing, model structure determination, aerodynamic derivatives identification, and model validation. The software tools AVL, MATLAB, PX4, and QGroundControl were deployed for the development and implementation of the method. Furthermore, the validation of the proposed method was carried out using flight test data collected with a low-cost fixed-wing UAV."
+     ]
+    },
+    {
+     "title": "System identification of fixed-wing UAV - Kristoffer Grytes academic website",
+     "url": "https://folk.ntnu.no/krisgry/proposals/fw-sysid/",
+     "publishedDate": "2024-03-16T14:34:09.000Z",
+     "highlights": [
+      "A third option is to identify the model based on logged sensor data, such as airspeed, acceleration/force and angular velocity, from flight experiments. ... advantage that it does not need additional equipment, while having a moderate computational load."
+     ]
+    },
+    {
+     "title": "Modeling and identification of a small fixed-wing UAV using estimated aerodynamic angles | CEAS Aeronautical Journal | Springer Nature Link",
+     "url": "https://link.springer.com/article/10.1007/s13272-025-00816-3",
+     "publishedDate": "2025-02-26T00:00:00.000Z",
+     "highlights": [
+      "This paper presents an experimental study on developing and validating a simulation-ready aerodynamic model for the Skywalker X8 unmanned aerial vehicle (UAV) using a hybrid output error method (OEM). Building on previous efforts, we introduce an updated 6-degree-of-freedom (DOF) nonlinear aerodynamic model and its linearized form. The key features of this work include the model\u2019s identification in the stability frame, achieved using estimated angle of attack and sideslip angle, and the use of a propulsion system model to obtained the motor speed data. The stability frame parameterization allows for direct comparisons with a larger set of UAV models ... Key advancements include a residual distribution analysis that was successfully applied to identify and correct weaknesses in the initial drag and side force models. Additionally, the paper addresses the unique combination of challenges faced during this study and describes strategies for managing strong winds during experiments, use of a propulsion system model to obtain motor speed data, and utilization of estimated aerodynamic angles. The resulting model is validated against a separate set of maneuvers comprising 10-s-long sequences that include estimated body states, force and moment coefficients, and estimated air data states, (\\(V_a\\), \\(\\alpha\\), \\(\\beta\\)), for both lateral and longitudinal maneuvers.\n\n...\n\n### 3.3 Payload and sensors\n\nThe payload and sensors installed on the Skywalker X8 are based on the setup in [38]. The Skywalker X8 flight stack is built around the Cube Orange autopilot, which runs on the open-source ArduPilot firmware. The Cube Orange comprises triple redundant IMUs with magnetometers and pressure sensors. In addition, the Skywalker X8 has a pitot-static tube for airspeed measurement, and a global navigation satellite system (GNSS) receiver for positioning. Furthermore, the ArduPilot firmware provides state estimates computed using an EKF, which includes estimates of the wind velocity vector, the angle of attack, and the sideslip angle. Moreover, an external IMU, STIM300, was installed for redundancy.\n\n...\n\nDuring the flight, the EKF estimated a strong north-west wind of 9 m/s. The experimental data did not include measurements of the angle of attack, and the EKF only estimated horizontal wind, making it challenging to directly identify the trim angle of attack."
+     ]
+    },
+    {
+     "title": "System Identification for Small Flying-Wing Unmanned Aircraft Using Open-loop and Closed-loop Flight Data",
+     "url": "https://doi.org/10.31224/4308",
+     "publishedDate": "2025-01-15T00:00:00.000Z",
+     "highlights": [
+      "for sensing, command generation, telemetry, and data logging. A GPS receiver and an ... sensor provide position, inertial velocity, and airspeed measurement. IMU and command signal data was used for system identification and recorded at 100 Hz. The"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uav-aero",
+   "query": "fixed wing drone stability derivatives vortex lattice versus flight test",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Comparison of Low and High Fidelity Dynamic Modeling Software for Small UAS Based on Flight Data | AIAA SciTech Forum",
+     "url": "https://arc.aiaa.org/doi/abs/10.2514/6.2025-0140",
+     "publishedDate": "2025-01-03T00:00:00.000Z",
+     "highlights": [
+      "Abstract:\n\nThis paper is a comparison of aircraft analysis techniques of the H-King Bixler 1.1, a small fixed-wing UAS. Geometric characteristics including wing, fuselage, control surfaces, and moments of inertia were measured, estimated, and used to develop physics-based dynamic models for the H-King Bixler. The dynamic analysis was performed using Advanced Aircraft Analysis, as well as Athena Vortex Lattice. Limited, selected high-impact stability derivatives were also estimated using the hpMusic computational fluid dynamics (CFD) solver. A linear time-invariant state-space model of the aircraft was created for each physics-based model. A validation flight test was conducted to assess the quality of engineering level and conceptual methods. Overall, the physics-based modeling provided a relatively acceptable prediction for longitudinal and lateral aircraft states."
+     ]
+    },
+    {
+     "title": "Aerodynamic plant model development and validation",
+     "url": "https://hdl.handle.net/20.500.14446/344936",
+     "publishedDate": "2024-05-01T00:00:00.000Z",
+     "highlights": [
+      "## Abstract\n\nThis thesis focuses on enhancing aerodynamic plant model estimations for Unmanned Aerial Vehicles. The research investigates the accuracy of various computational estimation methods - including vortex lattice methods, semi-empirical analyses, and computational fluid dynamics. These estimations are then compared against flight test data. Utilization of scripted maneuvers, with recovery systems, are explored to increase the efficiency and safety of flight testing. The flight test data is post-processed, and equation-error and output-error system identification methodologies are used to extract parameter estimates and confidence intervals from the flight maneuvers. Findings indicate that SolidWorks and FlightStream provide consistent static term estimations, Athena Vortex Lattice is superior for dynamic derivatives, and SolidWorks CFD offers the most accurate control effectiveness modeling. This comparative analysis reveals that a combined computational approach yields the most representative aerodynamic plant models. The research suggests future directions, including the application of computationally estimated derivatives in maneuver design and execution using ArduPilot's SITL. These steps aim to further refine the flight data-extracted estimates and provide even more precision in the aerodynamic plant models."
+     ]
+    },
+    {
+     "title": "Model-in-the-Loop Design and Flight Test Validation of Flight Control Laws for a Small Fixed-Wing UAV",
+     "url": "https://www.mdpi.com/2504-446X/9/9/624",
+     "publishedDate": "2025-08-05T00:00:00.000Z",
+     "highlights": [
+      "Beyond qualitative visualization, AVL also provides aerodynamic stability derivatives, which are essential for constructing the aircraft\u2019s 6-DOF dynamic model. These terms capture how aerodynamic forces and moments vary with respect to changes in flight states such as angle of attack, pitch rate, and sideslip angle. In the longitudinal axis, derivatives like $\n\n...\n\nL\n\n...\n\n$ govern pitch damping, equilibrium trimming, and static stability characteristics. The inclusion of these terms enhances model fidelity in time-domain simulation and enables accurate controller synthesis, particularly for flight modes involving transient maneuvers or gust disturbances.\n\n...\n\nThe aerodynamic coefficients and stability derivatives used in this study were derived from AVL simulations by segmenting the flight envelope into several steady-state trim conditions. These trim points balance simulation resolution and computational cost. However, this segmentation may not fully capture nonlinear variations across the entire flight envelope, potentially leading to local mismatches when operating away from nominal conditions or under rapid state changes."
+     ]
+    },
+    {
+     "title": "Comparison of flight dynamic model development of a fixed-wing UAS using system identification, computational fluid dynamics, and vortex lattice method techniques",
+     "url": "https://hdl.handle.net/20.500.14446/350529",
+     "publishedDate": "2026-05-01T00:00:00.000Z",
+     "highlights": [
+      "technique showed promising results for the longitudinal axis; however, further investigation revealed discrepancies between the models developed in this work and those found in the literature. It is theorized that aeroelastic effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "uav-aero",
+   "query": "small UAV design software aerodynamics market",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "These low-fidelity aerodynamic tools are popular among novel aircraft designers - Aerospace America",
+     "url": "https://aerospaceamerica.aiaa.org/these-low-fidelity-aerodynamic-tools-are-popular-among-novel-aircraft-designers/",
+     "publishedDate": "2024-01-29T16:15:44.000Z",
+     "highlights": [
+      "When Whisper Aero designed and built a small drone at its Tennessee facility to flight test its proprietary ducted-fan design, the goal was to identify as many potential aerodynamic problems \u2014 such as noise or dangerous structural loads \u2014 as early as possible.\n\nExpensive wind tunnel testing and high-fidelity computational fluid dynamics modeling for the drone could come later to refine the design, but Whisper turned first to one of at least three relatively cheap software tools on the market that are targeted specifically toward aviation startups.\n\nWhisper chose Research in Flight\u2019s FlightStream, which visually shows designers how air flows around an aircraft and its propulsors, and does so with modest demands for computing power. Such tools are popular among startups for rapidly evolving a novel aircraft design in early stages, when investor dollars might be scarce and the concept is complex \u2014 for instance, designs that rely on distributed electric propulsion by six or more rotors.\n\nFlightStream, for example, can be downloaded from the cloud and run on a laptop for the relatively quick calculations needed at these early design stages, Ian Villa, Whisper\u2019s co-founder and chief operating officer, tells me. The company has been flying the drone now for two years.\n\nSpecifically, Whisper applied the software to the drone design to characterize \u201caerodynamics at various flight states before performing higher-fidelity computational fluid dynamics and integrating our propulsion more tightly,\u201d Villa says. \u201cIt helps avoid any major pitfalls or wasting time on concepts that don\u2019t carry weight.\u201d\n\nResearch in Flight makes no guarantees about the success of an aircraft design based solely on FlightStream. \u201cOnce you get through the early design stage, it is important to validate the resulting design with high-fidelity tools to ensure that the proposed design is indeed true to its claims,\u201d Vivek Ahuja, co-founder and CEO of the six-person company in Alabama, tells me in an interview. He notes that FlightStream can make predictions within 5% to 10% of the fidelity achieved by those other tools.\n\n...\n\nAlso in the field, NASA has developed its free VSP tool, Vehicle Sketch Pad, for low-fidelity aerodynamic prediction. And California company Advanced Rotorcraft Technologies, ART, has a similar low- to moderate-fidelity tool, Flightlab, that can make such models and predictions. VSP, Flightlab and FlightStream can predict drag, stability, structural integrity and noise. While FlightStream and VSP require relatively little computing power, ART\u2019s Flightlab requires a high-end Linux PC.\n\n...\n\nAt $3,800 per year for startups, a subscription to FlightStream is far less expensive than the more complex tools, he says."
+     ]
+    },
+    {
+     "title": "EverySim to Showcase AI and Web-Based Drone Design Automation Platform\u2019 EveryDrone\u2019 at DSK 2025: \u201cRevolutionizing the Drone Development Process\u201d < Tech & Bio < Article - AVING NEWS",
+     "url": "https://us.aving.net/news/articleView.html?idxno=51938",
+     "publishedDate": "2025-02-12T11:45:16.000Z",
+     "highlights": [
+      "EveryDrone offers a one-stop solution that covers 3D modeling for drone exterior design, structural analysis, and aerodynamic simulations. Moreover, it utilizes wind tunnel test data officially verified by the Korea Aerospace Research Institute, ensuring high-precision computational fluid dynamics (CFD) simulations. The AI-driven automation feature further reduces the time and cost required for drone"
+     ]
+    },
+    {
+     "title": "Designing the Next Generation of Drones with Flow360",
+     "url": "https://flexcompute.com/blog/designing-the-future-of-drones",
+     "publishedDate": "2025-10-13T20:41:50.000Z",
+     "highlights": [
+      "> \u201cA big selling point of Flow360 is how accessible it is. It also has a \u2018modern\u2019 ... and functionality. Since Flow360 is completely cloud-based and browser-based, I only needed an internet connection.\u201d"
+     ]
+    },
+    {
+     "title": "Cloud-Based SaaS Platform for Drone Design & Simulation",
+     "url": "https://www.unmannedsystemstechnology.com/2024/02/cloud-based-saas-platform-for-drone-design-simulation/?hss_channel=tw-581751253",
+     "publishedDate": "2024-02-22T09:17:36.000Z",
+     "highlights": [
+      "SIMNET is an advanced cloud-based Software-as-a-Service (SaaS) platform developed by ComQuest that provides a range of integrated design, analysis and simulation capabilities for a wide variety of users and stakeholders within the UAS (unmanned aerial"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tunnel-plan",
+   "query": "wind tunnel test design of experiments response surface fewer runs aerodynamic",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Evaluation of Response Surface Experiment Designs for Distributed Propulsion Aircraft Aero-Propulsive Modeling",
+     "url": "https://doi.org/10.2514/6.2023-2251",
+     "publishedDate": "2023-01-19T00:00:00.000Z",
+     "highlights": [
+      "View Video Presentation: https://doi.org/10.2514/6.2023-2251.vid Modern distributed hybrid ... This paper presents the development and evaluation of experiment designs for aero-propulsive characterization of distributed propulsion aircraft. Five different foundational response surface designs are evaluated to inform the development of two sequential design approaches tailored to complex aircraft aerodynamic characterization experiments. The first approach, which builds on sequential face-centered central composite designs, has been used previously to develop aero-propulsive models for complex aircraft using wind tunnel testing. The second approach is a new design strategy leveraging a regular I-optimal and nested I-optimal design that was developed for this study. The two sequential design strategies are compared for experiments with a large number of test factors using pre-experiment design evaluation metrics, as well as modeling results obtained from simulated wind tunnel data for the NASA LA-8 aircraft. The design evaluation metrics show that the sequential I-optimal base design has higher statistical power, lower correlation among candidate regressors, lower prediction variance, and more precise parameter estimates. The simulated wind tunnel experiments conducted using each design reveal that the sequential I-optimal base design has better predictive capability with fewer test points. The experiment design and evaluation procedures are described in detail to inform future aerodynamic characterization experiments for complex aircraft."
+     ]
+    },
+    {
+     "title": "Statistical Wind-Tunnel Experimentation Advancements for eVTOL Aircraft Aero-Propulsive Model Development | AIAA SciTech Forum",
+     "url": "https://arc.aiaa.org/doi/10.2514/6.2024-2482",
+     "publishedDate": "2024-01-04T00:00:00.000Z",
+     "highlights": [
+      "Compared to many conventional aircraft, electric vertical takeoff and landing (eVTOL) vehicle designs present greater aero-propulsive complexity and many interacting factors requiring development of novel testing and model development strategies. This paper describes several advances in statistically-rigorous experiment design methods for wind-tunnel testing of eVTOL aircraft enabling accurate aero-propulsive model development. The techniques are applied to a subscale tilt-rotor eVTOL aircraft configuration built at NASA Langley Research Center that has 24 independent control effectors. The general testing approach, leveraging design of experiments and response surface methodology, is outlined and followed by a detailed description of the experiment design and modeling approach employed for different phases of the wind-tunnel testing. A new approach for gravitational tare modeling is developed and validated, which reduces the required wind-tunnel test time by nearly 50%. A mostly automated trim envelope determination approach is formulated to rapidly determine the aircraft flight envelope to inform transition testing for aero-propulsive model development. Efficient powered-airframe characterization tests are conducted using a nested I-optimal design approach formulated in previous simulation-based testing. The collective wind-tunnel testing approach facilitates rapid characterization of eVTOL aircraft configurations and produces accurate aero-propulsive models that can be used in flight dynamics simulations."
+     ]
+    },
+    {
+     "title": "Experimental design and regional reconstruction method for wind tunnel pressure measurements on flight vehicles",
+     "url": "https://www.sciopen.com/article/10.7638/kqdlxxb-2023.0222",
+     "publishedDate": "2024-08-01T05:44:48.000Z",
+     "highlights": [
+      "of features from prior pressure distributions, a clustering process for multiple scenarios, and an optimization strategy for ... of triangular facets in the initial design. To capture variations in local pressure distributions, we introduce a proper"
+     ]
+    },
+    {
+     "title": "Optimal Experimental Design-based Reduced Order Modeling for Learning Optimal Aerodynamic Designs | AIAA AVIATION Forum",
+     "url": "https://arc.aiaa.org/doi/10.2514/6.2023-3716",
+     "publishedDate": "2023-06-08T00:00:00.000Z",
+     "highlights": [
+      "based DNN, the OED-based DNN achieved the same level of predictive performance (95% accuracy) with fewer samples. In particular, OED-based DNN only required around ... only five OED infilled samples) while direct LHS-based DNN costed around 80 samples."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tunnel-plan",
+   "query": "Bayesian active learning wind tunnel testing aerodynamic coefficients",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Experimental Design for Aerodynamic Dataset Modelling using Bayesian Neural Networks and BALD Scoring",
+     "url": "https://doi.org/10.25967/650293",
+     "publishedDate": "2026-03-06T00:00:00.000Z",
+     "highlights": [
+      "Bayesian Experimental Design (BED) provides a practical framework for selecting an experimental design that maximizes the expected usage. Within the scope of the present work, we apply the BED paradigm to high-dimensional aerodynamic stability and control datasets. A Bayesian Neural Network (BNN) serves as a surrogate model of an initial dataset, approximating the posterior distribution via mean-field Variational Inference (VI). The inherent uncertainty quantification capabilities of the BNN enable the decomposition of uncertainty into aleatoric and epistemic components utilizing a dual-head architecture. Leveraging this, the Bayesian Active Learning by Disagreement (BALD) method provides a scoring criterion to estimate the Expected Information Gain (EIG) of hypothetical, unlabeled data points. The candidate pool is generated using a Sobol sequence. In the context of Aerodynamic Dataset Modelling (ADM), a prudent design of new experiments is driven by economic constraints. Data acquisition techniques predominantly focus on Wind-Tunnel Testing (WTT), supplemented by numerical simulations and flight testing. The proposed methodology aims to iteratively identify the subsequent optimal measurements, thereby optimizing the test matrix setup. A greedy plus diversity strategy ensures comprehensive coverage of the input space while maintaining a high EIG. To evaluate the performance and applicability of the implemented methods, data from WTT campaigns of the DLR-F17 and DLR-F19 Unmanned Aerial Vehicles (UAVs), commonly known as SACCON, is utilized. This configuration features a highly swept, low-observable lambda wing planform without a separate empennage, representing a high-agility aircraft configuration. Results demonstrate that the introduced approach reliably identifies potential reductions in data acquisition needs, thus decreasing costs and resource demands of WTT campaigns, numerical computations, or flight testing, while maintaining the predictive accuracy of the BNN surrogate model."
+     ]
+    },
+    {
+     "title": "Adaptive sampling with Gaussian Processes for experiments in wind-tunnel to efficiently learn an aerodynamic model for flight dynamics simulations",
+     "url": "https://doi.org/10.60711/aero2026.20260618.10761027982135214",
+     "publishedDate": "2026-06-18T00:00:00.000Z",
+     "highlights": [
+      "Flight-dynamics simulations traditionally depend on mathematical models that describe how aerodynamic coefficients vary with the aircraft's instantaneous states and control inputs. These models are derived from experimental wind-tunnel measurements, free flight data and/or numerical simulations, making their construction analogous to a regression problem. Conventional wind-tunnel test designs employ \"one-factor-at-a-time\" (OFAT) sweeps, in which a single input (for example the angle of attack) is varied while all others are held constant. In this paper, an adaptive sampling strategy based on Gaussian-process (GP) surrogates to guide wind-tunnel experimentation is investigated. The aerodynamic coefficients are represented by GP models that are updated iteratively. At each iteration, the method selects the input combination that maximizes an acquisition criterion balancing exploration of the input space and exploitation of the values of the current surrogate model. The results of a preliminary study applying this adaptive sampling approach to the multi-swept SUPERMAN geometry is presented. An"
+     ]
+    },
+    {
+     "title": "A Bayesian latent Gaussian process framework for aerodynamic uncertainty quantification",
+     "url": "https://arxiv.org/html/2606.28871",
+     "publishedDate": "2026-06-27T00:00:00.000Z",
+     "highlights": [
+      "the control inputs and the measured aerodynamic response. We develop a methodology to address this problem based on Gaussian process surrogates and the ... -O\u2019Hagan calibration. A surrogate model learned on abundant-but-"
+     ]
+    },
+    {
+     "title": "Learning active flow control strategies of a swept wing by intelligent wind ...",
+     "url": "https://www.sciencedirect.com/science/article/pii/S2095034924000540",
+     "publishedDate": "2024-08-23T00:00:00.000Z",
+     "highlights": [
+      "Gaussian process regression model is established to study the jet actuator\u2019s performance at various attack and flap deflection angles. By selectively ... wing conditions from just 55 experiments, significantly reducing the number of experiments required"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tunnel-plan",
+   "query": "wind tunnel testing cost per hour market",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Wind Tunnel Testing: Options Explained and Compared - Tyto Robotics",
+     "url": "https://www.tytorobotics.com/blogs/articles/wind-tunnel-testing-comparison",
+     "publishedDate": "2025-10-15T19:18:42.000Z",
+     "highlights": [
+      "October 15, 2025 \u00b7 2 min read \u00b7 Admin Staff\n\n \n\nBy Yasmin Elkalish\n\nWhen it comes to testing UAVs, aircraft, and other aerodynamic objects, controlled wind testing is essential. While simulations are valuable, there\u2019s no substitute for real-world testing. \n\nToday, organizations have three main options: renting time at a facility, purchasing a closed wind tunnel, or investing in a modular WindShaper system.\n\n## 1. Renting Time at a Testing Facility\n\nRenting wind tunnel time offers professional testing without the need for upfront equipment costs. It\u2019s an excellent choice for short-term projects, providing access to high-quality facilities. However, costs can add up quickly with repeated use, and schedules are often limited by availability.\n\n- Academic facilities: ~$600 USD per hour (typically with an 8-hour minimum session)\n- Commercial facilities: $550\u2013$650 USD per hour\n- Large-scale research tunnels: ~$7,000 USD for a 9-hour session, plus setup fees \n\n## 2. Purchasing a Closed Wind Tunnel\n\nFor organizations with frequent testing needs, owning a closed-return wind tunnel ensures continuous access. This option requires a significant upfront investment, not only in the tunnel itself but also in building and housing the facility.\n\n- 1 \u00d7 1 m test section wind tunnel: up to and above $1M USD, depending on features.\n- Facility construction: $300\u2013$800 per square foot (a 2,000 sq ft facility adds close to $1M in costs).\n\nWhile this option offers full control and performance, it\u2019s best suited for teams with long-term testing requirements and substantial budgets."
+     ]
+    },
+    {
+     "title": "Harnessing Air",
+     "url": "https://www.caranddriver.com/features/a15143247/harnessing-air/",
+     "publishedDate": "2026-08-04T13:35:10.000Z",
+     "highlights": [
+      "Larry Webster Updated: Feb 1, 2008\n\n...\n\nOne place where race teams go for this testing is the Auto Research Center (ARC) in Indianapolis, Indiana.\n\n...\n\nIt\u2019s an iterative process: Move the model, measure the effects, and on and on, at a cost of $1100 per hour. Teams test in wind tunnels constantly because that old\n\n...\n\nSo, one might wonder, if correlating the model data to the real thing is so important, why not use a real car? The main reason is simply the cost difference. A half-scale tunnel is roughly one-eighth the cost of a full-size unit but provides 90 percent of the needed data. Also, until a full-scale, rolling-road tunnel that\u2019s under construction in Concord, North Carolina, opens sometime this year, there simply isn\u2019t a facility available where U.S.-based race teams can test their actual cars. Even well-funded teams have to carefully choose where to spend money, and model testing is more cost effective (top-level formula and prototype race cars run at least twice the price of the half-scale models). Plus, the models are easier to work with and can be run simultaneously with the race car, gathering data that are fed to the teams between races."
+     ]
+    },
+    {
+     "title": "Wind Tunnel CFD Evaluation: Smarter Aerodynamic Testing | Predictive Engineering",
+     "url": "https://www.predictiveengineering.com/content/wind-tunnel-cfd-evaluation-smarter-aerodynamic-testing",
+     "publishedDate": "2025-11-17T20:38:26.000Z",
+     "highlights": [
+      "News / November 17, 2025 / Posted by : Clay Hearn \n\n Submitted by Clay Hearn on November 17, 2025 \n\n## Why Virtual Wind Tunnel CFD Matters\n\nLike physical testing in many industries, wind tunnel tests are costly and slow. They require multiple protypes, setting up and using specialized instrumentation, and can only offer results for limited test conditions. Depending on complexity, physical testing can also cost anywhere from $200/hr to $1000/hr."
+     ]
+    },
+    {
+     "title": "A Small Ohio Startup Is Testing Something Big: A Small Hypersonic Engine",
+     "url": "https://www.forbes.com/sites/erictegler/2023/06/22/a-small-ohio-startup-is-testing-something-biga-small-hypersonic-engine/",
+     "publishedDate": "2023-06-22T12:54:15.000Z",
+     "highlights": [
+      "By Eric Tegler,\n\nFormer Contributor.\n\nJun 22, 2023, 08:45am EDT Jun 28, 2023, 05:52pm EDT\n\n...\n\nAccording to Darin, large hypersonic propulsion system testing in full-scale wind tunnel facilities can cost up to $50,000 per hour. \u201cWe\u2019re paying $300,000 to get two to three months of testing,\u201d he says. \u201cThe development is much cheaper but the lessons we learn are scale-able to bigger applications.\u201d"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "multifi",
+   "query": "multi-fidelity Gaussian process vortex lattice CFD aerodynamic database",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Multi-Fidelity Probabilistic Aerodynamic Database Generation with the ProForMA Tool",
+     "url": "https://doi.org/10.2514/6.2023-0653",
+     "publishedDate": "2023-01-19T00:00:00.000Z",
+     "highlights": [
+      "Moreover, these databases have to incorporate estimates of uncertainty in the data, which is inevitable in the design and certification process. To address these concerns, we have been developing a toolset for creation of probabilistic aerodynamic databases that use multi-fidelity data and combine them using enhanced implementations of Gaussian Process Regression (GPR)."
+     ]
+    },
+    {
+     "title": "Multi-Fidelity Surrogate-Based Trajectory-Aware Shape Optimization of Hypersonic Vehicles",
+     "url": "https://doi.org/10.2514/6.2026-2301",
+     "publishedDate": "2026-01-08T00:00:00.000Z",
+     "highlights": [
+      "specific trajectory segments where aerodynamic perturbations most strongly influence vehicle range. This sensitivity profile drives a targeted sampling ... , fusing them with low-fidelity data to construct accurate aerodynamic surrogates. The framework is"
+     ]
+    },
+    {
+     "title": "FUSING AERODYNAMIC DATA USING MULTI-FIDELITY GAUSSIAN PROCESS REGRESSION",
+     "url": "https://doi.org/10.7712/140123.10191.18890",
+     "publishedDate": "2023-01-01T00:00:00.000Z",
+     "highlights": [
+      "The XRF1 [14] is a research aircraft model provided by Airbus, which is representative of a long-range wide-body aircraft. The work presented here has been carried out within the framework of the Group for Aeronautical Research and ... CFD was performed by means of Reynolds Average Navier Stokes (RANS) simulations, made with the TAU solver [16]. The entire aircraft was considered, so the aerodynamics interactions between different subsystems of the aircraft exposed to the air stream were captured. WTT were performed at the European Transonic Wind Tunnel (ETW) facility, and surface pressure data was acquired using pressure taps located in 26 spanwise locations along the wing span, \u03b7. The Reynolds for both CFD simulations and WTT was set to Re = 25 \u00d7 10 6. The test case presented in this study employs a subset of the above-mentioned database. One of the airfoils was isolated sufficiently far from the wing pods, located at \u03b7 = 0.75, to avoid significant aerodynamic interference. This subset contains a significant population of high-fidelity data collected in the WTT. The data within the selected section consist of 199 (Cp) values obtained from CFD simulations and 59 Cp values obtained from pressure taps."
+     ]
+    },
+    {
+     "title": "Rapid Aerodynamic Prediction Framework Based on Multi-Fidelity Data Fusion of Vortex Lattice Method and Computational Fluid Dynamics by Mutian Cui, Dongli Ma, Muqing Yang, Lihang Su, Duyu Guo :: SSRN",
+     "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5811322",
+     "publishedDate": "2025-11-26T23:04:39.000Z",
+     "highlights": [
+      "### Abstract\n\nIn the conceptual design phase of aircraft, it is essential to evaluate aerodynamic performance across multiple configurations rapidly and accurately. High-fidelity methods such as Computational Fluid Dynamics (CFD) ensure accuracy but are computationally expensive, while fast approaches, like the Vortex Lattice Method (VLM), lack precision. Conventional surrogate models directly map design variables to aerodynamic coefficients, with accuracy strongly dependent on the size and quality of the training dataset. A rapid aerodynamic prediction framework integrating multi-fidelity data from VLM and CFD are proposed in this study. An accurate radial basis function neural network (ARBFnn) with Gaussian kernels is developed to model the discrepancy between low and high fidelity aerodynamic data. The model takes VLM-derived aerodynamic coefficients, geometric design variables, Mach number, and wetted surface area as inputs to enhance its ability to capture aerodynamic behavior efficiently. A parametric Lambda-wing configuration is used to generate the training dataset and test the framework. Results show that only 25 training samples are sufficient to predict three-dimensional high-fidelity aerodynamic coefficients accurately. Compared with conventional surrogate models, the proposed framework reduces the RMSE of aerodynamic coefficients to 11\u201343% and lowers computational cost by two orders of magnitude. Validation under representative engineering scenarios further demonstrates that prediction errors remain below 3%. The multi-fidelity data fusion framework achieves rapid, accurate aerodynamic prediction with limited data, offering strong potential for practical applications in aircraft design and optimization."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "multifi",
+   "query": "SU2 delta wing vortex RANS accuracy",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Viscous and Non-Viscous Approaches for a Delta Wing Benchmark",
+     "url": "https://doi.org/10.2514/6.2025-3579",
+     "publishedDate": "2025-07-16T00:00:00.000Z",
+     "highlights": [
+      "## Abstract\n\nThis study presents an investigation of the sharp-edged delta wing from the Advisory Group of Aerospace Research and Development number 247 (AGARD-247), performing a quantitative comparison of different Computational Fluid Dynamics (CFD) modeling strategies. The analysis encompasses inviscid (Euler) and viscous Reynolds-Averaged Navier-Stokes (RANS) approaches, utilizing the one-equation Spalart-Allmaras with the Quadratic Constitutive Relation from 2000 and the two-equation k-omega Shear Stress Transport turbulence models. A cross-validation of these methods is performed on two distinct platforms, the open-source suite SU2 and the commercial solver FLUENT, with all numerical results being benchmarked against established experimental data. The findings confirm that viscous simulations are superior in predicting the flow, especially at high angles of attack, whereas the non-viscous approach overpredicts lift and fails to capture stall. Notable differences were observed between the turbulence models, particularly in the post-stall regime, and between the solvers, with FLUENT demonstrating greater mesh sensitivity. Although the viscous models showed closer agreement with the experimental data, none could accurately predict the pitching moment coefficient or capture the formation of secondary vortices, indicating the limitations of steady-state RANS models for flows dominated by vortex breakdown. The work concludes that, despite their limitations, viscous modeling is crucial for the analysis and highlights the need for scale-resolving simulations to more accurately capture the complex flow dynamics."
+     ]
+    },
+    {
+     "title": "Analysis of the vortex-dominated flow field over a delta wing at transonic speed | The Aeronautical Journal | Cambridge Core",
+     "url": "https://www.cambridge.org/core/journals/aeronautical-journal/article/analysis-of-the-vortexdominated-flow-field-over-a-delta-wing-at-transonic-speed/3CBDA1270D2215EF94134FA3DFBBCE3A",
+     "publishedDate": "2023-04-26T20:35:01.000Z",
+     "highlights": [
+      "The present work provides an advancement in the prediction of delta wing flow and an improved understanding of various flow physical phenomena which occur over the wing in transonic conditions. Scale-resolving simulations of the vortex-dominated flow around a sharp leading-edge VFE-2 wing have been performed using the SA-based IDDES model. The complex leading-edge vortex pattern with embedded shocks and subsequent shock-vortex interaction is investigated. A promising accuracy has been"
+     ]
+    },
+    {
+     "title": "Integrating High Computational and Experimental Aerodynamic ...",
+     "url": "https://arc.aiaa.org/doi/10.2514/1.C038576",
+     "publishedDate": "2025-11-24T06:32:42.000Z",
+     "highlights": [
+      ", all the cases in this work were simulated using the SU2 CFD code. The code ... including RANS, wave equation, heat equations, and equations ... model solid mechanics [11]. For RANS, SU2 provides a solver for both incompressible and compressible flow."
+     ]
+    },
+    {
+     "title": "A Study on Low-Speed Performance of Delta Wings Using a Hierarchical Cartesian Grid Flow Solver",
+     "url": "https://doi.org/10.1299/jsmecmd.2023.36.os-0906",
+     "publishedDate": "2023-01-01T00:00:00.000Z",
+     "highlights": [
+      "## Abstract\n\nDelta wings used for supersonic aircraft have to take a large angle of attack at takeoff and landing due to their low aerodynamic performance at low speed, which causes leading-edge vortices over the wing's upper surface. The previous paper used a hierarchical Cartesian grid flow solver to conduct steady flow analyses based on Navier-Stokes equations (NS) around flat-plate delta wing. This research uses steady flow analyses based on Reynolds-averaged Navier-Stokes equations (RANS) with two turbulence models (SA-noft2 and SA-noft2-R). This study examines the difference in the vortex phenomena between the results with different turbulence models and the suitable governing equations comparing the results of NS and RANS. The SA-noft2-R model shows better results than the SA-noft2 regarding the reproducibility of vortex flow pattern, but SA-noft2 predicts the primary vortex core location better than SA-noft2-R. Also, it is interesting to note that NS results are better than the RANS result compared to the experimental results. From these results, the analysis using NS is appropriate for estimating the vortex position around the delta wing under the flow field conditions conducted in this study."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "multifi",
+   "query": "co-kriging aerodynamic data fusion low and high fidelity",
+   "costDollars": {
+    "total": 0.007,
+    "search": {
+     "neural": 0.007
+    }
+   },
+   "results": [
+    {
+     "title": "Scalable sparse co-Kriging for multi-fidelity data fusion: An application to aerodynamics",
+     "url": "https://doi.org/10.1016/j.ress.2026.112485",
+     "publishedDate": "2026-02-26T00:00:00.000Z",
+     "highlights": [
+      "## Abstract\n\nMulti-fidelity Kriging surrogate modeling combines data of varying accuracy, such as experimental tests and numerical simulations, to improve predictive performance. Autoregressive models are commonly used to capture correlations across fidelity levels, offering interpretability compared to purely data-driven approaches. However, existing frameworks often suffer from high computational costs or rely on restrictive assumptions, such as requiring nested designs of experiments (DoEs). In an engineering context, the latter assumption implies that experimental tests must be conducted at the same input conditions as those used in numerical simulations. This requirement cannot always be met due to safety constraints in tests, which limit flexibility in data acquisition. In this work, we revisit the multi-fidelity Kriging approach and introduce a generalized co-Kriging framework that jointly models multiple fidelity levels through a correlation structure based on the autoregressive model. To ensure scalability, we extend sparse approximation techniques to the multi-fidelity setting, maintaining the efficiency of classical sparse Kriging while improving accuracy. We evaluate our framework on both nested and non-nested DoEs. On a large-scale multi-fidelity aerodynamic dataset that combines wind tunnel experiments with CFD simulations, the percentage of standardized residuals falling outside the confidence intervals is reduced by approximately 75% compared to standard sparse Kriging, highlighting the benefit of incorporating multi-fidelity information in complex engineering applications.\n\n...\n\nOn the other"
+     ]
+    },
+    {
+     "title": "Multi-Fidelity Data Fusion Methods for Aerodynamic Database Generation of a Small UAS | AIAA AVIATION Forum",
+     "url": "https://arc.aiaa.org/doi/10.2514/6.2026-4761",
+     "publishedDate": "2026-06-04T00:00:00.000Z",
+     "highlights": [
+      "Abstract:\n\nHigh-fidelity Computational Fluid Dynamics (CFD) simulations can be used to generate a highly accurate aerodynamic database, but they are time-consuming and computationally expensive. Data fusion techniques such as co-kriging offer a cost-effective alternative by combining data from models of varying fidelity to achieve comparable accuracy with reduced computational effort. This study develops a multi-fidelity aerodynamic database for the GREAT SHARK 330 Uncrewed Aircraft System (UAS) through the fusion of results from a high-fidelity solver (StarCCM+) and a lower-fidelity solver (FlightStream). An improved FlightStream model is introduced, demonstrating better agreement with StarCCM+, particularly in reducing lateral asymmetries and improving stall prediction. The analysis covers the clean configuration across an angle of attack (AoA) range of -20\u00b0 to 20\u00b0 and angles of sideslip (AoS) up to 20\u00b0, while control surface effectiveness is evaluated between AoA values of -10\u00b0 and 12\u00b0. The ordinary co-kriging method is used to construct an aerodynamic database for both longitudinal and lateral coefficients, as well as control derivatives. For the datum coefficients, the co\u2011kriging model outperforms a polynomial regression model, yielding lower RMS errors and more accurately capturing non-linear aerodynamic trends. For the control derivatives, the weaker correlation between FlightStream and StarCCM+ reduces the benefit of data fusion."
+     ]
+    },
+    {
+     "title": "Multi-fidelity transonic aerodynamic loads estimation using Bayesian neural networks with transfer learning",
+     "url": "https://doi.org/10.1016/j.ast.2025.110301",
+     "publishedDate": "2025-05-09T00:00:00.000Z",
+     "highlights": [
+      "high-fidelity simulation data and serves as a benchmark in this study. Following the methodology outlined in Da Ronch et al. [9] , the CK function, denoted as \u03b7, is\n...\n, augmented with LF data interpolated via a single-fidelity Bayesian neural network"
+     ]
+    },
+    {
+     "title": "Comparison of multi-fidelity surrogate models for multi-objective aerodynamic optimization in turbomachinery under extreme cost imbalance | Advanced Modeling and Simulation in Engineering Sciences | Springer Nature Link",
+     "url": "https://link.springer.com/article/10.1186/s40323-025-00316-3",
+     "publishedDate": "2025-12-18T00:00:00.000Z",
+     "highlights": [
+      "-mesh RANS simulations are used as the low-fidelity model while RANS simulations with a transition model and ... -fidelity ones. The efficacy of the two strategies is measured using various metrics. For the problem under consideration, it has been"
+     ]
+    }
+   ]
+  }
+ ]
+}

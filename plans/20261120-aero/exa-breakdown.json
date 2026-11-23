@@ -1,0 +1,137 @@
+[
+ {
+  "q": "vortex breakdown position crosses trailing edge angle of attack versus leading edge sweep delta wing data Wentz Kohlman",
+  "results": [
+   {
+    "title": "Wind tunnel investigations of vortex breakdown on slender sharp edged wings Final report",
+    "url": "http://hdl.handle.net/2060/19690005430",
+    "publishedDate": null,
+    "highlights": [
+     "The terms \"breakdown at the trailing edge\" or \"initial breakdown\" require rather careful definition, since the break down point was never stable at the trailing edge. Rather, the terms refer to the lowest angle of attack at which break down crosses the trailing edge. The initial breakdown data obtained in the present tests for delta wings with sweep angles less than 75' are generally in agreement with the results given by Poisson-Quinton and Ehrlich (8). It is noted that for sweep angles greater than 75O, breakdown angle is nearly constant, a fact not evident in earlier data."
+    ]
+   },
+   {
+    "title": "Breaking down the delta wing vortex: The role of vorticity in the breakdown process",
+    "url": "http://hdl.handle.net/2060/19910014796",
+    "publishedDate": "1990-01-01T00:00:00.000Z",
+    "highlights": [
+     "of the trailing edge geometry of 70* sweep delta, diamond and arrow planforms, had a negligible effect on vortex breakdown location. Wentz also found [7] that the vortex breakdown region crossed the trailing edge at the same angle of attack for all these"
+    ]
+   },
+   {
+    "title": "",
+    "url": "https://ntrs.nasa.gov/api/citations/19690005430/downloads/19690005430.pdf",
+    "publishedDate": null,
+    "highlights": [
+     "The terms \"breakdown at the trailing edge\" or \"initial breakdown\" require rather careful definition, since the break down point was never stable at the trailing edge. Rather, the terms refer to the lowest angle of attack at which break down crosses the trailing edge. The initial breakdown data obtained in the present tests for delta wings with sweep angles less than 75' are generally in agreement with the results given by Poisson-Quinton and Ehrlich (8). It is noted that for sweep angles greater than 75O, breakdown angle is nearly constant, a fact not evident in earlier data. Since these results indicated a change in the trend from previously published data, some additional tests were con ducted to establish the results more firmly."
+    ]
+   },
+   {
+    "title": "Critical assessment of test cases on vortex breakdown over slender delta wing under static model conditions",
+    "url": "https://nrc-publications.canada.ca/eng/view/object?id=5b97b232-c5f5-4f86-ad81-dfd11201a05d",
+    "publishedDate": "2009-10-01T00:00:00.000Z",
+    "highlights": [
+     "A brief, but by no means complete, survey of published results for the time-averaged primary vortex breakdown locations over delta wings at static model conditions with leading edge sweep angles (\u039b) ranging from 50\u00ba to 80\u00ba is depicted in Figs. 1 to 7. It is worthwhile to mention that most experimental results have not been corrected for wind/water tunnel wall and support interference effects and other test related effects.\n\nIn order to ... As the 65\u00b0 and 70\u00b0 sweep delta wings are typical and closely related to high-performance military aerial vehicles, most attention has been paid to results reported for these two angles of sweep.\n\nFor \u039b = 65\u00b0 and 70\u00b0, the preliminary comparisons shown in Figs. 4 and 5 reveal significant differences in the measured non-dimensional breakdown location, x VB = X VB /c 0 , where X VB is the distance from the apex to the measured vortex breakdown location and c 0 is the centerline chord. For \u039b = 65\u00b0 and \u03b1 = 22.5\u00b0, for example, x VB can be anywhere, from the trailing edge x VB = 1.0 (Earnshaw 26, 27 ) to x VB = 0.4 (Lambourne & Bryer 24 ). Similar scatter is found in the measurements on 70\u00b0 delta wings. At \u03b1 \u2248 31\u00b0~32\u00b0, the measured breakdown location varies from x VB \u2248 0.8 (Earnshaw & Lawford, et.al. 26, 27 to x VB \u2248 0.35 (Wentz & Kohlmann [33] [34] [35] ).\n\nFinally, for \u039b = 70\u00b0,and \u03b1 \u2248 31\u00b0~32\u00b0, one data set (Wentz & Kohlmann [33] [34] [35] ) exhibits a \"knee', reflecting a rapid, possibly discontinuous movement of the breakdown location from mid-chord to aft of the trailing edge over a small change in the angle of attack. The large scatter in the measured vortex breakdown locations and the possible presence of the discontinuity leads to different understanding and explanations 101, 109, 112 . This uncertainty will also jeopardize any attempt to model the vortex breakdown behavior.\n\n...\n\n## ASSESSMENT OF THE RESULTS WITH 70\u00ba DELTA WING\n\nIn the case of the 70\u00b0 delta wing, in addition to a scatter similar to that of the 65\u00b0 wing, a discontinuity movement of the breakdown location in the aft of the wing was observed in Wentz & Kohlman's [33] [34] [35] results. Both of them have to be further investigated.\n\na). Wentz & Kohlmann's [33] [34] [35] experiment employed a wing model with non-dimensional thickness (thickness/root chord) t/c 0 = 0.007, nearly an order of magnitude less than that in others' experiments.\n\nOwning to a 7.5\u00b0 bevel on the lower surface, the model was further exacerbated on the forward part. Thus the effect of the aeroelastic deformation on vortex behavior has to be considered. The deformation under the reported test conditions in Wentz & Kohlmann's 35 test (q=30 psf) was estimated by the finite element method where the loading was based on the reported breakdown locations, x VB , at the trailing edge, x VB =1, and at x VB =0.4 for \u03b1\u224829\u00b0 and 30\u00b0 respectively. The calculated deflections are large and their effects can not be ignored (see Fig. 36 and Fig. 37 ). Specifically, at \u03b1\u224830\u00b0 the wing has a negative camber with 1.3\u00b0 deflection angle at the apex while at \u03b1\u224829\u00b0 it exhibits a positive camber over most of wing area. In light of the above, it follows that when \u03b1 decreases from 30\u00b0, initially the negative camber will result in a premature vortex breakdown. As \u03b1 decreases, the vortex breakdown location begins to move downstream. That movement redistributes the load such that it tends to reduce the negative camber which, in turn, makes the breakdown location move further downstream. A positive feedback is clearly present in the coupling between the deformation changes and the loading changes, leading to the reported discontinuous behavior. In fact Wentz & Kohlmann's 35 reported angular deflections, as high as 3~4 degrees at the apex section for these slender delta wings and their possible effect on breakdown location. Considering the above, it is reasonable to assume that discontinuous vortex breakdown location in Wentz & Kohlmann's report for \u039b\u226570\u00b0 delta wing is anomalous due to aeroelastic effects and cannot, therefore, be deemed to be representative of the breakdown behavior over a rigid model. Similar conclusion had been obtained by Lowson 90 ."
+    ]
+   },
+   {
+    "title": "An experimental study of static and dynamic vortex breakdown on slender delta wing planforms",
+    "url": "https://doi.org/10.2514/6.1994-1879",
+    "publishedDate": "1994-06-20T00:00:00.000Z",
+    "highlights": [
+     "vortex breakdown on a family of delta wings is currently being conducted at the University of Notre Dame. ... . This paper reviews the results obtained for a 65 swept wing. ... models were used in the study, both models had the same leading edge sweep"
+    ]
+   }
+  ]
+ },
+ {
+  "q": "Earnshaw Lawford 1964 delta wing vortex breakdown trailing edge angle of attack sweep correlation",
+  "results": [
+   {
+    "title": "Low-speed wind-tunnel experiments on a series of sharp-edged delta wings",
+    "url": "https://reports.aerade.cranfield.ac.uk/handle/1826.2/4008",
+    "publishedDate": null,
+    "highlights": [
+     "# Low-speed wind-tunnel experiments on a series of sharp-edged delta wings\n\n P. B. Earnshaw; J. A. Lawford \n\n Date: 1964 \n\n### Abstract:\n\nA series of six delta wings of varying angles of sweepback has been tested. A three-component strain-gauge balance was used to investigate the forces and moments, and normal-force fluctuations for incidences between \u00b1 60\u00b0. Positions of vortex breakdown on these wings were noted. Surface flow pattern and boundary-layer transition observations were made. The three most highly swept wings (i.e. having sweepback angles of 65\u00b0, 70\u00b0 and 76\u00b0) appeared to have the most favourable characteristics of growth of normal-force fluctuations and had a smooth variation of forces and moments throughout the incidence range between positive and negative stalls. The change from a vortex type of flow to one with complete flow reversal on the upper surface occurred at increased incidence with increase of sweepback angle. At moderate incidence \u03b1 the main features of the flow pattern correspond to conical flow development, and correlate well with the single parameter \u03b1/cot \u03c6, where \u03c6 is the sweepback angle of the leading edge."
+    ]
+   },
+   {
+    "title": "Low-Speed Wind-Tunnel Measurements on a Thin Sharp,Edged Delta Wing with 7 \u00b0o Leading Edge Sweep, with Particular Reference to the Position of Leading-Edge-Vortex Breakdown",
+    "url": "https://reports.aerade.cranfield.ac.uk/bitstream/handle/1826.2/3919/arc-rm-3338.pdf?isAllowed=y&sequence=1",
+    "publishedDate": null,
+    "highlights": [
+     "It has been established that the tightly roiled vortex from a swept leading edge breaks down--that is, it transforms within a very short streamwise length into a much more diffuse vortex. At low incidences this breakdown occurs well downstream of the trailing edge; with increase of incidence the breakdown point moves upstream so that at high incidence it is above the wing upper surface. The present tests were made to find the relationship between the position of vortex breakdown, the fluctuations of pressure and normal force on the wing surface,\n\n...\n\n| 36 | 0.35(70 |\n| 37 | 0.28Co |\n\nThe rate of forward movement of the breakdown with increase of incidence became much less rapid when it was forward of the centre-line mid-chord point."
+    ]
+   },
+   {
+    "title": "Critical assessment of test cases on vortex breakdown over slender delta wing under static model conditions",
+    "url": "https://nrc-publications.canada.ca/eng/view/object?id=5b97b232-c5f5-4f86-ad81-dfd11201a05d",
+    "publishedDate": "2009-10-01T00:00:00.000Z",
+    "highlights": [
+     "## RESULTS ON MEASURED VORTEX BREAKDOWN LOCATIONS\n\nA brief, but by no means complete, survey of published results for the time-averaged primary vortex breakdown locations over delta wings at static model conditions with leading edge sweep angles (\u039b) ranging from 50\u00ba to 80\u00ba is depicted in Figs. 1 to 7. It is worthwhile to mention that most experimental results have not been corrected for wind/water tunnel wall and support interference effects and other test related effects.\n\nIn order to facilitate further investigations, the model(s), test facilities and conditions of the referred test cases are listed separately in Table 1 . As the 65\u00b0 and 70\u00b0 sweep delta wings are typical and closely related to high-performance military aerial vehicles, most attention has been paid to results reported for these two angles of sweep.\n\nFor \u039b = 65\u00b0 and 70\u00b0, the preliminary comparisons shown in Figs. 4 and 5 reveal significant differences in the measured non-dimensional breakdown location, x VB = X VB /c 0 , where X VB is the distance from the apex to the measured vortex breakdown location and c 0 is the centerline chord. For \u039b = 65\u00b0 and \u03b1 = 22.5\u00b0, for example, x VB can be anywhere, from the trailing edge x VB = 1.0 (Earnshaw 26, 27 ) to x VB = 0.4 (Lambourne & Bryer 24 ). Similar scatter is found in the measurements on 70\u00b0 delta wings. At \u03b1 \u2248 31\u00b0~32\u00b0, the measured breakdown location varies from x VB \u2248 0.8 (Earnshaw & Lawford, et.al. 26, 27 to x VB \u2248 0.35 (Wentz & Kohlmann [33] [34] [35] ).\n\nFinally, for \u039b = 70\u00b0,and \u03b1 \u2248 31\u00b0~32\u00b0, one data set (Wentz & Kohlmann [33] [34] [35] ) exhibits a \"knee', reflecting a rapid, possibly discontinuous movement of the breakdown location from mid-chord to aft of the trailing edge over a small change in the angle of attack. The large scatter in the measured vortex breakdown locations and the possible presence of the discontinuity leads to different understanding and explanations 101, 109, 112 . This uncertainty will also jeopardize any attempt to model the vortex breakdown behavior.\n\nGiven that the vortex breakdown is basically an unsteady, non-linear and time dependent process, some uncertainty in the measurements of the breakdown location is to be expected. Furthermore, the effects of the proximity of wind tunnel walls and support geometry, model blockage and model deformations under the aerodynamic loads increase the scatter in the measurements. These effects unavoidably degrade the consistency of results.\n\n...\n\nb). Earnshaw's 26, 27 results were obtained with a model with t/c r =4% and symmetrical cubic curve section.\n\nAccording to the equation of the model surface, the section half angle (normal to the leading-edge) at the leading-edge is 14.2\u00b0. As the bevel width is comparable with the thickness of the boundary layer before separation, the bevel effect corresponds to a decrease in the effective angle of attack. If the average slope is taken in Earnshaw's experiment, the effective angle of attack could be reduced by as much as 3\u00b0."
+    ]
+   },
+   {
+    "title": "Measurements of the effects of thickness on vortex breakdown position on a series of sharp-edged delta wings",
+    "url": "https://reports.aerade.cranfield.ac.uk/handle/1826.2/1031",
+    "publishedDate": null,
+    "highlights": [
+     "The results demonstrate that the angles of incidence necessary to achieve a given position of breakdown over the wing can differ by at least as much as 5 degrees from a thin wing ... a wing of 8% thickness-chord ratio. The tests also show the breakdown"
+    ]
+   },
+   {
+    "title": "vortexbrfx",
+    "url": "https://ntrs.nasa.gov/api/citations/19690005430/downloads/19690005430.pdf",
+    "publishedDate": null,
+    "highlights": [
+     "Systematic investigations on a family of delta wings were conducted by Earnshaw and Lawfordl (4) for wings with leading-edge sweep angles ranging from 55' to 76O. In these tests vortex breakdown observations were conducted utilizing a small tuft on a probe.\n\n...\n\nThe terms \"breakdown at the trailing edge\" or \"initial breakdown\" require rather careful definition, since the break down point was never stable at the trailing edge. Rather, the terms refer to the lowest angle of attack at which break down crosses the trailing edge. The initial breakdown data obtained in the present tests for delta wings with sweep angles less than 75' are generally in agreement with the results given by Poisson-Quinton and Ehrlich (8). It is noted that for sweep angles greater than 75O, breakdown angle is nearly constant, a fact not evident in earlier data."
+    ]
+   }
+  ]
+ },
+ {
+  "q": "delta wing maximum lift angle of attack versus sweep angle vortex breakdown low speed experiment",
+  "results": [
+   {
+    "title": "3424.tif",
+    "url": "https://reports.aerade.cranfield.ac.uk/bitstream/handle/1826.2/4008/arc-rm-3424.pdf?sequence=1",
+    "publishedDate": null,
+    "highlights": [
+     "A family of six cambered delta wings, having sharp leading edges with different angles of \nsweepback, were tested in the R.A.E. 4 ft x 3 ft Low Turbulence Wind Tunnel. Each wing had \na 6% thick piano-convex chordwise section, the convex surface being generated by straight lines, \ndrawn from the tips to the circular-arc centre-line section, giving geometrically similar chordwise\n\n...\n\nsections at all spanwise positions on all wings. The leading-edge sweepback angles were 76 \u00b0, 70 \u00b0, \n65 \u00b0, 60 \u00b0, 55 '~ and 45 \u00b0. All the wings had a \"planform area of 0. 347 sq.ft, with centre-line chords \nranging from 0-589 ft to 1.178 ft.\n\n...\n\nThe position at which the tightly rolled leading-edge vortex breaks down to form a much more \ndiffuse vortex was found by using a fine tuft, at the end of a rod inserted through the tunnel wall. \nAt leading-edge sweep angles of 65 \u00b0 , 70 \u00b0 and 76 \u00b0 , the vortex core could be easily identified and the \nbreakdown point clearly established. At the lower sweepback angles, the vortex core was less steady \nand the breakdown point could not be so clearly identified by this technique. At 45 \u00b0 sweepback, \nit could not be found at all, and it seems likely that the point of breakdown was very close to the \napex of the wing. These vortex breakdown measurements were made using a wind speed of 80 ft/sec, \nbut a few tests on the 65 \u00b0 delta with the wind speed increased to 160 ft/sec showed no change in \nbreakdown point.\n\n...\n\n3.3. Vortex Breakdown.\n\nThe chordwise position of the vortex breakdown point, expressed in terms of the centre-line chord (Figs. 11 and 12), moves forward with increase of incidence and with decrease of sweepback angle as expected. The following table lists the approximate position of the breakdown point when the normal-force fluctuations reach a level of [\\/{nF(n)]],_ 0.0.~ = 0. 0025, that is, close to the start of the rapid rise in normal-force fluctuation.\n\nWhile there is some variation from wing to wing, it is clear that the trend is for the rapid rise of normal-force fluctuation to occur when the vortex breakdown is close to the trailing-edge. When vortex breakdown is near the mid-point of the centre-line chord, normal-force fluctuations are high on all the wings.\n\nPositive incidence\n\nNegative incidence\n\nSweepback\n\nBreakdown position\n\nBreakdown position\n\n| 45 \u00b0 | 12 | | 13 | |\n| --- | --- | --- | --- | --- |\n| 55 \u00b0 | 13 | 0.85 | 18 | 0.85 |\n| 60 \u00b0 | 15 | 0.7 | 21 | 0.8 |\n| 65 \u00b0 | 29 | 0.95 | 26~- | 1.1 approx. |\n| 70 \u00b0 | 6 | 1.0 | 34 | 1-1 approx. |\n| 76 \u00b0 | 35 | 1.1 approx. | 37 | 0.85 |\n\nThe vortex breakdown point is farther aft at positive incidence than at the corresponding negative incidence (except in the region of 20 \u00b0 incidence at 65 \u00b0 sweepback). Since the lift coefficient is numerically greater at positive incidence than at the equivalent negative incidence, this applies to a greater extent at corresponding lift rather than incidence.\n\n...\n\nIncidences for maximum lift and maximum normal force are approximately equal on these wings (see Figs. 3 and 4) arid this incidence, and that at which vortex breakdown occurred at the mid-chord point, are included on Fig. 26. At the lower sweepback angles, maximum lift occurred just before forward flow developed near the trailing edge, but at the higher sweepback angles leading-edge vortex flow continued over the whole surface beyond the maximum lift point, for approximately 12 \u00b0 of incidence in the case of the 76 \u00b0 swept wing. Vortex breakdown took place at the mid-chord position at an incidence approximately 10 \u00b0 to 15 \u00b0 lower than the lowest incidence for flow reversal on all the wings."
+    ]
+   },
+   {
+    "title": "Investigation of the influence of the transverse sweepback of delta wings on their vortex structures and aerodynamic characteristics in the case of flow separation at low subsonic velocities",
+    "url": "https://link.springer.com/article/10.1007/BF01090170?code=1eed6816-f49b-4d25-86fe-cd42c04b0b6b&error=cookies_not_supported",
+    "publishedDate": null,
+    "highlights": [
+     "The results are given of theoretical and experimental investigations into the influence of transverse sweepback of ... the vortex structure in the case of flow separation. Theoretical investigations have been made using the method of discrete vortices."
+    ]
+   },
+   {
+    "title": "An experimental study of static and dynamic vortex breakdown on slender delta wing planforms",
+    "url": "https://doi.org/10.2514/6.1994-1879",
+    "publishedDate": "1994-06-20T00:00:00.000Z",
+    "highlights": [
+     "were conducted. The models were driven through dynamic pitch sweeps for a zero roll angle, and for ... the models were driven through dynamic roll sweeps. This paper reviews the results obtained for a"
+    ]
+   },
+   {
+    "title": "Numerical simulation of the effects of variation of angle of attack and sweep angle on vortex breakdown over delta wings | Fluid Dynamics and Co-located Conferences",
+    "url": "https://arc.aiaa.org/doi/10.2514/6.1990-3000",
+    "publishedDate": "2012-08-17T00:00:00.000Z",
+    "highlights": [
+     "NASA, Ames Research Center; Navy-NASA Joint Institute of Aeronautics, Moffett Field, CA\n\n and \n\nNASA, Ames Research Center, Moffett Field, CA\n\nPublished Online: 17 Aug 2012 https://doi.org/10.2514/6.1990-3000"
+    ]
+   },
+   {
+    "title": "Subsonic Vortex Lift over Sharp Leading-Edge Delta Wings",
+    "url": "https://dspace.lib.cranfield.ac.uk/server/api/core/bitstreams/b782a64b-1b96-48e9-ac13-4a7d6d9be3a4/content",
+    "publishedDate": null,
+    "highlights": [
+     "3 and Table. 2. The test campaign was performed at a fixed velocity of = 100 / for a range of different Reynolds numbers, based on the aerodynamic mean ... The range of angle of attack considered for measurements was [\u221260\u00b0; 60\u00b0] . ... This is consistent with the experimental analysis and the expected flow pattern. It has been observed experimentally that for the 45\u00b0 swept delta wing, the vortex breakdown point was close to the wing\u2019s apex [7]. The detached vortex has consequently less intensity. Due to the weaker vortex, a significant reduction in vortex lift is induced in regions where the primary vortex has detached from the leading edge. ... For the remaining wings, it has been experimentally established that the position of the vortex breakdown point moves forward as the incidence increases and the sweep angle decreases [7]. Since the Polhamus method is not able to capture the effect of the vortex breakdown on the aerodynamic forces, its position plays a major role in the accuracy of the overall correction method. For the 55\u00b0 and 60\u00b0 swept delta wings, it has been observed that the vortex breakdown occurred at respectively 0.85c for 13\u00b0 of AoA and 0.7c for 15\u00b0 of AoA. Thus, for these two delta wings, a good match is observed between experimental and computed data up to 15\u00b0 of AoA. Above this incidence, the vortex breakdown happens and leads to a reduction in lift. Therefore, The Polhamus method which is unable to model the effect of the vortex breakdown, is overestimating the lift force, leading to increasing differences with the experimental data. As for the 65\u00b0, 70\u00b0 and 76\u00b0 swept delta wings, the vortex breakdown occurs at a point closer to or after the trailing edge."
+    ]
+   }
+  ]
+ }
+]

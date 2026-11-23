@@ -1,0 +1,12 @@
+{"candidates": [
+ {"id": "vortex-lift", "label": "High-AoA vortex-lift estimator: VLM + suction analogy + breakdown model, validated on NASA delta/LEX/F-18 data",
+  "queries": ["vortex lattice method leading edge vortex lift prediction validation high angle of attack 2024", "nonlinear vortex lattice delta wing vortex breakdown low-order model", "OpenVSP VSPAERO vortex lift accuracy high angle of attack"]},
+ {"id": "uq-aero", "label": "Low-fidelity aerodynamics with calibrated error bars from a public validation database",
+  "queries": ["uncertainty quantification low fidelity aerodynamic prediction conceptual design error model", "aerodynamic database validation low-order tools versus wind tunnel error statistics", "model form uncertainty aerodynamic coefficients conceptual design"]},
+ {"id": "uav-aero", "label": "Drone/UAV aero and stability tool calibrated from flight logs",
+  "queries": ["UAV aerodynamic model identification from flight logs PX4 ArduPilot", "fixed wing drone stability derivatives vortex lattice versus flight test", "small UAV design software aerodynamics market"]},
+ {"id": "tunnel-plan", "label": "Wind-tunnel test-matrix planner: fewer runs via Bayesian design with a physics prior",
+  "queries": ["wind tunnel test design of experiments response surface fewer runs aerodynamic", "Bayesian active learning wind tunnel testing aerodynamic coefficients", "wind tunnel testing cost per hour market"]},
+ {"id": "multifi", "label": "Multi-fidelity: VLM corrected by sparse CFD runs (SU2), Gaussian-process fusion",
+  "queries": ["multi-fidelity Gaussian process vortex lattice CFD aerodynamic database", "SU2 delta wing vortex RANS accuracy", "co-kriging aerodynamic data fusion low and high fidelity"]}
+]}

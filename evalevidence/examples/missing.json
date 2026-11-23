@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "suite": {
+    "id": "synthetic-defense-eval",
+    "dataset_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "evaluator_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "policy_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "cases": [
+      {
+        "id": "case-0",
+        "critical": true
+      },
+      {
+        "id": "case-1",
+        "critical": false
+      },
+      {
+        "id": "case-2",
+        "critical": false
+      }
+    ],
+    "digest": "7526aaeb8cc61a6f9b8d24689f11dd4357579ca117f5c1d3a2ac7813d94e0fdf"
+  },
+  "baseline": {
+    "id": "synthetic-baseline",
+    "model_id": "model-baseline",
+    "model_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "suite_digest": "7526aaeb8cc61a6f9b8d24689f11dd4357579ca117f5c1d3a2ac7813d94e0fdf",
+    "created_at": "2026-11-17T23:59:50Z",
+    "results": [
+      {
+        "case_id": "case-0",
+        "outcome": "pass",
+        "latency_ms": 100,
+        "receipt_digest": "bcdc4f991bfde26ffe9252149049c1df7cb073f0e06e1554975306fdb98d35d6"
+      },
+      {
+        "case_id": "case-1",
+        "outcome": "pass",
+        "latency_ms": 100,
+        "receipt_digest": "0d29a9dc4e9af309db2dc2432055b3cd346291a4839e24cabbd30b2cc91787d2"
+      },
+      {
+        "case_id": "case-2",
+        "outcome": "pass",
+        "latency_ms": 100,
+        "receipt_digest": "a2277280ce4d8215a3c2c806aff98921f52e68e91c1e73ac55daf72b50c760f0"
+      }
+    ]
+  },
+  "candidate": {
+    "id": "synthetic-candidate",
+    "model_id": "model-candidate",
+    "model_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "suite_digest": "7526aaeb8cc61a6f9b8d24689f11dd4357579ca117f5c1d3a2ac7813d94e0fdf",
+    "created_at": "2026-11-17T23:59:50Z",
+    "results": [
+      {
+        "case_id": "case-0",
+        "outcome": "pass",
+        "latency_ms": 100,
+        "receipt_digest": "7ad4118bd6f311370ab20964537b3faa155b7a2601b4e983b252e088f2a8b2f1"
+      },
+      {
+        "case_id": "case-1",
+        "outcome": "pass",
+        "latency_ms": 100,
+        "receipt_digest": "5ddce1146619482b581f0539a9c9dce29a4f68d1a3f3bf0c4656eaddaa15519c"
+      }
+    ]
+  },
+  "max_age_seconds": 86400,
+  "max_latency_increase_ms": 50
+}

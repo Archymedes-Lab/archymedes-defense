@@ -1,0 +1,35 @@
+{
+ "criticalC": 110,
+ "ejectaToNeighbours": 0.3,
+ "contactG": 0.5,
+ "fit": {
+  "leeSpeed": 0.0829,
+  "leeTarget": 0.077,
+  "lopezAdjacent": [
+   107.5,
+   104.9,
+   102.1
+  ],
+  "lopezTarget": [
+   111,
+   96,
+   91
+  ]
+ },
+ "bounds": {
+  "criticalC": [
+   110,
+   260
+  ],
+  "ejectaToNeighbours": [
+   0,
+   0.5
+  ],
+  "contactG": [
+   0.02,
+   5
+  ]
+ },
+ "grid": "Tc step 10 °C, f step 0.05, contact conductance log grid 0.02-5 W/K",
+ "built": "2026-11-19"
+}

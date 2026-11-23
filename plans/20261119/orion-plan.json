@@ -1,0 +1,197 @@
+{
+ "W": 0.45,
+ "rows": [
+  {
+   "rank": 1,
+   "id": "b-validate",
+   "pFirst": 0.151,
+   "eisenhower": "do",
+   "effort": "big_bet",
+   "door": "two_way",
+   "ranks": {
+    "rice": 1,
+    "ice": 3,
+    "wsjf": 3,
+    "leverage": 2,
+    "eisenhower": 2
+   },
+   "level": {
+    "impact": 0.63,
+    "urgency": 0.58,
+    "reach": 0.3,
+    "confidence": 0.59,
+    "effort": 0.75,
+    "leverage": 0.82,
+    "reversibility": 0.62
+   }
+  },
+  {
+   "rank": 2,
+   "id": "b-model",
+   "pFirst": 0.103,
+   "eisenhower": "do",
+   "effort": "big_bet",
+   "door": "two_way",
+   "ranks": {
+    "rice": 2,
+    "ice": 5,
+    "wsjf": 4,
+    "leverage": 4,
+    "eisenhower": 1
+   },
+   "level": {
+    "impact": 0.67,
+    "urgency": 0.58,
+    "reach": 0.32,
+    "confidence": 0.51,
+    "effort": 0.8,
+    "leverage": 0.77,
+    "reversibility": 0.61
+   }
+  },
+  {
+   "rank": 3,
+   "id": "a-validate",
+   "pFirst": 0.171,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "ranks": {
+    "rice": 3,
+    "ice": 1,
+    "wsjf": 2,
+    "leverage": 3,
+    "eisenhower": 8
+   },
+   "level": {
+    "impact": 0.58,
+    "urgency": 0.49,
+    "reach": 0.27,
+    "confidence": 0.6,
+    "effort": 0.67,
+    "leverage": 0.69,
+    "reversibility": 0.68
+   }
+  },
+  {
+   "rank": 4,
+   "id": "b-data",
+   "pFirst": 0.232,
+   "eisenhower": "do",
+   "effort": "big_bet",
+   "door": "two_way",
+   "ranks": {
+    "rice": 6,
+    "ice": 8,
+    "wsjf": 1,
+    "leverage": 1,
+    "eisenhower": 4
+   },
+   "level": {
+    "impact": 0.58,
+    "urgency": 0.51,
+    "reach": 0.28,
+    "confidence": 0.32,
+    "effort": 0.65,
+    "leverage": 0.72,
+    "reversibility": 0.69
+   }
+  },
+  {
+   "rank": 5,
+   "id": "b-ui",
+   "pFirst": 0.109,
+   "eisenhower": "do",
+   "effort": "big_bet",
+   "door": "two_way",
+   "ranks": {
+    "rice": 5,
+    "ice": 7,
+    "wsjf": 5,
+    "leverage": 5,
+    "eisenhower": 3
+   },
+   "level": {
+    "impact": 0.59,
+    "urgency": 0.55,
+    "reach": 0.3,
+    "confidence": 0.45,
+    "effort": 0.74,
+    "leverage": 0.68,
+    "reversibility": 0.63
+   }
+  },
+  {
+   "rank": 6,
+   "id": "a-model",
+   "pFirst": 0.088,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "ranks": {
+    "rice": 4,
+    "ice": 2,
+    "wsjf": 7,
+    "leverage": 7,
+    "eisenhower": 5
+   },
+   "level": {
+    "impact": 0.6,
+    "urgency": 0.49,
+    "reach": 0.29,
+    "confidence": 0.61,
+    "effort": 0.74,
+    "leverage": 0.57,
+    "reversibility": 0.62
+   }
+  },
+  {
+   "rank": 7,
+   "id": "a-ui",
+   "pFirst": 0.092,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "ranks": {
+    "rice": 7,
+    "ice": 4,
+    "wsjf": 6,
+    "leverage": 6,
+    "eisenhower": 6
+   },
+   "level": {
+    "impact": 0.58,
+    "urgency": 0.5,
+    "reach": 0.25,
+    "confidence": 0.49,
+    "effort": 0.72,
+    "leverage": 0.57,
+    "reversibility": 0.66
+   }
+  },
+  {
+   "rank": 8,
+   "id": "a-planner",
+   "pFirst": 0.053,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "ranks": {
+    "rice": 8,
+    "ice": 6,
+    "wsjf": 8,
+    "leverage": 8,
+    "eisenhower": 7
+   },
+   "level": {
+    "impact": 0.6,
+    "urgency": 0.48,
+    "reach": 0.21,
+    "confidence": 0.55,
+    "effort": 0.8,
+    "leverage": 0.61,
+    "reversibility": 0.6
+   }
+  }
+ ]
+}

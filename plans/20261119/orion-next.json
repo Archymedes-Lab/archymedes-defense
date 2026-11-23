@@ -1,0 +1,54 @@
+{
+ "W": 0.64,
+ "rows": [
+  {
+   "rank": 1,
+   "id": "pilot",
+   "pFirst": 0.419,
+   "eisenhower": "do",
+   "effort": "quick_win"
+  },
+  {
+   "rank": 2,
+   "id": "variability",
+   "pFirst": 0.083,
+   "eisenhower": "do",
+   "effort": "big_bet"
+  },
+  {
+   "rank": 3,
+   "id": "barrier",
+   "pFirst": 0.096,
+   "eisenhower": "do",
+   "effort": "big_bet"
+  },
+  {
+   "rank": 4,
+   "id": "more-data",
+   "pFirst": 0.054,
+   "eisenhower": "do",
+   "effort": "big_bet"
+  },
+  {
+   "rank": 5,
+   "id": "kinetics",
+   "pFirst": 0.11,
+   "eisenhower": "do",
+   "effort": "big_bet"
+  },
+  {
+   "rank": 6,
+   "id": "exa",
+   "pFirst": 0.189,
+   "eisenhower": "delegate",
+   "effort": "fill_in"
+  },
+  {
+   "rank": 7,
+   "id": "armor-data",
+   "pFirst": 0.049,
+   "eisenhower": "do",
+   "effort": "big_bet"
+  }
+ ]
+}

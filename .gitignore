@@ -1,0 +1,27 @@
+# nested repo with its own remote
+/proofline/
+# secrets and local env
+.env
+.env.*
+*.pem
+*.key
+# dependencies and build output
+node_modules/
+.next/
+.vercel/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+*.tsbuildinfo
+# world: raw downloads and built outputs are reproducible (see world/ and plans/20261122-synthetic-world/PLAN.md)
+/world/data/
+/web/public/world/
+# downloaded third-party papers and dataset archives (re-fetchable; listed in papers.json / plans)
+*.pdf
+*.zip
+/plans/*/sources/
+/.feasibility/**/fulltext/

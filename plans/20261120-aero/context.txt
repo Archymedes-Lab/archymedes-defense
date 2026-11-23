@@ -1,0 +1,12 @@
+Archymedes is a small startup building defensive and civil engineering-simulation prototypes from public data (battery thermal
+runaway, soft-armor screening, sensor faults). Owner asks for aircraft aerodynamics, fighter-class high-angle-of-attack flow as the
+reference case, with the same approach: research, invariant tests, validation against published data, a Next.js page with drawings
+and 3D. Scope rule: analysis, education and validation only; nothing that improves combat capability (no stealth, weapons, or
+air-combat manoeuvre optimisation). Evidence 2023-2026:
+- Public validation data: NASA TN D-3767 (Polhamus vortex lift), NASA SP-405 (vortex lattice), NASA TM-112360 (F/A-18 HATP
+  baseline aero), NASA CR-165923 (60 deg delta wing balance+pressure), CAWAPI F-16XL flight and CFD, VFE-2 65 deg delta wing.
+- Vortex lattice tools are free and mature (OpenVSP/VSPAERO, AVL, XFLR5); VSPAERO 3.45 warns users to redo validation.
+- Active research on calibrated uncertainty for low-fidelity aero (Bayesian latent GP 2026, ProForMA multi-fidelity databases,
+  UNICADO variable fidelity); no public tool ships error bars measured against a validation corpus.
+- Fixed-wing UAV models identified from flight logs (Skywalker X8, Bixler; AVL vs flight-test gaps); public PX4 logs exist.
+- Wind-tunnel time costs about $1,100/h (automotive) up to $50,000/h (large facilities); Bayesian adaptive test design papers 2026.

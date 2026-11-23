@@ -1,0 +1,148 @@
+{
+ "site": "ch-lauterbrunnen",
+ "engine": "ORION (Borda over RICE, ICE, WSJF, leverage, Eisenhower; judgments by Jev)",
+ "model": "jev-1.14.0",
+ "agreement": 0.59,
+ "rows": [
+  {
+   "rank": 1,
+   "id": "4k-masts",
+   "label": "Fit 4K cameras to the corner masts, aimed along the fence",
+   "evidence": "Cameras see 63% of the fence line and 69% of the yard (now 2% and 0%). Hard case (drone camera and fence sensor out, intrusion at a random time across equipment charge cycles): intruder met in time 119/120 (95% interval 95%-100%) (now 97/120 (95% interval 73%-87%)), detected after 467 s (now 502 s). The paired runs cannot tell this apart from: Camera masts at the middle of both long sides. Cost: USD 2,000 to USD 8,000 once, nothing a year (assumed: four 4K bullet cameras at $500-2,000 each installed, swapped onto the existing masts and re-aimed along the fence).",
+   "pFirst": 0.159,
+   "eisenhower": "schedule",
+   "effort": "quick_win",
+   "door": "two_way",
+   "level": {
+    "impact": 0.619,
+    "urgency": 0.381,
+    "reach": 0.331,
+    "confidence": 0.706,
+    "effort": 0.349,
+    "leverage": 0.634,
+    "reversibility": 0.625
+   }
+  },
+  {
+   "rank": 2,
+   "id": "re-aimed-masts",
+   "label": "Re-aim the four corner cameras to look along the fence",
+   "evidence": "Cameras see 32% of the fence line and 20% of the yard (now 2% and 0%). Hard case (drone camera and fence sensor out, intrusion at a random time across equipment charge cycles): intruder met in time 97/120 (95% interval 73%-87%) (now 97/120 (95% interval 73%-87%)), detected after 502 s (now 502 s). The paired runs cannot tell this apart from: As it is now. Cost: USD 0 to USD 2,000 once, nothing a year (no new equipment; a technician's visit to re-aim four cameras (assumed up to $2,000)).",
+   "pFirst": 0.393,
+   "eisenhower": "drop",
+   "effort": "fill_in",
+   "door": "two_way",
+   "level": {
+    "impact": 0.364,
+    "urgency": 0.323,
+    "reach": 0.327,
+    "confidence": 0.346,
+    "effort": 0.139,
+    "leverage": 0.513,
+    "reversibility": 0.854
+   }
+  },
+  {
+   "rank": 3,
+   "id": "second-drone",
+   "label": "Add a second drone on the patrol circuit",
+   "evidence": "Hard case (drone camera and fence sensor out, intrusion at a random time across equipment charge cycles): intruder met in time 111/120 (95% interval 86%-97%) (now 97/120 (95% interval 73%-87%)), detected after 298 s (now 502 s). The paired runs cannot tell this apart from: A second guard on foot patrol. A drone is available 73% of the time (now 47%). Cost: USD 15,000 to USD 50,000 once, nothing a year (one surveillance drone at $15,000-50,000 to buy; no subscription price was found).",
+   "pFirst": 0.048,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.575,
+    "urgency": 0.326,
+    "reach": 0.325,
+    "confidence": 0.655,
+    "effort": 0.517,
+    "leverage": 0.523,
+    "reversibility": 0.566
+   }
+  },
+  {
+   "rank": 4,
+   "id": "verify-first",
+   "label": "Check fence alarms by drone or robot dog before sending guards",
+   "evidence": "Over 30 days and 94 nuisance alarms: guards sent 0 times and 0.22 guard hours (114 times and 6.52 hours when everyone responds). Intrusion during a nuisance alarm met in time 38/40 (38/40 when everyone responds). 1 alarms found no machine free. Cost: none; saves about 6 guard hours a month.",
+   "pFirst": 0.19,
+   "eisenhower": "drop",
+   "effort": "fill_in",
+   "door": "two_way",
+   "level": {
+    "impact": 0.322,
+    "urgency": 0.356,
+    "reach": 0.312,
+    "confidence": 0.784,
+    "effort": 0.248,
+    "leverage": 0.384,
+    "reversibility": 0.911
+   }
+  },
+  {
+   "rank": 5,
+   "id": "mid-masts",
+   "label": "Add camera masts at the middle of both long sides",
+   "evidence": "Cameras see 3% of the fence line and 0% of the yard (now 2% and 0%). Hard case (drone camera and fence sensor out, intrusion at a random time across equipment charge cycles): intruder met in time 114/120 (95% interval 89%-98%) (now 97/120 (95% interval 73%-87%)), detected after 465 s (now 502 s). The paired runs cannot tell this apart from: 4K cameras on the four corner masts, aimed along the fence. Cost: USD 12,000 to USD 90,000 once, nothing a year (two installed thermal cameras at $3,000-15,000 each, times 2-3 for poles, cabling, recording and integration).",
+   "pFirst": 0.019,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "one_way",
+   "level": {
+    "impact": 0.524,
+    "urgency": 0.322,
+    "reach": 0.326,
+    "confidence": 0.636,
+    "effort": 0.588,
+    "leverage": 0.475,
+    "reversibility": 0.375
+   }
+  },
+  {
+   "rank": 6,
+   "id": "second-guard",
+   "label": "Add a second guard on foot patrol",
+   "evidence": "Hard case (drone camera and fence sensor out, intrusion at a random time across equipment charge cycles): intruder met in time 113/120 (95% interval 88%-98%) (now 97/120 (95% interval 73%-87%)), detected after 431 s (now 502 s). The paired runs cannot tell this apart from: A second drone on the same circuit. Cost: nothing once, USD 245,280 to USD 367,920 a year (one more post staffed all year at $28-42 an hour fully loaded).",
+   "pFirst": 0.051,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.518,
+    "urgency": 0.339,
+    "reach": 0.306,
+    "confidence": 0.646,
+    "effort": 0.601,
+    "leverage": 0.4,
+    "reversibility": 0.511
+   }
+  },
+  {
+   "rank": 7,
+   "id": "callback",
+   "label": "Confirm every pickup by phone at the gate before admitting",
+   "evidence": "Fictitious pickup stopped in 38/40 shifts (12/40 with a paper check); mean wait 9 min (3 min); longest wait 35 min (16 min). The catch rates (0.95 against 0.35) are assumed, not measured. Cost: no equipment; the gate guard's time and the drivers' waiting.",
+   "pFirst": 0.14,
+   "eisenhower": "drop",
+   "effort": "fill_in",
+   "door": "two_way",
+   "level": {
+    "impact": 0.227,
+    "urgency": 0.236,
+    "reach": 0.358,
+    "confidence": 0.089,
+    "effort": 0.202,
+    "leverage": 0.275,
+    "reversibility": 0.858
+   }
+  }
+ ],
+ "context_sha256": "bcb0ec49121965794d19b8aa4dbbe2fb55fdc00405a6676cc9052d461088e09c",
+ "context_chars": 4297,
+ "evidence_from": {
+  "sim_digest": "7a55dde40762348db81122dda4e1d72b419124375f5110c8d2b5e0b43c200327",
+  "seeds": 120
+ },
+ "note": "Advisory. ORION ranks on the measured evidence above; the costs are rough public price ranges, and the evidence rests on the simulation's stated assumptions."
+}

@@ -1,0 +1,273 @@
+{
+ "commit": "uq-aero",
+ "innovation": "multifi",
+ "evpi": 0.1179,
+ "escalate": [
+  "uq-aero",
+  "multifi"
+ ],
+ "stats": [
+  {
+   "id": "uq-aero",
+   "mean": 0.521,
+   "std": 0.124,
+   "p_best": 0.262,
+   "status": "clear",
+   "niche": "trust",
+   "reliable": true
+  },
+  {
+   "id": "multifi",
+   "mean": 0.517,
+   "std": 0.13,
+   "p_best": 0.261,
+   "status": "clear",
+   "niche": "trust",
+   "reliable": true
+  },
+  {
+   "id": "tunnel-plan",
+   "mean": 0.508,
+   "std": 0.132,
+   "p_best": 0.242,
+   "status": "clear",
+   "niche": "test",
+   "reliable": true
+  },
+  {
+   "id": "vortex-lift",
+   "mean": 0.453,
+   "std": 0.119,
+   "p_best": 0.1,
+   "status": "clear",
+   "niche": "solver",
+   "reliable": true
+  },
+  {
+   "id": "uav-sysid",
+   "mean": 0.449,
+   "std": 0.115,
+   "p_best": 0.094,
+   "status": "clear",
+   "niche": "data",
+   "reliable": true
+  },
+  {
+   "id": "status-quo",
+   "mean": 0.362,
+   "std": 0.13,
+   "p_best": 0.04,
+   "status": "clear",
+   "niche": "other",
+   "reliable": true
+  }
+ ],
+ "dims": {
+  "status-quo": {
+   "moat": [
+    0.161,
+    0.332,
+    0.289,
+    0.165,
+    0.053
+   ],
+   "usefulness": [
+    0.805,
+    0.128,
+    0.025,
+    0.017,
+    0.025
+   ],
+   "feasible": [
+    0.068,
+    0.104,
+    0.281,
+    0.416,
+    0.131
+   ],
+   "demand": [
+    0.121,
+    0.13,
+    0.314,
+    0.365,
+    0.07
+   ]
+  },
+  "vortex-lift": {
+   "moat": [
+    0.076,
+    0.434,
+    0.408,
+    0.056,
+    0.027
+   ],
+   "usefulness": [
+    0.022,
+    0.111,
+    0.375,
+    0.47,
+    0.022
+   ],
+   "feasible": [
+    0.022,
+    0.187,
+    0.47,
+    0.298,
+    0.022
+   ],
+   "demand": [
+    0.08,
+    0.27,
+    0.466,
+    0.163,
+    0.021
+   ]
+  },
+  "uq-aero": {
+   "moat": [
+    0.023,
+    0.204,
+    0.591,
+    0.138,
+    0.044
+   ],
+   "usefulness": [
+    0.017,
+    0.024,
+    0.12,
+    0.733,
+    0.107
+   ],
+   "feasible": [
+    0.022,
+    0.306,
+    0.46,
+    0.197,
+    0.015
+   ],
+   "demand": [
+    0.037,
+    0.184,
+    0.43,
+    0.307,
+    0.042
+   ]
+  },
+  "uav-sysid": {
+   "moat": [
+    0.074,
+    0.401,
+    0.317,
+    0.187,
+    0.021
+   ],
+   "usefulness": [
+    0.015,
+    0.24,
+    0.53,
+    0.199,
+    0.015
+   ],
+   "feasible": [
+    0.016,
+    0.159,
+    0.55,
+    0.252,
+    0.023
+   ],
+   "demand": [
+    0.064,
+    0.226,
+    0.522,
+    0.166,
+    0.022
+   ]
+  },
+  "tunnel-plan": {
+   "moat": [
+    0.031,
+    0.172,
+    0.417,
+    0.317,
+    0.064
+   ],
+   "usefulness": [
+    0.033,
+    0.079,
+    0.239,
+    0.601,
+    0.049
+   ],
+   "feasible": [
+    0.07,
+    0.44,
+    0.364,
+    0.111,
+    0.015
+   ],
+   "demand": [
+    0.037,
+    0.162,
+    0.352,
+    0.386,
+    0.063
+   ]
+  },
+  "multifi": {
+   "moat": [
+    0.031,
+    0.177,
+    0.496,
+    0.238,
+    0.058
+   ],
+   "usefulness": [
+    0.016,
+    0.034,
+    0.177,
+    0.716,
+    0.056
+   ],
+   "feasible": [
+    0.015,
+    0.238,
+    0.519,
+    0.211,
+    0.015
+   ],
+   "demand": [
+    0.045,
+    0.208,
+    0.441,
+    0.269,
+    0.037
+   ]
+  }
+ },
+ "violations": {
+  "status-quo": {
+   "combat": 0.061,
+   "export": 0.115
+  },
+  "vortex-lift": {
+   "combat": 0.096,
+   "export": 0.153
+  },
+  "uq-aero": {
+   "combat": 0.078,
+   "export": 0.183
+  },
+  "uav-sysid": {
+   "combat": 0.044,
+   "export": 0.124
+  },
+  "tunnel-plan": {
+   "combat": 0.096,
+   "export": 0.153
+  },
+  "multifi": {
+   "combat": 0.106,
+   "export": 0.183
+  }
+ }
+}

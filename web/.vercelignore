@@ -1,0 +1,12 @@
+.next
+node_modules
+*.tsbuildinfo
+scripts/jev_review.py
+.env*
+.vercel
+scripts/jev_auth_review.py
+tests
+scripts/jev_subsea_review.py
+scripts/jev_armor_review.py
+scripts/calibrate_tr.ts
+scripts/validate_tr.ts

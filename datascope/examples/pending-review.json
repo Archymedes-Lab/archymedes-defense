@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "request": {
+    "dataset_id": "synthetic-data-1",
+    "purpose": "evaluation"
+  },
+  "datasets": [
+    {
+      "id": "synthetic-data-0",
+      "content_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_id": "synthetic-source",
+      "permission_id": "permission-0",
+      "derived_from": []
+    },
+    {
+      "id": "synthetic-data-1",
+      "content_digest": "0000000000000000000000000000000000000000000000000000000000000001",
+      "source_id": "synthetic-source",
+      "permission_id": "permission-1",
+      "derived_from": [
+        "synthetic-data-0"
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "id": "permission-0",
+      "source_id": "synthetic-source",
+      "content_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "grantor_record": "synthetic-grant",
+      "allowed_purposes": [
+        "evaluation",
+        "training"
+      ],
+      "allow_derivation": true,
+      "expires_at": "2026-12-01T00:00:00Z",
+      "reviewer_id": "synthetic-reviewer",
+      "reviewed_at": "2026-11-17T23:59:50Z",
+      "decision": "pending"
+    },
+    {
+      "id": "permission-1",
+      "source_id": "synthetic-source",
+      "content_digest": "0000000000000000000000000000000000000000000000000000000000000001",
+      "grantor_record": "synthetic-grant",
+      "allowed_purposes": [
+        "evaluation",
+        "training"
+      ],
+      "allow_derivation": true,
+      "expires_at": "2026-12-01T00:00:00Z",
+      "reviewer_id": "synthetic-reviewer",
+      "reviewed_at": "2026-11-17T23:59:50Z",
+      "decision": "approved"
+    }
+  ],
+  "sources": [
+    {
+      "id": "synthetic-source",
+      "available": true,
+      "checked_at": "2026-11-17T23:59:50Z",
+      "max_age_seconds": 86400
+    }
+  ],
+  "max_review_age_seconds": 86400
+}

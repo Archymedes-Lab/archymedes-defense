@@ -1,0 +1,1 @@
+User redirected work to higher-defensibility research before further implementation. EvalEvidence and DataScope each have a runnable first pass and 13 engine tests passing. Shared CLI/IO tests, static gates, packaging and commercial validation are unfinished. No commits, public repositories or production deployment were made for these new trees. Do not label them complete.

@@ -1,0 +1,1420 @@
+{
+ "crossref": {
+  "vlm": [
+   {
+    "title": "A rapid and sensitive method for the quantitation of microgram quantities of protein utilizing the principle of protein-dye binding",
+    "year": 1976,
+    "cites": 222209,
+    "doi": "10.1016/0003-2697(76)90527-3",
+    "venue": "Analytical Biochemistry"
+   },
+   {
+    "title": "Analysis of Relative Gene Expression Data Using Real-Time Quantitative PCR and the 2\u2212\u0394\u0394CT Method",
+    "year": 2001,
+    "cites": 168461,
+    "doi": "10.1006/meth.2001.1262",
+    "venue": "Methods"
+   },
+   {
+    "title": "Projector augmented-wave method",
+    "year": 1994,
+    "cites": 92169,
+    "doi": "10.1103/physrevb.50.17953",
+    "venue": "Physical Review B"
+   },
+   {
+    "title": "From ultrasoft pseudopotentials to the projector augmented-wave method",
+    "year": 1999,
+    "cites": 84753,
+    "doi": "10.1103/physrevb.59.1758",
+    "venue": "Physical Review B"
+   },
+   {
+    "title": "Common method biases in behavioral research: A critical review of the literature and recommended remedies.",
+    "year": 2003,
+    "cites": 73560,
+    "doi": "10.1037/0021-9010.88.5.879",
+    "venue": "Journal of Applied Psychology"
+   },
+   {
+    "title": "A SIMPLE METHOD FOR THE ISOLATION AND PURIFICATION OF TOTAL LIPIDES FROM ANIMAL TISSUES",
+    "year": 1957,
+    "cites": 54581,
+    "doi": "10.1016/s0021-9258(18)64849-5",
+    "venue": "Journal of Biological Chemistry"
+   },
+   {
+    "title": "A new method of classifying prognostic comorbidity in longitudinal studies: Development and validation",
+    "year": 1987,
+    "cites": 43869,
+    "doi": "10.1016/0021-9681(87)90171-8",
+    "venue": "Journal of Chronic Diseases"
+   },
+   {
+    "title": "Single-step method of RNA isolation by acid guanidinium thiocyanate-phenol-chloroform extraction",
+    "year": 1987,
+    "cites": 43856,
+    "doi": "10.1016/0003-2697(87)90021-2",
+    "venue": "Analytical Biochemistry"
+   }
+  ],
+  "polhamus": [
+   {
+    "title": "A Computational Approach to Edge Detection",
+    "year": 1986,
+    "cites": 23961,
+    "doi": "10.1109/tpami.1986.4767851",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+   },
+   {
+    "title": "Relationship of Childhood Abuse and Household Dysfunction to Many of the Leading Causes of Death in Adults",
+    "year": 1998,
+    "cites": 15921,
+    "doi": "10.1016/s0749-3797(98)00017-8",
+    "venue": "American Journal of Preventive Medicine"
+   },
+   {
+    "title": "Scale-space and edge detection using anisotropic diffusion",
+    "year": 1990,
+    "cites": 9733,
+    "doi": "10.1109/34.56205",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+   },
+   {
+    "title": "Edge Computing: Vision and Challenges",
+    "year": 2016,
+    "cites": 8255,
+    "doi": "10.1109/jiot.2016.2579198",
+    "venue": "IEEE Internet of Things Journal"
+   },
+   {
+    "title": "A Combined Corner and Edge Detector",
+    "year": 1988,
+    "cites": 7114,
+    "doi": "10.5244/c.2.23",
+    "venue": "Procedings of the Alvey Vision Conference 1988"
+   },
+   {
+    "title": "The American Joint Committee on Cancer: the 7th Edition of the AJCC Cancer Staging Manual and the Future of TNM",
+    "year": 2010,
+    "cites": 6841,
+    "doi": "10.1245/s10434-010-0985-4",
+    "venue": "Annals of Surgical Oncology"
+   },
+   {
+    "title": "Identification of Active Edge Sites for Electrochemical H\n                    <sub>2</sub>\n                    Evolution from MoS\n                    <sub>2</sub>\n                    Nanocatalysts",
+    "year": 2007,
+    "cites": 6037,
+    "doi": "10.1126/science.1141483",
+    "venue": "Science"
+   },
+   {
+    "title": "Cutting-edge terahertz technology",
+    "year": 2007,
+    "cites": 6026,
+    "doi": "10.1038/nphoton.2007.3",
+    "venue": "Nature Photonics"
+   }
+  ],
+  "vfe2": [
+   {
+    "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+    "year": 2015,
+    "cites": 65387,
+    "doi": "10.1007/978-3-319-24574-4_28",
+    "venue": "Lecture Notes in Computer Science"
+   },
+   {
+    "title": "XGBoost",
+    "year": 2016,
+    "cites": 52109,
+    "doi": "10.1145/2939672.2939785",
+    "venue": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining"
+   },
+   {
+    "title": "Distinctive Image Features from Scale-Invariant Keypoints",
+    "year": 2004,
+    "cites": 47265,
+    "doi": "10.1023/b:visi.0000029664.99615.94",
+    "venue": "International Journal of Computer Vision"
+   },
+   {
+    "title": "Particle swarm optimization",
+    "year": null,
+    "cites": 42760,
+    "doi": "10.1109/icnn.1995.488968",
+    "venue": "Proceedings of ICNN'95 - International Conference on Neural Networks"
+   },
+   {
+    "title": "Consolidated criteria for reporting qualitative research (COREQ): a 32-item checklist for interviews and focus groups",
+    "year": 2007,
+    "cites": 39456,
+    "doi": "10.1093/intqhc/mzm042",
+    "venue": "International Journal for Quality in Health Care"
+   },
+   {
+    "title": "Naturalistic inquiry",
+    "year": 1985,
+    "cites": 38186,
+    "doi": "10.1016/0147-1767(85)90062-8",
+    "venue": "International Journal of Intercultural Relations"
+   },
+   {
+    "title": "Scoping studies: towards a methodological framework",
+    "year": 2005,
+    "cites": 33132,
+    "doi": "10.1080/1364557032000119616",
+    "venue": "International Journal of Social Research Methodology"
+   },
+   {
+    "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+    "year": 2021,
+    "cites": 32544,
+    "doi": "10.1109/iccv48922.2021.00986",
+    "venue": "2021 IEEE/CVF International Conference on Computer Vision (ICCV)"
+   }
+  ],
+  "breakdown": [
+   {
+    "title": "A global reference for human genetic variation",
+    "year": 2015,
+    "cites": 18575,
+    "doi": "10.1038/nature15393",
+    "venue": "Nature"
+   },
+   {
+    "title": "Computational thinking",
+    "year": 2006,
+    "cites": 6285,
+    "doi": "10.1145/1118178.1118215",
+    "venue": "Communications of the ACM"
+   },
+   {
+    "title": "On the identification of a vortex",
+    "year": 1995,
+    "cites": 5945,
+    "doi": "10.1017/s0022112095000462",
+    "venue": "Journal of Fluid Mechanics"
+   },
+   {
+    "title": "A SPECTROPHOTOMETRIC METHOD FOR MEASURING THE BREAKDOWN OF HYDROGEN PEROXIDE BY CATALASE",
+    "year": 1952,
+    "cites": 5445,
+    "doi": "10.1016/s0021-9258(19)50881-x",
+    "venue": "Journal of Biological Chemistry"
+   },
+   {
+    "title": "Immunologic self-tolerance maintained by activated T cells expressing IL-2 receptor \u03b1-chains (CD25). Breakdown of a single mechanism of self-tolerance causes various autoimmune diseases",
+    "year": 1995,
+    "cites": 5140,
+    "doi": "10.4049/jimmunol.155.3.1151",
+    "venue": "The Journal of Immunology"
+   },
+   {
+    "title": "Genome sequence of the palaeopolyploid soybean",
+    "year": 2010,
+    "cites": 3954,
+    "doi": "10.1038/nature08670",
+    "venue": "Nature"
+   },
+   {
+    "title": "The B73 Maize Genome: Complexity, Diversity, and Dynamics",
+    "year": 2009,
+    "cites": 3605,
+    "doi": "10.1126/science.1178534",
+    "venue": "Science"
+   },
+   {
+    "title": "Vortex Dynamics in the Cylinder Wake",
+    "year": 1996,
+    "cites": 3281,
+    "doi": "10.1146/annurev.fl.28.010196.002401",
+    "venue": "Annual Review of Fluid Mechanics"
+   }
+  ],
+  "highaoa": [
+   {
+    "title": "MUSCLE: multiple sequence alignment with high accuracy and high throughput",
+    "year": 2004,
+    "cites": 39604,
+    "doi": "10.1093/nar/gkh340",
+    "venue": "Nucleic Acids Research"
+   },
+   {
+    "title": "DADA2: High-resolution sample inference from Illumina amplicon data",
+    "year": 2016,
+    "cites": 35515,
+    "doi": "10.1038/nmeth.3869",
+    "venue": "Nature Methods"
+   },
+   {
+    "title": "Cutadapt removes adapter sequences from high-throughput sequencing reads",
+    "year": 2011,
+    "cites": 32874,
+    "doi": "10.14806/ej.17.1.200",
+    "venue": "EMBnet.journal"
+   },
+   {
+    "title": "QIIME allows analysis of high-throughput community sequencing data",
+    "year": 2010,
+    "cites": 31562,
+    "doi": "10.1038/nmeth.f.303",
+    "venue": "Nature Methods"
+   },
+   {
+    "title": "GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers",
+    "year": 2015,
+    "cites": 27563,
+    "doi": "10.1016/j.softx.2015.06.001",
+    "venue": "SoftwareX"
+   },
+   {
+    "title": "A low-cost, high-efficiency solar cell based on dye-sensitized colloidal TiO2 films",
+    "year": 1991,
+    "cites": 26967,
+    "doi": "10.1038/353737a0",
+    "venue": "Nature"
+   },
+   {
+    "title": "Executive Summary of the Third Report of the National Cholesterol Education Program (NCEP) Expert Panel on Detection, Evaluation, and Treatment of High Blood Cholesterol in Adults (Adult Treatment Panel III)",
+    "year": 2001,
+    "cites": 23587,
+    "doi": "10.1001/jama.285.19.2486",
+    "venue": "JAMA: The Journal of the American Medical Association"
+   },
+   {
+    "title": "HTSeq\u2014a Python framework to work with high-throughput sequencing data",
+    "year": 2014,
+    "cites": 20444,
+    "doi": "10.1093/bioinformatics/btu638",
+    "venue": "Bioinformatics"
+   }
+  ],
+  "nvlm": [
+   {
+    "title": "A rapid and sensitive method for the quantitation of microgram quantities of protein utilizing the principle of protein-dye binding",
+    "year": 1976,
+    "cites": 222209,
+    "doi": "10.1016/0003-2697(76)90527-3",
+    "venue": "Analytical Biochemistry"
+   },
+   {
+    "title": "Analysis of Relative Gene Expression Data Using Real-Time Quantitative PCR and the 2\u2212\u0394\u0394CT Method",
+    "year": 2001,
+    "cites": 168461,
+    "doi": "10.1006/meth.2001.1262",
+    "venue": "Methods"
+   },
+   {
+    "title": "Projector augmented-wave method",
+    "year": 1994,
+    "cites": 92169,
+    "doi": "10.1103/physrevb.50.17953",
+    "venue": "Physical Review B"
+   },
+   {
+    "title": "From ultrasoft pseudopotentials to the projector augmented-wave method",
+    "year": 1999,
+    "cites": 84753,
+    "doi": "10.1103/physrevb.59.1758",
+    "venue": "Physical Review B"
+   },
+   {
+    "title": "Common method biases in behavioral research: A critical review of the literature and recommended remedies.",
+    "year": 2003,
+    "cites": 73560,
+    "doi": "10.1037/0021-9010.88.5.879",
+    "venue": "Journal of Applied Psychology"
+   },
+   {
+    "title": "A SIMPLE METHOD FOR THE ISOLATION AND PURIFICATION OF TOTAL LIPIDES FROM ANIMAL TISSUES",
+    "year": 1957,
+    "cites": 54581,
+    "doi": "10.1016/s0021-9258(18)64849-5",
+    "venue": "Journal of Biological Chemistry"
+   },
+   {
+    "title": "A new method of classifying prognostic comorbidity in longitudinal studies: Development and validation",
+    "year": 1987,
+    "cites": 43869,
+    "doi": "10.1016/0021-9681(87)90171-8",
+    "venue": "Journal of Chronic Diseases"
+   },
+   {
+    "title": "Single-step method of RNA isolation by acid guanidinium thiocyanate-phenol-chloroform extraction",
+    "year": 1987,
+    "cites": 43856,
+    "doi": "10.1016/0003-2697(87)90021-2",
+    "venue": "Analytical Biochemistry"
+   }
+  ],
+  "lowfi": [
+   {
+    "title": "The moderator\u2013mediator variable distinction in social psychological research: Conceptual, strategic, and statistical considerations.",
+    "year": 1986,
+    "cites": 74095,
+    "doi": "10.1037/0022-3514.51.6.1173",
+    "venue": "Journal of Personality and Social Psychology"
+   },
+   {
+    "title": "Highly accurate protein structure prediction with AlphaFold",
+    "year": 2021,
+    "cites": 47554,
+    "doi": "10.1038/s41586-021-03819-2",
+    "venue": "Nature"
+   },
+   {
+    "title": "Comparison of simple potential functions for simulating liquid water",
+    "year": 1983,
+    "cites": 40962,
+    "doi": "10.1063/1.445869",
+    "venue": "The Journal of Chemical Physics"
+   },
+   {
+    "title": "A Conceptual Model of Service Quality and Its Implications for Future Research",
+    "year": 1985,
+    "cites": 36052,
+    "doi": "10.1177/002224298504900403",
+    "venue": "Journal of Marketing"
+   },
+   {
+    "title": "Balanced basis sets of split valence, triple zeta valence and quadruple zeta valence quality for H to Rn: Design and assessment of accuracy",
+    "year": 2005,
+    "cites": 30822,
+    "doi": "10.1039/b508541a",
+    "venue": "Physical Chemistry Chemical Physics"
+   },
+   {
+    "title": "The MOS 36-ltem Short-Form Health Survey (SF-36)",
+    "year": 1992,
+    "cites": 29859,
+    "doi": "10.1097/00005650-199206000-00002",
+    "venue": "Medical Care"
+   },
+   {
+    "title": "A Three-Dimensional Conceptual Model of Corporate Performance",
+    "year": 1979,
+    "cites": 28169,
+    "doi": "10.2307/257850",
+    "venue": "The Academy of Management Review"
+   },
+   {
+    "title": "A low-cost, high-efficiency solar cell based on dye-sensitized colloidal TiO2 films",
+    "year": 1991,
+    "cites": 26967,
+    "doi": "10.1038/353737a0",
+    "venue": "Nature"
+   }
+  ],
+  "uav": [
+   {
+    "title": "LATTICE BOLTZMANN METHOD FOR FLUID FLOWS",
+    "year": 1998,
+    "cites": 6641,
+    "doi": "10.1146/annurev.fluid.30.1.329",
+    "venue": "Annual Review of Fluid Mechanics"
+   },
+   {
+    "title": "A grid-based Bader analysis algorithm without lattice bias",
+    "year": 2009,
+    "cites": 5945,
+    "doi": "10.1088/0953-8984/21/8/084204",
+    "venue": "Journal of Physics: Condensed Matter"
+   },
+   {
+    "title": "On the identification of a vortex",
+    "year": 1995,
+    "cites": 5945,
+    "doi": "10.1017/s0022112095000462",
+    "venue": "Journal of Fluid Mechanics"
+   },
+   {
+    "title": "Type, Density, and Location of Immune Cells Within Human Colorectal Tumors Predict Clinical Outcome",
+    "year": 2006,
+    "cites": 5863,
+    "doi": "10.1126/science.1129139",
+    "venue": "Science"
+   },
+   {
+    "title": "Anomalous Lattice Vibrations of Single- and Few-Layer MoS\n                    <sub>2</sub>",
+    "year": 2010,
+    "cites": 4873,
+    "doi": "10.1021/nn1003937",
+    "venue": "ACS Nano"
+   },
+   {
+    "title": "Lattice BGK Models for Navier-Stokes Equation",
+    "year": 1992,
+    "cites": 4850,
+    "doi": "10.1209/0295-5075/17/6/001",
+    "venue": "Europhysics Letters (EPL)"
+   },
+   {
+    "title": "Skyrmion Lattice in a Chiral Magnet",
+    "year": 2009,
+    "cites": 4663,
+    "doi": "10.1126/science.1166767",
+    "venue": "Science"
+   },
+   {
+    "title": "Spatial Interaction and the Statistical Analysis of Lattice Systems",
+    "year": 1974,
+    "cites": 4369,
+    "doi": "10.1111/j.2517-6161.1974.tb00999.x",
+    "venue": "Journal of the Royal Statistical Society Series B: Statistical Methodology"
+   }
+  ],
+  "saccon": [
+   {
+    "title": "AIJ guidelines for practical applications of CFD to pedestrian wind environment around buildings",
+    "year": 2008,
+    "cites": 2287,
+    "doi": "10.1016/j.jweia.2008.02.058",
+    "venue": "Journal of Wind Engineering and Industrial Aerodynamics"
+   },
+   {
+    "title": "Aerodynamics of solid bodies in the solar nebula",
+    "year": 1977,
+    "cites": 1675,
+    "doi": "10.1093/mnras/180.2.57",
+    "venue": "Monthly Notices of the Royal Astronomical Society"
+   },
+   {
+    "title": "XFOIL: An Analysis and Design System for Low Reynolds Number Airfoils",
+    "year": 1989,
+    "cites": 1568,
+    "doi": "10.1007/978-3-642-84010-4_1",
+    "venue": "Lecture Notes in Engineering"
+   },
+   {
+    "title": "On a quasi-linear parabolic equation occurring in aerodynamics",
+    "year": 1951,
+    "cites": 1511,
+    "doi": "10.1090/qam/42889",
+    "venue": "Quarterly of Applied Mathematics"
+   },
+   {
+    "title": "Low-Speed Aerodynamics",
+    "year": 2001,
+    "cites": 1377,
+    "doi": "10.1017/cbo9780511810329",
+    "venue": ""
+   },
+   {
+    "title": "The aerodynamics of insect flight",
+    "year": 2003,
+    "cites": 1144,
+    "doi": "10.1242/jeb.00663",
+    "venue": "Journal of Experimental Biology"
+   },
+   {
+    "title": "Wind turbine wake aerodynamics",
+    "year": 2003,
+    "cites": 1121,
+    "doi": "10.1016/s0376-0421(03)00078-2",
+    "venue": "Progress in Aerospace Sciences"
+   },
+   {
+    "title": "Appropriate boundary conditions for computational wind engineering models using the k-\u03f5 turbulence model",
+    "year": 1993,
+    "cites": 1030,
+    "doi": "10.1016/0167-6105(93)90124-7",
+    "venue": "Journal of Wind Engineering and Industrial Aerodynamics"
+   }
+  ],
+  "surrogate": [
+   {
+    "title": "A new look at the statistical model identification",
+    "year": 1974,
+    "cites": 43653,
+    "doi": "10.1109/tac.1974.1100705",
+    "venue": "IEEE Transactions on Automatic Control"
+   },
+   {
+    "title": "An Integrative Model of Organizational Trust",
+    "year": 1995,
+    "cites": 42884,
+    "doi": "10.2307/258792",
+    "venue": "The Academy of Management Review"
+   },
+   {
+    "title": "Estimating the Dimension of a Model",
+    "year": 1978,
+    "cites": 36379,
+    "doi": "10.1214/aos/1176344136",
+    "venue": "The Annals of Statistics"
+   },
+   {
+    "title": "A Conceptual Model of Service Quality and Its Implications for Future Research",
+    "year": 1985,
+    "cites": 36052,
+    "doi": "10.1177/002224298504900403",
+    "venue": "Journal of Marketing"
+   },
+   {
+    "title": "A new mathematical model for relative quantification in real-time RT-PCR",
+    "year": 2001,
+    "cites": 30451,
+    "doi": "10.1093/nar/29.9.e45",
+    "venue": "Nucleic Acids Research"
+   },
+   {
+    "title": "<i>Coot</i>\n                    : model-building tools for molecular graphics",
+    "year": 2004,
+    "cites": 30049,
+    "doi": "10.1107/s0907444904019158",
+    "venue": "Acta Crystallographica Section D Biological Crystallography"
+   },
+   {
+    "title": "A Three-Dimensional Conceptual Model of Corporate Performance",
+    "year": 1979,
+    "cites": 28169,
+    "doi": "10.2307/257850",
+    "venue": "The Academy of Management Review"
+   },
+   {
+    "title": "Consumer Perceptions of Price, Quality, and Value: A Means-End Model and Synthesis of Evidence",
+    "year": 1988,
+    "cites": 27736,
+    "doi": "10.1177/002224298805200302",
+    "venue": "Journal of Marketing"
+   }
+  ]
+ },
+ "ntrs": {
+  "polhamus": [
+   {
+    "id": 19670003842,
+    "title": "A concept of the vortex lift of sharp-edge delta wings based on a leading-edge-suction analogy",
+    "year": "1966",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19670003842/downloads/19670003842.pdf",
+    "txt": "/api/citations/19670003842/downloads/19670003842.txt",
+    "nums": [
+     "NASA-TN-D-3767",
+     "Report Number: NASA-TN-D-3767"
+    ]
+   },
+   {
+    "id": 19710044154,
+    "title": "Predictions of vortex-lift characteristics by a leading-edge suction analogy",
+    "year": "1971",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AIAA PAPER 69-1133",
+     "Report Number: AIAA PAPER 69-1133"
+    ]
+   },
+   {
+    "id": 19680022518,
+    "title": "Application of the leading-edge-suction analogy of vortex lift to the drag due to lift of sharp-edge delta wings",
+    "year": "1968",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19680022518/downloads/19680022518.pdf",
+    "txt": "/api/citations/19680022518/downloads/19680022518.txt",
+    "nums": [
+     "NASA-TN-D-4739",
+     "Report Number: NASA-TN-D-4739"
+    ]
+   },
+   {
+    "id": 19700034491,
+    "title": "Predictions of vortex-lift characteristics based on a leading-edge suction analogy.",
+    "year": "1969",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AIAA PAPER 69-1133",
+     "Report Number: AIAA PAPER 69-1133"
+    ]
+   },
+   {
+    "id": 19760010952,
+    "title": "Some recent applications of the suction analogy to vortex-lift estimates",
+    "year": "1976",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19760010952/downloads/19760010952.pdf",
+    "txt": "/api/citations/19760010952/downloads/19760010952.txt",
+    "nums": [
+     "NASA-TM-X-72785",
+     "Report Number: NASA-TM-X-72785"
+    ]
+   },
+   {
+    "id": 19860017721,
+    "title": "Extensions of the concept of suction analogy to prediction of vortex lift effect",
+    "year": "1986",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19860017721/downloads/19860017721.pdf",
+    "txt": "/api/citations/19860017721/downloads/19860017721.txt",
+    "nums": null
+   },
+   {
+    "id": 19810020561,
+    "title": "Calculation of vortex lift effect for cambered wings by the suction analogy",
+    "year": "1981",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19810020561/downloads/19810020561.pdf",
+    "txt": "/api/citations/19810020561/downloads/19810020561.txt",
+    "nums": [
+     "NASA-CR-3449",
+     "CRINC/FRL-426-1",
+     "Report Number: NASA-CR-3449",
+     "Report Number: CRINC/FRL-426-1"
+    ]
+   },
+   {
+    "id": 19900048715,
+    "title": "Connection between leading-edge sweep, vortex lift, and vortex strength for delta wings",
+    "year": "1990",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "ISSN: 0021-8669"
+    ]
+   }
+  ],
+  "highaoa": [
+   {
+    "id": 19950007815,
+    "title": "Fourth High Alpha Conference, volume 1",
+    "year": "1994",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19950007815/downloads/19950007815.pdf",
+    "txt": "/api/citations/19950007815/downloads/19950007815.txt",
+    "nums": [
+     "NAS 1.55:10143-VOL-1",
+     "H-2007-VOL-1",
+     "NASA-CP-10143-VOL-1",
+     "Report Number: NAS 1.55:10143-VOL-1",
+     "Report Number: H-2007-VOL-1",
+     "Report Number: NASA-CP-10143-VOL-1"
+    ]
+   },
+   {
+    "id": 20040010871,
+    "title": "Technical Evaluation Report, Part A - Vortex Flow and High Angle of Attack",
+    "year": "2003",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AD-A418961",
+     "Report Number: AD-A418961"
+    ]
+   },
+   {
+    "id": 19820055564,
+    "title": "High angle-of-attack characteristics of a forward-swept wing fighter configuration",
+    "year": "1982",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AIAA PAPER 82-1322",
+     "Report Number: AIAA PAPER 82-1322"
+    ]
+   },
+   {
+    "id": 19900019200,
+    "title": "Control research in the NASA high-alpha technology program",
+    "year": "1990",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": null
+   },
+   {
+    "id": 19920071388,
+    "title": "Full Navier-Stokes calculations on the installed F/A-18 inlet at a high angle of attack",
+    "year": "1992",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AIAA PAPER 92-3175",
+     "Report Number: AIAA PAPER 92-3175"
+    ]
+   },
+   {
+    "id": 19830057448,
+    "title": "High angle-of-attack flight dynamics of a forward-swept wing fighter configuration",
+    "year": "1983",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AIAA PAPER 83-1837",
+     "Report Number: AIAA PAPER 83-1837"
+    ]
+   },
+   {
+    "id": 19950008200,
+    "title": "Numerical simulation of the flow about the F-18 HARV at high angle of attack",
+    "year": "1994",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19950008200/downloads/19950008200.pdf",
+    "txt": "/api/citations/19950008200/downloads/19950008200.txt",
+    "nums": [
+     "NASA-CR-197023",
+     "MCAT-94-11",
+     "NAS 1.26:197023",
+     "Report Number: NASA-CR-197023",
+     "Report Number: MCAT-94-11",
+     "Report Number: NAS 1.26:197023"
+    ]
+   },
+   {
+    "id": 19970012895,
+    "title": "Overview of HATP Experimental Aerodynamics Data for the Baseline F/A-18 Configuration",
+    "year": "1996",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19970012895/downloads/19970012895.pdf",
+    "txt": "/api/citations/19970012895/downloads/19970012895.txt",
+    "nums": [
+     "NAS 1.15:112360",
+     "NASA-TM-112360",
+     "Report Number: NAS 1.15:112360",
+     "Report Number: NASA-TM-112360"
+    ]
+   }
+  ],
+  "f16": [
+   {
+    "id": 19890063987,
+    "title": "Wind-tunnel investigation of the forebody aerodynamics of a vortex-lift fighter configuration at high angles of attack",
+    "year": "1988",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "SAE PAPER 881419",
+     "Report Number: SAE PAPER 881419"
+    ]
+   },
+   {
+    "id": 19790013829,
+    "title": "Design Guidelines for the Application of Forebody and Nose Strakes to a Fighter Aircraft Based on F-16 Wind Tunnel Testing Experience",
+    "year": "1979",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": null
+   },
+   {
+    "id": 19950007840,
+    "title": "F/A-18 and F-16 forebody vortex control, static and rotary-balance results",
+    "year": "1994",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19950007840/downloads/19950007840.pdf",
+    "txt": "/api/citations/19950007840/downloads/19950007840.txt",
+    "nums": null
+   },
+   {
+    "id": 19800015803,
+    "title": "Comparison of theoretically predicted lateral-directional aerodynamic characteristics with full-scale wind tunnel data on the ATLIT airplane",
+    "year": "1980",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19800015803/downloads/19800015803.pdf",
+    "txt": "/api/citations/19800015803/downloads/19800015803.txt",
+    "nums": [
+     "NASA-CR-163189",
+     "KU-FRL-399-2",
+     "Report Number: NASA-CR-163189",
+     "Report Number: KU-FRL-399-2"
+    ]
+   },
+   {
+    "id": 19960001960,
+    "title": "Low-speed wind-tunnel investigation of a porous forebody and nose strakes for yaw control of a multirole fighter aircraft",
+    "year": "1995",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19960001960/downloads/19960001960.pdf",
+    "txt": "/api/citations/19960001960/downloads/19960001960.txt",
+    "nums": [
+     "NAS 1.26:4685",
+     "NASA-CR-4685",
+     "Report Number: NAS 1.26:4685",
+     "Report Number: NASA-CR-4685"
+    ]
+   },
+   {
+    "id": 19910012770,
+    "title": "Multiaxis thrust vectoring using axisymmetric nozzles and postexit vanes on an F/A-18 configuration vehicle",
+    "year": "1991",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19910012770/downloads/19910012770.pdf",
+    "txt": "/api/citations/19910012770/downloads/19910012770.txt",
+    "nums": [
+     "NAS 1.15:101741",
+     "NASA-TM-101741",
+     "H-1705",
+     "Report Number: NAS 1.15:101741",
+     "Report Number: NASA-TM-101741",
+     "Report Number: H-1705"
+    ]
+   },
+   {
+    "id": 19800005879,
+    "title": "Simulator study of stall/post-stall characteristics of a fighter airplane with relaxed longitudinal static stability",
+    "year": "1979",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19800005879/downloads/19800005879.pdf",
+    "txt": "/api/citations/19800005879/downloads/19800005879.txt",
+    "nums": [
+     "Report Number: L-12854",
+     "Report Number: NASA-TP-1538",
+     "L-12854",
+     "NASA-TP-1538"
+    ]
+   },
+   {
+    "id": 20040040215,
+    "title": "Symposium on Advanced Flow Management. Part A: Vortex Flows and High Angle of Attack for Military Vehicles. Part B: Heat Transfer and Cooling in Propulsion and Power Systems",
+    "year": "2003",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AC/323(AVT-072/073)TP/47-Pt-A-B",
+     "RTO-MP-069(I)-Pt-A-B"
+    ]
+   }
+  ],
+  "delta": [
+   {
+    "id": 19890063983,
+    "title": "Wind-tunnel investigation of the low-speed aerodynamics of slender accelerator-type configurations",
+    "year": "1988",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "SAE PAPER 881356",
+     "Report Number: SAE PAPER 881356"
+    ]
+   },
+   {
+    "id": 19950012541,
+    "title": "Development of a multicomponent force and moment balance for water tunnel applications, volume 2",
+    "year": "1994",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19950012541/downloads/19950012541.pdf",
+    "txt": "/api/citations/19950012541/downloads/19950012541.txt",
+    "nums": [
+     "NAS 1.26:4642-VOL-2",
+     "H-2030-VOL-2",
+     "NASA-CR-4642-VOL-2",
+     "Report Number: NAS 1.26:4642-VOL-2",
+     "Report Number: H-2030-VOL-2",
+     "Report Number: NASA-CR-4642-VOL-2"
+    ]
+   },
+   {
+    "id": 19850015397,
+    "title": "Low-speed stability and control wind-tunnel investigations of effects of spanwise blowing on fighter flight characteristics at high angles of attack",
+    "year": "1985",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19850015397/downloads/19850015397.pdf",
+    "txt": "/api/citations/19850015397/downloads/19850015397.txt",
+    "nums": [
+     "NASA-TP-2431",
+     "NAS 1.60:2431",
+     "L-15851",
+     "Report Number: NASA-TP-2431",
+     "Report Number: NAS 1.60:2431",
+     "Report Number: L-15851"
+    ]
+   },
+   {
+    "id": 19830011443,
+    "title": "Subsonic balance and pressure investigation of a 60 deg delta wing with leading edge devices",
+    "year": "1982",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19830011443/downloads/19830011443.pdf",
+    "txt": "/api/citations/19830011443/downloads/19830011443.txt",
+    "nums": [
+     "NAS 1.26:165923",
+     "NASA-CR-165923",
+     "Report Number: NAS 1.26:165923",
+     "Report Number: NASA-CR-165923"
+    ]
+   },
+   {
+    "id": 19850061720,
+    "title": "Measurements of canard-induced roll oscillations",
+    "year": "1985",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AIAA PAPER 85-1830",
+     "Report Number: AIAA PAPER 85-1830"
+    ]
+   },
+   {
+    "id": 20030065232,
+    "title": "Quantifying the Effect of Pressure Sensitive Paint On Aerodynamic Data",
+    "year": "2003",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20030065232/downloads/20030065232.pdf",
+    "txt": "/api/citations/20030065232/downloads/20030065232.txt",
+    "nums": [
+     "AIAA Paper 2003-3951",
+     "Report Number: AIAA Paper 2003-3951"
+    ]
+   }
+  ],
+  "vlm": [
+   {
+    "id": 19760021078,
+    "title": "Extended applications of the vortex lattice method",
+    "year": "1976",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19760021078/downloads/19760021078.pdf",
+    "txt": "/api/citations/19760021078/downloads/19760021078.txt",
+    "nums": null
+   },
+   {
+    "id": 20220004316,
+    "title": "Low-Noise Propeller Design with the Vortex Lattice Method: Preliminary Results",
+    "year": "",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20220004316/downloads/twg_ingraham-v2%20presentation%205%2010%2022.pdf",
+    "txt": "/api/citations/20220004316/downloads/twg_ingraham-v2%20presentation%205%2010%2022.pdf.txt",
+    "nums": null
+   },
+   {
+    "id": 19760021096,
+    "title": "Some applications of the quasi vortex-lattice method in steady and unsteady aerodynamics",
+    "year": "1976",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19760021096/downloads/19760021096.pdf",
+    "txt": "/api/citations/19760021096/downloads/19760021096.txt",
+    "nums": null
+   },
+   {
+    "id": 19760021076,
+    "title": "Historical evolution of vortex-lattice methods",
+    "year": "1976",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19760021076/downloads/19760021076.pdf",
+    "txt": "/api/citations/19760021076/downloads/19760021076.txt",
+    "nums": null
+   },
+   {
+    "id": 19800000236,
+    "title": "A generalized vortex lattice method",
+    "year": "1980",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "LAR-12636",
+     "Report Number: LAR-12636",
+     "ISSN: 0145-319X"
+    ]
+   },
+   {
+    "id": 19760021081,
+    "title": "Minimum trim drag design for interfering lifting surfaces using vortex-lattice methodology",
+    "year": "1976",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19760021081/downloads/19760021081.pdf",
+    "txt": "/api/citations/19760021081/downloads/19760021081.txt",
+    "nums": null
+   },
+   {
+    "id": 19760021075,
+    "title": "Vortex-Lattice Utilization",
+    "year": "1976",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19760021075/downloads/19760021075.pdf",
+    "txt": "/api/citations/19760021075/downloads/19760021075.txt",
+    "nums": [
+     "NASA-SP-405",
+     "L-10948",
+     "Report Number: NASA-SP-405",
+     "Report Number: L-10948"
+    ]
+   },
+   {
+    "id": 19760021089,
+    "title": "Application of the vortex-lattice technique to the analysis of thin wings with vortex separation and thick multi-element wings",
+    "year": "1976",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19760021089/downloads/19760021089.pdf",
+    "txt": "/api/citations/19760021089/downloads/19760021089.txt",
+    "nums": null
+   }
+  ],
+  "datcom": [
+   {
+    "id": 19990064144,
+    "title": "Rotationally Adaptive Flight Test Surface",
+    "year": "1999",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19990064144/downloads/19990064144.pdf",
+    "txt": "/api/citations/19990064144/downloads/19990064144.txt",
+    "nums": null
+   }
+  ],
+  "hart": [
+   {
+    "id": 19950007843,
+    "title": "Preparations for flight research to evaluate actuated forebody strakes on the F-18 high-alpha research vehicle",
+    "year": "1994",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19950007843/downloads/19950007843.pdf",
+    "txt": "/api/citations/19950007843/downloads/19950007843.txt",
+    "nums": null
+   },
+   {
+    "id": 19970001863,
+    "title": "Multiaxis Thrust-Vectoring Characteristics of a Model Representative of the F-18 High-Alpha Research Vehicle at Angles of Attack From 0 deg to 70 deg",
+    "year": "1995",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19970001863/downloads/19970001863.pdf",
+    "txt": "/api/citations/19970001863/downloads/19970001863.txt",
+    "nums": [
+     "NASA-TP-3531",
+     "L-17441",
+     "NAS 1.60:3531",
+     "Report Number: NASA-TP-3531",
+     "Report Number: L-17441",
+     "Report Number: NAS 1.60:3531"
+    ]
+   },
+   {
+    "id": 19970012895,
+    "title": "Overview of HATP Experimental Aerodynamics Data for the Baseline F/A-18 Configuration",
+    "year": "1996",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19970012895/downloads/19970012895.pdf",
+    "txt": "/api/citations/19970012895/downloads/19970012895.txt",
+    "nums": [
+     "NAS 1.15:112360",
+     "NASA-TM-112360",
+     "Report Number: NAS 1.15:112360",
+     "Report Number: NASA-TM-112360"
+    ]
+   },
+   {
+    "id": 19920016724,
+    "title": "A static investigation of the thrust vectoring system of the F/A-18 high-alpha research vehicle",
+    "year": "1992",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19920016724/downloads/19920016724.pdf",
+    "txt": "/api/citations/19920016724/downloads/19920016724.txt",
+    "nums": [
+     "L-17002",
+     "NAS 1.15:4359",
+     "NASA-TM-4359",
+     "Report Number: L-17002",
+     "Report Number: NAS 1.15:4359",
+     "Report Number: NASA-TM-4359"
+    ]
+   },
+   {
+    "id": 19940035353,
+    "title": "A summary of the forebody high-angle-of-attack aerodynamics research on the F-18 and the X-29A aircraft",
+    "year": "1992",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "SAE PAPER 921996",
+     "Report Number: SAE PAPER 921996"
+    ]
+   },
+   {
+    "id": 19930003165,
+    "title": "A summary of the forebody high-angle-of-attack aerodynamics research on the F-18 and the X-29A aircraft",
+    "year": "1992",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19930003165/downloads/19930003165.pdf",
+    "txt": "/api/citations/19930003165/downloads/19930003165.txt",
+    "nums": [
+     "NAS 1.15:104261",
+     "SAE-92-1996",
+     "H-1862",
+     "NASA-TM-104261",
+     "Report Number: NAS 1.15:104261",
+     "Report Number: SAE-92-1996",
+     "Report Number: H-1862",
+     "Report Number: NASA-TM-104261"
+    ]
+   },
+   {
+    "id": 19950007815,
+    "title": "Fourth High Alpha Conference, volume 1",
+    "year": "1994",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19950007815/downloads/19950007815.pdf",
+    "txt": "/api/citations/19950007815/downloads/19950007815.txt",
+    "nums": [
+     "NAS 1.55:10143-VOL-1",
+     "H-2007-VOL-1",
+     "NASA-CP-10143-VOL-1",
+     "Report Number: NAS 1.55:10143-VOL-1",
+     "Report Number: H-2007-VOL-1",
+     "Report Number: NASA-CP-10143-VOL-1"
+    ]
+   },
+   {
+    "id": 19950008200,
+    "title": "Numerical simulation of the flow about the F-18 HARV at high angle of attack",
+    "year": "1994",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19950008200/downloads/19950008200.pdf",
+    "txt": "/api/citations/19950008200/downloads/19950008200.txt",
+    "nums": [
+     "NASA-CR-197023",
+     "MCAT-94-11",
+     "NAS 1.26:197023",
+     "Report Number: NASA-CR-197023",
+     "Report Number: MCAT-94-11",
+     "Report Number: NAS 1.26:197023"
+    ]
+   }
+  ],
+  "lex": [
+   {
+    "id": 20040161535,
+    "title": "An Attached Flow Design of a Noninterferring Leading Edge Extension to a Thick Delta Wing",
+    "year": "1985",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20040161535/downloads/20040161535.pdf",
+    "txt": "/api/citations/20040161535/downloads/20040161535.txt",
+    "nums": [
+     "AIAA-85-0350",
+     "Report Number: AIAA Paper 85-0350"
+    ]
+   },
+   {
+    "id": 19740040582,
+    "title": "Extension of a vortex-lattice method to include the effects of leading-edge separation",
+    "year": "1974",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": null
+   },
+   {
+    "id": 20170004505,
+    "title": "Wind Tunnel Investigation of Passive Porosity Applied to the Leading-Edge Extension and Leading-Edge Flaps on a Slender Wing at Subsonic Speed",
+    "year": "2017",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20170004505/downloads/20170004505.pdf",
+    "txt": "/api/citations/20170004505/downloads/20170004505.txt",
+    "nums": [
+     "NF1676L-26349",
+     "NASA-TM-2017-219596",
+     "L-20784",
+     "Report Number: NF1676L-26349",
+     "Report Number: NASA-TM-2017-219596",
+     "Report Number: L-20784"
+    ]
+   },
+   {
+    "id": 19920022032,
+    "title": "In-flight leading-edge extension vortex flow-field survey measurements on a F-18 aircraft at high angle of attack",
+    "year": "1992",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19920022032/downloads/19920022032.pdf",
+    "txt": "/api/citations/19920022032/downloads/19920022032.txt",
+    "nums": [
+     "NASA-TM-4398",
+     "NAS 1.15:4398",
+     "H-1783",
+     "Report Number: NASA-TM-4398",
+     "Report Number: NAS 1.15:4398",
+     "Report Number: H-1783"
+    ]
+   },
+   {
+    "id": 20040016158,
+    "title": "Control of Interacting Vortex Flows at Subsonic and Transonic Speeds Using Passive Porosity",
+    "year": "2003",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AD-A419098",
+     "Report Number: AD-A419098"
+    ]
+   },
+   {
+    "id": 19760010968,
+    "title": "Flow visualization of vortices locked by spanwise blowing over wings featuring a unique leading and trailing-edge flap system",
+    "year": "1975",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/19760010968/downloads/19760010968.pdf",
+    "txt": "/api/citations/19760010968/downloads/19760010968.txt",
+    "nums": [
+     "NASA-TM-X-72788",
+     "Report Number: NASA-TM-X-72788"
+    ]
+   },
+   {
+    "id": 19910069136,
+    "title": "In-flight leading-edge vortex flow-field survey measurements on a F-18 aircraft at high angle of attack",
+    "year": "1991",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AIAA PAPER 91-3248",
+     "Report Number: AIAA PAPER 91-3248"
+    ]
+   },
+   {
+    "id": 19930053381,
+    "title": "Multiblock Navier-Stokes solutions about the F/A-18 wing-LEX-fuselage configuration",
+    "year": "1993",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "ISSN: 0021-8669"
+    ]
+   }
+  ],
+  "vfe2": [
+   {
+    "id": 19930063270,
+    "title": "Navier-Stokes prediction of a delta wing in roll with vortex breakdown",
+    "year": "1993",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": [
+     "AIAA PAPER 93-3495",
+     "Report Number: AIAA PAPER 93-3495"
+    ]
+   },
+   {
+    "id": 20020022527,
+    "title": "Progress in Navier-Stokes Simulation of Delta Wing Maneuver Aerodynamics",
+    "year": "1995",
+    "dist": "PUBLIC",
+    "pdf": null,
+    "txt": null,
+    "nums": null
+   },
+   {
+    "id": 20130012531,
+    "title": "Wind Tunnel Investigation of Passive Vortex Control and Vortex-Tail Interactions on a Slender Wing at Subsonic and Transonic Speeds",
+    "year": "2013",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20130012531/downloads/20130012531.pdf",
+    "txt": "/api/citations/20130012531/downloads/20130012531.txt",
+    "nums": [
+     "NF1676L-12153",
+     "NASA/TM-2013-217982",
+     "L-19987",
+     "Report Number: NF1676L-12153",
+     "Report Number: NASA/TM-2013-217982",
+     "Report Number: L-19987"
+    ]
+   },
+   {
+    "id": 20090017770,
+    "title": "Introduction: Prediction of F-16XL Flight Flow Physics",
+    "year": "2009",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20090017770/downloads/20090017770.pdf",
+    "txt": "/api/citations/20090017770/downloads/20090017770.txt",
+    "nums": [
+     "LF99-7385",
+     "Report Number: LF99-7385",
+     "ISSN: 0021-8669"
+    ]
+   }
+  ],
+  "crm": [
+   {
+    "id": 20150006851,
+    "title": "Comparison of the NASA Common Research Model European Transonic Wind Tunnel Test Data to NASA Test Data",
+    "year": "2015",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20150006851/downloads/20150006851.pdf",
+    "txt": "/api/citations/20150006851/downloads/20150006851.txt",
+    "nums": [
+     "NF1676L-19137",
+     "Report Number: NF1676L-19137"
+    ]
+   },
+   {
+    "id": 20160007484,
+    "title": "Comparison of the NASA Common Research Model European Transonic Wind Tunnel Test Data to NASA Test Data",
+    "year": "2015",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20160007484/downloads/20160007484.pdf",
+    "txt": "/api/citations/20160007484/downloads/20160007484.txt",
+    "nums": [
+     "NF1676L-21894",
+     "Report Number: NF1676L-21894"
+    ]
+   },
+   {
+    "id": 20240014242,
+    "title": "NASA 5.2%-Scale Semispan High Lift Common Research Model Wind Tunnel Test at the 14- by 22-Foot Subsonic Tunnel",
+    "year": "",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20240014242/downloads/AIAA_CRMHL_14x22T669_V10_STRIVES.pdf",
+    "txt": "/api/citations/20240014242/downloads/AIAA_CRMHL_14x22T669_V10_STRIVES.pdf.txt",
+    "nums": null
+   },
+   {
+    "id": 20240015702,
+    "title": "NASA 5.2%-Scale Semispan High Lift Common Research Model Wind Tunnel Test at the 14- by 22-Foot Subsonic Tunnel",
+    "year": "",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20240015702/downloads/AIAA_SciTech_2025_CRM-HL_20250106_v3.pdf",
+    "txt": "/api/citations/20240015702/downloads/AIAA_SciTech_2025_CRM-HL_20250106_v3.pdf.txt",
+    "nums": null
+   },
+   {
+    "id": 20230018144,
+    "title": "Aeroelastic Simulation of Wind Tunnel Scale Aspect Ratio 13.5 Common Research Model with Trailing Edge Mini-Flaps",
+    "year": "",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20230018144/downloads/AIAA_SciTech_2024_CRM_Rev3.pdf",
+    "txt": "/api/citations/20230018144/downloads/AIAA_SciTech_2024_CRM_Rev3.pdf.txt",
+    "nums": null
+   },
+   {
+    "id": 20240013792,
+    "title": "Testing of High-Lift Common Research Model at Takeoff Configurations",
+    "year": "",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20240013792/downloads/SciTech25_mkoklu_Final.pdf",
+    "txt": "/api/citations/20240013792/downloads/SciTech25_mkoklu_Final.pdf.txt",
+    "nums": null
+   },
+   {
+    "id": 20240016086,
+    "title": "Testing of High-Lift Common Research Model at Takeoff Configurations",
+    "year": "",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20240016086/downloads/mkoklu-SciTech2025-presentation.pdf",
+    "txt": "/api/citations/20240016086/downloads/mkoklu-SciTech2025-presentation.pdf.txt",
+    "nums": null
+   },
+   {
+    "id": 20250006451,
+    "title": "NASA 5.2%-Scale Semispan High Lift Common Research Model High Reynolds Number Wind Tunnel Test in the National Transonic Facility",
+    "year": "",
+    "dist": "PUBLIC",
+    "pdf": "/api/citations/20250006451/downloads/AIAA_CRMHL_NTF237_Presentation_v2.pdf",
+    "txt": "/api/citations/20250006451/downloads/AIAA_CRMHL_NTF237_Presentation_v2.pdf.txt",
+    "nums": null
+   }
+  ]
+ }
+}

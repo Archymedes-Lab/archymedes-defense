@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* Archymedes Defense design system: tactical console.
+   Dark only, square geometry, hairline frames on a 32px grid, one signal accent, mono readouts.
+   Categorical slots keep the validated dark data-viz order; status colors stay reserved. */
+:root {
+  --bg: #07090b;
+  --surface: #0d1014;
+  --raised: #10141a;
+  --fg: #e1e7ee;
+  --fg-2: #97a2b0;
+  --fg-3: #5d6876;
+  --line: #1b222b;
+  --line-strong: #2a3441;
+  --grid: rgba(140, 165, 195, 0.05);
+  --accent: #6f9cc4;
+  --accent-ink: #06101a;
+  --accent-soft: #0f1a26;
+  --c1: #3987e5; --c2: #d95926; --c3: #199e70; --c4: #c98500; --c5: #d55181; --c6: #9085e9;
+  --good: #22b35a; --warning: #fab219; --critical: #e5484d; --neutral: #5c6865;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-fg-3: var(--fg-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-good: var(--good);
+  --color-warning: var(--warning);
+  --color-critical: var(--critical);
+}
+
+@layer base {
+  html { background: var(--bg); color: var(--fg); -webkit-font-smoothing: antialiased; }
+  body {
+    color: var(--fg); font-family: var(--font-sans); font-size: 15px; line-height: 1.55;
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: -1px -1px;
+  }
+  h1, h2, h3 { text-wrap: balance; letter-spacing: -0.03em; }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--accent); color: var(--accent-ink); }
+  :focus-visible { outline: 1px solid var(--accent); outline-offset: 2px; }
+  svg text { font-family: var(--font-mono); fill: var(--fg-2); }
+  input, select { border-radius: 0; }
+}
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-[1216px] px-4 sm:px-8; }
+
+  /* Mono label with a square tick. */
+  .eyebrow { @apply inline-flex items-center gap-2 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-fg-2; }
+  .eyebrow::before { content: ""; @apply h-1.5 w-1.5 shrink-0 bg-accent; }
+
+  /* Hairline frame with corner brackets: the base container for every panel. */
+  .panel { @apply relative border border-line bg-raised/85; }
+  .panel::before, .panel::after {
+    content: ""; position: absolute; width: 10px; height: 10px; pointer-events: none; z-index: 2;
+    border-color: var(--fg-3);
+  }
+  .panel::before { top: -1px; left: -1px; border-top: 1px solid; border-left: 1px solid; }
+  .panel::after { bottom: -1px; right: -1px; border-bottom: 1px solid; border-right: 1px solid; }
+
+  .btn-primary { @apply inline-flex h-10 items-center justify-center gap-2 px-4 font-mono text-[12px] font-medium uppercase tracking-[0.12em] transition-colors disabled:opacity-50 bg-accent text-accent-ink hover:bg-fg; }
+  .btn-ghost { @apply inline-flex h-10 items-center justify-center gap-2 px-4 font-mono text-[12px] font-medium uppercase tracking-[0.12em] transition-colors disabled:opacity-50 border border-line-strong text-fg hover:border-accent hover:text-accent; }
+  .field { @apply h-10 w-full border border-line-strong bg-bg px-3 font-mono text-[14px] text-fg outline-none transition-colors focus:border-accent; }
+
+  .tag { @apply inline-flex w-fit items-center gap-1.5 border border-line-strong px-2 py-0.5 font-mono text-[11px] uppercase tracking-[0.08em] text-fg-2; }
+  .num { font-variant-numeric: tabular-nums; }
+  .link { @apply text-accent underline-offset-4 hover:underline; }
+}
+
+/* MapLibre popups and controls in the console style. */
+.sw-pop .maplibregl-popup-content { background: var(--raised); color: var(--fg); border: 1px solid var(--line-strong); border-radius: 0; padding: 8px 10px; font: 12px/1.5 var(--font-mono); box-shadow: none; }
+.sw-pop .maplibregl-popup-content b { font-family: var(--font-sans); font-weight: 500; }
+.sw-pop .maplibregl-popup-tip { display: none; }
+.maplibregl-map .maplibregl-ctrl-group { border-radius: 0; background: var(--raised); box-shadow: none; border: 1px solid var(--line-strong); }
+.maplibregl-map .maplibregl-ctrl-group button + button { border-top-color: var(--line-strong); }
+.maplibregl-map .maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: invert(0.85); }
+.maplibregl-map .maplibregl-ctrl-attrib { background: rgba(7, 9, 11, 0.82); color: var(--fg-2); font-family: var(--font-mono); font-size: 10px; border-radius: 0; }
+.maplibregl-map .maplibregl-ctrl-attrib.maplibregl-compact { border-radius: 0; background: rgba(7, 9, 11, 0.82); }
+.maplibregl-map .maplibregl-ctrl-attrib-inner { color: var(--fg-2); }
+.maplibregl-map .maplibregl-ctrl-attrib a { color: var(--fg); }
+.maplibregl-map .maplibregl-ctrl-attrib-button { filter: invert(0.85); }
+.maplibregl-map .maplibregl-ctrl-scale { background: rgba(7, 9, 11, 0.7); color: var(--fg-2); border-color: var(--fg-3); font-family: var(--font-mono); font-size: 10px; border-radius: 0; }
+.maplibregl-cooperative-gesture-screen { font-family: var(--font-mono); font-size: 13px; }
+
+/* Slide theme (unused in this release). */
+   Paper (Compass / archymedes-site): warm paper, ink, 1px hairlines, 2px ink section rules, 12-column grid, mono read-outs.
+   Night (ORION Swiss Sky): dusk sky with a dawn glow, frosted glass, light Outfit headlines, wide-tracked labels.
+   Console (defense app): square geometry, corner brackets, square markers. One electric blue means "the point". */
+.deck-theme {
+  --bg: #f7f7f4; --surface: #fcfcfa; --raised: #ffffff; --fg: #111214; --fg-2: #4d5156; --fg-3: #8a8d91;
+  --line: #dadde0; --line-strong: #b9bdc2; --hair: rgb(17 18 20 / 0.07); --grid-col: rgb(28 102 254 / 0.07);
+  --accent: #1c66fe; --accent-ink: #ffffff; --blue-ink: #235fc2; --accent-soft: #e8effc;
+  --gold: #c47a34; --gold-soft: #fbeee2; --dawn: #f0a868; --sky: #4f6e9e; --sky-soft: #dfe9fb;
+  --clay: #c0283c; --clay-soft: #fbe6e9; --good: #0b7d62; --good-soft: #dcf1ea; --warning: #a6560f; --critical: #c0283c;
+  color-scheme: light; background: var(--bg); color: var(--fg); font-family: var(--font-deck-text), "Inter Tight", ui-sans-serif, sans-serif;
+}
+.deck-theme .deck-slide {
+  background-color: var(--bg);
+  background-image: linear-gradient(90deg, var(--grid-col) 1px, transparent 1px);
+  background-size: 118px 100%; background-position: 92px 0; font-family: var(--font-deck-text), sans-serif;
+}
+.deck-theme .serif, .deck-theme .display { font-family: var(--font-deck-display), "Outfit", sans-serif; font-weight: 400; letter-spacing: -0.025em; }
+.deck-theme .mono { font-family: var(--font-deck-mono), ui-monospace, monospace; }
+.deck-theme .caps { font-family: var(--font-deck-mono), ui-monospace, monospace; text-transform: uppercase; letter-spacing: 0.2em; }
+/* Ruled panel (paper): rules, not boxes. */
+.deck-theme .dk-panel { position: relative; background: var(--surface); border: 1px solid var(--line); border-top: 2px solid var(--fg); }
+.deck-theme .dk-panel::after { content: ""; position: absolute; right: -1px; bottom: -1px; width: 12px; height: 12px; border-right: 1px solid var(--fg-3); border-bottom: 1px solid var(--fg-3); }
+/* Night (ORION dusk sky, frosted glass). */
+.deck-theme .dk-night {
+  --fg: #ffffff; --fg-2: rgb(255 255 255 / 0.78); --fg-3: rgb(255 255 255 / 0.5); --line: rgb(255 255 255 / 0.16); --surface: rgb(14 20 32 / 0.55);
+  --accent: #7faaff; color: #fff;
+  background: radial-gradient(120% 70% at 72% 112%, rgb(240 168 104 / 0.55) 0%, rgb(196 122 52 / 0.18) 32%, transparent 62%),
+              radial-gradient(90% 60% at 10% -10%, rgb(28 102 254 / 0.35), transparent 60%),
+              linear-gradient(180deg, #05080f 0%, #0a1220 55%, #1a1c2a 100%) !important;
+}
+.deck-theme .dk-night .dk-glass { background: rgb(14 20 32 / 0.55); border: 1px solid rgb(255 255 255 / 0.16); border-radius: 22px; backdrop-filter: blur(22px);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08), 0 24px 60px rgb(2 6 16 / 0.42); }
+.deck-theme .dk-grain { position: absolute; inset: 0; pointer-events: none; opacity: 0.08; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+
+/* Slide deck: 1600×900 canvases; print gives one slide per page. */
+.deck-slide { width: 1600px; height: 900px; position: relative; overflow: hidden; color: var(--fg);
+  background-color: var(--bg); background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 40px 40px; }
+.deck-print { display: none; }
+@media print {
+  @page { size: 1600px 900px; margin: 0; }
+  html, body { background: var(--bg) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .deck-screen { display: none !important; }
+  .deck-print { display: block; }
+  .deck-page { break-after: page; page-break-after: always; }
+  .deck-page:last-child { break-after: auto; page-break-after: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

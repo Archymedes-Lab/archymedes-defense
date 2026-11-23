@@ -1,0 +1,19 @@
+{
+  "model": "jev-1.14.0",
+  "answers": {
+    "design": {
+      "type": "choice",
+      "choice": "offline",
+      "confidence": 1.0,
+      "probabilities": {
+        "offline": 1.0,
+        "hosted": 0.0,
+        "unknown": 0.0
+      }
+    },
+    "claims": {
+      "type": "noul",
+      "noul": 0.03
+    }
+  }
+}

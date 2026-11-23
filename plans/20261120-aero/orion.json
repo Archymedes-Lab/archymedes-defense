@@ -1,0 +1,90 @@
+{
+ "W": 0.46,
+ "rows": [
+  {
+   "rank": 1,
+   "id": "multifi",
+   "pFirst": 0.204,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.557,
+    "urgency": 0.357,
+    "reach": 0.304,
+    "confidence": 0.484,
+    "effort": 0.835,
+    "leverage": 0.683,
+    "reversibility": 0.589
+   }
+  },
+  {
+   "rank": 2,
+   "id": "uq-aero",
+   "pFirst": 0.186,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.566,
+    "urgency": 0.367,
+    "reach": 0.319,
+    "confidence": 0.414,
+    "effort": 0.857,
+    "leverage": 0.676,
+    "reversibility": 0.595
+   }
+  },
+  {
+   "rank": 3,
+   "id": "uav-sysid",
+   "pFirst": 0.297,
+   "eisenhower": "drop",
+   "effort": "money_pit",
+   "door": "two_way",
+   "level": {
+    "impact": 0.342,
+    "urgency": 0.282,
+    "reach": 0.225,
+    "confidence": 0.519,
+    "effort": 0.606,
+    "leverage": 0.441,
+    "reversibility": 0.744
+   }
+  },
+  {
+   "rank": 4,
+   "id": "vortex-lift",
+   "pFirst": 0.146,
+   "eisenhower": "drop",
+   "effort": "money_pit",
+   "door": "two_way",
+   "level": {
+    "impact": 0.484,
+    "urgency": 0.32,
+    "reach": 0.269,
+    "confidence": 0.53,
+    "effort": 0.82,
+    "leverage": 0.558,
+    "reversibility": 0.596
+   }
+  },
+  {
+   "rank": 5,
+   "id": "tunnel-plan",
+   "pFirst": 0.167,
+   "eisenhower": "drop",
+   "effort": "money_pit",
+   "door": "two_way",
+   "level": {
+    "impact": 0.432,
+    "urgency": 0.342,
+    "reach": 0.229,
+    "confidence": 0.385,
+    "effort": 0.776,
+    "leverage": 0.468,
+    "reversibility": 0.577
+   }
+  }
+ ]
+}

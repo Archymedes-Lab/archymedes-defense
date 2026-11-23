@@ -1,0 +1,145 @@
+{
+ "site": {
+  "commit": "ch-then-us",
+  "innovation": "both-now",
+  "evpi": 0.0446,
+  "escalate": [
+   "ch-then-us",
+   "both-now"
+  ],
+  "stats": [
+   {
+    "id": "ch-then-us",
+    "mean": 0.529,
+    "std": 0.121,
+    "p_best": 0.531,
+    "status": "clear",
+    "niche": "truth"
+   },
+   {
+    "id": "both-now",
+    "mean": 0.492,
+    "std": 0.121,
+    "p_best": 0.299,
+    "status": "clear",
+    "niche": "truth"
+   },
+   {
+    "id": "us-only",
+    "mean": 0.423,
+    "std": 0.118,
+    "p_best": 0.102,
+    "status": "clear",
+    "niche": "truth"
+   },
+   {
+    "id": "nl-only",
+    "mean": 0.375,
+    "std": 0.127,
+    "p_best": 0.063,
+    "status": "clear",
+    "niche": "truth"
+   },
+   {
+    "id": "kigali",
+    "mean": 0.228,
+    "std": 0.151,
+    "p_best": 0.004,
+    "status": "clear",
+    "niche": "other"
+   }
+  ],
+  "violations": {
+   "ch-then-us": {
+    "sensitive": 0.087,
+    "licence": 0.306
+   },
+   "both-now": {
+    "sensitive": 0.106,
+    "licence": 0.338
+   },
+   "us-only": {
+    "sensitive": 0.143,
+    "licence": 0.203
+   },
+   "nl-only": {
+    "sensitive": 0.106,
+    "licence": 0.317
+   },
+   "kigali": {
+    "sensitive": 0.124,
+    "licence": 0.37
+   }
+  }
+ },
+ "viewer": {
+  "commit": "r3f-3dtiles",
+  "innovation": null,
+  "evpi": 0.0,
+  "escalate": [],
+  "stats": [
+   {
+    "id": "r3f-3dtiles",
+    "mean": 0.442,
+    "std": 0.12,
+    "p_best": 0.627,
+    "status": "clear",
+    "niche": "web"
+   },
+   {
+    "id": "unreal",
+    "mean": 0.362,
+    "std": 0.135,
+    "p_best": 0.06,
+    "status": "verify",
+    "niche": "photoreal"
+   },
+   {
+    "id": "cesiumjs",
+    "mean": 0.354,
+    "std": 0.125,
+    "p_best": 0.133,
+    "status": "verify",
+    "niche": "geo"
+   },
+   {
+    "id": "deckgl",
+    "mean": 0.335,
+    "std": 0.132,
+    "p_best": 0.101,
+    "status": "verify",
+    "niche": "web"
+   },
+   {
+    "id": "custom-glb",
+    "mean": 0.329,
+    "std": 0.126,
+    "p_best": 0.079,
+    "status": "verify",
+    "niche": "web"
+   }
+  ],
+  "violations": {
+   "r3f-3dtiles": {
+    "gpu": 0.338,
+    "lockin": 0.306
+   },
+   "cesiumjs": {
+    "gpu": 0.233,
+    "lockin": 0.435
+   },
+   "deckgl": {
+    "gpu": 0.243,
+    "lockin": 0.456
+   },
+   "unreal": {
+    "gpu": 0.456,
+    "lockin": 0.533
+   },
+   "custom-glb": {
+    "gpu": 0.243,
+    "lockin": 0.619
+   }
+  }
+ }
+}

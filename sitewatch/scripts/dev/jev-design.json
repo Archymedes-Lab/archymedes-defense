@@ -1,0 +1,20 @@
+{
+  "model": "jev-1.14.0",
+  "answers": {
+    "design": {
+      "type": "choice",
+      "choice": "rules",
+      "confidence": 0.87,
+      "probabilities": {
+        "rules": 0.9,
+        "naive": 0.01,
+        "learned": 0.09,
+        "unknown": 0.0
+      }
+    },
+    "circular": {
+      "type": "noul",
+      "noul": 0.07
+    }
+  }
+}

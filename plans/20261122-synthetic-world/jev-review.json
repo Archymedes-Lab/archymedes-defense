@@ -1,0 +1,45 @@
+{
+ "model": "jev-1.14.0",
+ "answers": {
+  "seam_gaps": {
+   "p": 0.88,
+   "hazard": "Adjacent terrain tiles decimated independently will show cracks or T-junctions at their shared edges unless edge vertices are shared exactly."
+  },
+  "float_jitter": {
+   "p": 0.63,
+   "hazard": "float32 vertices relative to an ENU origin 2-3 km away will cause visible jitter or z-fighting at the scales used."
+  },
+  "geoid_const": {
+   "p": 0.48,
+   "hazard": "Using one constant geoid offset over a 4 km alpine site introduces height errors larger than 10 cm."
+  },
+  "building_float": {
+   "p": 0.79,
+   "hazard": "LoD2 buildings placed on a 4 m decimated terrain will float above or sink into the ground by more than 1 m on steep slopes."
+  },
+  "road_drape": {
+   "p": 0.86,
+   "hazard": "Road ribbons draped at 0.3 m over a 4 m terrain mesh will cut into or hover over the terrain on cliffs and embankments."
+  },
+  "odbl": {
+   "p": 0.66,
+   "hazard": "Mixing ODbL OpenStreetMap data into the same derived tiles as swisstopo data creates share-alike obligations for the combined database."
+  },
+  "public_leak": {
+   "p": 0.89,
+   "hazard": "Serving tiles from the Next.js public folder risks exposing them without the password gate."
+  },
+  "texture_mem": {
+   "p": 0.64,
+   "hazard": "Sixteen 4000x4000 JPEG textures will exceed typical browser GPU memory budgets on laptops."
+  },
+  "determinism": {
+   "p": 0.64,
+   "hazard": "Pipeline output digests will not be deterministic across runs because of floating-point or library ordering differences."
+  },
+  "truth_leak": {
+   "p": 0.65,
+   "hazard": "Using swissBUILDINGS3D as the measured building layer in milestone 1 makes it harder to keep it hidden from the deduction engine in milestone 2."
+  }
+ }
+}

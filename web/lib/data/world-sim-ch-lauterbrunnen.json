@@ -1,0 +1,2771 @@
+{
+ "agents": [
+  {
+   "id": "guard-1",
+   "kind": "guard",
+   "label": "Guard, yard patrol",
+   "payloads": [
+    "radio",
+    "light"
+   ]
+  },
+  {
+   "id": "guard-2",
+   "kind": "guard",
+   "label": "Guard, gate post",
+   "payloads": [
+    "radio"
+   ]
+  },
+  {
+   "id": "dog-1",
+   "kind": "dog",
+   "label": "Robot dog",
+   "payloads": [
+    "camera",
+    "thermal_camera",
+    "lidar",
+    "radio"
+   ]
+  },
+  {
+   "id": "vehicle-1",
+   "kind": "vehicle",
+   "label": "Patrol vehicle",
+   "payloads": [
+    "camera",
+    "radio"
+   ]
+  },
+  {
+   "id": "drone-1",
+   "kind": "drone",
+   "label": "Drone",
+   "payloads": [
+    "camera",
+    "thermal_camera",
+    "radio",
+    "gnss",
+    "imu"
+   ]
+  },
+  {
+   "id": "mast-1",
+   "kind": "mast",
+   "label": "Camera mast 1",
+   "payloads": [
+    "camera",
+    "thermal_camera"
+   ]
+  },
+  {
+   "id": "mast-2",
+   "kind": "mast",
+   "label": "Camera mast 2",
+   "payloads": [
+    "camera",
+    "thermal_camera"
+   ]
+  },
+  {
+   "id": "mast-3",
+   "kind": "mast",
+   "label": "Camera mast 3",
+   "payloads": [
+    "camera",
+    "thermal_camera"
+   ]
+  },
+  {
+   "id": "mast-4",
+   "kind": "mast",
+   "label": "Camera mast 4",
+   "payloads": [
+    "camera",
+    "thermal_camera"
+   ]
+  }
+ ],
+ "assumptions": {
+  "fade_per_cycle": 0.0002,
+  "foliage_path_limit_m": 25.0,
+  "forest_speed_factor": 0.7,
+  "kinds": {
+   "dog": {
+    "battery_wh": 236.0,
+    "move_w": 120.0,
+    "sensor": {
+     "fov_deg": 100.0,
+     "p0": 0.5,
+     "range_m": 60.0
+    },
+    "vmax_ms": 3.0
+   },
+   "drone": {
+    "battery_wh": 80.0,
+    "move_w": 180.0,
+    "sensor": {
+     "fov_deg": 360.0,
+     "p0": 0.6,
+     "range_m": 300.0
+    },
+    "vmax_ms": 12.0
+   },
+   "guard": {
+    "battery_wh": 0.0,
+    "move_w": 0.0,
+    "sensor": {
+     "fov_deg": 120.0,
+     "p0": 0.35,
+     "range_m": 150.0
+    },
+    "vmax_ms": 1.7
+   },
+   "mast": {
+    "battery_wh": 0.0,
+    "move_w": 0.0,
+    "sensor": {
+     "fov_deg": 90.0,
+     "p0": 0.6,
+     "range_m": 38.4
+    },
+    "vmax_ms": 0.0
+   },
+   "person": {
+    "battery_wh": 0.0,
+    "move_w": 0.0,
+    "sensor": null,
+    "vmax_ms": 1.7
+   },
+   "truck": {
+    "battery_wh": 0.0,
+    "move_w": 0.0,
+    "sensor": null,
+    "vmax_ms": 11.0
+   },
+   "vehicle": {
+    "battery_wh": 60000.0,
+    "move_w": 12000.0,
+    "sensor": {
+     "fov_deg": 90.0,
+     "p0": 0.3,
+     "range_m": 100.0
+    },
+    "vmax_ms": 14.0
+   },
+   "worker": {
+    "battery_wh": 0.0,
+    "move_w": 0.0,
+    "sensor": null,
+    "vmax_ms": 1.7
+   }
+  },
+  "los_step_m": 1.0,
+  "method": "default",
+  "note": "Equipment and detection figures are round class numbers, not validated models.",
+  "off_path_speed_factor": 0.6
+ },
+ "compound": {
+  "centre": [
+   2636220.0,
+   1158600.0
+  ],
+  "gate_side": "W",
+  "provenance": {
+   "confidence": 0.0,
+   "licence": "own work",
+   "method": "synthetic",
+   "source": "archworld.sim.compound",
+   "value": "placed by rule"
+  },
+  "relief_m": 2.95,
+  "size": [
+   140.0,
+   100.0
+  ]
+ },
+ "drills": [
+  {
+   "contacted": 40,
+   "detect_to_contact_s": {
+    "median": 214.0,
+    "n": 40,
+    "p10": 202.0,
+    "p90": 249.0
+   },
+   "detected": 40,
+   "entered_zone": 0,
+   "entered_zone_before_contact": 0,
+   "id": "approach-on-foot",
+   "info": {
+    "approach_bearing_deg": 0,
+    "start_m": 450.0,
+    "walk_s": 487
+   },
+   "replay_digest": "f8f4bd1922d734a3c352bd9d6e9c6e3d3d8db8b1b8ffa98e607720d017ad2166",
+   "replay_seed": 33,
+   "rows": [
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 870000,
+     "detect_to_contact_s": 204.0,
+     "detected_by": "drone-1",
+     "detected_ms": 666000,
+     "digest": "b0f24dba0a4b9ac9",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 686711,
+     "seed": 0,
+     "time_to_contact_s": 270.0,
+     "time_to_detect_s": 66.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 890000,
+     "detect_to_contact_s": 219.0,
+     "detected_by": "drone-1",
+     "detected_ms": 671000,
+     "digest": "be0aa7a9aa2cab75",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 688984,
+     "seed": 1,
+     "time_to_contact_s": 290.0,
+     "time_to_detect_s": 71.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 866000,
+     "detect_to_contact_s": 206.0,
+     "detected_by": "drone-1",
+     "detected_ms": 660000,
+     "digest": "f4a2375188530513",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 680746,
+     "seed": 2,
+     "time_to_contact_s": 266.0,
+     "time_to_detect_s": 60.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 874000,
+     "detect_to_contact_s": 209.0,
+     "detected_by": "drone-1",
+     "detected_ms": 665000,
+     "digest": "3f86cbc579ed6906",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 683696,
+     "seed": 3,
+     "time_to_contact_s": 274.0,
+     "time_to_detect_s": 65.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 887000,
+     "detect_to_contact_s": 221.0,
+     "detected_by": "drone-1",
+     "detected_ms": 666000,
+     "digest": "a04c7c42e59448e5",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 685039,
+     "seed": 4,
+     "time_to_contact_s": 287.0,
+     "time_to_detect_s": 66.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 911000,
+     "detect_to_contact_s": 250.0,
+     "detected_by": "drone-1",
+     "detected_ms": 661000,
+     "digest": "0fdd59aa9af92df9",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 675755,
+     "seed": 5,
+     "time_to_contact_s": 311.0,
+     "time_to_detect_s": 61.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 957000,
+     "detect_to_contact_s": 189.0,
+     "detected_by": "drone-1",
+     "detected_ms": 768000,
+     "digest": "6e014b6b2f438a98",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 785600,
+     "seed": 6,
+     "time_to_contact_s": 357.0,
+     "time_to_detect_s": 168.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 875000,
+     "detect_to_contact_s": 202.0,
+     "detected_by": "drone-1",
+     "detected_ms": 673000,
+     "digest": "827baf514748f678",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 686972,
+     "seed": 7,
+     "time_to_contact_s": 275.0,
+     "time_to_detect_s": 73.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 925000,
+     "detect_to_contact_s": 244.0,
+     "detected_by": "drone-1",
+     "detected_ms": 681000,
+     "digest": "9ea8a7efeef843c5",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 697779,
+     "seed": 8,
+     "time_to_contact_s": 325.0,
+     "time_to_detect_s": 81.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 874000,
+     "detect_to_contact_s": 202.0,
+     "detected_by": "drone-1",
+     "detected_ms": 672000,
+     "digest": "8afd8657ac920741",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 690981,
+     "seed": 9,
+     "time_to_contact_s": 274.0,
+     "time_to_detect_s": 72.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 870000,
+     "detect_to_contact_s": 204.0,
+     "detected_by": "drone-1",
+     "detected_ms": 666000,
+     "digest": "ad8f50d12922a578",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 687020,
+     "seed": 10,
+     "time_to_contact_s": 270.0,
+     "time_to_detect_s": 66.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 897000,
+     "detect_to_contact_s": 216.0,
+     "detected_by": "drone-1",
+     "detected_ms": 681000,
+     "digest": "b11ddec8b2242da6",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 696792,
+     "seed": 11,
+     "time_to_contact_s": 297.0,
+     "time_to_detect_s": 81.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 887000,
+     "detect_to_contact_s": 214.0,
+     "detected_by": "drone-1",
+     "detected_ms": 673000,
+     "digest": "041243699a8627da",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 691040,
+     "seed": 12,
+     "time_to_contact_s": 287.0,
+     "time_to_detect_s": 73.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 886000,
+     "detect_to_contact_s": 215.0,
+     "detected_by": "drone-1",
+     "detected_ms": 671000,
+     "digest": "b52bafd6ead95beb",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 684972,
+     "seed": 13,
+     "time_to_contact_s": 286.0,
+     "time_to_detect_s": 71.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 876000,
+     "detect_to_contact_s": 216.0,
+     "detected_by": "drone-1",
+     "detected_ms": 660000,
+     "digest": "859804288f2106ab",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 676400,
+     "seed": 14,
+     "time_to_contact_s": 276.0,
+     "time_to_detect_s": 60.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 879000,
+     "detect_to_contact_s": 211.0,
+     "detected_by": "drone-1",
+     "detected_ms": 668000,
+     "digest": "f333dcb32de7f09c",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 688503,
+     "seed": 15,
+     "time_to_contact_s": 279.0,
+     "time_to_detect_s": 68.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 870000,
+     "detect_to_contact_s": 204.0,
+     "detected_by": "drone-1",
+     "detected_ms": 666000,
+     "digest": "3cf8a4bacd13fc30",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 683319,
+     "seed": 16,
+     "time_to_contact_s": 270.0,
+     "time_to_detect_s": 66.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 923000,
+     "detect_to_contact_s": 255.0,
+     "detected_by": "drone-1",
+     "detected_ms": 668000,
+     "digest": "90c8577fc0e9db8b",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 688816,
+     "seed": 17,
+     "time_to_contact_s": 323.0,
+     "time_to_detect_s": 68.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 979000,
+     "detect_to_contact_s": 224.0,
+     "detected_by": "drone-1",
+     "detected_ms": 755000,
+     "digest": "67db881f8ce1b986",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 774530,
+     "seed": 18,
+     "time_to_contact_s": 379.0,
+     "time_to_detect_s": 155.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 890000,
+     "detect_to_contact_s": 223.0,
+     "detected_by": "drone-1",
+     "detected_ms": 667000,
+     "digest": "f3858eb91c492c02",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 687845,
+     "seed": 19,
+     "time_to_contact_s": 290.0,
+     "time_to_detect_s": 67.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 914000,
+     "detect_to_contact_s": 249.0,
+     "detected_by": "drone-1",
+     "detected_ms": 665000,
+     "digest": "598883505a818117",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 679905,
+     "seed": 20,
+     "time_to_contact_s": 314.0,
+     "time_to_detect_s": 65.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 860000,
+     "detect_to_contact_s": 209.0,
+     "detected_by": "drone-1",
+     "detected_ms": 651000,
+     "digest": "8bb0e012e0366adb",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 670140,
+     "seed": 21,
+     "time_to_contact_s": 260.0,
+     "time_to_detect_s": 51.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 884000,
+     "detect_to_contact_s": 214.0,
+     "detected_by": "drone-1",
+     "detected_ms": 670000,
+     "digest": "fd137517e1f71657",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 686781,
+     "seed": 22,
+     "time_to_contact_s": 284.0,
+     "time_to_detect_s": 70.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 888000,
+     "detect_to_contact_s": 212.0,
+     "detected_by": "drone-1",
+     "detected_ms": 676000,
+     "digest": "406674b829d79203",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 694316,
+     "seed": 23,
+     "time_to_contact_s": 288.0,
+     "time_to_detect_s": 76.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 878000,
+     "detect_to_contact_s": 199.0,
+     "detected_by": "drone-1",
+     "detected_ms": 679000,
+     "digest": "4f7353638ad56a80",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 693005,
+     "seed": 24,
+     "time_to_contact_s": 278.0,
+     "time_to_detect_s": 79.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 888000,
+     "detect_to_contact_s": 221.0,
+     "detected_by": "drone-1",
+     "detected_ms": 667000,
+     "digest": "aabb79720132b994",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 681382,
+     "seed": 25,
+     "time_to_contact_s": 288.0,
+     "time_to_detect_s": 67.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 879000,
+     "detect_to_contact_s": 218.0,
+     "detected_by": "drone-1",
+     "detected_ms": 661000,
+     "digest": "3e09fa04b9955f94",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 679371,
+     "seed": 26,
+     "time_to_contact_s": 279.0,
+     "time_to_detect_s": 61.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 871000,
+     "detect_to_contact_s": 204.0,
+     "detected_by": "drone-1",
+     "detected_ms": 667000,
+     "digest": "d11cda5fcee9b190",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 684058,
+     "seed": 27,
+     "time_to_contact_s": 271.0,
+     "time_to_detect_s": 67.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 922000,
+     "detect_to_contact_s": 245.0,
+     "detected_by": "drone-1",
+     "detected_ms": 677000,
+     "digest": "c0a46a6e094c80da",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 695480,
+     "seed": 28,
+     "time_to_contact_s": 322.0,
+     "time_to_detect_s": 77.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 872000,
+     "detect_to_contact_s": 203.0,
+     "detected_by": "drone-1",
+     "detected_ms": 669000,
+     "digest": "3ebcdb1fca266393",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 689558,
+     "seed": 29,
+     "time_to_contact_s": 272.0,
+     "time_to_detect_s": 69.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 893000,
+     "detect_to_contact_s": 214.0,
+     "detected_by": "drone-1",
+     "detected_ms": 679000,
+     "digest": "9631e92623935291",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 697753,
+     "seed": 30,
+     "time_to_contact_s": 293.0,
+     "time_to_detect_s": 79.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 861000,
+     "detect_to_contact_s": 209.0,
+     "detected_by": "drone-1",
+     "detected_ms": 652000,
+     "digest": "c40d029fcbf9cb8e",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 671314,
+     "seed": 31,
+     "time_to_contact_s": 261.0,
+     "time_to_detect_s": 52.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 911000,
+     "detect_to_contact_s": 253.0,
+     "detected_by": "drone-1",
+     "detected_ms": 658000,
+     "digest": "60ffc702782a2ad1",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 675717,
+     "seed": 32,
+     "time_to_contact_s": 311.0,
+     "time_to_detect_s": 58.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 871000,
+     "detect_to_contact_s": 203.0,
+     "detected_by": "drone-1",
+     "detected_ms": 668000,
+     "digest": "f8f4bd1922d734a3",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 684779,
+     "seed": 33,
+     "time_to_contact_s": 271.0,
+     "time_to_detect_s": 68.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 956000,
+     "detect_to_contact_s": 190.0,
+     "detected_by": "drone-1",
+     "detected_ms": 766000,
+     "digest": "77ae36e7403e1969",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 774502,
+     "seed": 34,
+     "time_to_contact_s": 356.0,
+     "time_to_detect_s": 166.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 891000,
+     "detect_to_contact_s": 213.0,
+     "detected_by": "drone-1",
+     "detected_ms": 678000,
+     "digest": "2465ac84f5b20475",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 695712,
+     "seed": 35,
+     "time_to_contact_s": 291.0,
+     "time_to_detect_s": 78.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 911000,
+     "detect_to_contact_s": 249.0,
+     "detected_by": "drone-1",
+     "detected_ms": 662000,
+     "digest": "b57a23f12a3e1e64",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 678932,
+     "seed": 36,
+     "time_to_contact_s": 311.0,
+     "time_to_detect_s": 62.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 867000,
+     "detect_to_contact_s": 206.0,
+     "detected_by": "drone-1",
+     "detected_ms": 661000,
+     "digest": "05397c2c9e8d51e3",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 677830,
+     "seed": 37,
+     "time_to_contact_s": 267.0,
+     "time_to_detect_s": 61.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 886000,
+     "detect_to_contact_s": 213.0,
+     "detected_by": "drone-1",
+     "detected_ms": 673000,
+     "digest": "a8b99bb87b602684",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 693638,
+     "seed": 38,
+     "time_to_contact_s": 286.0,
+     "time_to_detect_s": 73.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 888000,
+     "detect_to_contact_s": 220.0,
+     "detected_by": "drone-1",
+     "detected_ms": 668000,
+     "digest": "5d1252e0b01e50a6",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 682680,
+     "seed": 39,
+     "time_to_contact_s": 288.0,
+     "time_to_detect_s": 68.0
+    }
+   ],
+   "runs": 40,
+   "time_to_contact_s": {
+    "median": 287.0,
+    "n": 40,
+    "p10": 270.0,
+    "p90": 325.0
+   },
+   "time_to_detect_s": {
+    "median": 68.0,
+    "n": 40,
+    "p10": 60.0,
+    "p90": 81.0
+   },
+   "title": "Unknown person walks in across open ground"
+  },
+  {
+   "contacted": 40,
+   "detect_to_contact_s": {
+    "median": 214.0,
+    "n": 40,
+    "p10": 202.0,
+    "p90": 249.0
+   },
+   "detected": 40,
+   "entered_zone": 0,
+   "entered_zone_before_contact": 0,
+   "id": "approach-with-mast-fault",
+   "info": {
+    "approach_bearing_deg": 0,
+    "faulted": "mast-3",
+    "start_m": 450.0,
+    "walk_s": 487
+   },
+   "replay_digest": "a44abfa09bb73876a24a0f5c272c1f5a889a94b44f2dda3de143ecdfaa7ba61b",
+   "replay_seed": 33,
+   "rows": [
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 870000,
+     "detect_to_contact_s": 204.0,
+     "detected_by": "drone-1",
+     "detected_ms": 666000,
+     "digest": "14f5db7dd268df5b",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 686711,
+     "seed": 0,
+     "time_to_contact_s": 270.0,
+     "time_to_detect_s": 66.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 890000,
+     "detect_to_contact_s": 219.0,
+     "detected_by": "drone-1",
+     "detected_ms": 671000,
+     "digest": "d1f6caf42029a6e3",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 688984,
+     "seed": 1,
+     "time_to_contact_s": 290.0,
+     "time_to_detect_s": 71.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 866000,
+     "detect_to_contact_s": 206.0,
+     "detected_by": "drone-1",
+     "detected_ms": 660000,
+     "digest": "205feb400dee7612",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 680746,
+     "seed": 2,
+     "time_to_contact_s": 266.0,
+     "time_to_detect_s": 60.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 874000,
+     "detect_to_contact_s": 209.0,
+     "detected_by": "drone-1",
+     "detected_ms": 665000,
+     "digest": "a9ba58f3a5911ca1",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 683696,
+     "seed": 3,
+     "time_to_contact_s": 274.0,
+     "time_to_detect_s": 65.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 887000,
+     "detect_to_contact_s": 221.0,
+     "detected_by": "drone-1",
+     "detected_ms": 666000,
+     "digest": "a7925a02311ac9ac",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 685039,
+     "seed": 4,
+     "time_to_contact_s": 287.0,
+     "time_to_detect_s": 66.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 911000,
+     "detect_to_contact_s": 250.0,
+     "detected_by": "drone-1",
+     "detected_ms": 661000,
+     "digest": "a171b28b5288b860",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 675755,
+     "seed": 5,
+     "time_to_contact_s": 311.0,
+     "time_to_detect_s": 61.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 957000,
+     "detect_to_contact_s": 189.0,
+     "detected_by": "drone-1",
+     "detected_ms": 768000,
+     "digest": "c2a62846552e30ec",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 785600,
+     "seed": 6,
+     "time_to_contact_s": 357.0,
+     "time_to_detect_s": 168.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 875000,
+     "detect_to_contact_s": 202.0,
+     "detected_by": "drone-1",
+     "detected_ms": 673000,
+     "digest": "96d2884c712efd0e",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 686972,
+     "seed": 7,
+     "time_to_contact_s": 275.0,
+     "time_to_detect_s": 73.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 925000,
+     "detect_to_contact_s": 244.0,
+     "detected_by": "drone-1",
+     "detected_ms": 681000,
+     "digest": "948ca0be325129d8",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 697779,
+     "seed": 8,
+     "time_to_contact_s": 325.0,
+     "time_to_detect_s": 81.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 874000,
+     "detect_to_contact_s": 202.0,
+     "detected_by": "drone-1",
+     "detected_ms": 672000,
+     "digest": "b9e6f9c2b084f275",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 690981,
+     "seed": 9,
+     "time_to_contact_s": 274.0,
+     "time_to_detect_s": 72.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 870000,
+     "detect_to_contact_s": 204.0,
+     "detected_by": "drone-1",
+     "detected_ms": 666000,
+     "digest": "b88e3a3ab459cc5a",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 687020,
+     "seed": 10,
+     "time_to_contact_s": 270.0,
+     "time_to_detect_s": 66.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 897000,
+     "detect_to_contact_s": 216.0,
+     "detected_by": "drone-1",
+     "detected_ms": 681000,
+     "digest": "8bf9866577442b9d",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 696792,
+     "seed": 11,
+     "time_to_contact_s": 297.0,
+     "time_to_detect_s": 81.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 887000,
+     "detect_to_contact_s": 214.0,
+     "detected_by": "drone-1",
+     "detected_ms": 673000,
+     "digest": "c030c301fe8dd876",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 691040,
+     "seed": 12,
+     "time_to_contact_s": 287.0,
+     "time_to_detect_s": 73.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 886000,
+     "detect_to_contact_s": 215.0,
+     "detected_by": "drone-1",
+     "detected_ms": 671000,
+     "digest": "bfe225218e813941",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 684972,
+     "seed": 13,
+     "time_to_contact_s": 286.0,
+     "time_to_detect_s": 71.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 876000,
+     "detect_to_contact_s": 216.0,
+     "detected_by": "drone-1",
+     "detected_ms": 660000,
+     "digest": "68d91560650a94cc",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 676400,
+     "seed": 14,
+     "time_to_contact_s": 276.0,
+     "time_to_detect_s": 60.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 879000,
+     "detect_to_contact_s": 211.0,
+     "detected_by": "drone-1",
+     "detected_ms": 668000,
+     "digest": "56ca3c0ffaf6ee4f",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 688503,
+     "seed": 15,
+     "time_to_contact_s": 279.0,
+     "time_to_detect_s": 68.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 870000,
+     "detect_to_contact_s": 204.0,
+     "detected_by": "drone-1",
+     "detected_ms": 666000,
+     "digest": "fbf866f94cce0bb5",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 683319,
+     "seed": 16,
+     "time_to_contact_s": 270.0,
+     "time_to_detect_s": 66.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 923000,
+     "detect_to_contact_s": 255.0,
+     "detected_by": "drone-1",
+     "detected_ms": 668000,
+     "digest": "6865b93cbebf2fa5",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 688816,
+     "seed": 17,
+     "time_to_contact_s": 323.0,
+     "time_to_detect_s": 68.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 979000,
+     "detect_to_contact_s": 224.0,
+     "detected_by": "drone-1",
+     "detected_ms": 755000,
+     "digest": "4495cb3ecee18916",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 774530,
+     "seed": 18,
+     "time_to_contact_s": 379.0,
+     "time_to_detect_s": 155.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 890000,
+     "detect_to_contact_s": 223.0,
+     "detected_by": "drone-1",
+     "detected_ms": 667000,
+     "digest": "368b18a35c567e6d",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 687845,
+     "seed": 19,
+     "time_to_contact_s": 290.0,
+     "time_to_detect_s": 67.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 914000,
+     "detect_to_contact_s": 249.0,
+     "detected_by": "drone-1",
+     "detected_ms": 665000,
+     "digest": "b5307c6902fd4746",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 679905,
+     "seed": 20,
+     "time_to_contact_s": 314.0,
+     "time_to_detect_s": 65.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 860000,
+     "detect_to_contact_s": 209.0,
+     "detected_by": "drone-1",
+     "detected_ms": 651000,
+     "digest": "37ba1ef312f9007a",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 670140,
+     "seed": 21,
+     "time_to_contact_s": 260.0,
+     "time_to_detect_s": 51.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 884000,
+     "detect_to_contact_s": 214.0,
+     "detected_by": "drone-1",
+     "detected_ms": 670000,
+     "digest": "909874a7e8787b7e",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 686781,
+     "seed": 22,
+     "time_to_contact_s": 284.0,
+     "time_to_detect_s": 70.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 888000,
+     "detect_to_contact_s": 212.0,
+     "detected_by": "drone-1",
+     "detected_ms": 676000,
+     "digest": "937e0dc6b1148e07",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 694316,
+     "seed": 23,
+     "time_to_contact_s": 288.0,
+     "time_to_detect_s": 76.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 878000,
+     "detect_to_contact_s": 199.0,
+     "detected_by": "drone-1",
+     "detected_ms": 679000,
+     "digest": "71bea8a4bb4fefc8",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 693005,
+     "seed": 24,
+     "time_to_contact_s": 278.0,
+     "time_to_detect_s": 79.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 888000,
+     "detect_to_contact_s": 221.0,
+     "detected_by": "drone-1",
+     "detected_ms": 667000,
+     "digest": "e05b5c601e9ae0e0",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 681382,
+     "seed": 25,
+     "time_to_contact_s": 288.0,
+     "time_to_detect_s": 67.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 879000,
+     "detect_to_contact_s": 218.0,
+     "detected_by": "drone-1",
+     "detected_ms": 661000,
+     "digest": "4c4d53bd58e7ab05",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 679371,
+     "seed": 26,
+     "time_to_contact_s": 279.0,
+     "time_to_detect_s": 61.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 871000,
+     "detect_to_contact_s": 204.0,
+     "detected_by": "drone-1",
+     "detected_ms": 667000,
+     "digest": "8864b8ab9720750c",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 684058,
+     "seed": 27,
+     "time_to_contact_s": 271.0,
+     "time_to_detect_s": 67.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 922000,
+     "detect_to_contact_s": 245.0,
+     "detected_by": "drone-1",
+     "detected_ms": 677000,
+     "digest": "b12bd388fcb4881c",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 695480,
+     "seed": 28,
+     "time_to_contact_s": 322.0,
+     "time_to_detect_s": 77.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 872000,
+     "detect_to_contact_s": 203.0,
+     "detected_by": "drone-1",
+     "detected_ms": 669000,
+     "digest": "48d1458ea72b9e10",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 689558,
+     "seed": 29,
+     "time_to_contact_s": 272.0,
+     "time_to_detect_s": 69.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 893000,
+     "detect_to_contact_s": 214.0,
+     "detected_by": "drone-1",
+     "detected_ms": 679000,
+     "digest": "04c91b02eb55f274",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 697753,
+     "seed": 30,
+     "time_to_contact_s": 293.0,
+     "time_to_detect_s": 79.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 861000,
+     "detect_to_contact_s": 209.0,
+     "detected_by": "drone-1",
+     "detected_ms": 652000,
+     "digest": "1f245d9f10fc84da",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 671314,
+     "seed": 31,
+     "time_to_contact_s": 261.0,
+     "time_to_detect_s": 52.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 911000,
+     "detect_to_contact_s": 253.0,
+     "detected_by": "drone-1",
+     "detected_ms": 658000,
+     "digest": "9d69c466699d1943",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 675717,
+     "seed": 32,
+     "time_to_contact_s": 311.0,
+     "time_to_detect_s": 58.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 871000,
+     "detect_to_contact_s": 203.0,
+     "detected_by": "drone-1",
+     "detected_ms": 668000,
+     "digest": "a44abfa09bb73876",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 684779,
+     "seed": 33,
+     "time_to_contact_s": 271.0,
+     "time_to_detect_s": 68.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 956000,
+     "detect_to_contact_s": 190.0,
+     "detected_by": "drone-1",
+     "detected_ms": 766000,
+     "digest": "ca07302f75c3df22",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 774502,
+     "seed": 34,
+     "time_to_contact_s": 356.0,
+     "time_to_detect_s": 166.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 891000,
+     "detect_to_contact_s": 213.0,
+     "detected_by": "drone-1",
+     "detected_ms": 678000,
+     "digest": "b852a6983bcffe32",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 695712,
+     "seed": 35,
+     "time_to_contact_s": 291.0,
+     "time_to_detect_s": 78.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 911000,
+     "detect_to_contact_s": 249.0,
+     "detected_by": "drone-1",
+     "detected_ms": 662000,
+     "digest": "4613e769cd1d13de",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 678932,
+     "seed": 36,
+     "time_to_contact_s": 311.0,
+     "time_to_detect_s": 62.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 867000,
+     "detect_to_contact_s": 206.0,
+     "detected_by": "drone-1",
+     "detected_ms": 661000,
+     "digest": "9366316db7ed40c8",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 677830,
+     "seed": 37,
+     "time_to_contact_s": 267.0,
+     "time_to_detect_s": 61.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 886000,
+     "detect_to_contact_s": 213.0,
+     "detected_by": "drone-1",
+     "detected_ms": 673000,
+     "digest": "59d2d4af8a05219d",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 693638,
+     "seed": 38,
+     "time_to_contact_s": 286.0,
+     "time_to_detect_s": 73.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 888000,
+     "detect_to_contact_s": 220.0,
+     "detected_by": "drone-1",
+     "detected_ms": 668000,
+     "digest": "f1f7738f13f443e6",
+     "entered_zone": false,
+     "entered_zone_ms": null,
+     "first_arrival_ms": 682680,
+     "seed": 39,
+     "time_to_contact_s": 288.0,
+     "time_to_detect_s": 68.0
+    }
+   ],
+   "runs": 40,
+   "time_to_contact_s": {
+    "median": 287.0,
+    "n": 40,
+    "p10": 270.0,
+    "p90": 325.0
+   },
+   "time_to_detect_s": {
+    "median": 68.0,
+    "n": 40,
+    "p10": 60.0,
+    "p90": 81.0
+   },
+   "title": "Same approach, camera mast-3 out of service"
+  },
+  {
+   "contacted": 40,
+   "detect_to_contact_s": {
+    "median": 147.0,
+    "n": 40,
+    "p10": 126.0,
+    "p90": 156.0
+   },
+   "detected": 40,
+   "entered_zone": 40,
+   "entered_zone_before_contact": 40,
+   "id": "approach-with-drone-down",
+   "info": {
+    "approach_bearing_deg": 0,
+    "faulted": "drone-1",
+    "start_m": 450.0,
+    "walk_s": 487
+   },
+   "replay_digest": "c1ccf5630165c0308076c69e95bde4c2de0ca7b663ff9f2b9ccfa7574681cb48",
+   "replay_seed": 22,
+   "rows": [
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1345000,
+     "detect_to_contact_s": 141.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1204000,
+     "digest": "19d7fd97e40b84df",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1213049,
+     "seed": 0,
+     "time_to_contact_s": 745.0,
+     "time_to_detect_s": 604.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1089000,
+     "detect_to_contact_s": 154.0,
+     "detected_by": "guard-1",
+     "detected_ms": 935000,
+     "digest": "f497d6d9f748b3b6",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 968102,
+     "seed": 1,
+     "time_to_contact_s": 489.0,
+     "time_to_detect_s": 335.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1298000,
+     "detect_to_contact_s": 147.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1151000,
+     "digest": "2b921f12efd77263",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1167983,
+     "seed": 2,
+     "time_to_contact_s": 698.0,
+     "time_to_detect_s": 551.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1310000,
+     "detect_to_contact_s": 149.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1161000,
+     "digest": "f2cb04fcb8abf81c",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1179604,
+     "seed": 3,
+     "time_to_contact_s": 710.0,
+     "time_to_detect_s": 561.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1263000,
+     "detect_to_contact_s": 147.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1116000,
+     "digest": "c725179c757f5c37",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1133316,
+     "seed": 4,
+     "time_to_contact_s": 663.0,
+     "time_to_detect_s": 516.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1291000,
+     "detect_to_contact_s": 114.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1177000,
+     "digest": "0cfd543162b00951",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1187989,
+     "seed": 5,
+     "time_to_contact_s": 691.0,
+     "time_to_detect_s": 577.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1277000,
+     "detect_to_contact_s": 149.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1128000,
+     "digest": "a57055124e71957b",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1144732,
+     "seed": 6,
+     "time_to_contact_s": 677.0,
+     "time_to_detect_s": 528.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1302000,
+     "detect_to_contact_s": 154.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1148000,
+     "digest": "ea93ed8889b2edd8",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1167198,
+     "seed": 7,
+     "time_to_contact_s": 702.0,
+     "time_to_detect_s": 548.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1395000,
+     "detect_to_contact_s": 141.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1254000,
+     "digest": "18f174adb5510cfa",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1276444,
+     "seed": 8,
+     "time_to_contact_s": 795.0,
+     "time_to_detect_s": 654.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1362000,
+     "detect_to_contact_s": 151.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1211000,
+     "digest": "a1edd7fbc778ad6d",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1221199,
+     "seed": 9,
+     "time_to_contact_s": 762.0,
+     "time_to_detect_s": 611.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1244000,
+     "detect_to_contact_s": 147.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1097000,
+     "digest": "ba4db6827eef1c46",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1105991,
+     "seed": 10,
+     "time_to_contact_s": 644.0,
+     "time_to_detect_s": 497.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1233000,
+     "detect_to_contact_s": 154.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1079000,
+     "digest": "d4e0fa633928616c",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1093476,
+     "seed": 11,
+     "time_to_contact_s": 633.0,
+     "time_to_detect_s": 479.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1298000,
+     "detect_to_contact_s": 146.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1152000,
+     "digest": "78e62ed9ee620008",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1171314,
+     "seed": 12,
+     "time_to_contact_s": 698.0,
+     "time_to_detect_s": 552.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1342000,
+     "detect_to_contact_s": 184.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1158000,
+     "digest": "b01286b65ad8c184",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1175267,
+     "seed": 13,
+     "time_to_contact_s": 742.0,
+     "time_to_detect_s": 558.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1308000,
+     "detect_to_contact_s": 150.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1158000,
+     "digest": "bcb96ed79aa4347f",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1174728,
+     "seed": 14,
+     "time_to_contact_s": 708.0,
+     "time_to_detect_s": 558.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1259000,
+     "detect_to_contact_s": 146.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1113000,
+     "digest": "6dc0043b1833f066",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1128369,
+     "seed": 15,
+     "time_to_contact_s": 659.0,
+     "time_to_detect_s": 513.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1310000,
+     "detect_to_contact_s": 153.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1157000,
+     "digest": "83ddb42126d42f90",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1174490,
+     "seed": 16,
+     "time_to_contact_s": 710.0,
+     "time_to_detect_s": 557.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1400000,
+     "detect_to_contact_s": 157.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1243000,
+     "digest": "9bfc5f4daff3d3ec",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1263584,
+     "seed": 17,
+     "time_to_contact_s": 800.0,
+     "time_to_detect_s": 643.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1276000,
+     "detect_to_contact_s": 141.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1135000,
+     "digest": "9b4cf7fc3067d3e1",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1155979,
+     "seed": 18,
+     "time_to_contact_s": 676.0,
+     "time_to_detect_s": 535.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1253000,
+     "detect_to_contact_s": 139.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1114000,
+     "digest": "406502d1b9f701e1",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1131702,
+     "seed": 19,
+     "time_to_contact_s": 653.0,
+     "time_to_detect_s": 514.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1258000,
+     "detect_to_contact_s": 116.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1142000,
+     "digest": "1621c58cc4ab8a19",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1160648,
+     "seed": 20,
+     "time_to_contact_s": 658.0,
+     "time_to_detect_s": 542.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1270000,
+     "detect_to_contact_s": 149.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1121000,
+     "digest": "8d9399fa7ab291bc",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1143576,
+     "seed": 21,
+     "time_to_contact_s": 670.0,
+     "time_to_detect_s": 521.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1302000,
+     "detect_to_contact_s": 147.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1155000,
+     "digest": "c1ccf5630165c030",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1172056,
+     "seed": 22,
+     "time_to_contact_s": 702.0,
+     "time_to_detect_s": 555.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1226000,
+     "detect_to_contact_s": 156.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1070000,
+     "digest": "0229bd99d99214d1",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1089651,
+     "seed": 23,
+     "time_to_contact_s": 626.0,
+     "time_to_detect_s": 470.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1240000,
+     "detect_to_contact_s": 126.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1114000,
+     "digest": "705633409a55bee4",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1128154,
+     "seed": 24,
+     "time_to_contact_s": 640.0,
+     "time_to_detect_s": 514.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1265000,
+     "detect_to_contact_s": 114.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1151000,
+     "digest": "42159018ef0ea14e",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1167983,
+     "seed": 25,
+     "time_to_contact_s": 665.0,
+     "time_to_detect_s": 551.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1359000,
+     "detect_to_contact_s": 145.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1214000,
+     "digest": "d4f1185b82f47a18",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1231316,
+     "seed": 26,
+     "time_to_contact_s": 759.0,
+     "time_to_detect_s": 614.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1322000,
+     "detect_to_contact_s": 154.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1168000,
+     "digest": "1bea4703d4450669",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1183273,
+     "seed": 27,
+     "time_to_contact_s": 722.0,
+     "time_to_detect_s": 568.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1333000,
+     "detect_to_contact_s": 141.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1192000,
+     "digest": "a74d9c8f2d79b0ae",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1201454,
+     "seed": 28,
+     "time_to_contact_s": 733.0,
+     "time_to_detect_s": 592.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1366000,
+     "detect_to_contact_s": 141.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1225000,
+     "digest": "53fc706d4b7dde8f",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1242713,
+     "seed": 29,
+     "time_to_contact_s": 766.0,
+     "time_to_detect_s": 625.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1284000,
+     "detect_to_contact_s": 155.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1129000,
+     "digest": "c67031f05f483db5",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1146599,
+     "seed": 30,
+     "time_to_contact_s": 684.0,
+     "time_to_detect_s": 529.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1310000,
+     "detect_to_contact_s": 149.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1161000,
+     "digest": "59c8b8c95eb2d482",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1172084,
+     "seed": 31,
+     "time_to_contact_s": 710.0,
+     "time_to_detect_s": 561.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1279000,
+     "detect_to_contact_s": 141.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1138000,
+     "digest": "e293fe84e01c47dc",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1156315,
+     "seed": 32,
+     "time_to_contact_s": 679.0,
+     "time_to_detect_s": 538.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1348000,
+     "detect_to_contact_s": 150.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1198000,
+     "digest": "e7036d5902df52a8",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1207046,
+     "seed": 33,
+     "time_to_contact_s": 748.0,
+     "time_to_detect_s": 598.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1314000,
+     "detect_to_contact_s": 155.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1159000,
+     "digest": "052fbc08604c4909",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1174744,
+     "seed": 34,
+     "time_to_contact_s": 714.0,
+     "time_to_detect_s": 559.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1312000,
+     "detect_to_contact_s": 146.0,
+     "detected_by": "dog-1",
+     "detected_ms": 1166000,
+     "digest": "9398dbaadbdc6cfb",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1182984,
+     "seed": 35,
+     "time_to_contact_s": 712.0,
+     "time_to_detect_s": 566.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1264000,
+     "detect_to_contact_s": 116.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1148000,
+     "digest": "b2421b65ac31cfb6",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1164983,
+     "seed": 36,
+     "time_to_contact_s": 664.0,
+     "time_to_detect_s": 548.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1261000,
+     "detect_to_contact_s": 141.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1120000,
+     "digest": "3ff6de8055703c66",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1137820,
+     "seed": 37,
+     "time_to_contact_s": 661.0,
+     "time_to_detect_s": 520.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1346000,
+     "detect_to_contact_s": 141.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1205000,
+     "digest": "93ad184df0eeeafc",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1219567,
+     "seed": 38,
+     "time_to_contact_s": 746.0,
+     "time_to_detect_s": 605.0
+    },
+    {
+     "appeared_ms": 600000,
+     "contact_ms": 1312000,
+     "detect_to_contact_s": 157.0,
+     "detected_by": "guard-1",
+     "detected_ms": 1155000,
+     "digest": "5b6fd26985f0604c",
+     "entered_zone": true,
+     "entered_zone_ms": 1043000,
+     "first_arrival_ms": 1172160,
+     "seed": 39,
+     "time_to_contact_s": 712.0,
+     "time_to_detect_s": 555.0
+    }
+   ],
+   "runs": 40,
+   "time_to_contact_s": {
+    "median": 702.0,
+    "n": 40,
+    "p10": 644.0,
+    "p90": 762.0
+   },
+   "time_to_detect_s": {
+    "median": 555.0,
+    "n": 40,
+    "p10": 513.0,
+    "p90": 614.0
+   },
+   "title": "Same approach, drone camera out of service"
+  }
+ ],
+ "files": {
+  "replay-approach-on-foot.json": "72637c63b50bd73f48b764f14a9a89f996cab3a1a61968cf2617278b4e4c29dd",
+  "replay-approach-with-drone-down.json": "8b591869fb21387a79a4bfae51086627508bcec3f589ff00f7746fa50a3a29b7",
+  "replay-approach-with-mast-fault.json": "313b40e6fecb9840700eefe1e1e6828cdcdecc90c3e802fab37e401b70bff668",
+  "replay-evacuation.json": "991444449e32d47317ed04dfcd719ddd5087474f24e856122d66e4732f709afc",
+  "replay-fence-to-door-drone-down.json": "90ed4935092d598e3e0dba3d97ea238b469a2ba38f9da88aa81afaac0c88cfa9",
+  "replay-fence-to-door-during-alarm.json": "801a78dc4e6ea1e4764041ba8fece1421dcea147b8ee0cdff8db32e8a61b68ce",
+  "replay-fence-to-door-two-faults.json": "007e81b1b3b67ab27dba60a4781b5e9eeccdb4e25f8b67da9d21e22b1021cbd7",
+  "replay-fence-to-door.json": "a86bbf7ccfa38f031b450179d123956a6de925ff463887235ca4973b678cb0b2",
+  "replay-gate-two-hours.json": "3491d1c5e700e88bbb09c3ecb3bf0ea3f11cc7ee4fb8422e9004731f0731d463",
+  "replay-nuisance-alarm-all-respond.json": "a0c52c0ccae498d7f53029b3ba847a22975c86a55f0efde6181ba37126bf6446",
+  "replay-nuisance-alarm-verify-first.json": "7c4ca67eb3486025b61c1ea02cd115143c7cc4ad59c7f74b42e504d8bdf58d0b",
+  "site.json": "b0181ae7a87913fca988453b869c0cedc0343d3d0cbd90e38455cdbf43bbedac",
+  "summary.json": "d04c59d73d8d5a25873594a8b0e6396264fab95c8b2e1fc74befc6f9be2135d4"
+ },
+ "frame_distortion_ppm": 282.1,
+ "graph": {
+  "drive": {
+   "components": 13,
+   "main_fraction": 0.8641,
+   "nodes": 74472
+  },
+  "edges_dropped_inside_buildings": 134,
+  "foot": {
+   "components": 26,
+   "main_fraction": 0.9848,
+   "nodes": 126124
+  },
+  "nodes": 126259
+ },
+ "horizon": {
+  "agents": {
+   "dog-1": {
+    "availability": 0.8499,
+    "capacity_fraction": 0.9656,
+    "charging_ms": 389063431,
+    "cycles": 172,
+    "distance_m": 2366768.0,
+    "energy_fraction": 0.05283,
+    "idle_ms": 1348080570,
+    "kind": "dog",
+    "label": "Robot dog",
+    "mode": "charging",
+    "moving_ms": 854855999,
+    "pos": [
+     2636176.0,
+     1158638.0,
+     808.081
+    ],
+    "role": "staff",
+    "task_ms": {
+     "charging": 389063431,
+     "idle": 1348080570,
+     "patrol": 850610572,
+     "recharge": 4245427
+    }
+   },
+   "drone-1": {
+    "availability": 0.47059,
+    "capacity_fraction": 0.8222,
+    "charging_ms": 1372220239,
+    "cycles": 889,
+    "distance_m": 14291177.2,
+    "energy_fraction": 0.05595,
+    "idle_ms": 19121,
+    "kind": "drone",
+    "label": "Drone",
+    "mode": "charging",
+    "moving_ms": 1219760640,
+    "pos": [
+     2636264.0,
+     1158627.0,
+     807.114
+    ],
+    "role": "staff",
+    "task_ms": {
+     "charging": 1372220239,
+     "idle": 19121,
+     "patrol": 1189470275,
+     "recharge": 30290365
+    }
+   },
+   "guard-1": {
+    "availability": 1.0,
+    "capacity_fraction": null,
+    "charging_ms": 0,
+    "cycles": 0,
+    "distance_m": 2005443.0,
+    "energy_fraction": null,
+    "idle_ms": 1153098032,
+    "kind": "guard",
+    "label": "Guard, yard patrol",
+    "mode": "moving",
+    "moving_ms": 1438901968,
+    "pos": [
+     2636196.374,
+     1158638.0,
+     807.481
+    ],
+    "role": "staff",
+    "task_ms": {
+     "idle": 1153098032,
+     "patrol": 1438901968
+    }
+   },
+   "guard-2": {
+    "availability": 1.0,
+    "capacity_fraction": null,
+    "charging_ms": 0,
+    "cycles": 0,
+    "distance_m": 0.0,
+    "energy_fraction": null,
+    "idle_ms": 2592000000,
+    "kind": "guard",
+    "label": "Guard, gate post",
+    "mode": "idle",
+    "moving_ms": 0,
+    "pos": [
+     2636153.0,
+     1158565.0,
+     809.336
+    ],
+    "role": "staff",
+    "task_ms": {
+     "idle": 2592000000
+    }
+   },
+   "vehicle-1": {
+    "availability": 0.67452,
+    "capacity_fraction": 0.9814,
+    "charging_ms": 843649340,
+    "cycles": 93,
+    "distance_m": 12577455.8,
+    "energy_fraction": 0.06123,
+    "idle_ms": 196273796,
+    "kind": "vehicle",
+    "label": "Patrol vehicle",
+    "mode": "charging",
+    "moving_ms": 1552076864,
+    "pos": [
+     2636162.0,
+     1158562.0,
+     809.465
+    ],
+    "role": "staff",
+    "task_ms": {
+     "charging": 843649340,
+     "idle": 196273796,
+     "patrol": 1552076864
+    }
+   }
+  },
+  "days": 30,
+  "digest": "7a55dde40762348db81122dda4e1d72b419124375f5110c8d2b5e0b43c200327",
+  "events": 192329
+ },
+ "operations": {
+  "alarms": [
+   {
+    "alarms": 94,
+    "cleared": 93,
+    "days": 30,
+    "dog_hours_on_alarms": 0.81,
+    "drone_hours_on_alarms": 0.51,
+    "drone_verifications": 41,
+    "guard_dispatches": 0,
+    "guard_hours_on_alarms": 0.22,
+    "per_day": 3.0,
+    "policy": "verify_first",
+    "title": "Nuisance alarms, verify first",
+    "unverified": 1
+   },
+   {
+    "alarms": 94,
+    "cleared": 1,
+    "days": 30,
+    "dog_hours_on_alarms": 3.09,
+    "drone_hours_on_alarms": 0.92,
+    "drone_verifications": 0,
+    "guard_dispatches": 114,
+    "guard_hours_on_alarms": 6.52,
+    "per_day": 3.0,
+    "policy": "all_respond",
+    "title": "Nuisance alarms, everyone responds",
+    "unverified": 0
+   }
+  ],
+  "assumptions": {
+   "callback_s": [
+    120.0,
+    300.0
+   ],
+   "check_s": [
+    300.0,
+    600.0
+   ],
+   "door_delay_s": 90.0,
+   "fence_delay_s": 30.0,
+   "fence_pd": 0.95,
+   "nuisance_per_day": 3.0,
+   "p_catch": {
+    "callback": 0.95,
+    "paper": 0.35
+   },
+   "premovement": "lognormal, median 30 s, sigma 0.6; indoors +10 to 60 s",
+   "trucks_per_hour": 4.0,
+   "workers": 12
+  },
+  "coupled": [
+   {
+    "contact_s": {
+     "median": 580.187,
+     "n": 40,
+     "p10": 507.214,
+     "p90": 681.237
+    },
+    "detected_before_fence": 21,
+    "fence_alarm": 37,
+    "fence_to_contact_s": {
+     "median": 93.565,
+     "n": 40,
+     "p10": 20.592,
+     "p90": 194.615
+    },
+    "interrupted": 38,
+    "interrupted_ci": {
+     "hi": 0.9939,
+     "k": 38,
+     "lo": 0.8308,
+     "n": 40,
+     "share": 0.95
+    },
+    "margin_s": null,
+    "policy": "verify_first",
+    "runs": 40,
+    "task_completed": 2,
+    "task_s": {
+     "median": 764.042,
+     "n": 2,
+     "p10": 764.042,
+     "p90": 764.042
+    },
+    "time_to_detect_s": {
+     "median": 482.402,
+     "n": 40,
+     "p10": 376.214,
+     "p90": 518.012
+    }
+   },
+   {
+    "contact_s": {
+     "median": 565.398,
+     "n": 40,
+     "p10": 526.402,
+     "p90": 686.425
+    },
+    "detected_before_fence": 3,
+    "fence_alarm": 37,
+    "fence_to_contact_s": {
+     "median": 78.776,
+     "n": 40,
+     "p10": 39.78,
+     "p90": 199.803
+    },
+    "interrupted": 38,
+    "interrupted_ci": {
+     "hi": 0.9939,
+     "k": 38,
+     "lo": 0.8308,
+     "n": 40,
+     "share": 0.95
+    },
+    "margin_s": null,
+    "policy": "all_respond",
+    "runs": 40,
+    "task_completed": 2,
+    "task_s": {
+     "median": 764.042,
+     "n": 2,
+     "p10": 764.042,
+     "p90": 764.042
+    },
+    "time_to_detect_s": {
+     "median": 514.402,
+     "n": 40,
+     "p10": 487.425,
+     "p90": 557.146
+    }
+   }
+  ],
+  "evacuation": {
+   "all_mustered": 40,
+   "info": {
+    "muster": [
+     2636167.310835056,
+     1158572.155417528
+    ],
+    "premovement_median_s": 30.0,
+    "workers": 12
+   },
+   "last_s": {
+    "median": 178.0,
+    "n": 40,
+    "p10": 139.1,
+    "p90": 217.4
+   },
+   "median_s": {
+    "median": 120.3,
+    "n": 40,
+    "p10": 110.0,
+    "p90": 131.2
+   },
+   "mustered": {
+    "median": 12,
+    "n": 40,
+    "p10": 12,
+    "p90": 12
+   },
+   "runs": 40,
+   "title": "Evacuation drill: everyone to the muster point",
+   "workers": {
+    "median": 12,
+    "n": 40,
+    "p10": 12,
+    "p90": 12
+   }
+  },
+  "evacuation_blocked": {
+   "all_mustered": 40,
+   "last_s": {
+    "median": 246.9,
+    "n": 40,
+    "p10": 221.0,
+    "p90": 296.9
+   },
+   "median_s": {
+    "median": 169.3,
+    "n": 40,
+    "p10": 142.1,
+    "p90": 195.7
+   },
+   "mustered": {
+    "median": 12,
+    "n": 40,
+    "p10": 12,
+    "p90": 12
+   },
+   "runs": 40,
+   "title": "Evacuation drill with the nearest exit blocked",
+   "workers": {
+    "median": 12,
+    "n": 40,
+    "p10": 12,
+    "p90": 12
+   }
+  },
+  "gate": [
+   {
+    "checked": {
+     "median": 37,
+     "n": 40,
+     "p10": 31,
+     "p90": 43
+    },
+    "fictitious": {
+     "lost": 28,
+     "stopped": 12
+    },
+    "hours": 10.0,
+    "lost": 28,
+    "max_queue": {
+     "median": 3,
+     "n": 40,
+     "p10": 3,
+     "p90": 4
+    },
+    "max_wait_s": {
+     "median": 933,
+     "n": 40,
+     "p10": 473,
+     "p90": 1259
+    },
+    "mean_wait_s": {
+     "median": 182.4,
+     "n": 40,
+     "p10": 86.6,
+     "p90": 270.8
+    },
+    "p90_wait_s": {
+     "median": 557,
+     "n": 40,
+     "p10": 321,
+     "p90": 785
+    },
+    "procedure": "paper",
+    "runs": 40,
+    "stopped": 12,
+    "trucks": {
+     "median": 37,
+     "n": 40,
+     "p10": 31,
+     "p90": 43
+    }
+   },
+   {
+    "checked": {
+     "median": 37,
+     "n": 40,
+     "p10": 31,
+     "p90": 43
+    },
+    "fictitious": {
+     "lost": 1,
+     "stopped": 38,
+     "unresolved": 1
+    },
+    "hours": 10.0,
+    "lost": 1,
+    "max_queue": {
+     "median": 5,
+     "n": 40,
+     "p10": 3,
+     "p90": 6
+    },
+    "max_wait_s": {
+     "median": 2086,
+     "n": 40,
+     "p10": 1258,
+     "p90": 2976
+    },
+    "mean_wait_s": {
+     "median": 554.3,
+     "n": 40,
+     "p10": 285.9,
+     "p90": 1010.8
+    },
+    "p90_wait_s": {
+     "median": 1581,
+     "n": 40,
+     "p10": 803,
+     "p90": 2315
+    },
+    "procedure": "callback",
+    "runs": 40,
+    "stopped": 38,
+    "trucks": {
+     "median": 37,
+     "n": 40,
+     "p10": 31,
+     "p90": 43
+    }
+   }
+  ],
+  "replays": [
+   {
+    "id": "fence-to-door-during-alarm",
+    "title": "Intrusion while a nuisance alarm is being handled"
+   },
+   {
+    "id": "fence-to-door",
+    "title": "Protection timeline: from the fence to a door"
+   },
+   {
+    "id": "fence-to-door-drone-down",
+    "title": "Protection timeline, drone camera out"
+   },
+   {
+    "id": "fence-to-door-two-faults",
+    "title": "Protection timeline, drone camera and fence sensor out"
+   },
+   {
+    "id": "nuisance-alarm-verify-first",
+    "title": "Nuisance fence alarm, checked by drone first"
+   },
+   {
+    "id": "nuisance-alarm-all-respond",
+    "title": "Nuisance fence alarm, everyone responds"
+   },
+   {
+    "id": "gate-two-hours",
+    "title": "Two hours at the gate, one fictitious pickup"
+   },
+   {
+    "id": "evacuation",
+    "title": "Evacuation drill: everyone to the muster point"
+   }
+  ],
+  "sensitivity": [
+   {
+    "door_delay_s": 45.0,
+    "interrupted": 32,
+    "runs": 40
+   },
+   {
+    "door_delay_s": 90.0,
+    "interrupted": 32,
+    "runs": 40
+   },
+   {
+    "door_delay_s": 180.0,
+    "interrupted": 33,
+    "runs": 40
+   }
+  ],
+  "sweep": [
+   {
+    "bearing_deg": 0,
+    "detected_before_fence": 20,
+    "interrupted": 32,
+    "runs": 40,
+    "task_completed": 8,
+    "time_to_detect_s": {
+     "median": 487.123,
+     "n": 40,
+     "p10": 372.936,
+     "p90": 925.863
+    },
+    "walkable": true
+   },
+   {
+    "bearing_deg": 45,
+    "detected_before_fence": 40,
+    "interrupted": 8,
+    "runs": 40,
+    "task_completed": 32,
+    "time_to_detect_s": {
+     "median": 423.402,
+     "n": 40,
+     "p10": 312.513,
+     "p90": 440.78
+    },
+    "walkable": true
+   },
+   {
+    "bearing_deg": 90,
+    "walkable": false
+   },
+   {
+    "bearing_deg": 135,
+    "detected_before_fence": 40,
+    "interrupted": 40,
+    "runs": 40,
+    "task_completed": 0,
+    "time_to_detect_s": {
+     "median": 822.402,
+     "n": 40,
+     "p10": 698.116,
+     "p90": 835.146
+    },
+    "walkable": true
+   },
+   {
+    "bearing_deg": 180,
+    "detected_before_fence": 19,
+    "interrupted": 24,
+    "runs": 40,
+    "task_completed": 16,
+    "time_to_detect_s": {
+     "median": 518.203,
+     "n": 40,
+     "p10": 370.123,
+     "p90": 783.906
+    },
+    "walkable": true
+   },
+   {
+    "bearing_deg": 225,
+    "detected_before_fence": 21,
+    "interrupted": 32,
+    "runs": 40,
+    "task_completed": 8,
+    "time_to_detect_s": {
+     "median": 406.116,
+     "n": 40,
+     "p10": 337.631,
+     "p90": 594.203
+    },
+    "walkable": true
+   },
+   {
+    "bearing_deg": 270,
+    "walkable": false
+   },
+   {
+    "bearing_deg": 315,
+    "detected_before_fence": 37,
+    "interrupted": 38,
+    "runs": 40,
+    "task_completed": 2,
+    "time_to_detect_s": {
+     "median": 534.692,
+     "n": 40,
+     "p10": 386.116,
+     "p90": 548.977
+    },
+    "walkable": true
+   }
+  ],
+  "timeline": [
+   {
+    "contact_s": {
+     "median": 525.146,
+     "n": 40,
+     "p10": 303.402,
+     "p90": 668.617
+    },
+    "detected_before_fence": 30,
+    "fence_alarm": 26,
+    "fence_to_contact_s": {
+     "median": 102.921,
+     "n": 28,
+     "p10": 20.776,
+     "p90": 184.679
+    },
+    "id": "fence-to-door",
+    "info": {
+     "bearing_deg": null,
+     "door_delay_s": 90.0,
+     "fence_delay_s": 30.0,
+     "fence_pd": 0.95
+    },
+    "interrupted": 39,
+    "interrupted_ci": {
+     "hi": 0.9994,
+     "k": 39,
+     "lo": 0.8684,
+     "n": 40,
+     "share": 0.975
+    },
+    "margin_s": null,
+    "runs": 40,
+    "task_completed": 1,
+    "task_s": {
+     "median": 764.042,
+     "n": 1,
+     "p10": 764.042,
+     "p90": 764.042
+    },
+    "time_to_detect_s": {
+     "median": 412.617,
+     "n": 40,
+     "p10": 71.012,
+     "p90": 499.337
+    },
+    "title": "Protection timeline: from the fence to a door"
+   },
+   {
+    "contact_s": {
+     "median": 594.322,
+     "n": 40,
+     "p10": 507.936,
+     "p90": 682.617
+    },
+    "detected_before_fence": 20,
+    "fence_alarm": 37,
+    "fence_to_contact_s": {
+     "median": 107.7,
+     "n": 40,
+     "p10": 21.314,
+     "p90": 195.995
+    },
+    "id": "fence-to-door-drone-down",
+    "info": {
+     "bearing_deg": null,
+     "door_delay_s": 90.0,
+     "faulted": "drone-1",
+     "fence_delay_s": 30.0,
+     "fence_pd": 0.95
+    },
+    "interrupted": 38,
+    "interrupted_ci": {
+     "hi": 0.9939,
+     "k": 38,
+     "lo": 0.8308,
+     "n": 40,
+     "share": 0.95
+    },
+    "margin_s": null,
+    "runs": 40,
+    "task_completed": 2,
+    "task_s": {
+     "median": 764.042,
+     "n": 2,
+     "p10": 764.042,
+     "p90": 764.042
+    },
+    "time_to_detect_s": {
+     "median": 487.123,
+     "n": 40,
+     "p10": 372.936,
+     "p90": 526.518
+    },
+    "title": "Protection timeline, drone camera out"
+   },
+   {
+    "contact_s": {
+     "median": 604.236,
+     "n": 40,
+     "p10": 516.376,
+     "p90": 969.893
+    },
+    "detected_before_fence": 20,
+    "fence_alarm": 0,
+    "fence_to_contact_s": {
+     "median": 117.614,
+     "n": 40,
+     "p10": 29.754,
+     "p90": 483.271
+    },
+    "id": "fence-to-door-two-faults",
+    "info": {
+     "bearing_deg": null,
+     "door_delay_s": 90.0,
+     "faulted": "drone-1",
+     "fence_delay_s": 30.0,
+     "fence_pd": 0.0
+    },
+    "interrupted": 32,
+    "interrupted_ci": {
+     "hi": 0.9095,
+     "k": 32,
+     "lo": 0.6435,
+     "n": 40,
+     "share": 0.8
+    },
+    "margin_s": null,
+    "runs": 40,
+    "task_completed": 8,
+    "task_s": {
+     "median": 764.042,
+     "n": 8,
+     "p10": 764.042,
+     "p90": 764.042
+    },
+    "time_to_detect_s": {
+     "median": 487.123,
+     "n": 40,
+     "p10": 372.936,
+     "p90": 925.863
+    },
+    "title": "Protection timeline, drone camera and fence sensor out"
+   }
+  ]
+ },
+ "replays": [
+  {
+   "id": "approach-on-foot",
+   "title": "Unknown person walks in across open ground"
+  },
+  {
+   "id": "approach-with-mast-fault",
+   "title": "Same approach, camera mast-3 out of service"
+  },
+  {
+   "id": "approach-with-drone-down",
+   "title": "Same approach, drone camera out of service"
+  },
+  {
+   "id": "fence-to-door-during-alarm",
+   "title": "Intrusion while a nuisance alarm is being handled"
+  },
+  {
+   "id": "fence-to-door",
+   "title": "Protection timeline: from the fence to a door"
+  },
+  {
+   "id": "fence-to-door-drone-down",
+   "title": "Protection timeline, drone camera out"
+  },
+  {
+   "id": "fence-to-door-two-faults",
+   "title": "Protection timeline, drone camera and fence sensor out"
+  },
+  {
+   "id": "nuisance-alarm-verify-first",
+   "title": "Nuisance fence alarm, checked by drone first"
+  },
+  {
+   "id": "nuisance-alarm-all-respond",
+   "title": "Nuisance fence alarm, everyone responds"
+  },
+  {
+   "id": "gate-two-hours",
+   "title": "Two hours at the gate, one fictitious pickup"
+  },
+  {
+   "id": "evacuation",
+   "title": "Evacuation drill: everyone to the muster point"
+  }
+ ],
+ "seconds": 1047,
+ "site": "ch-lauterbrunnen"
+}

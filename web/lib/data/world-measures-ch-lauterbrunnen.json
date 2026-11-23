@@ -1,0 +1,281 @@
+{
+ "drill": "Protection timeline, first drone's camera and the fence sensor out",
+ "intrusion_window_s": [
+  3600,
+  32400
+ ],
+ "measures": {
+  "4k-masts": {
+   "cost": {
+    "basis": "assumed: four 4K bullet cameras at $500-2,000 each installed, swapped onto the existing masts and re-aimed along the fence",
+    "one_off_usd": [
+     2000,
+     8000
+    ],
+    "per_year_usd": [
+     0,
+     0
+    ]
+   },
+   "label": "4K cameras on the four corner masts, aimed along the fence",
+   "met_in_time": 119,
+   "met_in_time_ci": {
+    "hi": 0.9998,
+    "k": 119,
+    "lo": 0.9544,
+    "n": 120,
+    "share": 0.9917
+   },
+   "runs": 120,
+   "seen_before_fence": 92,
+   "task_completed": 1,
+   "tie_group": 0,
+   "tied_with": [
+    "mid-masts"
+   ],
+   "time_to_contact_s": {
+    "median": 574.706,
+    "n": 120,
+    "p10": 513.513,
+    "p90": 620.411
+   },
+   "time_to_detect_s": {
+    "median": 467.012,
+    "n": 120,
+    "p10": 372.936,
+    "p90": 503.076
+   },
+   "vs_baseline_p": 0.0
+  },
+  "baseline": {
+   "cost": {
+    "basis": "no change",
+    "one_off_usd": [
+     0,
+     0
+    ],
+    "per_year_usd": [
+     0,
+     0
+    ]
+   },
+   "drone_cover": {
+    "cycles": {
+     "drone-1": 889
+    },
+    "days": 30,
+    "drones": 1,
+    "share_with_a_drone_available": 0.4706
+   },
+   "label": "As it is now",
+   "met_in_time": 97,
+   "met_in_time_ci": {
+    "hi": 0.8744,
+    "k": 97,
+    "lo": 0.7264,
+    "n": 120,
+    "share": 0.8083
+   },
+   "runs": 120,
+   "seen_before_fence": 57,
+   "task_completed": 23,
+   "tie_group": 2,
+   "tied_with": [
+    "re-aimed-masts"
+   ],
+   "time_to_contact_s": {
+    "median": 615.386,
+    "n": 120,
+    "p10": 525.301,
+    "p90": 943.58
+   },
+   "time_to_detect_s": {
+    "median": 502.005,
+    "n": 120,
+    "p10": 372.936,
+    "p90": 904.58
+   },
+   "vs_baseline_p": 1.0
+  },
+  "mid-masts": {
+   "cost": {
+    "basis": "two installed thermal cameras at $3,000-15,000 each, times 2-3 for poles, cabling, recording and integration",
+    "one_off_usd": [
+     12000,
+     90000
+    ],
+    "per_year_usd": [
+     0,
+     0
+    ]
+   },
+   "label": "Camera masts at the middle of both long sides",
+   "met_in_time": 114,
+   "met_in_time_ci": {
+    "hi": 0.9814,
+    "k": 114,
+    "lo": 0.8943,
+    "n": 120,
+    "share": 0.95
+   },
+   "runs": 120,
+   "seen_before_fence": 120,
+   "task_completed": 6,
+   "tie_group": 0,
+   "tied_with": [
+    "4k-masts"
+   ],
+   "time_to_contact_s": {
+    "median": 591.007,
+    "n": 120,
+    "p10": 510.684,
+    "p90": 682.617
+   },
+   "time_to_detect_s": {
+    "median": 465.371,
+    "n": 120,
+    "p10": 372.936,
+    "p90": 476.757
+   },
+   "vs_baseline_p": 0.00049
+  },
+  "re-aimed-masts": {
+   "cost": {
+    "basis": "no new equipment; a technician's visit to re-aim four cameras (assumed up to $2,000)",
+    "one_off_usd": [
+     0,
+     2000
+    ],
+    "per_year_usd": [
+     0,
+     0
+    ]
+   },
+   "label": "Re-aim the four corner cameras along the fence",
+   "met_in_time": 97,
+   "met_in_time_ci": {
+    "hi": 0.8744,
+    "k": 97,
+    "lo": 0.7264,
+    "n": 120,
+    "share": 0.8083
+   },
+   "runs": 120,
+   "seen_before_fence": 57,
+   "task_completed": 23,
+   "tie_group": 2,
+   "tied_with": [
+    "baseline"
+   ],
+   "time_to_contact_s": {
+    "median": 615.386,
+    "n": 120,
+    "p10": 525.301,
+    "p90": 943.58
+   },
+   "time_to_detect_s": {
+    "median": 502.005,
+    "n": 120,
+    "p10": 372.936,
+    "p90": 904.58
+   },
+   "vs_baseline_p": 1.0
+  },
+  "second-drone": {
+   "cost": {
+    "basis": "one surveillance drone at $15,000-50,000 to buy; no subscription price was found",
+    "one_off_usd": [
+     15000,
+     50000
+    ],
+    "per_year_usd": [
+     0,
+     0
+    ]
+   },
+   "drone_cover": {
+    "cycles": {
+     "drone-1": 889,
+     "drone-2": 891
+    },
+    "days": 30,
+    "drones": 2,
+    "share_with_a_drone_available": 0.7263
+   },
+   "label": "A second drone on the same circuit",
+   "met_in_time": 111,
+   "met_in_time_ci": {
+    "hi": 0.9651,
+    "k": 111,
+    "lo": 0.8624,
+    "n": 120,
+    "share": 0.925
+   },
+   "runs": 120,
+   "seen_before_fence": 98,
+   "task_completed": 9,
+   "tie_group": 1,
+   "tied_with": [
+    "second-guard"
+   ],
+   "time_to_contact_s": {
+    "median": 507.936,
+    "n": 120,
+    "p10": 289.923,
+    "p90": 688.376
+   },
+   "time_to_detect_s": {
+    "median": 297.987,
+    "n": 120,
+    "p10": 44.5,
+    "p90": 593.631
+   },
+   "vs_baseline_p": 0.00258
+  },
+  "second-guard": {
+   "cost": {
+    "basis": "one more post staffed all year at $28-42 an hour fully loaded",
+    "one_off_usd": [
+     0,
+     0
+    ],
+    "per_year_usd": [
+     245280,
+     367920
+    ]
+   },
+   "label": "A second guard on foot patrol",
+   "met_in_time": 113,
+   "met_in_time_ci": {
+    "hi": 0.9762,
+    "k": 113,
+    "lo": 0.8835,
+    "n": 120,
+    "share": 0.9417
+   },
+   "runs": 120,
+   "seen_before_fence": 87,
+   "task_completed": 7,
+   "tie_group": 1,
+   "tied_with": [
+    "second-drone"
+   ],
+   "time_to_contact_s": {
+    "median": 591.906,
+    "n": 120,
+    "p10": 509.425,
+    "p90": 682.897
+   },
+   "time_to_detect_s": {
+    "median": 430.52,
+    "n": 120,
+    "p10": 372.936,
+    "p90": 608.617
+   },
+   "vs_baseline_p": 0.00249
+  }
+ },
+ "note": "Each measure is the baseline plus one change, on the same seeds and the same intrusion times. Rates carry exact 95 % intervals; measures the paired runs cannot tell apart share a tie group.",
+ "seeds": 120,
+ "site": "ch-lauterbrunnen"
+}

@@ -1,0 +1,154 @@
+{
+ "what": "Gradual vortex breakdown (smoothstep ramp of the burst share) against the step model, both fitted by leave-one-wing-out on the same corpus and scored on the pre-registered criteria C1-C4.",
+ "decision": "not adopted: the fitted ramp width runs to the edge of every grid tried (12 deg on 0-12, 30 deg on 0-30), so the parameter is not identified; it is absorbing a mismatch between the breakdown map and the lift data. Step model (ramp 0) stays the default; the ramp remains an option.",
+ "runs": {
+  "step": {
+   "grid_deg": [
+    0
+   ],
+   "final_ramp_deg": 0,
+   "final_retained": 0.37,
+   "held_out_ramps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "pooled_held_out_rms": 0.1213,
+   "coverage_widened": 0.8981,
+   "criteria": {
+    "C1": {
+     "pass": false,
+     "failing": [
+      "wk-60",
+      "wk-65",
+      "wk-80"
+     ]
+    },
+    "C2": {
+     "pass": false,
+     "failing": [
+      "wk-60",
+      "wk-65",
+      "wk-70",
+      "wk-80"
+     ]
+    },
+    "C3": {
+     "pass": true,
+     "value": 0.8981
+    },
+    "C4": {
+     "pass": true,
+     "failing": []
+    }
+   }
+  },
+  "ramp 0-12": {
+   "grid_deg": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+   ],
+   "final_ramp_deg": 12,
+   "final_retained": 0.35,
+   "held_out_ramps": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+   ],
+   "pooled_held_out_rms": 0.114,
+   "coverage_widened": 0.8599,
+   "criteria": {
+    "C1": {
+     "pass": false,
+     "failing": [
+      "wk-80"
+     ]
+    },
+    "C2": {
+     "pass": false,
+     "failing": [
+      "wk-60",
+      "wk-65",
+      "wk-70"
+     ]
+    },
+    "C3": {
+     "pass": true,
+     "value": 0.8599
+    },
+    "C4": {
+     "pass": true,
+     "failing": []
+    }
+   }
+  },
+  "ramp 0-30": {
+   "grid_deg": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    30
+   ],
+   "final_ramp_deg": 30,
+   "final_retained": 0.31,
+   "held_out_ramps": [
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30
+   ],
+   "pooled_held_out_rms": 0.1036,
+   "coverage_widened": 0.9172,
+   "criteria": {
+    "C1": {
+     "pass": false,
+     "failing": [
+      "wk-80"
+     ]
+    },
+    "C2": {
+     "pass": false,
+     "failing": [
+      "wk-60",
+      "wk-65",
+      "wk-70"
+     ]
+    },
+    "C3": {
+     "pass": true,
+     "value": 0.9172
+    },
+    "C4": {
+     "pass": true,
+     "failing": []
+    }
+   }
+  }
+ }
+}

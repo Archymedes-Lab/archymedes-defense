@@ -1,0 +1,1454 @@
+{
+ "version": 1,
+ "note": "Build lib/data/aero-corpus.json: digitized public NASA data with provenance and digitizing error.",
+ "cases": [
+  {
+   "id": "pol-A0.5",
+   "kind": "delta",
+   "sweepDeg": 82.87,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 0.5",
+   "refs": "Tosti 1947, NACA TN 1468",
+   "conditions": "low speed",
+   "points": [
+    {
+     "alphaDeg": 3.94,
+     "cl": 0.079,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 10.02,
+     "cl": 0.232,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 14.98,
+     "cl": 0.385,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 19.94,
+     "cl": 0.586,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 25.02,
+     "cl": 0.71,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    }
+   ]
+  },
+  {
+   "id": "pol-A0.7",
+   "kind": "delta",
+   "sweepDeg": 79.92,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 0.7",
+   "refs": "Fink 1956",
+   "conditions": "low speed",
+   "points": [
+    {
+     "alphaDeg": 2.94,
+     "cl": 0.069,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 4.94,
+     "cl": 0.117,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 7.91,
+     "cl": 0.214,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 10.02,
+     "cl": 0.292,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 11.98,
+     "cl": 0.367,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 15.02,
+     "cl": 0.484,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 17.98,
+     "cl": 0.589,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 20.06,
+     "cl": 0.693,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 23.06,
+     "cl": 0.789,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    }
+   ]
+  },
+  {
+   "id": "pol-A1.0",
+   "kind": "delta",
+   "sweepDeg": 75.96,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 1.0",
+   "refs": "Peckham 1961, R&M 3186; Tosti 1947",
+   "conditions": "low speed",
+   "points": [
+    {
+     "alphaDeg": 0.93,
+     "cl": 0.019,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 1.96,
+     "cl": 0.039,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 3.04,
+     "cl": 0.066,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 5.04,
+     "cl": 0.127,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 6.07,
+     "cl": 0.165,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 7.07,
+     "cl": 0.194,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 8.11,
+     "cl": 0.234,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 9.89,
+     "cl": 0.3,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 12.33,
+     "cl": 0.388,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 14.3,
+     "cl": 0.469,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 14.93,
+     "cl": 0.49,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 16.33,
+     "cl": 0.562,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 18.41,
+     "cl": 0.649,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 20.44,
+     "cl": 0.743,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 25.0,
+     "cl": 0.928,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    }
+   ]
+  },
+  {
+   "id": "pol-A1.5",
+   "kind": "delta",
+   "sweepDeg": 69.44,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 1.5",
+   "refs": "Bartlett & Vidal 1955",
+   "conditions": "low speed",
+   "points": [
+    {
+     "alphaDeg": 0.9,
+     "cl": 0.025,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "manual": true
+    },
+    {
+     "alphaDeg": 1.9,
+     "cl": 0.055,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "manual": true
+    },
+    {
+     "alphaDeg": 2.85,
+     "cl": 0.085,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "manual": true
+    },
+    {
+     "alphaDeg": 5.93,
+     "cl": 0.214,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 8.97,
+     "cl": 0.341,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 12.12,
+     "cl": 0.481,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 15.09,
+     "cl": 0.629,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 18.12,
+     "cl": 0.781,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 21.2,
+     "cl": 0.959,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 24.46,
+     "cl": 1.08,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    }
+   ]
+  },
+  {
+   "id": "pol-A2.0",
+   "kind": "delta",
+   "sweepDeg": 63.43,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 2.0",
+   "refs": "Bartlett & Vidal 1955",
+   "conditions": "low speed",
+   "points": [
+    {
+     "alphaDeg": 1.98,
+     "cl": 0.065,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 2.95,
+     "cl": 0.096,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 6.02,
+     "cl": 0.244,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 8.99,
+     "cl": 0.387,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 12.14,
+     "cl": 0.555,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 15.55,
+     "cl": 0.717,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 18.44,
+     "cl": 0.885,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 21.44,
+     "cl": 0.987,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    },
+    {
+     "alphaDeg": 24.52,
+     "cl": 1.097,
+     "sigmaAlphaDeg": 0.15,
+     "sigmaCl": 0.008
+    }
+   ]
+  },
+  {
+   "id": "wk-50",
+   "kind": "delta",
+   "sweepDeg": 50.0,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.2.1",
+   "refs": "Wentz & Kohlman",
+   "conditions": "Wichita State 7x10 ft tunnel, q = 30 psf, Re about 1.0e6 per ft, thin flat wings, sharp bevelled edges",
+   "points": [
+    {
+     "alphaDeg": 1.61,
+     "cl": 0.087,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 5.75,
+     "cl": 0.304,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 7.69,
+     "cl": 0.421,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 9.97,
+     "cl": 0.48,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 14.18,
+     "cl": 0.666,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 18.39,
+     "cl": 0.844,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 22.61,
+     "cl": 0.952,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 23.95,
+     "cl": 0.977,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 26.89,
+     "cl": 0.977,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 31.24,
+     "cl": 0.894,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 35.38,
+     "cl": 0.816,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 39.6,
+     "cl": 0.705,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 43.61,
+     "cl": 0.67,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    }
+   ]
+  },
+  {
+   "id": "wk-55",
+   "kind": "delta",
+   "sweepDeg": 55.0,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.3.1",
+   "refs": "Wentz & Kohlman",
+   "conditions": "Wichita State 7x10 ft tunnel, q = 30 psf, Re about 1.0e6 per ft, thin flat wings, sharp bevelled edges",
+   "points": [
+    {
+     "alphaDeg": 1.14,
+     "cl": 0.069,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 5.35,
+     "cl": 0.258,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 9.36,
+     "cl": 0.459,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 13.58,
+     "cl": 0.624,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 17.73,
+     "cl": 0.82,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 21.81,
+     "cl": 0.974,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 26.09,
+     "cl": 1.068,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 30.23,
+     "cl": 1.01,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 35.18,
+     "cl": 0.914,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 38.86,
+     "cl": 0.783,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 43.14,
+     "cl": 0.709,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    }
+   ]
+  },
+  {
+   "id": "wk-60",
+   "kind": "delta",
+   "sweepDeg": 60.0,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.4.1",
+   "refs": "Wentz & Kohlman",
+   "conditions": "Wichita State 7x10 ft tunnel, q = 30 psf, Re about 1.0e6 per ft, thin flat wings, sharp bevelled edges",
+   "points": [
+    {
+     "alphaDeg": 1.9,
+     "cl": 0.1,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "manual": true
+    },
+    {
+     "alphaDeg": 3.68,
+     "cl": 0.186,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 5.75,
+     "cl": 0.294,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 7.96,
+     "cl": 0.39,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 9.9,
+     "cl": 0.46,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 12.17,
+     "cl": 0.566,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 14.31,
+     "cl": 0.636,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 15.45,
+     "cl": 0.697,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 16.32,
+     "cl": 0.726,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 17.53,
+     "cl": 0.771,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 18.66,
+     "cl": 0.802,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 19.67,
+     "cl": 0.87,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 20.8,
+     "cl": 0.899,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 22.81,
+     "cl": 0.958,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 24.95,
+     "cl": 1.032,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 27.09,
+     "cl": 1.091,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 29.23,
+     "cl": 1.133,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 31.3,
+     "cl": 1.149,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 33.44,
+     "cl": 1.125,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 35.59,
+     "cl": 1.099,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 37.59,
+     "cl": 0.969,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 39.7,
+     "cl": 0.875,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "manual": true
+    },
+    {
+     "alphaDeg": 41.81,
+     "cl": 0.819,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 43.75,
+     "cl": 0.778,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    }
+   ]
+  },
+  {
+   "id": "wk-65",
+   "kind": "delta",
+   "sweepDeg": 65.0,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.5.1",
+   "refs": "Wentz & Kohlman",
+   "conditions": "Wichita State 7x10 ft tunnel, q = 30 psf, Re about 1.0e6 per ft, thin flat wings, sharp bevelled edges",
+   "points": [
+    {
+     "alphaDeg": 1.61,
+     "cl": 0.074,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 3.68,
+     "cl": 0.13,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 5.89,
+     "cl": 0.245,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 7.96,
+     "cl": 0.334,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 10.17,
+     "cl": 0.433,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 12.24,
+     "cl": 0.513,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 14.38,
+     "cl": 0.607,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 16.39,
+     "cl": 0.705,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 18.6,
+     "cl": 0.778,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 20.74,
+     "cl": 0.855,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 21.81,
+     "cl": 0.932,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 22.81,
+     "cl": 0.949,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 24.15,
+     "cl": 0.982,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 24.88,
+     "cl": 1.015,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 27.02,
+     "cl": 1.099,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 29.23,
+     "cl": 1.149,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 31.44,
+     "cl": 1.198,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 33.51,
+     "cl": 1.24,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 35.65,
+     "cl": 1.237,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 37.79,
+     "cl": 1.235,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 39.73,
+     "cl": 1.2,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 41.94,
+     "cl": 1.129,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 44.01,
+     "cl": 1.041,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    }
+   ]
+  },
+  {
+   "id": "wk-70",
+   "kind": "delta",
+   "sweepDeg": 70.0,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.7.1",
+   "refs": "Wentz & Kohlman",
+   "conditions": "Wichita State 7x10 ft tunnel, q = 30 psf, Re about 1.0e6 per ft, thin flat wings, sharp bevelled edges",
+   "points": [
+    {
+     "alphaDeg": 1.4,
+     "cl": 0.045,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 3.48,
+     "cl": 0.119,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 5.55,
+     "cl": 0.194,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 7.63,
+     "cl": 0.272,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 9.7,
+     "cl": 0.353,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 11.91,
+     "cl": 0.444,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 13.85,
+     "cl": 0.538,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 16.05,
+     "cl": 0.635,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 18.06,
+     "cl": 0.728,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 20.13,
+     "cl": 0.831,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 22.34,
+     "cl": 0.925,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 24.41,
+     "cl": 1.022,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 26.49,
+     "cl": 1.118,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 29.5,
+     "cl": 1.239,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 31.91,
+     "cl": 1.288,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 35.18,
+     "cl": 1.306,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 39.53,
+     "cl": 1.257,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 41.61,
+     "cl": 1.231,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 43.48,
+     "cl": 1.181,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 48.03,
+     "cl": 0.954,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 49.23,
+     "cl": 0.923,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    }
+   ]
+  },
+  {
+   "id": "wk-75",
+   "kind": "delta",
+   "sweepDeg": 75.0,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.9.1",
+   "refs": "Wentz & Kohlman",
+   "conditions": "Wichita State 7x10 ft tunnel, q = 30 psf, Re about 1.0e6 per ft, thin flat wings, sharp bevelled edges",
+   "points": [
+    {
+     "alphaDeg": 0.74,
+     "cl": 0.026,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 2.88,
+     "cl": 0.077,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 5.02,
+     "cl": 0.142,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 7.29,
+     "cl": 0.224,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 9.3,
+     "cl": 0.293,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 11.57,
+     "cl": 0.367,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 13.71,
+     "cl": 0.454,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 15.79,
+     "cl": 0.536,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 17.99,
+     "cl": 0.637,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 20.13,
+     "cl": 0.742,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 22.27,
+     "cl": 0.817,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 24.48,
+     "cl": 0.91,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 26.56,
+     "cl": 0.978,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 28.56,
+     "cl": 1.066,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 30.77,
+     "cl": 1.147,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 32.98,
+     "cl": 1.227,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 35.52,
+     "cl": 1.295,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 37.12,
+     "cl": 1.295,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 38.06,
+     "cl": 1.212,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 39.26,
+     "cl": 1.186,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 45.48,
+     "cl": 1.076,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 47.63,
+     "cl": 1.029,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 49.77,
+     "cl": 0.948,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    }
+   ]
+  },
+  {
+   "id": "wk-80",
+   "kind": "delta",
+   "sweepDeg": 80.0,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.11.1",
+   "refs": "Wentz & Kohlman",
+   "conditions": "Wichita State 7x10 ft tunnel, q = 30 psf, Re about 1.0e6 per ft, thin flat wings, sharp bevelled edges",
+   "points": [
+    {
+     "alphaDeg": 2.27,
+     "cl": 0.034,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 4.41,
+     "cl": 0.072,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 6.42,
+     "cl": 0.13,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 8.7,
+     "cl": 0.186,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 10.84,
+     "cl": 0.248,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 12.91,
+     "cl": 0.314,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 14.98,
+     "cl": 0.384,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 17.19,
+     "cl": 0.455,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 19.2,
+     "cl": 0.526,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 21.4,
+     "cl": 0.601,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 23.48,
+     "cl": 0.685,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 25.62,
+     "cl": 0.719,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 27.76,
+     "cl": 0.803,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 29.83,
+     "cl": 0.847,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 31.84,
+     "cl": 0.923,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 34.05,
+     "cl": 0.966,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 36.12,
+     "cl": 1.034,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 38.13,
+     "cl": 1.073,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 40.4,
+     "cl": 1.123,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 42.54,
+     "cl": 1.046,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 44.55,
+     "cl": 1.003,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 46.69,
+     "cl": 0.956,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    },
+    {
+     "alphaDeg": 48.9,
+     "cl": 0.92,
+     "sigmaAlphaDeg": 0.3,
+     "sigmaCl": 0.01
+    }
+   ]
+  },
+  {
+   "id": "fa18-hatp",
+   "kind": "aircraft",
+   "source": "Banks, Fisher et al. 1996, NASA TM-112360 (HATP baseline F/A-18)",
+   "figure": "Fig. 28 (wind-tunnel CL)",
+   "refs": "Ames 80x120 ft full scale; Langley 30x60 ft 0.16 scale",
+   "reference": {
+    "sRefFt2": 400.0,
+    "spanFt": 37.417,
+    "macFt": 11.517,
+    "cgFracMac": 0.25
+   },
+   "conditions": "full scale M 0.15 Re 12.4e6 (filled diamonds); 0.16 scale M 0.08 Re 1.0e6 (circles)",
+   "points": [
+    {
+     "alphaDeg": 5.1,
+     "cl": 0.137,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "0.16-scale 30x60"
+    },
+    {
+     "alphaDeg": 10.1,
+     "cl": 0.522,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "0.16-scale 30x60"
+    },
+    {
+     "alphaDeg": 15.0,
+     "cl": 0.879,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "0.16-scale 30x60"
+    },
+    {
+     "alphaDeg": 17.9,
+     "cl": 1.108,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "full-scale 80x120"
+    },
+    {
+     "alphaDeg": 19.9,
+     "cl": 1.213,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "full-scale 80x120"
+    },
+    {
+     "alphaDeg": 24.9,
+     "cl": 1.486,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "full-scale 80x120"
+    },
+    {
+     "alphaDeg": 29.9,
+     "cl": 1.684,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "full-scale 80x120"
+    },
+    {
+     "alphaDeg": 34.8,
+     "cl": 1.798,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "full-scale 80x120"
+    },
+    {
+     "alphaDeg": 40.1,
+     "cl": 1.833,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "full-scale 80x120"
+    },
+    {
+     "alphaDeg": 44.8,
+     "cl": 1.745,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "full-scale 80x120"
+    },
+    {
+     "alphaDeg": 49.9,
+     "cl": 1.648,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "full-scale 80x120"
+    },
+    {
+     "alphaDeg": 55.0,
+     "cl": 1.448,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "0.16-scale 30x60"
+    },
+    {
+     "alphaDeg": 60.0,
+     "cl": 1.202,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "0.16-scale 30x60"
+    },
+    {
+     "alphaDeg": 70.0,
+     "cl": 0.858,
+     "sigmaAlphaDeg": 0.4,
+     "sigmaCl": 0.015,
+     "series": "0.16-scale 30x60"
+    }
+   ]
+  }
+ ],
+ "breakdown": {
+  "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+  "figure": "Fig. 4.1.1",
+  "sigmaAlphaDeg": 1.0,
+  "positions": [
+   0.0,
+   0.2,
+   0.4,
+   0.6,
+   0.8,
+   1.0
+  ],
+  "rows": [
+   {
+    "sweepDeg": 55.0,
+    "alphaDeg": [
+     null,
+     null,
+     null,
+     13.5,
+     19.0,
+     27.5
+    ]
+   },
+   {
+    "sweepDeg": 60.0,
+    "alphaDeg": [
+     14.5,
+     14.6,
+     15.5,
+     19.0,
+     25.6,
+     33.0
+    ]
+   },
+   {
+    "sweepDeg": 65.0,
+    "alphaDeg": [
+     19.5,
+     20.0,
+     21.0,
+     24.5,
+     30.0,
+     38.0
+    ]
+   },
+   {
+    "sweepDeg": 70.0,
+    "alphaDeg": [
+     29.0,
+     29.0,
+     29.5,
+     31.0,
+     39.5,
+     47.0
+    ]
+   },
+   {
+    "sweepDeg": 75.0,
+    "alphaDeg": [
+     35.0,
+     36.0,
+     36.5,
+     39.0,
+     45.0,
+     55.0
+    ]
+   },
+   {
+    "sweepDeg": 80.0,
+    "alphaDeg": [
+     38.5,
+     39.0,
+     40.0,
+     44.0,
+     55.5,
+     62.0
+    ]
+   }
+  ]
+ }
+}

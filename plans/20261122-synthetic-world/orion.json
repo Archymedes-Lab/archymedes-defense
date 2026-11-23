@@ -1,0 +1,141 @@
+{
+ "W": 0.63,
+ "rows": [
+  {
+   "rank": 1,
+   "id": "m3-simcore",
+   "pFirst": 0.183,
+   "eisenhower": "do",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.668,
+    "urgency": 0.526,
+    "reach": 0.52,
+    "confidence": 0.565,
+    "effort": 0.682,
+    "leverage": 0.896,
+    "reversibility": 0.6
+   }
+  },
+  {
+   "rank": 2,
+   "id": "m1-world",
+   "pFirst": 0.188,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.645,
+    "urgency": 0.426,
+    "reach": 0.454,
+    "confidence": 0.618,
+    "effort": 0.595,
+    "leverage": 0.802,
+    "reversibility": 0.662
+   }
+  },
+  {
+   "rank": 3,
+   "id": "m7-validate",
+   "pFirst": 0.171,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.675,
+    "urgency": 0.476,
+    "reach": 0.498,
+    "confidence": 0.542,
+    "effort": 0.651,
+    "leverage": 0.819,
+    "reversibility": 0.698
+   }
+  },
+  {
+   "rank": 4,
+   "id": "m5-sensors",
+   "pFirst": 0.108,
+   "eisenhower": "do",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.686,
+    "urgency": 0.525,
+    "reach": 0.523,
+    "confidence": 0.538,
+    "effort": 0.724,
+    "leverage": 0.845,
+    "reversibility": 0.604
+   }
+  },
+  {
+   "rank": 5,
+   "id": "m4-agents",
+   "pFirst": 0.153,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.671,
+    "urgency": 0.454,
+    "reach": 0.407,
+    "confidence": 0.546,
+    "effort": 0.659,
+    "leverage": 0.763,
+    "reversibility": 0.679
+   }
+  },
+  {
+   "rank": 6,
+   "id": "m2-deduce",
+   "pFirst": 0.083,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.687,
+    "urgency": 0.474,
+    "reach": 0.423,
+    "confidence": 0.512,
+    "effort": 0.742,
+    "leverage": 0.815,
+    "reversibility": 0.629
+   }
+  },
+  {
+   "rank": 7,
+   "id": "m6-missions",
+   "pFirst": 0.036,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "one_way",
+   "level": {
+    "impact": 0.771,
+    "urgency": 0.458,
+    "reach": 0.377,
+    "confidence": 0.399,
+    "effort": 0.913,
+    "leverage": 0.792,
+    "reversibility": 0.423
+   }
+  },
+  {
+   "rank": 8,
+   "id": "us-variant",
+   "pFirst": 0.079,
+   "eisenhower": "schedule",
+   "effort": "big_bet",
+   "door": "two_way",
+   "level": {
+    "impact": 0.582,
+    "urgency": 0.393,
+    "reach": 0.331,
+    "confidence": 0.464,
+    "effort": 0.659,
+    "leverage": 0.636,
+    "reversibility": 0.612
+   }
+  }
+ ]
+}

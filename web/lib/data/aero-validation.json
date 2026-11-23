@@ -1,0 +1,2186 @@
+{
+ "generated": "scripts/validate_aero.ts",
+ "nominal": 0.9,
+ "sweepValidated": [
+  60,
+  80
+ ],
+ "retained": 0.37,
+ "widen": 1.35,
+ "bands": {
+  "attached": {
+   "lo": -0.22568973178332102,
+   "hi": 0.14825039401482548,
+   "n": 103
+  },
+  "bursting": {
+   "lo": -0.09997477860816706,
+   "hi": 0.2884161660745481,
+   "n": 40
+  },
+  "burst": {
+   "lo": -0.5112657953397577,
+   "hi": 0.11874898919238468,
+   "n": 14
+  }
+ },
+ "baseBands": {
+  "attached": {
+   "lo": -0.1671775790987563,
+   "hi": 0.1098151066776485,
+   "n": 103
+  },
+  "bursting": {
+   "lo": -0.07405539156160522,
+   "hi": 0.21364160449966527,
+   "n": 40
+  },
+  "burst": {
+   "lo": -0.37871540395537606,
+   "hi": 0.08796221421658124,
+   "n": 14
+  }
+ },
+ "coverage": {
+  "baseline": 0.7707006369426752,
+  "widened": 0.8980891719745223
+ },
+ "regimeCounts": {
+  "attached": 103,
+  "bursting": 40,
+  "burst": 14
+ },
+ "criteria": {
+  "C1": {
+   "text": "attached-regime RMS(CL) ≤ 0.05 on every in-domain wing",
+   "pass": false,
+   "failing": [
+    "wk-60",
+    "wk-65",
+    "wk-80"
+   ]
+  },
+  "C2": {
+   "text": "|CLmax error| ≤ 0.15 and |α at CLmax error| ≤ 5° where the data pass CLmax",
+   "pass": false,
+   "failing": [
+    "wk-60",
+    "wk-65",
+    "wk-70",
+    "wk-80"
+   ]
+  },
+  "C3": {
+   "text": "pooled leave-one-wing-out coverage of the 90% band within [0.80, 0.97]",
+   "pass": true,
+   "value": 0.8980891719745223,
+   "baselineValue": 0.7707006369426752,
+   "baselinePass": false
+  },
+  "C4": {
+   "text": "out-of-domain cases flagged as extrapolation at every point",
+   "pass": true,
+   "failing": []
+  }
+ },
+ "inDomain": [
+  {
+   "id": "pol-A0.7",
+   "sweepDeg": 79.92,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 0.7",
+   "retainedHeldOut": 0.37,
+   "widenHeldOut": 1.35,
+   "n": 9,
+   "rmsAll": 0.03244508341051515,
+   "rmsAttached": 0.03244508341051515,
+   "clMax": null,
+   "coverage": 1,
+   "coverageBase": 0.4444444444444444,
+   "c1": true,
+   "c2": null,
+   "points": [
+    {
+     "a": 2.94,
+     "data": 0.069,
+     "model": 0.0577,
+     "lo": 0.0324,
+     "hi": 0.07,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 4.94,
+     "data": 0.117,
+     "model": 0.106,
+     "lo": 0.0694,
+     "hi": 0.1238,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 7.91,
+     "data": 0.214,
+     "model": 0.1899,
+     "lo": 0.1337,
+     "hi": 0.2173,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 10.02,
+     "data": 0.292,
+     "model": 0.2576,
+     "lo": 0.1855,
+     "hi": 0.2927,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 11.98,
+     "data": 0.367,
+     "model": 0.3257,
+     "lo": 0.2376,
+     "hi": 0.3686,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 15.02,
+     "data": 0.484,
+     "model": 0.4397,
+     "lo": 0.3248,
+     "hi": 0.4955,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 17.98,
+     "data": 0.589,
+     "model": 0.5579,
+     "lo": 0.4153,
+     "hi": 0.6272,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 20.06,
+     "data": 0.693,
+     "model": 0.6437,
+     "lo": 0.481,
+     "hi": 0.7229,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 23.06,
+     "data": 0.789,
+     "model": 0.7692,
+     "lo": 0.577,
+     "hi": 0.8627,
+     "regime": "attached",
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "pol-A1.0",
+   "sweepDeg": 75.96,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 1.0",
+   "retainedHeldOut": 0.37,
+   "widenHeldOut": 1.3,
+   "n": 15,
+   "rmsAll": 0.014962107638167731,
+   "rmsAttached": 0.014962107638167731,
+   "clMax": null,
+   "coverage": 1,
+   "coverageBase": 1,
+   "c1": true,
+   "c2": null,
+   "points": [
+    {
+     "a": 0.93,
+     "data": 0.019,
+     "model": 0.0217,
+     "lo": 0.0055,
+     "hi": 0.0322,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 1.96,
+     "data": 0.039,
+     "model": 0.0477,
+     "lo": 0.0257,
+     "hi": 0.0619,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 3.04,
+     "data": 0.066,
+     "model": 0.077,
+     "lo": 0.0484,
+     "hi": 0.0955,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 5.04,
+     "data": 0.127,
+     "model": 0.1367,
+     "lo": 0.0945,
+     "hi": 0.1638,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 6.07,
+     "data": 0.165,
+     "model": 0.17,
+     "lo": 0.1203,
+     "hi": 0.2019,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 7.07,
+     "data": 0.194,
+     "model": 0.2039,
+     "lo": 0.1465,
+     "hi": 0.2407,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 8.11,
+     "data": 0.234,
+     "model": 0.2406,
+     "lo": 0.175,
+     "hi": 0.2829,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 9.89,
+     "data": 0.3,
+     "model": 0.307,
+     "lo": 0.2263,
+     "hi": 0.3588,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 12.33,
+     "data": 0.388,
+     "model": 0.4039,
+     "lo": 0.3014,
+     "hi": 0.4698,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 14.3,
+     "data": 0.469,
+     "model": 0.4864,
+     "lo": 0.3652,
+     "hi": 0.5643,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 14.93,
+     "data": 0.49,
+     "model": 0.5134,
+     "lo": 0.3861,
+     "hi": 0.5952,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 16.33,
+     "data": 0.562,
+     "model": 0.5743,
+     "lo": 0.4333,
+     "hi": 0.665,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 18.41,
+     "data": 0.649,
+     "model": 0.6665,
+     "lo": 0.5047,
+     "hi": 0.7706,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 20.44,
+     "data": 0.743,
+     "model": 0.7576,
+     "lo": 0.5752,
+     "hi": 0.8749,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 25,
+     "data": 0.928,
+     "model": 0.9608,
+     "lo": 0.7325,
+     "hi": 1.1076,
+     "regime": "attached",
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "pol-A1.5",
+   "sweepDeg": 69.44,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 1.5",
+   "retainedHeldOut": 0.37,
+   "widenHeldOut": 1.3,
+   "n": 10,
+   "rmsAll": 0.011678762316374172,
+   "rmsAttached": 0.011678762316374172,
+   "clMax": null,
+   "coverage": 1,
+   "coverageBase": 1,
+   "c1": true,
+   "c2": null,
+   "points": [
+    {
+     "a": 0.9,
+     "data": 0.025,
+     "model": 0.0287,
+     "lo": 0.0109,
+     "hi": 0.0401,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 1.9,
+     "data": 0.055,
+     "model": 0.0623,
+     "lo": 0.037,
+     "hi": 0.0787,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 2.85,
+     "data": 0.085,
+     "model": 0.096,
+     "lo": 0.063,
+     "hi": 0.1172,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 5.93,
+     "data": 0.214,
+     "model": 0.2153,
+     "lo": 0.1554,
+     "hi": 0.2538,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 8.97,
+     "data": 0.341,
+     "model": 0.3465,
+     "lo": 0.257,
+     "hi": 0.4041,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 12.12,
+     "data": 0.481,
+     "model": 0.4934,
+     "lo": 0.3707,
+     "hi": 0.5723,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 15.09,
+     "data": 0.629,
+     "model": 0.6389,
+     "lo": 0.4833,
+     "hi": 0.7389,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 18.12,
+     "data": 0.781,
+     "model": 0.7908,
+     "lo": 0.6009,
+     "hi": 0.913,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 21.2,
+     "data": 0.959,
+     "model": 0.9454,
+     "lo": 0.7206,
+     "hi": 1.0899,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 24.46,
+     "data": 1.08,
+     "model": 1.1047,
+     "lo": 0.8439,
+     "hi": 1.2724,
+     "regime": "attached",
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "pol-A2.0",
+   "sweepDeg": 63.43,
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 2.0",
+   "retainedHeldOut": 0.37,
+   "widenHeldOut": 1.5,
+   "n": 9,
+   "rmsAll": 0.04125699174910413,
+   "rmsAttached": 0.028025611708341877,
+   "clMax": null,
+   "coverage": 1,
+   "coverageBase": 1,
+   "c1": true,
+   "c2": null,
+   "points": [
+    {
+     "a": 1.98,
+     "data": 0.065,
+     "model": 0.0794,
+     "lo": 0.0457,
+     "hi": 0.1011,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 2.95,
+     "data": 0.096,
+     "model": 0.1209,
+     "lo": 0.0764,
+     "hi": 0.1495,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 6.02,
+     "data": 0.244,
+     "model": 0.2622,
+     "lo": 0.1808,
+     "hi": 0.3145,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 8.99,
+     "data": 0.387,
+     "model": 0.411,
+     "lo": 0.2909,
+     "hi": 0.4883,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 12.14,
+     "data": 0.555,
+     "model": 0.5785,
+     "lo": 0.4147,
+     "hi": 0.6838,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 15.55,
+     "data": 0.717,
+     "model": 0.7663,
+     "lo": 0.5535,
+     "hi": 0.9031,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 18.44,
+     "data": 0.885,
+     "model": 0.8791,
+     "lo": 0.7743,
+     "hi": 1.2034,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 21.44,
+     "data": 0.987,
+     "model": 0.9335,
+     "lo": 0.8226,
+     "hi": 1.2768,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 24.52,
+     "data": 1.097,
+     "model": 1.0092,
+     "lo": 0.8897,
+     "hi": 1.3789,
+     "regime": "bursting",
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "wk-60",
+   "sweepDeg": 60,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.4.1",
+   "retainedHeldOut": 0.46,
+   "widenHeldOut": 1.6,
+   "n": 24,
+   "rmsAll": 0.23019749537780396,
+   "rmsAttached": 0.05251388316401018,
+   "clMax": {
+    "data": 1.149,
+    "dataAlpha": 31.3,
+    "model": 1.3851,
+    "modelAlpha": 42.25
+   },
+   "coverage": 0.8333333333333334,
+   "coverageBase": 0.5416666666666666,
+   "c1": false,
+   "c2": false,
+   "points": [
+    {
+     "a": 1.9,
+     "data": 0.1,
+     "model": 0.0835,
+     "lo": 0.0464,
+     "hi": 0.107,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 3.68,
+     "data": 0.186,
+     "model": 0.1676,
+     "lo": 0.1071,
+     "hi": 0.2058,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 5.75,
+     "data": 0.294,
+     "model": 0.2717,
+     "lo": 0.1823,
+     "hi": 0.3282,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 7.96,
+     "data": 0.39,
+     "model": 0.3892,
+     "lo": 0.2671,
+     "hi": 0.4663,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 9.9,
+     "data": 0.46,
+     "model": 0.4967,
+     "lo": 0.3447,
+     "hi": 0.5927,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 12.17,
+     "data": 0.566,
+     "model": 0.6263,
+     "lo": 0.4383,
+     "hi": 0.7451,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 14.31,
+     "data": 0.636,
+     "model": 0.751,
+     "lo": 0.5283,
+     "hi": 0.8917,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 15.45,
+     "data": 0.697,
+     "model": 0.7663,
+     "lo": 0.6698,
+     "hi": 0.9939,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 16.32,
+     "data": 0.726,
+     "model": 0.7996,
+     "lo": 0.6991,
+     "hi": 1.0364,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 17.53,
+     "data": 0.771,
+     "model": 0.8477,
+     "lo": 0.7415,
+     "hi": 1.098,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 18.66,
+     "data": 0.802,
+     "model": 0.8893,
+     "lo": 0.7782,
+     "hi": 1.1511,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 19.67,
+     "data": 0.87,
+     "model": 0.9232,
+     "lo": 0.8081,
+     "hi": 1.1945,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 20.8,
+     "data": 0.899,
+     "model": 0.9731,
+     "lo": 0.8521,
+     "hi": 1.2583,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 22.81,
+     "data": 0.958,
+     "model": 1.0441,
+     "lo": 0.9147,
+     "hi": 1.3491,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 24.95,
+     "data": 1.032,
+     "model": 1.1131,
+     "lo": 0.9755,
+     "hi": 1.4373,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 27.09,
+     "data": 1.091,
+     "model": 1.1644,
+     "lo": 1.0207,
+     "hi": 1.5029,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 29.23,
+     "data": 1.133,
+     "model": 1.2196,
+     "lo": 1.0695,
+     "hi": 1.5735,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 31.3,
+     "data": 1.149,
+     "model": 1.2617,
+     "lo": 0.913,
+     "hi": 1.3043,
+     "regime": "burst",
+     "inBand": true
+    },
+    {
+     "a": 33.44,
+     "data": 1.125,
+     "model": 1.3018,
+     "lo": 0.9424,
+     "hi": 1.3457,
+     "regime": "burst",
+     "inBand": true
+    },
+    {
+     "a": 35.59,
+     "data": 1.099,
+     "model": 1.3372,
+     "lo": 0.9684,
+     "hi": 1.3822,
+     "regime": "burst",
+     "inBand": true
+    },
+    {
+     "a": 37.59,
+     "data": 0.969,
+     "model": 1.3615,
+     "lo": 0.9862,
+     "hi": 1.4073,
+     "regime": "burst",
+     "inBand": false
+    },
+    {
+     "a": 39.7,
+     "data": 0.875,
+     "model": 1.3779,
+     "lo": 0.9983,
+     "hi": 1.4243,
+     "regime": "burst",
+     "inBand": false
+    },
+    {
+     "a": 41.81,
+     "data": 0.819,
+     "model": 1.3848,
+     "lo": 1.0034,
+     "hi": 1.4314,
+     "regime": "burst",
+     "inBand": false
+    },
+    {
+     "a": 43.75,
+     "data": 0.778,
+     "model": 1.3828,
+     "lo": 1.0018,
+     "hi": 1.4293,
+     "regime": "burst",
+     "inBand": false
+    }
+   ]
+  },
+  {
+   "id": "wk-65",
+   "sweepDeg": 65,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.5.1",
+   "retainedHeldOut": 0.35,
+   "widenHeldOut": 1.5,
+   "n": 23,
+   "rmsAll": 0.0728147997899416,
+   "rmsAttached": 0.05840325061647038,
+   "clMax": {
+    "data": 1.24,
+    "dataAlpha": 33.51,
+    "model": 1.1419,
+    "modelAlpha": 41.5
+   },
+   "coverage": 0.8695652173913043,
+   "coverageBase": 0.8260869565217391,
+   "c1": false,
+   "c2": false,
+   "points": [
+    {
+     "a": 1.61,
+     "data": 0.074,
+     "model": 0.0611,
+     "lo": 0.0321,
+     "hi": 0.0794,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 3.68,
+     "data": 0.13,
+     "model": 0.1464,
+     "lo": 0.0952,
+     "hi": 0.1788,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 5.89,
+     "data": 0.245,
+     "model": 0.2451,
+     "lo": 0.1682,
+     "hi": 0.2937,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 7.96,
+     "data": 0.334,
+     "model": 0.3438,
+     "lo": 0.2412,
+     "hi": 0.4086,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 10.17,
+     "data": 0.433,
+     "model": 0.4545,
+     "lo": 0.323,
+     "hi": 0.5376,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 12.24,
+     "data": 0.513,
+     "model": 0.5622,
+     "lo": 0.4027,
+     "hi": 0.6631,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 14.38,
+     "data": 0.607,
+     "model": 0.6764,
+     "lo": 0.4871,
+     "hi": 0.796,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 16.39,
+     "data": 0.705,
+     "model": 0.785,
+     "lo": 0.5674,
+     "hi": 0.9226,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 18.6,
+     "data": 0.778,
+     "model": 0.9048,
+     "lo": 0.6559,
+     "hi": 1.062,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 20.74,
+     "data": 0.855,
+     "model": 0.9084,
+     "lo": 0.8034,
+     "hi": 1.2628,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 21.81,
+     "data": 0.932,
+     "model": 0.9299,
+     "lo": 0.8225,
+     "hi": 1.2922,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 22.81,
+     "data": 0.949,
+     "model": 0.9457,
+     "lo": 0.8366,
+     "hi": 1.3138,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 24.15,
+     "data": 0.982,
+     "model": 0.9714,
+     "lo": 0.8595,
+     "hi": 1.3491,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 24.88,
+     "data": 1.015,
+     "model": 0.9965,
+     "lo": 0.8819,
+     "hi": 1.3834,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 27.02,
+     "data": 1.099,
+     "model": 1.0193,
+     "lo": 0.9022,
+     "hi": 1.4147,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 29.23,
+     "data": 1.149,
+     "model": 1.0582,
+     "lo": 0.9368,
+     "hi": 1.468,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 31.44,
+     "data": 1.198,
+     "model": 1.0759,
+     "lo": 0.9526,
+     "hi": 1.4922,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 33.51,
+     "data": 1.24,
+     "model": 1.1007,
+     "lo": 0.9746,
+     "hi": 1.5261,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 35.65,
+     "data": 1.237,
+     "model": 1.1155,
+     "lo": 0.4718,
+     "hi": 1.1155,
+     "regime": "burst",
+     "inBand": false
+    },
+    {
+     "a": 37.79,
+     "data": 1.235,
+     "model": 1.1292,
+     "lo": 0.478,
+     "hi": 1.1292,
+     "regime": "burst",
+     "inBand": false
+    },
+    {
+     "a": 39.73,
+     "data": 1.2,
+     "model": 1.1388,
+     "lo": 0.4823,
+     "hi": 1.1388,
+     "regime": "burst",
+     "inBand": false
+    },
+    {
+     "a": 41.94,
+     "data": 1.129,
+     "model": 1.1418,
+     "lo": 0.4836,
+     "hi": 1.1418,
+     "regime": "burst",
+     "inBand": true
+    },
+    {
+     "a": 44.01,
+     "data": 1.041,
+     "model": 1.1367,
+     "lo": 0.4813,
+     "hi": 1.1367,
+     "regime": "burst",
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "wk-70",
+   "sweepDeg": 70,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.7.1",
+   "retainedHeldOut": 0.34,
+   "widenHeldOut": 1.3,
+   "n": 21,
+   "rmsAll": 0.11867871486364308,
+   "rmsAttached": 0.040987971855676035,
+   "clMax": {
+    "data": 1.306,
+    "dataAlpha": 35.18,
+    "model": 1.2854,
+    "modelAlpha": 28.75
+   },
+   "coverage": 0.9523809523809523,
+   "coverageBase": 0.8571428571428571,
+   "c1": true,
+   "c2": false,
+   "points": [
+    {
+     "a": 1.4,
+     "data": 0.045,
+     "model": 0.0443,
+     "lo": 0.023,
+     "hi": 0.058,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 3.48,
+     "data": 0.119,
+     "model": 0.1167,
+     "lo": 0.0791,
+     "hi": 0.1409,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 5.55,
+     "data": 0.194,
+     "model": 0.1959,
+     "lo": 0.1404,
+     "hi": 0.2316,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 7.63,
+     "data": 0.272,
+     "model": 0.282,
+     "lo": 0.207,
+     "hi": 0.3302,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 9.7,
+     "data": 0.353,
+     "model": 0.3731,
+     "lo": 0.2775,
+     "hi": 0.4345,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 11.91,
+     "data": 0.444,
+     "model": 0.4753,
+     "lo": 0.3567,
+     "hi": 0.5516,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 13.85,
+     "data": 0.538,
+     "model": 0.5684,
+     "lo": 0.4287,
+     "hi": 0.6582,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 16.05,
+     "data": 0.635,
+     "model": 0.6765,
+     "lo": 0.5124,
+     "hi": 0.782,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 18.06,
+     "data": 0.728,
+     "model": 0.7765,
+     "lo": 0.5898,
+     "hi": 0.8965,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 20.13,
+     "data": 0.831,
+     "model": 0.8796,
+     "lo": 0.6697,
+     "hi": 1.0146,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 22.34,
+     "data": 0.925,
+     "model": 0.9886,
+     "lo": 0.754,
+     "hi": 1.1395,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 24.41,
+     "data": 1.022,
+     "model": 1.0884,
+     "lo": 0.8313,
+     "hi": 1.2538,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 26.49,
+     "data": 1.118,
+     "model": 1.1853,
+     "lo": 0.9063,
+     "hi": 1.3647,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 29.5,
+     "data": 1.239,
+     "model": 1.1041,
+     "lo": 0.9962,
+     "hi": 1.3901,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 31.91,
+     "data": 1.288,
+     "model": 1.0174,
+     "lo": 0.9176,
+     "hi": 1.2819,
+     "regime": "bursting",
+     "inBand": false
+    },
+    {
+     "a": 35.18,
+     "data": 1.306,
+     "model": 1.0453,
+     "lo": 0.9429,
+     "hi": 1.3167,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 39.53,
+     "data": 1.257,
+     "model": 1.0412,
+     "lo": 0.9391,
+     "hi": 1.3116,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 41.61,
+     "data": 1.231,
+     "model": 1.0319,
+     "lo": 0.9307,
+     "hi": 1.2999,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 43.48,
+     "data": 1.181,
+     "model": 1.0194,
+     "lo": 0.9194,
+     "hi": 1.2845,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 48.03,
+     "data": 0.954,
+     "model": 0.9761,
+     "lo": 0.4922,
+     "hi": 1.1263,
+     "regime": "burst",
+     "inBand": true
+    },
+    {
+     "a": 49.23,
+     "data": 0.923,
+     "model": 0.9648,
+     "lo": 0.4862,
+     "hi": 1.1133,
+     "regime": "burst",
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "wk-75",
+   "sweepDeg": 75,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.9.1",
+   "retainedHeldOut": 0.34,
+   "widenHeldOut": 1.35,
+   "n": 23,
+   "rmsAll": 0.0929570823490374,
+   "rmsAttached": 0.045886991813088494,
+   "clMax": {
+    "data": 1.295,
+    "dataAlpha": 35.52,
+    "model": 1.3793,
+    "modelAlpha": 35
+   },
+   "coverage": 1,
+   "coverageBase": 0.9565217391304348,
+   "c1": true,
+   "c2": true,
+   "points": [
+    {
+     "a": 0.74,
+     "data": 0.026,
+     "model": 0.0181,
+     "lo": 0.0022,
+     "hi": 0.0282,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 2.88,
+     "data": 0.077,
+     "model": 0.0763,
+     "lo": 0.0467,
+     "hi": 0.0951,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 5.02,
+     "data": 0.142,
+     "model": 0.1426,
+     "lo": 0.0974,
+     "hi": 0.1711,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 7.29,
+     "data": 0.224,
+     "model": 0.2209,
+     "lo": 0.1573,
+     "hi": 0.261,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 9.3,
+     "data": 0.293,
+     "model": 0.2963,
+     "lo": 0.2151,
+     "hi": 0.3477,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 11.57,
+     "data": 0.367,
+     "model": 0.3874,
+     "lo": 0.2848,
+     "hi": 0.4523,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 13.71,
+     "data": 0.454,
+     "model": 0.478,
+     "lo": 0.3542,
+     "hi": 0.5563,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 15.79,
+     "data": 0.536,
+     "model": 0.5695,
+     "lo": 0.4242,
+     "hi": 0.6613,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 17.99,
+     "data": 0.637,
+     "model": 0.6686,
+     "lo": 0.5001,
+     "hi": 0.7752,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 20.13,
+     "data": 0.742,
+     "model": 0.7663,
+     "lo": 0.5748,
+     "hi": 0.8873,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 22.27,
+     "data": 0.817,
+     "model": 0.8639,
+     "lo": 0.6496,
+     "hi": 0.9994,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 24.48,
+     "data": 0.91,
+     "model": 0.9635,
+     "lo": 0.7258,
+     "hi": 1.1138,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 26.56,
+     "data": 0.978,
+     "model": 1.0548,
+     "lo": 0.7957,
+     "hi": 1.2186,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 28.56,
+     "data": 1.066,
+     "model": 1.1394,
+     "lo": 0.8605,
+     "hi": 1.3158,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 30.77,
+     "data": 1.147,
+     "model": 1.2281,
+     "lo": 0.9283,
+     "hi": 1.4175,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 32.98,
+     "data": 1.227,
+     "model": 1.3105,
+     "lo": 0.9914,
+     "hi": 1.5122,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 35.52,
+     "data": 1.295,
+     "model": 1.3505,
+     "lo": 1.2145,
+     "hi": 1.8297,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 37.12,
+     "data": 1.295,
+     "model": 1.0797,
+     "lo": 0.97,
+     "hi": 1.4663,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 38.06,
+     "data": 1.212,
+     "model": 1.0427,
+     "lo": 0.9366,
+     "hi": 1.4167,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 39.26,
+     "data": 1.186,
+     "model": 1.0112,
+     "lo": 0.9081,
+     "hi": 1.3743,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 45.48,
+     "data": 1.076,
+     "model": 0.9095,
+     "lo": 0.8164,
+     "hi": 1.2379,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 47.63,
+     "data": 1.029,
+     "model": 0.885,
+     "lo": 0.7942,
+     "hi": 1.205,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 49.77,
+     "data": 0.948,
+     "model": 0.8588,
+     "lo": 0.7706,
+     "hi": 1.1699,
+     "regime": "bursting",
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "wk-80",
+   "sweepDeg": 80,
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.11.1",
+   "retainedHeldOut": 0.35,
+   "widenHeldOut": 1.2,
+   "n": 23,
+   "rmsAll": 0.13088409287967298,
+   "rmsAttached": 0.13496200862901545,
+   "clMax": {
+    "data": 1.123,
+    "dataAlpha": 40.4,
+    "model": 1.3306,
+    "modelAlpha": 38.5
+   },
+   "coverage": 0.6521739130434783,
+   "coverageBase": 0.4782608695652174,
+   "c1": false,
+   "c2": false,
+   "points": [
+    {
+     "a": 2.27,
+     "data": 0.034,
+     "model": 0.0429,
+     "lo": 0.0305,
+     "hi": 0.0553,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 4.41,
+     "data": 0.072,
+     "model": 0.092,
+     "lo": 0.073,
+     "hi": 0.111,
+     "regime": "attached",
+     "inBand": false
+    },
+    {
+     "a": 6.42,
+     "data": 0.13,
+     "model": 0.1453,
+     "lo": 0.1192,
+     "hi": 0.1715,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 8.7,
+     "data": 0.186,
+     "model": 0.2135,
+     "lo": 0.1783,
+     "hi": 0.2489,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 10.84,
+     "data": 0.248,
+     "model": 0.2843,
+     "lo": 0.2397,
+     "hi": 0.3292,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 12.91,
+     "data": 0.314,
+     "model": 0.3582,
+     "lo": 0.3036,
+     "hi": 0.4129,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 14.98,
+     "data": 0.384,
+     "model": 0.4365,
+     "lo": 0.3715,
+     "hi": 0.5017,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 17.19,
+     "data": 0.455,
+     "model": 0.524,
+     "lo": 0.4473,
+     "hi": 0.6009,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 19.2,
+     "data": 0.526,
+     "model": 0.606,
+     "lo": 0.5184,
+     "hi": 0.694,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 21.4,
+     "data": 0.601,
+     "model": 0.6975,
+     "lo": 0.5976,
+     "hi": 0.7977,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 23.48,
+     "data": 0.685,
+     "model": 0.7845,
+     "lo": 0.673,
+     "hi": 0.8964,
+     "regime": "attached",
+     "inBand": true
+    },
+    {
+     "a": 25.62,
+     "data": 0.719,
+     "model": 0.8734,
+     "lo": 0.75,
+     "hi": 0.9972,
+     "regime": "attached",
+     "inBand": false
+    },
+    {
+     "a": 27.76,
+     "data": 0.803,
+     "model": 0.9604,
+     "lo": 0.8254,
+     "hi": 1.0959,
+     "regime": "attached",
+     "inBand": false
+    },
+    {
+     "a": 29.83,
+     "data": 0.847,
+     "model": 1.0418,
+     "lo": 0.8959,
+     "hi": 1.1882,
+     "regime": "attached",
+     "inBand": false
+    },
+    {
+     "a": 31.84,
+     "data": 0.923,
+     "model": 1.1173,
+     "lo": 0.9613,
+     "hi": 1.2738,
+     "regime": "attached",
+     "inBand": false
+    },
+    {
+     "a": 34.05,
+     "data": 0.966,
+     "model": 1.195,
+     "lo": 1.0286,
+     "hi": 1.3619,
+     "regime": "attached",
+     "inBand": false
+    },
+    {
+     "a": 36.12,
+     "data": 1.034,
+     "model": 1.2619,
+     "lo": 1.0866,
+     "hi": 1.4378,
+     "regime": "attached",
+     "inBand": false
+    },
+    {
+     "a": 38.13,
+     "data": 1.073,
+     "model": 1.3205,
+     "lo": 1.1374,
+     "hi": 1.5043,
+     "regime": "attached",
+     "inBand": false
+    },
+    {
+     "a": 40.4,
+     "data": 1.123,
+     "model": 0.9671,
+     "lo": 0.878,
+     "hi": 1.268,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 42.54,
+     "data": 1.046,
+     "model": 0.9345,
+     "lo": 0.8482,
+     "hi": 1.2257,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 44.55,
+     "data": 1.003,
+     "model": 0.898,
+     "lo": 0.815,
+     "hi": 1.1785,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 46.69,
+     "data": 0.956,
+     "model": 0.861,
+     "lo": 0.7811,
+     "hi": 1.1304,
+     "regime": "bursting",
+     "inBand": true
+    },
+    {
+     "a": 48.9,
+     "data": 0.92,
+     "model": 0.8232,
+     "lo": 0.7467,
+     "hi": 1.0815,
+     "regime": "bursting",
+     "inBand": true
+    }
+   ]
+  }
+ ],
+ "outOfDomain": [
+  {
+   "id": "pol-A0.5",
+   "sweepDeg": 82.87,
+   "kind": "delta",
+   "source": "Polhamus 1966, NASA TN D-3767",
+   "figure": "Fig. 12, A = 0.5",
+   "reasons": [
+    "100% of the leading-edge suction is on edges swept outside 60–80°"
+   ],
+   "n": 5,
+   "rmsAll": 0.028356163351201093,
+   "coverage": 1,
+   "c4": true,
+   "points": [
+    {
+     "a": 3.94,
+     "data": 0.079,
+     "model": 0.0634,
+     "lo": 0.0122,
+     "hi": 0.097,
+     "regime": "attached",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 10.02,
+     "data": 0.232,
+     "model": 0.2144,
+     "lo": 0.0951,
+     "hi": 0.2928,
+     "regime": "attached",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 14.98,
+     "data": 0.385,
+     "model": 0.3766,
+     "lo": 0.184,
+     "hi": 0.5031,
+     "regime": "attached",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 19.939999999999998,
+     "data": 0.586,
+     "model": 0.5622,
+     "lo": 0.2859,
+     "hi": 0.7438,
+     "regime": "attached",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 25.019999999999996,
+     "data": 0.71,
+     "model": 0.7632,
+     "lo": 0.3962,
+     "hi": 1.0044,
+     "regime": "attached",
+     "extrapolated": true,
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "wk-50",
+   "sweepDeg": 50,
+   "kind": "delta",
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.2.1",
+   "reasons": [
+    "100% of the leading-edge suction is on edges swept outside 60–80°"
+   ],
+   "n": 13,
+   "rmsAll": 0.4334083737787474,
+   "coverage": 1,
+   "c4": true,
+   "points": [
+    {
+     "a": 1.6100000000000003,
+     "data": 0.087,
+     "model": 0.0879,
+     "lo": 0.0256,
+     "hi": 0.1288,
+     "regime": "attached",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 5.75,
+     "data": 0.304,
+     "model": 0.3245,
+     "lo": 0.2496,
+     "hi": 0.5405,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 7.69,
+     "data": 0.421,
+     "model": 0.4342,
+     "lo": 0.3374,
+     "hi": 0.7135,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 9.969999999999999,
+     "data": 0.48,
+     "model": 0.5599,
+     "lo": 0.4379,
+     "hi": 0.9117,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 14.18,
+     "data": 0.666,
+     "model": 0.7806,
+     "lo": 0.6145,
+     "hi": 1.2598,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 18.389999999999997,
+     "data": 0.844,
+     "model": 0.985,
+     "lo": 0.7781,
+     "hi": 1.582,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 22.610000000000003,
+     "data": 0.952,
+     "model": 1.1631,
+     "lo": -0.0773,
+     "hi": 1.4512,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 23.949999999999996,
+     "data": 0.977,
+     "model": 1.2152,
+     "lo": -0.0785,
+     "hi": 1.5157,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 26.89,
+     "data": 0.977,
+     "model": 1.3174,
+     "lo": -0.0808,
+     "hi": 1.6421,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 31.24,
+     "data": 0.894,
+     "model": 1.4348,
+     "lo": -0.0835,
+     "hi": 1.7875,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 35.38,
+     "data": 0.816,
+     "model": 1.5058,
+     "lo": -0.0851,
+     "hi": 1.8753,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 39.60000000000001,
+     "data": 0.705,
+     "model": 1.5352,
+     "lo": -0.0857,
+     "hi": 1.9117,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 43.61,
+     "data": 0.67,
+     "model": 1.5228,
+     "lo": -0.0854,
+     "hi": 1.8963,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "wk-55",
+   "sweepDeg": 55,
+   "kind": "delta",
+   "source": "Wentz & Kohlman 1968, NASA CR-98737 (NTRS 19690005430)",
+   "figure": "Fig. 5.3.1",
+   "reasons": [
+    "100% of the leading-edge suction is on edges swept outside 60–80°"
+   ],
+   "n": 11,
+   "rmsAll": 0.33116838205469934,
+   "coverage": 1,
+   "c4": true,
+   "points": [
+    {
+     "a": 1.14,
+     "data": 0.069,
+     "model": 0.0556,
+     "lo": 0.0079,
+     "hi": 0.0869,
+     "regime": "attached",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 5.35,
+     "data": 0.258,
+     "model": 0.2807,
+     "lo": 0.1314,
+     "hi": 0.3787,
+     "regime": "attached",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 9.36,
+     "data": 0.459,
+     "model": 0.5059,
+     "lo": 0.3948,
+     "hi": 0.8266,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 13.579999999999998,
+     "data": 0.624,
+     "model": 0.7072,
+     "lo": 0.5558,
+     "hi": 1.1441,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 17.73,
+     "data": 0.82,
+     "model": 0.8878,
+     "lo": 0.7003,
+     "hi": 1.4288,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 21.81,
+     "data": 0.974,
+     "model": 1.0477,
+     "lo": 0.8282,
+     "hi": 1.6808,
+     "regime": "bursting",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 26.089999999999996,
+     "data": 1.068,
+     "model": 1.1807,
+     "lo": -0.0777,
+     "hi": 1.4729,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 30.230000000000004,
+     "data": 1.01,
+     "model": 1.291,
+     "lo": -0.0802,
+     "hi": 1.6095,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 35.18,
+     "data": 0.914,
+     "model": 1.3789,
+     "lo": -0.0822,
+     "hi": 1.7183,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 38.86,
+     "data": 0.783,
+     "model": 1.4093,
+     "lo": -0.0829,
+     "hi": 1.7559,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 43.13999999999999,
+     "data": 0.709,
+     "model": 1.4065,
+     "lo": -0.0828,
+     "hi": 1.7524,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    }
+   ]
+  },
+  {
+   "id": "fa18-hatp",
+   "sweepDeg": null,
+   "kind": "aircraft",
+   "source": "Banks, Fisher et al. 1996, NASA TM-112360 (HATP baseline F/A-18)",
+   "figure": "Fig. 28 (wind-tunnel CL)",
+   "reasons": [
+    "99% of the leading-edge suction is on edges swept outside 60–80°",
+    "kinked planform: validated only on pointed delta wings",
+    "angles above 50° are beyond the validation data"
+   ],
+   "n": 14,
+   "rmsAll": 0.09742354878130263,
+   "coverage": 1,
+   "c4": true,
+   "points": [
+    {
+     "a": 5.1,
+     "data": 0.137,
+     "model": 0.3253,
+     "lo": -0.0585,
+     "hi": 0.4144,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 10.1,
+     "data": 0.522,
+     "model": 0.6441,
+     "lo": -0.0656,
+     "hi": 0.8089,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 14.999999999999998,
+     "data": 0.879,
+     "model": 0.9396,
+     "lo": -0.0723,
+     "hi": 1.1746,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 17.9,
+     "data": 1.108,
+     "model": 1.1003,
+     "lo": -0.0759,
+     "hi": 1.3735,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 19.9,
+     "data": 1.213,
+     "model": 1.203,
+     "lo": -0.0782,
+     "hi": 1.5006,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 24.900000000000002,
+     "data": 1.486,
+     "model": 1.4249,
+     "lo": -0.0832,
+     "hi": 1.7751,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 29.9,
+     "data": 1.684,
+     "model": 1.5862,
+     "lo": -0.0869,
+     "hi": 1.9749,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 34.8,
+     "data": 1.798,
+     "model": 1.6814,
+     "lo": -0.089,
+     "hi": 2.0926,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 40.1,
+     "data": 1.833,
+     "model": 1.7073,
+     "lo": -0.0896,
+     "hi": 2.1247,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 44.8,
+     "data": 1.745,
+     "model": 1.6659,
+     "lo": -0.0887,
+     "hi": 2.0734,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 49.9,
+     "data": 1.648,
+     "model": 1.555,
+     "lo": -0.0862,
+     "hi": 1.9362,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 55,
+     "data": 1.448,
+     "model": 1.3906,
+     "lo": -0.0825,
+     "hi": 1.7327,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 59.99999999999999,
+     "data": 1.202,
+     "model": 1.1877,
+     "lo": -0.0779,
+     "hi": 1.4817,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    },
+    {
+     "a": 70,
+     "data": 0.858,
+     "model": 0.7254,
+     "lo": -0.0675,
+     "hi": 0.9095,
+     "regime": "burst",
+     "extrapolated": true,
+     "inBand": true
+    }
+   ]
+  }
+ ]
+}
