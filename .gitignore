@@ -26,5 +26,6 @@ __pycache__/
 /plans/*/sources/
 /.feasibility/**/fulltext/
 
-# Generated 3D models: rights pending (see web/public/aero/models/*.json)
+# Third-party generated 3D models stay out of git; the F-16 traced from NASA's three-view and finished in Blender is ours
 /web/public/aero/models/*.glb
+!/web/public/aero/models/f16-traced.glb

@@ -20,6 +20,10 @@ const SOURCES = [
   { k: "HARV geometry", v: "NASA TP-1999-206573, Fig. 2 and Table 3", href: "https://ntrs.nasa.gov/citations/19980007172", note: "Three-view traced at 300 dpi; length, span, height, stabilator span and area" },
   { k: "HARV description", v: "Iliff & Wang 1997, NASA TM-4786; NASA TM-104261 (1992)", href: "https://ntrs.nasa.gov/citations/19970010502", note: "Wing area, MAC, aspect ratio; vertical tails canted 20°" },
   { k: "Vortex-lift centroid", v: "Lamar & Gloss 1975, NASA TN D-7921", href: "https://ntrs.nasa.gov/citations/19750023950", note: "Vortex lift acts at the centroid of the suction it replaces" },
+  { k: "F-16 flight model", v: "Nguyen et al. 1979, NASA TP-1538", href: "https://ntrs.nasa.gov/citations/19800005879", note: "Table III whole-aircraft aerodynamics, Table VI thrust, Table I mass and inertia, Appendix A actuators and flap schedule, Appendix C blackout rule, Fig. 2 three-view" },
+  { k: "F-16 tables, machine-readable", v: "isrlab/F16-Model-Matlab (MIT, © 2023 R. Bhattacharya)", href: "https://github.com/isrlab/F16-Model-Matlab", note: "HDF5 transcription of TP-1538 Table III; 40 values checked against the NASA scans" },
+  { k: "G tolerance", v: "Whinnery & Forster 2013, Extreme Physiology & Medicine 2:19", href: "https://doi.org/10.1186/2046-7648-2-19", note: "888 centrifuge G-LOC episodes: mean 9.1 s at rapid onset, never under 5 s (consistent with NASA's rule)" },
+  { k: "F-16 load limit", v: "USAF F-16 Fighting Falcon fact sheet", href: "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104505/f-16-fighting-falcon/", note: "\"can withstand up to nine G's\" with full internal fuel" },
   { k: "Bands", v: "Vovk, Gammerman & Shafer 2005, Algorithmic Learning in a Random World", href: "https://doi.org/10.1007/b106715", note: "Split conformal intervals; scored leave-one-wing-out" },
 ];
 
@@ -79,7 +83,7 @@ export default function AeroPage() {
       </PageHeader>
 
       <Section eyebrow="Live simulation" title="Fly it: the aerodynamics running in real time"
-        description="Pick an aircraft, press Fly, and work the stick and throttle. The flight path, the lift coefficient and the leading-edge vortex state are integrated live at a fixed 120 Hz step in your browser, from the same code and tests as the rest of this page. Every assumption is listed under the charts.">
+        description="Pick an aircraft, press Fly, and work the stick and throttle. The F-16 flies NASA's measured whole-aircraft wind-tunnel data with its pitching moment, stabilator and flap: in the control-law mode a stated law holds the angle of attack you ask for; in the direct mode there is no augmentation and the airframe is unstable, as NASA reports. Pull too hard and the pilot greys out (NASA's rule), past 9 g the airframe is over-stressed. You can fly past Mach 0.6, to Mach 3 and beyond, but every number is then marked as an extrapolation beyond NASA's low-speed data. The other aircraft fly the engine's estimate, labelled as such. Integrated at a fixed 120 Hz step in your browser; every source and assumption is listed under the charts.">
         <LiveFlightLoader />
       </Section>
 
@@ -140,13 +144,13 @@ export default function AeroPage() {
           <div key={heading} className="panel overflow-x-auto">
             <table className="w-full min-w-[980px] text-left text-[13px]">
               <thead className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-fg-2"><tr className="border-b border-line">
-                <th className="p-3">ORION</th><th>{heading} and why</th><th>Verdict</th><th className="text-right">Value (range)</th><th className="text-right">Moat</th><th className="text-right">Quality</th><th className="pl-4 pr-3">Aftermath at a year</th></tr></thead>
+                <th className="p-3">Rank</th><th>{heading} and why</th><th>Verdict</th><th className="text-right">Value (range)</th><th className="text-right">Moat</th><th className="text-right">Quality</th><th className="pl-4 pr-3">Aftermath at a year</th></tr></thead>
               <tbody>
                 {group.map((i) => {
                   const year = i.aftermath.reduce((a, st) => (Math.abs(st.days - 365) < Math.abs(a.days - 365) ? st : a), i.aftermath[0] ?? { days: 0, when: "", value: 0, well: 0, mixed: 0, hard: 0, sign: "" });
                   return (
                     <tr key={i.id} className="border-b border-line/60 align-top">
-                      <td className="p-3"><div className="num font-mono text-[18px] font-medium">{i.orion.rank}</div><div className="num font-mono text-[11px] text-fg-3">{pct(i.orion.pFirst)} first</div></td>
+                      <td className="p-3"><div className="num font-mono text-[18px] font-medium">{i.orion.rank}</div><div className="num font-mono text-[11px] text-fg-3">{i.orion.groupRank > 0 ? `ORION ${i.orion.groupRank} in ${i.orion.group}` : "not ranked"}</div><div className="num font-mono text-[11px] text-fg-3">{pct(i.orion.pFirst)} first</div></td>
                       <td className="max-w-[440px] py-3 pr-4">
                         <div className="font-medium">{i.title} <span className="font-mono text-[10.5px] uppercase tracking-[0.08em] text-fg-3">· {STATUS[i.status]}</span></div>
                         <ul className="mt-1 grid gap-0.5 text-[12.5px] text-fg-2"><li>{i.why.useful}</li><li>Evidence: {i.why.evidence}</li>

@@ -216,3 +216,33 @@ linked from the page.
 - **Value review**: the live simulation scores 1.41 (cut by the high-value rule); it is shown at the owner's request,
   and the page says so. Next high-value step unchanged: measured whole-aircraft data — the F-16's are in TP-1538
   Table III (scanned in mixed orientations; transcription not started).
+
+## F-16 on NASA's measured data, modes and hard limits, traced shape (2026-11-23, overnight)
+
+- **What was fixed** (owner: "drag allowance; stick commands α directly; F-16 lift extrapolated; transcribe Table
+  III"): the F-16 now flies NASA TP-1538 Table III whole-aircraft data (`lib/aero/f16aero.ts`, zero-sideslip slice in
+  `lib/data/f16-tp1538.json`, from isrlab/F16-Model-Matlab, MIT, 40 values checked against the scans) with NASA's
+  Appendix B buildup, rigid-body pitch dynamics (u, w, q, θ, h, x; Iyy 55,814), NASA's stabilator actuator
+  (0.0495 s, 60°/s, ±25°), flap schedule with its lead filter and actuator (Appendix A) and Table VI thrust
+  (`lib/aero/f16live.ts`). Drag and lift are measured; no CD0 allowance; no α-follows-stick shortcut.
+- **Modes**: control law (ours: α command with pitch-rate damping and integral, α ≤ 25° like NASA's limiter) and
+  direct stabilator (no augmentation). `lib/aero/sim.ts` puts both models behind one interface; the other aircraft
+  keep the engine estimate, labelled.
+- **Harsher, all sourced**: NASA's blackout rule (above 5 g; 300 s at 5 g to 10 s at 9 g; recovery time assumed),
+  USAF 9 g limit, hard stop at Mach 0.6 where NASA says the data end, ground. Researched (subagent): no open F-16
+  Mach data above 0.6 exist; Whinnery & Forster 2013 G-LOC data agree in size with NASA's rule; Dryden turbulence
+  intensities were found only second-hand, so turbulence is a candidate, not built; no official −3 g source.
+- **Checks against NASA's text, not tuned**: static margin −3.9% to −4.1% vs "approximately −4 percent"; deep-stall
+  trim with full nose-up stabilator ≈ 60° vs NASA's 66° (stated shortfall); simulated divergence within 10% of the
+  linearised root (flap frozen). Finding: NASA's flap schedule makes the pitch divergence far milder (doubling 1.2 s →
+  11 s at 500 ft/s; stable at 300 ft/s); the app shows modes with the flap scheduled and frozen.
+- **Shape**: the Tripo model's plan view was invented (wings and tails oversized, blended) and the viewer had stretched
+  it to the 5.01 m on-gear height, which made it look narrow. Replaced by `lib/aero/f16shape.ts`, traced from TP-1538
+  Fig. 2 (deskewed 1.26°, silhouettes, anchored to 15.09 m; span over launchers 9.45 m). Then finished in Blender 5.1 (Windows,
+  `web/scripts/export_f16_obj.ts` → `web/scripts/blender/f16_finish.py`: weld, one subdivision on fuselage and canopy,
+  sharp edges by angle, materials) into `web/public/aero/models/f16-traced.glb` (0.6 MB, ours, in git); Blender
+  reports length 15.55 m (fin tip over the 15.09 m nozzle exit), span 9.59 m (launcher centres 9.45 m), gear-up height
+  4.20 m, and a test checks the GLB against the traced shape. The Tripo GLB is no longer used.
+- **Value review** (rule unchanged, impact ≥ 2.5): F-16 on NASA data 2.20, modes and limits 1.82, traced shape 1.50:
+  none clears the bar; all are owner requests and shown as such. Candidates: NASA's own n_z law 1.34, 6-DOF 1.97,
+  turbulence 1.16; the only high-value item remains measured lift curves for all three aircraft (2.55).

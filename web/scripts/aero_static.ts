@@ -22,7 +22,7 @@ const files = readdirSync(DIR).filter((f) => f.endsWith(".ts")).map((f) => join(
 const testSrc = readdirSync(join(ROOT, "tests")).filter((f) => /^aero.*\.test\.ts$/.test(f))
   .map((f) => readFileSync(join(ROOT, "tests", f), "utf8")).join("\n");
 const problems: string[] = [];
-const ALLOWED_IMPORT = /^(\.\/[a-z0-9-]+|\.\.\/data\/aero-(corpus|validation)\.json)$/;
+const ALLOWED_IMPORT = /^(\.\/[a-z0-9-]+|\.\.\/data\/(aero-(corpus|validation)|f16-tp1538)\.json)$/;
 const BANNED_CALLS = new Set(["Math.random", "Date.now", "performance.now", "setTimeout", "setInterval", "crypto.getRandomValues"]);
 const ANGLE_NAME = /^(alpha|alphas|sweep|sweepLe|angle|aoa)$/i;
 const exported: { file: string; name: string }[] = [];
