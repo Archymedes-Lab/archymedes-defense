@@ -124,3 +124,25 @@ unchanged (no combat capability, no manoeuvre optimisation).
   independent wind-tunnel cases.
 - **Finding on the HARV pitch-up** (450 ft/s, 15,000 ft, to 35° and back): the vortex lag changes lift by under 0.01
   in this model, because few HARV edges reach their breakdown angle below 35°; the 70° delta shows clear loops.
+
+## Geometry rebuilt with solid-modelling practice (2026-11-23)
+
+Owner request: a better fighter model, with proper geometric practice. `lib/aero/harv-mesh.ts` rebuilt, checked by
+`tests/aero-geometry.test.ts` (21) with `lib/aero/mesh-check.ts`:
+
+- Fuselage and canopy follow monotone cubic Hermite curves (Fritsch & Carlson 1980, `lib/aero/curves.ts`) through
+  the traced stations: exact at every station, continuous slope, no overshoot (property tests). Before: straight
+  segments with kinks at every station.
+- Every component is a closed, consistently oriented 2-manifold: each edge in exactly two triangles, once in each
+  direction; Euler characteristic 2; positive enclosed volume (outward normals); welded vertices; no degenerate
+  triangles. Before: open lofts, single-sided LEX, canopy and inlet plates, duplicated cap vertices, and a nose made
+  of a 0.02 ft ring (sliver triangles). Now a single pole vertex closes the nose.
+- Left side is the exact mirror of the right (tested vertex by vertex).
+- Fuselage volume converges under refinement to the integral of the exact superellipse sections
+  (4ab Γ(1+1/n)²/Γ(1+2/n), Lanczos Γ); the wing's upward-facing area matches the analytic trapezoid within 0.5%.
+- LEX is a solid strake (thick at the body, sharp at the edge) that now meets the wing leading edge at the traced
+  junction; the intake is a D-shaped duct under the LEX blending into the body; nozzles have exit faces.
+- The mesh checker is itself tested on a tetrahedron and a cube, and on deliberately broken meshes (missing face,
+  flipped face, inside-out solid).
+- Viewer: crease-angle normals (35°) keep curved skin smooth and trailing edges, caps and corners sharp; the floor
+  grid moved below the tail at high angle of attack (it used to cut through the stabilator and fins).

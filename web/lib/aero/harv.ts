@@ -1,3 +1,4 @@
+import { pchip } from "./curves";
 import type { Planform, Station } from "./geometry";
 import { type Deg, deg, toRad } from "./units";
 
@@ -117,19 +118,24 @@ export function harvVtailCant(): { dy: number; dz: number; angle: Deg } {
   return { dy: Math.sin(a), dz: Math.cos(a), angle: deg(HARV_PUBLISHED.verticalTailCantDeg) };
 }
 
-/** Linear interpolation of the body tables (clamped). */
+const BODY_X = HARV_BODY.map((b) => b.x);
+const BODY_W = pchip(BODY_X, HARV_BODY.map((b) => b.halfWidth));
+const BODY_T = pchip(BODY_X, HARV_BODY.map((b) => b.top));
+const BODY_B = pchip(BODY_X, HARV_BODY.map((b) => b.bottom));
+
+/**
+ * Body section at x: monotone cubic (Fritsch–Carlson) through the traced stations, so the outline is smooth (continuous
+ * slope) and passes exactly through every traced point without overshooting it. Clamped outside the table.
+ */
 export function bodyAt(x: number): BodySection {
-  const b = HARV_BODY;
-  const first = b[0], last = b[b.length - 1];
-  if (first === undefined || last === undefined) throw new Error("empty body table");
-  if (x <= first.x) return first;
-  if (x >= last.x) return last;
-  for (let k = 0; k + 1 < b.length; k++) {
-    const p = b[k], q = b[k + 1];
-    if (p !== undefined && q !== undefined && x <= q.x) {
-      const t = (x - p.x) / (q.x - p.x);
-      return { x, halfWidth: p.halfWidth + t * (q.halfWidth - p.halfWidth), top: p.top + t * (q.top - p.top), bottom: p.bottom + t * (q.bottom - p.bottom) };
-    }
-  }
-  return last;
+  return { x, halfWidth: BODY_W(x), top: BODY_T(x), bottom: BODY_B(x) };
+}
+
+const CANOPY_X = HARV_CANOPY.map((c) => c.x);
+const CANOPY_T = pchip(CANOPY_X, HARV_CANOPY.map((c) => c.top));
+const CANOPY_W = pchip(CANOPY_X, HARV_CANOPY.map((c) => c.halfWidth));
+
+/** Canopy crest and half width at x, smooth through the traced stations (same interpolation as the body). */
+export function canopyAt(x: number): { x: number; top: number; halfWidth: number } {
+  return { x, top: CANOPY_T(x), halfWidth: CANOPY_W(x) };
 }

@@ -104,7 +104,7 @@ export default function AeroPage() {
         <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
           <Stat value={pct(validation.coverage.widened)} label="held-out band coverage" hint={`90% band · ${validation.inDomain.length} wings left out in turn`} />
           <Stat value={`${nPts}`} label="digitized data points" hint={`${corpus.cases.length} cases · 3 NASA reports`} />
-          <Stat value="78" label="engine checks" hint="65 invariant tests · 7 static rules · 6 type proofs" />
+          <Stat value="103" label="engine checks" hint="90 invariant tests · 7 static rules · 6 type proofs" />
           <Stat value="2 / 4" label="pre-registered criteria met" hint="the two misses are published below" />
         </div>
       </PageHeader>
@@ -182,6 +182,7 @@ export default function AeroPage() {
           {[
             ["Invariant tests (42)", "Property-based (fast-check): scale and translation invariance, odd lift, vortex lift ≥ 0, breakdown only removes lift, burst share monotone in α, elliptic bound on span efficiency within a mesh tolerance that shrinks on refinement, conformal coverage by simulation, refusal of invalid geometry and unbounded meshes."],
             ["Verification against theory", "Slender-wing limit Kp → πA/2, lifting-line limit at A = 20, mesh convergence < 1%, Polhamus Kv range, the published F/A-18 reference MAC (11.517 ft) reproduced by the generic layout."],
+            ["Geometry, checked like a solid modeller", "Every component of the HARV is a closed, consistently oriented solid: each edge shared by exactly two triangles, one shell (Euler characteristic 2), outward normals (positive volume), welded vertices, no degenerate triangles, the left side the exact mirror of the right. The fuselage and canopy follow monotone cubic curves (Fritsch–Carlson) through the traced stations: smooth, exact at every station, never overshooting. Fuselage volume converges to the integral of its exact superellipse sections; the wing's planform matches the analytic trapezoid."],
             ["Static analysis (7 rules)", "A compiler-API gate on lib/aero: pure imports only, no randomness or clocks, no any / non-null / casts, strict equality, angle parameters must be typed Rad or Deg, every export referenced by a test, and the unit proofs must still fail when their guards are removed."],
             ["Compile-time unit proofs (6)", "Degrees, radians and bare numbers are distinct types; six deliberate misuses must fail to compile. Removing a guard was checked to break the build."],
           ].map(([k, v]) => <Panel key={k} className="grid content-start gap-2 p-5"><div className="eyebrow">{k}</div><p className="text-[14px] text-fg-2">{v}</p></Panel>)}

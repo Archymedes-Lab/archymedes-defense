@@ -2,6 +2,7 @@
 import { Line } from "@react-three/drei";
 import { useMemo } from "react";
 import * as THREE from "three";
+import { toCreasedNormals } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import { HARV_LEX, HARV_WING, harvPlanform } from "@/lib/aero/harv";
 import { type MeshPart, buildHarvMesh } from "@/lib/aero/harv-mesh";
 import { useThemeColors } from "@/lib/hooks/use-theme-colors";
@@ -29,8 +30,11 @@ export function HarvScene({ alphaDeg, burstXi, label }: { alphaDeg: number; burs
       }
       geo.setAttribute("position", new THREE.BufferAttribute(p, 3));
       geo.setIndex(g.indices);
-      geo.computeVertexNormals();
-      byPart.set(g.part, [...(byPart.get(g.part) ?? []), geo]);
+      // Welded solids: smooth shading across curved skin, hard edges where faces meet at more than 35° (trailing
+      // edges, caps, box corners).
+      const shaded = toCreasedNormals(geo, (35 * Math.PI) / 180);
+      geo.dispose();
+      byPart.set(g.part, [...(byPart.get(g.part) ?? []), shaded]);
     }
     return byPart;
   }, []);
@@ -95,7 +99,7 @@ export function HarvScene({ alphaDeg, burstXi, label }: { alphaDeg: number; burs
         </group>
       </group>
       {[-1.2, -0.6, 0, 0.6, 1.2].map((z) => <Line key={z} points={[[-6.5, -0.2, z], [-5.2, -0.2, z]]} color={colors["--fg-3"]} lineWidth={1} />)}
-      <gridHelper args={[16, 32, colors["--line-strong"], colors["--line"]]} position={[0, -1.4, 0]} />
+      <gridHelper args={[16, 32, colors["--line-strong"], colors["--line"]]} position={[0, -3.6, 0]} /> {/* below the tail at high α */}
     </Stage>
   );
 }
